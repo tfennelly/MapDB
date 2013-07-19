@@ -80,7 +80,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.BTreeRootSerializer.html" title="class in org.mapdb">BTreeMap.BTreeRootSerializer</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
@@ -90,23 +90,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.HashRootSerializer.html" title="class in org.mapdb">HTreeMap.HashRootSerializer</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.CircularQueueRootSerializer.html" title="class in org.mapdb">Queues.CircularQueueRootSerializer</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.QueueRootSerializer.html" title="class in org.mapdb">Queues.QueueRootSerializer</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.NodeSerializer.html" title="class in org.mapdb">Queues.SimpleQueue.NodeSerializer</a>&lt;E&gt;</strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.StackRootSerializer.html" title="class in org.mapdb">Queues.StackRootSerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
@@ -191,14 +175,6 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
-<td class="colLast"><span class="strong">BTreeMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.html#defaultSerializer">defaultSerializer</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
-<td class="colLast"><span class="strong">BTreeMap.BTreeRootSerializer.</span><code><strong><a href="../../../org/mapdb/BTreeMap.BTreeRootSerializer.html#defaultSerializer">defaultSerializer</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
 <td class="colLast"><span class="strong">BTreeKeySerializer.BasicKeySerializer.</span><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.BasicKeySerializer.html#defaultSerializer">defaultSerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -206,14 +182,6 @@
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#defaultSerializer">defaultSerializer</a></strong></code>
 <div class="block">default serializer used for persistence.</div>
 </td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
-<td class="colLast"><span class="strong">HTreeMap.HashRootSerializer.</span><code><strong><a href="../../../org/mapdb/HTreeMap.HashRootSerializer.html#defaultSerializer">defaultSerializer</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
-<td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#defaultSerialzierForSnapshots">defaultSerialzierForSnapshots</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;long[][]&gt;</code></td>
@@ -236,42 +204,50 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#keySerializer">keySerializer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#keySerializer">keySerializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&gt;</code></td>
 <td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#LN_SERIALIZER">LN_SERIALIZER</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
 <td class="colLast"><span class="strong">Serializer.</span><code><strong><a href="../../../org/mapdb/Serializer.html#LONG_SERIALIZER">LONG_SERIALIZER</a></strong></code>
 <div class="block">Serializes Long into 8 bytes, used mainly for testing.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeMap.BNode.html" title="interface in org.mapdb">BTreeMap.BNode</a>&gt;</code></td>
 <td class="colLast"><span class="strong">BTreeMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.html#nodeSerializer">nodeSerializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.SimpleQueue.Node.html" title="class in org.mapdb">Queues.SimpleQueue.Node</a>&lt;<a href="../../../org/mapdb/Queues.SimpleQueue.html" title="type parameter in Queues.SimpleQueue">E</a>&gt;&gt;</code></td>
 <td class="colLast"><span class="strong">Queues.SimpleQueue.</span><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#nodeSerializer">nodeSerializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Serializer.CompressSerializerWrapper.html" title="type parameter in Serializer.CompressSerializerWrapper">E</a>&gt;</code></td>
 <td class="colLast"><span class="strong">Serializer.CompressSerializerWrapper.</span><code><strong><a href="../../../org/mapdb/Serializer.CompressSerializerWrapper.html#serializer">serializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/CopyOnWriteArrayList.html?is-external=true" title="class or interface in java.util.concurrent">CopyOnWriteArrayList</a>&lt;<a href="../../../org/mapdb/SerializerPojo.ClassInfo.html" title="class in org.mapdb">SerializerPojo.ClassInfo</a>&gt;&gt;</code></td>
 <td class="colLast"><span class="strong">SerializerPojo.</span><code><strong><a href="../../../org/mapdb/SerializerPojo.html#serializer">serializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Atomic.Var.html" title="type parameter in Atomic.Var">E</a>&gt;</code></td>
 <td class="colLast"><span class="strong">Atomic.Var.</span><code><strong><a href="../../../org/mapdb/Atomic.Var.html#serializer">serializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.SimpleQueue.html" title="type parameter in Queues.SimpleQueue">E</a>&gt;</code></td>
 <td class="colLast"><span class="strong">Queues.SimpleQueue.</span><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#serializer">serializer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HTreeMap.ExpireLinkNode.</span><code><strong><a href="../../../org/mapdb/HTreeMap.ExpireLinkNode.html#SERIALIZER">SERIALIZER</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;byte[]&gt;</code></td>
@@ -290,6 +266,18 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colLast"><span class="strong">BTreeMap.NodeSerializer.</span><code><strong><a href="../../../org/mapdb/BTreeMap.NodeSerializer.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
@@ -521,30 +509,18 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="../../../org/mapdb/Atomic.Var.html" title="class in org.mapdb">Atomic.Var</a>&lt;E&gt;</code></td>
+<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createAtomicVar(java.lang.String, E, org.mapdb.Serializer)">createAtomicVar</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+               E&nbsp;initValue,
+               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createCircularQueue(java.lang.String, org.mapdb.Serializer, long)">createCircularQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer,
                    long&nbsp;size)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;</code></td>
-<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createHashMap(java.lang.String, boolean, org.mapdb.Serializer, org.mapdb.Serializer)">createHashMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-             boolean&nbsp;keepCounter,
-             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;K&gt;&nbsp;keySerializer,
-             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;V&gt;&nbsp;valueSerializer)</code>
-<div class="block">Creates new HashMap with more specific arguments</div>
-</td>
-</tr>
 <tr class="rowColor">
-<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;</code></td>
-<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createHashMap(java.lang.String, boolean, org.mapdb.Serializer, org.mapdb.Serializer)">createHashMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-             boolean&nbsp;keepCounter,
-             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;K&gt;&nbsp;keySerializer,
-             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;V&gt;&nbsp;valueSerializer)</code>
-<div class="block">Creates new HashMap with more specific arguments</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;K&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createHashSet(java.lang.String, boolean, org.mapdb.Serializer)">createHashSet</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
              boolean&nbsp;keepCounter,
@@ -552,37 +528,24 @@
 <div class="block">Creates new HashSet</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createQueue(java.lang.String, org.mapdb.Serializer)">createQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
            <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected static long</code></td>
+<td class="colLast"><span class="strong">BTreeMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.html#createRootRef(org.mapdb.Engine, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer)">createRootRef</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+             <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;keySer,
+             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSer)</code>
+<div class="block">creates empty root node and returns recid of its reference</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createStack(java.lang.String, org.mapdb.Serializer, boolean)">createStack</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
            <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer,
            boolean&nbsp;useLocks)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
-<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createTreeMap(java.lang.String, int, boolean, boolean, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">createTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-             int&nbsp;nodeSize,
-             boolean&nbsp;valuesStoredOutsideNodes,
-             boolean&nbsp;keepCounter,
-             <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;keySerializer,
-             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;V&gt;&nbsp;valueSerializer,
-             <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;K&gt;&nbsp;comparator)</code>
-<div class="block">Creates new TreeMap</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static &lt;E&gt;&nbsp;<a href="../../../org/mapdb/Atomic.Var.html" title="class in org.mapdb">Atomic.Var</a>&lt;E&gt;</code></td>
-<td class="colLast"><span class="strong">Atomic.</span><code><strong><a href="../../../org/mapdb/Atomic.html#createVar(org.mapdb.DB, java.lang.String, E, org.mapdb.Serializer)">createVar</a></strong>(<a href="../../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db,
-         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-         E&nbsp;initVal,
-         <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer)</code>
-<div class="block">Creates new record with given name and initial value.</div>
-</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
@@ -773,11 +736,9 @@
          <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static &lt;E&gt;&nbsp;<a href="../../../org/mapdb/Atomic.Var.html" title="class in org.mapdb">Atomic.Var</a>&lt;E&gt;</code></td>
-<td class="colLast"><span class="strong">Atomic.</span><code><strong><a href="../../../org/mapdb/Atomic.html#getVar(org.mapdb.DB, java.lang.String, org.mapdb.Serializer)">getVar</a></strong>(<a href="../../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db,
-      <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer)</code>
-<div class="block">Gets or creates new record with given name.</div>
+<td class="colFirst"><code><a href="../../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
+<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#keySerializer(org.mapdb.Serializer)">keySerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;keySerializer)</code>
+<div class="block">keySerializer used to convert keys into/from binary form.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1000,6 +961,18 @@
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
+<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</code>
+<div class="block">valueSerializer used to convert values into/from binary form.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</code>
+<div class="block">valueSerializer used to convert values into/from binary form.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
@@ -1099,87 +1072,61 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, int, boolean, boolean, boolean, org.mapdb.Serializer, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-        int&nbsp;maxNodeSize,
-        boolean&nbsp;hasValues,
-        boolean&nbsp;valsOutsideNodes,
-        boolean&nbsp;keepCounter,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer,
-        <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;keySerializer,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;&nbsp;valueSerializer,
-        <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;comparator)</code>
-<div class="block">Constructor used to create new BTreeMap without existing record (recid) in Engine.</div>
-</td>
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.NodeSerializer.html#BTreeMap.NodeSerializer(boolean, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap.NodeSerializer</a></strong>(boolean&nbsp;valsOutsideNodes,
+                       <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;keySerializer,
+                       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer,
+                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, int, boolean, boolean, boolean, org.mapdb.Serializer, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+        long&nbsp;rootRecidRef,
         int&nbsp;maxNodeSize,
-        boolean&nbsp;hasValues,
         boolean&nbsp;valsOutsideNodes,
-        boolean&nbsp;keepCounter,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer,
+        long&nbsp;counterRecid,
         <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;keySerializer,
         <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;&nbsp;valueSerializer,
         <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;comparator)</code>
-<div class="block">Constructor used to create new BTreeMap without existing record (recid) in Engine.</div>
+<div class="block">Constructor used to create new BTreeMap.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, org.mapdb.Serializer)">BTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-        long&nbsp;recid,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer)</code>
-<div class="block">Constructor used to load existing BTreeMap (with assigned recid).</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/EngineWrapper.ByteTransformEngine.html#EngineWrapper.ByteTransformEngine(org.mapdb.Engine, org.mapdb.Serializer)">EngineWrapper.ByteTransformEngine</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
                                  <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;byte[]&gt;&nbsp;blockSerializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.Item.html#EngineWrapper.ImmutabilityCheckEngine.Item(org.mapdb.Serializer, java.lang.Object)">EngineWrapper.ImmutabilityCheckEngine.Item</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer,
                                           <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;item)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.HashRootSerializer.html#HTreeMap.HashRootSerializer(org.mapdb.Serializer)">HTreeMap.HashRootSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, boolean, boolean, int, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-        boolean&nbsp;hasValues,
-        boolean&nbsp;keepCounter,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[])">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+        long&nbsp;counterRecid,
         int&nbsp;hashSalt,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer,
+        long[]&nbsp;segmentRecids,
         <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;keySerializer,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;valueSerializer)</code>
-<div class="block">Constructor used to create new HTreeMap without existing record (recid) in Engine.</div>
+        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;valueSerializer,
+        long&nbsp;expireTimeStart,
+        long&nbsp;expire,
+        long&nbsp;expireAccess,
+        long&nbsp;expireMaxSize,
+        long[]&nbsp;expireHeads,
+        long[]&nbsp;expireTails)</code>
+<div class="block">Opens HTreeMap</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, boolean, boolean, int, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-        boolean&nbsp;hasValues,
-        boolean&nbsp;keepCounter,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[])">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+        long&nbsp;counterRecid,
         int&nbsp;hashSalt,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer,
+        long[]&nbsp;segmentRecids,
         <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;keySerializer,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;valueSerializer)</code>
-<div class="block">Constructor used to create new HTreeMap without existing record (recid) in Engine.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, boolean, boolean, int, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-        boolean&nbsp;hasValues,
-        boolean&nbsp;keepCounter,
-        int&nbsp;hashSalt,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;keySerializer,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;valueSerializer)</code>
-<div class="block">Constructor used to create new HTreeMap without existing record (recid) in Engine.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, org.mapdb.Serializer)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-        long&nbsp;rootRecid,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer)</code>
-<div class="block">Constructor used to load existing HTreeMap (with assigned recid).</div>
+        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;valueSerializer,
+        long&nbsp;expireTimeStart,
+        long&nbsp;expire,
+        long&nbsp;expireAccess,
+        long&nbsp;expireMaxSize,
+        long[]&nbsp;expireHeads,
+        long[]&nbsp;expireTails)</code>
+<div class="block">Opens HTreeMap</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1190,15 +1137,6 @@
                     long&nbsp;size)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.CircularQueueRoot.html#Queues.CircularQueueRoot(long, long, long, org.mapdb.Serializer)">Queues.CircularQueueRoot</a></strong>(long&nbsp;headerRecid,
-                        long&nbsp;headerInsertRecid,
-                        long&nbsp;sizeRecid,
-                        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.CircularQueueRootSerializer.html#Queues.CircularQueueRootSerializer(org.mapdb.Serializer)">Queues.CircularQueueRootSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&gt;&nbsp;serialierSerializer)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.Queue.html#Queues.Queue(org.mapdb.Engine, org.mapdb.Serializer, long, long, long)">Queues.Queue</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&gt;&nbsp;serializer,
             long&nbsp;headerRecid,
@@ -1206,55 +1144,21 @@
             long&nbsp;sizeRecid)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.QueueRoot.html#Queues.QueueRoot(long, long, long, org.mapdb.Serializer)">Queues.QueueRoot</a></strong>(long&nbsp;headerRecid,
-                long&nbsp;nextTailRecid,
-                long&nbsp;sizeRecid,
-                <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.QueueRootSerializer.html#Queues.QueueRootSerializer(org.mapdb.Serializer)">Queues.QueueRootSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&gt;&nbsp;serialierSerializer)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.NodeSerializer.html#Queues.SimpleQueue.NodeSerializer(org.mapdb.Serializer)">Queues.SimpleQueue.NodeSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.SimpleQueue.NodeSerializer.html" title="type parameter in Queues.SimpleQueue.NodeSerializer">E</a>&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#Queues.SimpleQueue(org.mapdb.Engine, org.mapdb.Serializer, long)">Queues.SimpleQueue</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
                   <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.SimpleQueue.html" title="type parameter in Queues.SimpleQueue">E</a>&gt;&nbsp;serializer,
-                  long&nbsp;headRecid)</code>&nbsp;</td>
+                  long&nbsp;headRecidRef)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.Stack.html#Queues.Stack(org.mapdb.Engine, org.mapdb.Serializer, long, boolean)">Queues.Stack</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.Stack.html" title="type parameter in Queues.Stack">E</a>&gt;&nbsp;serializer,
-            long&nbsp;headerRecid,
+            long&nbsp;headerRecidRef,
             boolean&nbsp;useLocks)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.StackRoot.html#Queues.StackRoot(long, boolean, org.mapdb.Serializer)">Queues.StackRoot</a></strong>(long&nbsp;headerRecid,
-                boolean&nbsp;useLocks,
-                <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.StackRootSerializer.html#Queues.StackRootSerializer(org.mapdb.Serializer)">Queues.StackRootSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&gt;&nbsp;serialierSerializer)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/Serializer.CompressSerializerWrapper.html#Serializer.CompressSerializerWrapper(org.mapdb.Serializer)">Serializer.CompressSerializerWrapper</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Serializer.CompressSerializerWrapper.html" title="type parameter in Serializer.CompressSerializerWrapper">E</a>&gt;&nbsp;serializer)</code>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
-<caption><span>Constructor parameters in <a href="../../../org/mapdb/package-summary.html">org.mapdb</a> with type arguments of type <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colOne" scope="col">Constructor and Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.CircularQueueRootSerializer.html#Queues.CircularQueueRootSerializer(org.mapdb.Serializer)">Queues.CircularQueueRootSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&gt;&nbsp;serialierSerializer)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.QueueRootSerializer.html#Queues.QueueRootSerializer(org.mapdb.Serializer)">Queues.QueueRootSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&gt;&nbsp;serialierSerializer)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.StackRootSerializer.html#Queues.StackRootSerializer(org.mapdb.Serializer)">Queues.StackRootSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&gt;&nbsp;serialierSerializer)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

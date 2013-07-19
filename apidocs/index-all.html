@@ -83,6 +83,8 @@
 <dd>
 <div class="block">number of active threads running, used to await thread termination on close</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.KeySet.html#add(K)">add(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb">HTreeMap.KeySet</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/LongConcurrentLRUMap.Stats.html#add(org.mapdb.LongConcurrentLRUMap.Stats)">add(LongConcurrentLRUMap.Stats)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongConcurrentLRUMap.Stats.html" title="class in org.mapdb">LongConcurrentLRUMap.Stats</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueue.html#add(java.lang.Object)">add(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.CircularQueue.html" title="class in org.mapdb">Queues.CircularQueue</a></dt>
@@ -211,6 +213,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4.html#b">b</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Fun.Tuple4.html" title="class in org.mapdb">Fun.Tuple4</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.html#BASIC">BASIC</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Serializer.html#BASIC_SERIALIZER">BASIC_SERIALIZER</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></dt>
 <dd>
 <div class="block">basic serializer for most classes in &lsquo;java.lang&rsquo; and &lsquo;java.util&rsquo; packages</div>
@@ -281,13 +285,9 @@
 <dd>
 <div class="block">A scalable concurrent <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent"><code>ConcurrentNavigableMap</code></a> implementation.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, int, boolean, boolean, boolean, org.mapdb.Serializer, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap(Engine, int, boolean, boolean, boolean, Serializer, BTreeKeySerializer&lt;K&gt;, Serializer&lt;V&gt;, Comparator&lt;K&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap(Engine, long, int, boolean, long, BTreeKeySerializer&lt;K&gt;, Serializer&lt;V&gt;, Comparator&lt;K&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>
-<div class="block">Constructor used to create new BTreeMap without existing record (recid) in Engine.</div>
-</dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, org.mapdb.Serializer)">BTreeMap(Engine, long, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
-<dd>
-<div class="block">Constructor used to load existing BTreeMap (with assigned recid).</div>
+<div class="block">Constructor used to create new BTreeMap.</div>
 </dd>
 <dt><a href="./org/mapdb/BTreeMap.BNode.html" title="interface in org.mapdb"><span class="strong">BTreeMap.BNode</span></a> - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
@@ -295,11 +295,17 @@
 </dd>
 <dt><a href="./org/mapdb/BTreeMap.BTreeIterator.html" title="class in org.mapdb"><span class="strong">BTreeMap.BTreeIterator</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/BTreeMap.BTreeRootSerializer.html" title="class in org.mapdb"><span class="strong">BTreeMap.BTreeRootSerializer</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dt><a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb"><span class="strong">BTreeMap.DescendingMap</span></a>&lt;<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">K</a>,<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">V</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#BTreeMap.DescendingMap(org.mapdb.BTreeMap, K, boolean, K, boolean)">BTreeMap.DescendingMap(BTreeMap&lt;K, V&gt;, K, boolean, K, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/BTreeMap.DirNode.html" title="class in org.mapdb"><span class="strong">BTreeMap.DirNode</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/BTreeMap.LeafNode.html" title="class in org.mapdb"><span class="strong">BTreeMap.LeafNode</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb"><span class="strong">BTreeMap.NodeSerializer</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.NodeSerializer.html#BTreeMap.NodeSerializer(boolean, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap.NodeSerializer(boolean, BTreeKeySerializer, Serializer, Comparator)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb"><span class="strong">BTreeMap.SubMap</span></a>&lt;<a href="./org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">K</a>,<a href="./org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">V</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
@@ -437,6 +443,16 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/CacheWeakSoftRef.CacheWeakItem.html#CacheWeakSoftRef.CacheWeakItem(A, java.lang.ref.ReferenceQueue, long)">CacheWeakSoftRef.CacheWeakItem(A, ReferenceQueue&lt;A&gt;, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/CacheWeakSoftRef.CacheWeakItem.html" title="class in org.mapdb">CacheWeakSoftRef.CacheWeakItem</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#calculateStatistics()">calculateStatistics()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
+<dd>
+<div class="block">get some statistics about store.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#calculateStatistics()">calculateStatistics()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#calculateStatistics()">calculateStatistics()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreHeap.html#calculateStatistics()">calculateStatistics()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Engine.html#canRollback()">canRollback()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#canRollback()">canRollback()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
@@ -449,19 +465,35 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#canRollback()">canRollback()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#catalog">catalog</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>
+<div class="block">view over named records</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/Engine.html#CATALOG_RECID">CATALOG_RECID</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#catGet(java.lang.String, A)">catGet(String, A)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#catGet(java.lang.String)">catGet(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#catPut(java.lang.String, A)">catPut(String, A)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#catPut(java.lang.String, A, A)">catPut(String, A, A)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/CC.html" title="interface in org.mapdb"><span class="strong">CC</span></a> - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">Compiler Configuration.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#ccc(int, int)">ccc(int, int)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html#cComparator">cComparator</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple4KeySerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#ceilingEntry(K)">ceilingEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#ceilingEntry(K)">ceilingEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#ceilingEntry(K)">ceilingEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#ceilingKey(K)">ceilingKey(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#ceilingKey(K)">ceilingKey(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#ceilingKey(K)">ceilingKey(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
@@ -483,6 +515,8 @@
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#checkNotClosed()">checkNotClosed()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#checkShouldCreate(java.lang.String)">checkShouldCreate(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/AsyncWriteEngine.html#checkState()">checkState()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a></dt>
 <dd>
 <div class="block">checks that background threads are ready and throws exception if not</div>
@@ -491,6 +525,8 @@
 <dd>
 <div class="block">Adds CRC32 checksum at end of each record to check data integrity.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#checkType(java.lang.String, java.lang.String)">checkType(String, String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.BNode.html#child()">child()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/BTreeMap.BNode.html" title="interface in org.mapdb">BTreeMap.BNode</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.DirNode.html#child()">child()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DirNode.html" title="class in org.mapdb">BTreeMap.DirNode</a></dt>
@@ -511,9 +547,13 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#clear()">clear()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#clear()">clear()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#clear()">clear()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#clear()">clear()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.KeySet.html#clear()">clear()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb">HTreeMap.KeySet</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/LongConcurrentHashMap.html#clear()">clear()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongConcurrentHashMap.html" title="class in org.mapdb">LongConcurrentHashMap</a></dt>
 <dd>
@@ -700,8 +740,18 @@
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#comparator()">comparator()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#comparator()">comparator()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.NodeSerializer.html#comparator">comparator</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#comparator()">comparator()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#comparator">comparator</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#comparator(java.util.Comparator)">comparator(Comparator)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>
+<div class="block">comparator used to sort keys.</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/Atomic.Boolean.html#compareAndSet(boolean, boolean)">compareAndSet(boolean, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Atomic.Boolean.html" title="class in org.mapdb">Atomic.Boolean</a></dt>
 <dd>
 <div class="block">Atomically sets the value to the given updated value if the current value <code>==</code> the expected value.</div>
@@ -785,6 +835,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Concurrency level.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.KeySet.html#contains(java.lang.Object)">contains(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb">HTreeMap.KeySet</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.html#contains(java.lang.Object)">contains(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.html#containsAll(java.util.Collection)">containsAll(Collection&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></dt>
@@ -792,6 +844,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#containsClass(java.lang.Class)">containsClass(Class&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#containsKey(java.lang.Object)">containsKey(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#containsKey(java.lang.Object)">containsKey(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#containsKey(java.lang.Object)">containsKey(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
@@ -802,6 +856,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <div class="block">Tests if the specified object is a key in this table.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#containsValue(java.lang.Object)">containsValue(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#containsValue(java.lang.Object)">containsValue(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#containsValue(java.lang.Object)">containsValue(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
@@ -821,21 +877,39 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DataOutput2.html#copyBytes()">copyBytes()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#copyNext(long)">copyNext(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#copyPrev(long)">copyPrev(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#copyTime(long)">copyTime(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#counter">counter</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#counter">counter</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#countLongStackItems(long)">countLongStackItems(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Serializer.html#CRC32_CHECKSUM">CRC32_CHECKSUM</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></dt>
 <dd>
 <div class="block">Adds CRC32 checksum at end of each record to check data integrity.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#createBoolean(org.mapdb.DB, java.lang.String, boolean)">createBoolean(DB, String, boolean)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Creates new record with given name and initial value.</div>
-</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#createAtomicBoolean(java.lang.String, boolean)">createAtomicBoolean(String, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#createAtomicInteger(java.lang.String, int)">createAtomicInteger(String, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#createAtomicLong(java.lang.String, long)">createAtomicLong(String, long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#createAtomicString(java.lang.String, java.lang.String)">createAtomicString(String, String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#createAtomicVar(java.lang.String, E, org.mapdb.Serializer)">createAtomicVar(String, E, Serializer&lt;E&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#createCircularQueue(java.lang.String, org.mapdb.Serializer, long)">createCircularQueue(String, Serializer&lt;E&gt;, long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.html#createHashMap(java.lang.String, boolean, org.mapdb.Serializer, org.mapdb.Serializer)">createHashMap(String, boolean, Serializer&lt;K&gt;, Serializer&lt;V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#createHashMap(java.lang.String)">createHashMap(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>
+<div class="block">Returns new builder for HashMap with given name</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#createHashMap(org.mapdb.DB.HTreeMapMaker)">createHashMap(DB.HTreeMapMaker)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>
 <div class="block">Creates new HashMap with more specific arguments</div>
 </dd>
@@ -849,41 +923,31 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">For pojo serialization we need to instanciate class without invoking its constructor.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#createInteger(org.mapdb.DB, java.lang.String, int)">createInteger(DB, String, int)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Creates new record with given name and initial value.</div>
-</dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#createLong(org.mapdb.DB, java.lang.String, long)">createLong(DB, String, long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Creates new record with given name and initial value.</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.Factory.html#createPhysVolume()">createPhysVolume()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#createQueue(java.lang.String, org.mapdb.Serializer)">createQueue(String, Serializer&lt;E&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#createRootRef(org.mapdb.Engine, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer)">createRootRef(Engine, BTreeKeySerializer, Serializer)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dd>
+<div class="block">creates empty root node and returns recid of its reference</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/SnapshotEngine.html#createSnapshotFor(org.mapdb.Engine)">createSnapshotFor(Engine)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#createStack(java.lang.String, org.mapdb.Serializer, boolean)">createStack(String, Serializer&lt;E&gt;, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#createString(org.mapdb.DB, java.lang.String, java.lang.String)">createString(DB, String, String)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Creates new record with given name and initial value.</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#createStructure()">createStructure()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.Factory.html#createTransLogVolume()">createTransLogVolume()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.html#createTreeMap(java.lang.String, int, boolean, boolean, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">createTreeMap(String, int, boolean, boolean, BTreeKeySerializer&lt;K&gt;, Serializer&lt;V&gt;, Comparator&lt;K&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#createTreeMap(java.lang.String)">createTreeMap(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>
-<div class="block">Creates new TreeMap</div>
+<div class="block">Returns new builder for TreeMap with given name</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#createTreeMap(org.mapdb.DB.BTreeMapMaker)">createTreeMap(DB.BTreeMapMaker)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#createTreeSet(java.lang.String, int, boolean, org.mapdb.BTreeKeySerializer, java.util.Comparator)">createTreeSet(String, int, boolean, BTreeKeySerializer&lt;K&gt;, Comparator&lt;K&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>
 <div class="block">Creates new TreeSet.</div>
-</dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#createVar(org.mapdb.DB, java.lang.String, E, org.mapdb.Serializer)">createVar(DB, String, E, Serializer&lt;E&gt;)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Creates new record with given name and initial value.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html#cSerializer">cSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple3KeySerializer</a></dt>
 <dd>&nbsp;</dd>
@@ -937,6 +1001,16 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Construct new DB.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#DB(org.mapdb.Engine, boolean)">DB(Engine, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb"><span class="strong">DB.BTreeMapMaker</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#DB.BTreeMapMaker(java.lang.String)">DB.BTreeMapMaker(String)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb"><span class="strong">DB.HTreeMapMaker</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#DB.HTreeMapMaker(java.lang.String)">DB.HTreeMapMaker(String)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/DBMaker.html" title="class in org.mapdb"><span class="strong">DBMaker</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">A builder class for creating and opening a database.</div>
@@ -957,18 +1031,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.BasicKeySerializer.html#defaultSerializer">defaultSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.BasicKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.BasicKeySerializer</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.BTreeRootSerializer.html#defaultSerializer">defaultSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.BTreeRootSerializer.html" title="class in org.mapdb">BTreeMap.BTreeRootSerializer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#defaultSerializer">defaultSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#defaultSerializer">defaultSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>
 <div class="block">default serializer used for persistence.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.HashRootSerializer.html#defaultSerializer">defaultSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.HashRootSerializer.html" title="class in org.mapdb">HTreeMap.HashRootSerializer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#defaultSerialzierForSnapshots">defaultSerialzierForSnapshots</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/AsyncWriteEngine.html#delete(long, org.mapdb.Serializer)">delete(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a></dt>
 <dd>
 <div class="block">Remove existing record from store/cache</div>
@@ -981,6 +1047,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/CacheWeakSoftRef.html#delete(long, org.mapdb.Serializer)">delete(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#delete(java.lang.String)">delete(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>
+<div class="block">delete record/collection with given name</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/Engine.html#delete(long, org.mapdb.Serializer)">delete(long, Serializer&lt;A&gt;)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
 <dd>
 <div class="block">Remove existing record from store/cache</div>
@@ -1027,9 +1097,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#descendingKeySet()">descendingKeySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#descendingKeySet()">descendingKeySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#descendingKeySet()">descendingKeySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#descendingMap()">descendingMap()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#descendingMap()">descendingMap()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#descendingMap()">descendingMap()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
@@ -1045,19 +1119,11 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html#deserialize(java.io.DataInput, int, int, int)">deserialize(DataInput, int, int, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple4KeySerializer</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.BTreeRootSerializer.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.BTreeRootSerializer.html" title="class in org.mapdb">BTreeMap.BTreeRootSerializer</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.NodeSerializer.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EncryptionXTEA.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EncryptionXTEA.html" title="class in org.mapdb">EncryptionXTEA</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.HashRootSerializer.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.HashRootSerializer.html" title="class in org.mapdb">HTreeMap.HashRootSerializer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueueRootSerializer.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.CircularQueueRootSerializer.html" title="class in org.mapdb">Queues.CircularQueueRootSerializer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.QueueRootSerializer.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.QueueRootSerializer.html" title="class in org.mapdb">Queues.QueueRootSerializer</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.NodeSerializer.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.NodeSerializer.html" title="class in org.mapdb">Queues.SimpleQueue.NodeSerializer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.StackRootSerializer.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.StackRootSerializer.html" title="class in org.mapdb">Queues.StackRootSerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Serializer.CompressSerializerWrapper.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Serializer.CompressSerializerWrapper.html" title="class in org.mapdb">Serializer.CompressSerializerWrapper</a></dt>
 <dd>&nbsp;</dd>
@@ -1203,11 +1269,11 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">make sure there will be enought space in buffer to write N bytes</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#ensureAvailable(long)">ensureAvailable(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.html#ensureAvailable(long)">ensureAvailable(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#ensureAvailable(long)">ensureAvailable(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
+<dd>
+<div class="block">Check space allocated by Volume is bigger or equal to given offset.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#entrySet()">entrySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#entrySet()">entrySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -1241,6 +1307,62 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/CompressLZF.html#expand(byte[], int, int, byte[], int, int)">expand(byte[], int, int, byte[], int, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/CompressLZF.html" title="class in org.mapdb">CompressLZF</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#expire">expire</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expire">expire</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#expireAccess">expireAccess</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireAccess">expireAccess</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireAccessFlag">expireAccessFlag</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#expireAfterAccess(long, java.util.concurrent.TimeUnit)">expireAfterAccess(long, TimeUnit)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>
+<div class="block">Specifies that each entry should be automatically removed from the map once a fixed duration has elapsed after the entry&rsquo;s creation, the most recent replacement of its value, or its last access.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#expireAfterAccess(long)">expireAfterAccess(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>
+<div class="block">Specifies that each entry should be automatically removed from the map once a fixed duration has elapsed after the entry&rsquo;s creation, the most recent replacement of its value, or its last access.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#expireAfterWrite(long, java.util.concurrent.TimeUnit)">expireAfterWrite(long, TimeUnit)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>
+<div class="block">Specifies that each entry should be automatically removed from the map once a fixed duration has elapsed after the entry&rsquo;s creation, or the most recent replacement of its value.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#expireAfterWrite(long)">expireAfterWrite(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>
+<div class="block">Specifies that each entry should be automatically removed from the map once a fixed duration has elapsed after the entry&rsquo;s creation, or the most recent replacement of its value.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireFlag">expireFlag</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireHeads">expireHeads</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireLinkAdd(int, long, long, int)">expireLinkAdd(int, long, long, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireLinkBump(int, long, boolean)">expireLinkBump(int, long, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.LinkedNode.html#expireLinkNodeRecid">expireLinkNodeRecid</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireLinkRemove(int, long)">expireLinkRemove(int, long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireLinkRemoveLast(int)">expireLinkRemoveLast(int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#expireMaxSize">expireMaxSize</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#expireMaxSize(long)">expireMaxSize(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>
+<div class="block">maximal number of entries in this map.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireMaxSize">expireMaxSize</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireMaxSizeFlag">expireMaxSizeFlag</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expirePurge()">expirePurge()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireTails">expireTails</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#expireTimeStart">expireTimeStart</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a name="_F_">
 <!--   -->
@@ -1267,9 +1389,9 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.MappedFileVol.html#fileChannel">fileChannel</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb">Volume.MappedFileVol</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File)">fileFactory(boolean, int, File)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long)">fileFactory(boolean, int, File, long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, java.io.File, java.io.File)">fileFactory(boolean, int, File, File, File)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.html#fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">fileFactory(boolean, int, long, File, File, File)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#fillNulls(org.mapdb.BTreeKeySerializer)">fillNulls(BTreeKeySerializer&lt;K&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
@@ -1291,9 +1413,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.FieldInfo.html#firstCharCap(java.lang.String)">firstCharCap(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.FieldInfo.html" title="class in org.mapdb">SerializerPojo.FieldInfo</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#firstEntry()">firstEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#firstEntry()">firstEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#firstEntry()">firstEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#firstKey()">firstKey()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#firstKey()">firstKey()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -1303,9 +1429,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Atomic.Long.html#floatValue()">floatValue()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#floorEntry(K)">floorEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#floorEntry(K)">floorEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#floorEntry(K)">floorEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#floorKey(K)">floorKey(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#floorKey(K)">floorKey(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -1322,6 +1452,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#freePhysTake(int, boolean)">freePhysTake(int, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreHeap.html#freeRecids">freeRecids</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#freeSize">freeSize</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#freeSpaceReclaimQ(int)">freeSpaceReclaimQ(int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>
@@ -1381,6 +1513,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Returns the current value.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#get(java.lang.Object)">get(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#get(java.lang.Object)">get(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#get(java.lang.Object)">get(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
@@ -1395,6 +1529,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/CacheWeakSoftRef.html#get(long, org.mapdb.Serializer)">get(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#get(java.lang.String)">get(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>
+<div class="block">return record with given name or null if name does not exist</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/Engine.html#get(long, org.mapdb.Serializer)">get(long, Serializer&lt;A&gt;)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
 <dd>
 <div class="block">Get existing record.</div>
@@ -1441,6 +1579,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#get2(long, org.mapdb.Serializer)">get2(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#getAll()">getAll()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>
+<div class="block">return map of all named collections/records</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/Atomic.Integer.html#getAndAdd(int)">getAndAdd(int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Atomic.Integer.html" title="class in org.mapdb">Atomic.Integer</a></dt>
 <dd>
 <div class="block">Atomically adds the given value to the current value.</div>
@@ -1485,16 +1627,26 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Atomically sets to the given value and returns the previous value.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#getBoolean(org.mapdb.DB, java.lang.String)">getBoolean(DB, String)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Gets or creates new record with given name.</div>
-</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#getAtomicBoolean(java.lang.String)">getAtomicBoolean(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#getAtomicInteger(java.lang.String)">getAtomicInteger(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#getAtomicLong(java.lang.String)">getAtomicLong(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#getAtomicString(java.lang.String)">getAtomicString(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#getAtomicVar(java.lang.String)">getAtomicVar(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#getByte(long)">getByte(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#getByte(long)">getByte(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.html#getByte(long)">getByte(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#getCatalog()">getCatalog()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>
+<div class="block">Get Named directory.</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#getCircularQueue(java.lang.String)">getCircularQueue(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#getClassId(java.lang.Class)">getClassId(Class&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
@@ -1512,6 +1664,16 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/LongConcurrentLRUMap.Stats.html#getCumulativePuts()">getCumulativePuts()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongConcurrentLRUMap.Stats.html" title="class in org.mapdb">LongConcurrentLRUMap.Stats</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/LongConcurrentLRUMap.Stats.html#getCurrentSize()">getCurrentSize()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongConcurrentLRUMap.Stats.html" title="class in org.mapdb">LongConcurrentLRUMap.Stats</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#getCurrSize()">getCurrSize()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
+<dd>
+<div class="block">returns current size occupied by physical store (does not include index).</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#getCurrSize()">getCurrSize()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#getCurrSize()">getCurrSize()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreHeap.html#getCurrSize()">getCurrSize()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#getDataInput(long, int)">getDataInput(long, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
 <dd>&nbsp;</dd>
@@ -1549,13 +1711,23 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#getFileFromNum(long)">getFileFromNum(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Store.html#getFreeRecids()">getFreeRecids()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Store.html" title="interface in org.mapdb">Store</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#getFreeRecids()">getFreeRecids()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#getFreeRecids()">getFreeRecids()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#getFreeRecids()">getFreeRecids()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreHeap.html#getFreeRecids()">getFreeRecids()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#getFreeSize()">getFreeSize()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
+<dd>
+<div class="block">returns free size in physical store (does not include index).</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#getFreeSize()">getFreeSize()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#getFreeSize()">getFreeSize()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreHeap.html#getFreeSize()">getFreeSize()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#getFromWeakCollection(java.lang.String)">getFromWeakCollection(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>
@@ -1573,26 +1745,20 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Opens existing or creates new Hash Tree Set.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#getInner(java.lang.Object, int, int)">getInner(Object, int, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#getInt(long)">getInt(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#getInt(long)">getInt(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.html#getInt(long)">getInt(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#getInteger(org.mapdb.DB, java.lang.String)">getInteger(DB, String)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Gets or creates new record with given name.</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/LongConcurrentLRUMap.html#getLatestAccessedItems(int)">getLatestAccessedItems(int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongConcurrentLRUMap.html" title="class in org.mapdb">LongConcurrentLRUMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#getLinkedRecordsFromLog(long)">getLinkedRecordsFromLog(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#getLinkedRecordsIndexVals(long)">getLinkedRecordsIndexVals(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#getLong(org.mapdb.DB, java.lang.String)">getLong(DB, String)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Gets or creates new record with given name.</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#getLong(long)">getLong(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#getLong(long)">getLong(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
@@ -1601,7 +1767,11 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/LongConcurrentLRUMap.html#getMap()">getMap()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongConcurrentLRUMap.html" title="class in org.mapdb">LongConcurrentLRUMap</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Store.html#getMaxRecid()">getMaxRecid()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Store.html" title="interface in org.mapdb">Store</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#getMaxExpireTime()">getMaxExpireTime()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>
+<div class="block">Returns maximal (newest) expiration timestamp</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#getMaxRecid()">getMaxRecid()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#getMaxRecid()">getMaxRecid()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>&nbsp;</dd>
@@ -1609,14 +1779,14 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreHeap.html#getMaxRecid()">getMaxRecid()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#getMinExpireTime()">getMinExpireTime()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>
+<div class="block">Returns minimal (oldest) expiration timestamp</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.ClassInfo.html#getName()">getName()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.ClassInfo.html" title="class in org.mapdb">SerializerPojo.ClassInfo</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.FieldInfo.html#getName()">getName()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.FieldInfo.html" title="class in org.mapdb">SerializerPojo.FieldInfo</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.html#getNameDir()">getNameDir()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
-<dd>
-<div class="block">Get Named directory.</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#getNoLock(long, org.mapdb.Serializer)">getNoLock(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.ClassInfo.html#getObjectStreamFields()">getObjectStreamFields()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.ClassInfo.html" title="class in org.mapdb">SerializerPojo.ClassInfo</a></dt>
@@ -1627,9 +1797,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.html#getPackedLong(long)">getPackedLong(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#getPeek(java.lang.Object)">getPeek(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>
+<div class="block">Return given value, without updating cache statistics if <code>expireAccess()</code> is true</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#getQueue(java.lang.String)">getQueue(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Store.html#getRaw(long)">getRaw(long)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Store.html" title="interface in org.mapdb">Store</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#getRaw(long)">getRaw(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#getRaw(long)">getRaw(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>&nbsp;</dd>
@@ -1649,14 +1823,20 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Reads a long from the indicated position</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#getSizeLimit()">getSizeLimit()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
+<dd>
+<div class="block">returns maximal store size or <code>0</code> if there is no limit</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#getSizeLimit()">getSizeLimit()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#getSizeLimit()">getSizeLimit()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreHeap.html#getSizeLimit()">getSizeLimit()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#getStack(java.lang.String)">getStack(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/LongConcurrentLRUMap.html#getStats()">getStats()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongConcurrentLRUMap.html" title="class in org.mapdb">LongConcurrentLRUMap</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#getString(org.mapdb.DB, java.lang.String)">getString(DB, String)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Gets or creates new record with given name.</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.FieldInfo.html#getter">getter</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.FieldInfo.html" title="class in org.mapdb">SerializerPojo.FieldInfo</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#getTreeMap(java.lang.String)">getTreeMap(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
@@ -1673,10 +1853,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.html#getUnsignedShort(long)">getUnsignedShort(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Atomic.html#getVar(org.mapdb.DB, java.lang.String, org.mapdb.Serializer)">getVar(DB, String, Serializer&lt;E&gt;)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Atomic.html" title="class in org.mapdb">Atomic</a></dt>
-<dd>
-<div class="block">Gets or creates new record with given name.</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/TxMaker.html#globalMods">globalMods</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/TxMaker.html" title="class in org.mapdb">TxMaker</a></dt>
@@ -1691,6 +1867,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 </a>
 <h2 class="title">H</h2>
 <dl>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#hash">hash</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#hash(java.lang.Object)">hash(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html#hashCode()">hashCode()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple2KeySerializer</a></dt>
@@ -1727,12 +1905,18 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/LongHashMap.html#hashSaltValue()">hashSaltValue()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongHashMap.html" title="class in org.mapdb">LongHashMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#hasLimit">hasLimit</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#hasLimit">hasLimit</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.BTreeIterator.html#hasNext()">hasNext()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.BTreeIterator.html" title="class in org.mapdb">BTreeMap.BTreeIterator</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#hasValues">hasValues</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>
 <div class="block">is this a Map or Set? if false, entries do not have values, only keys are allowed</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.NodeSerializer.html#hasValues">hasValues</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#hasValues">hasValues</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>
 <div class="block">is this a Map or Set? if false, entries do not have values, only keys are allowed</div>
@@ -1747,6 +1931,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueue.html#headInsert">headInsert</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Queues.CircularQueue.html" title="class in org.mapdb">Queues.CircularQueue</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#headMap(K, boolean)">headMap(K, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#headMap(K)">headMap(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#headMap(K, boolean)">headMap(K, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#headMap(K)">headMap(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
@@ -1754,6 +1942,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#headMap(K, boolean)">headMap(K, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#headMap(K)">headMap(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#hi">hi</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#hi">hi</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
@@ -1765,9 +1955,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">autocast version of <code>HI</code></div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#higherEntry(K)">higherEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#higherEntry(K)">higherEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#higherEntry(K)">higherEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#higherKey(K)">higherKey(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#higherKey(K)">higherKey(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -1779,6 +1973,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.LeafNode.html#highKey()">highKey()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.LeafNode.html" title="class in org.mapdb">BTreeMap.LeafNode</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#hiInclusive">hiInclusive</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#hiInclusive">hiInclusive</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Bind.html#histogram(org.mapdb.Bind.MapWithModificationListener, java.util.concurrent.ConcurrentMap, org.mapdb.Fun.Function2)">histogram(Bind.MapWithModificationListener&lt;K, V&gt;, ConcurrentMap&lt;C, Long&gt;, Fun.Function2&lt;C, K, V&gt;)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Bind.html" title="class in org.mapdb">Bind</a></dt>
@@ -1789,27 +1985,27 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Thread safe concurrent HashMap <p/> This map uses full 32bit hash from beginning, There is no initial load factor and rehash.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, boolean, boolean, int, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">HTreeMap(Engine, boolean, boolean, int, Serializer, Serializer&lt;K&gt;, Serializer&lt;V&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[])">HTreeMap(Engine, long, int, long[], Serializer&lt;K&gt;, Serializer&lt;V&gt;, long, long, long, long, long[], long[])</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>
-<div class="block">Constructor used to create new HTreeMap without existing record (recid) in Engine.</div>
+<div class="block">Opens HTreeMap</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, org.mapdb.Serializer)">HTreeMap(Engine, long, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
-<dd>
-<div class="block">Constructor used to load existing HTreeMap (with assigned recid).</div>
-</dd>
-<dt><a href="./org/mapdb/HTreeMap.HashRoot.html" title="class in org.mapdb"><span class="strong">HTreeMap.HashRoot</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dt><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb"><span class="strong">HTreeMap.ExpireLinkNode</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.HashRoot.html#HTreeMap.HashRoot()">HTreeMap.HashRoot()</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.HashRoot.html" title="class in org.mapdb">HTreeMap.HashRoot</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#HTreeMap.ExpireLinkNode(long, long, long, long, int)">HTreeMap.ExpireLinkNode(long, long, long, long, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/HTreeMap.HashRootSerializer.html" title="class in org.mapdb"><span class="strong">HTreeMap.HashRootSerializer</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dt><a href="./org/mapdb/HTreeMap.ExpireRunnable.html" title="class in org.mapdb"><span class="strong">HTreeMap.ExpireRunnable</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.HashRootSerializer.html#HTreeMap.HashRootSerializer(org.mapdb.Serializer)">HTreeMap.HashRootSerializer(Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.HashRootSerializer.html" title="class in org.mapdb">HTreeMap.HashRootSerializer</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireRunnable.html#HTreeMap.ExpireRunnable(org.mapdb.HTreeMap)">HTreeMap.ExpireRunnable(HTreeMap)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireRunnable.html" title="class in org.mapdb">HTreeMap.ExpireRunnable</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb"><span class="strong">HTreeMap.KeySet</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.KeySet.html#HTreeMap.KeySet()">HTreeMap.KeySet()</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb">HTreeMap.KeySet</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb"><span class="strong">HTreeMap.LinkedNode</span></a>&lt;<a href="./org/mapdb/HTreeMap.LinkedNode.html" title="type parameter in HTreeMap.LinkedNode">K</a>,<a href="./org/mapdb/HTreeMap.LinkedNode.html" title="type parameter in HTreeMap.LinkedNode">V</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">node which holds key-value pair</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.LinkedNode.html#HTreeMap.LinkedNode(long, K, V)">HTreeMap.LinkedNode(long, K, V)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.LinkedNode.html#HTreeMap.LinkedNode(long, long, K, V)">HTreeMap.LinkedNode(long, long, K, V)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a name="_I_">
@@ -1865,6 +2061,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">index file offset where reference to longstack of free recid is stored</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#IO_FREE_SIZE">IO_FREE_SIZE</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>
+<div class="block">index file offset where space occupied by free phys records is stored</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#IO_INDEX_SIZE">IO_INDEX_SIZE</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>
 <div class="block">index file offset where current size of index file is stored</div>
@@ -1899,11 +2099,15 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreHeap.html#isClosed()">isClosed()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#isEmpty()">isEmpty()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#isEmpty()">isEmpty()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#isEmpty()">isEmpty()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#isEmpty()">isEmpty()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.KeySet.html#isEmpty()">isEmpty()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb">HTreeMap.KeySet</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/LongConcurrentHashMap.html#isEmpty()">isEmpty()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongConcurrentHashMap.html" title="class in org.mapdb">LongConcurrentHashMap</a></dt>
 <dd>
@@ -1973,6 +2177,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html#items">items</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.KeySet.html#iterator()">iterator()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb">HTreeMap.KeySet</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.html#iterator()">iterator()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -1991,11 +2197,25 @@ This class implements the LZF lossless data compression algorithm.</div>
 </a>
 <h2 class="title">K</h2>
 <dl>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#keepCounter">keepCounter</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#keepCounter(boolean)">keepCounter(boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>
+<div class="block">keepCounter if counter should be kept, without counter updates are faster, but entire collection needs to be traversed to count items.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#keepCounter">keepCounter</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#keepCounter(boolean)">keepCounter(boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>
+<div class="block">keepCounter if counter should be kept, without counter updates are faster, but entire collection needs to be traversed to count items.</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.LinkedNode.html#key">key</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/LongMap.LongMapIterator.html#key()">key()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/LongMap.LongMapIterator.html" title="interface in org.mapdb">LongMap.LongMapIterator</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.html#keyExtractor()">keyExtractor()</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Fun.html" title="class in org.mapdb">Fun</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#keyRecid">keyRecid</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.BNode.html#keys()">keys()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/BTreeMap.BNode.html" title="interface in org.mapdb">BTreeMap.BNode</a></dt>
 <dd>&nbsp;</dd>
@@ -2007,7 +2227,23 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Serializer used to convert keys from/into binary form.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.NodeSerializer.html#keySerializer">keySerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#keySerializer">keySerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#keySerializer(org.mapdb.BTreeKeySerializer)">keySerializer(BTreeKeySerializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>
+<div class="block">keySerializer used to convert keys into/from binary form.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#keySerializer">keySerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#keySerializer(org.mapdb.Serializer)">keySerializer(Serializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>
+<div class="block">keySerializer used to convert keys into/from binary form.</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#keySerializer">keySerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#keySet()">keySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#keySet()">keySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -2023,9 +2259,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dl>
 <dt><span class="strong"><a href="./org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#lastEntry()">lastEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#lastEntry()">lastEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#lastEntry()">lastEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#lastKey()">lastKey()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#lastKey()">lastKey()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -2040,6 +2280,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <div class="block">This method is used for delta compression for keys.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#LN_SERIALIZER">LN_SERIALIZER</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#lo">lo</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#lo">lo</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
@@ -2079,6 +2321,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Log lock/unlock events.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#LOG_MASK_OFFSET">LOG_MASK_OFFSET</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#LOG_SEAL">LOG_SEAL</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>
 <div class="block">added to offset 8 into log file, indicates that log was synced and closed</div>
@@ -2091,12 +2335,18 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#logSize">logSize</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#loInclusive">loInclusive</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#loInclusive">loInclusive</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Serializer.html#LONG_SERIALIZER">LONG_SERIALIZER</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></dt>
 <dd>
 <div class="block">Serializes Long into 8 bytes, used mainly for testing.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#LONG_STACK_PREF_COUNT">LONG_STACK_PREF_COUNT</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#LONG_STACK_PREF_SIZE">LONG_STACK_PREF_SIZE</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/LongConcurrentHashMap.html" title="class in org.mapdb"><span class="strong">LongConcurrentHashMap</span></a>&lt;<a href="./org/mapdb/LongConcurrentHashMap.html" title="type parameter in LongConcurrentHashMap">V</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">Thread safe LongMap.</div>
@@ -2175,9 +2425,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Atomic.Long.html#longValue()">longValue()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#lowerEntry(K)">lowerEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#lowerEntry(K)">lowerEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#lowerEntry(K)">lowerEntry(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#lowerKey(K)">lowerKey(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#lowerKey(K)">lowerKey(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -2189,7 +2443,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 </a>
 <h2 class="title">M</h2>
 <dl>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#m">m</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#m">m</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#make()">make()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#make()">make()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#make()">make()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>
@@ -2201,12 +2461,20 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#makeEntry(java.lang.Object, java.lang.Object)">makeEntry(Object, Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#makeLongMap()">makeLongMap()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>
+<div class="block">creates map optimized for using zero or positive <code>Long</code> keys</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#makeNewBuffer(long, java.nio.ByteBuffer[])">makeNewBuffer(long, ByteBuffer[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.MappedFileVol.html#makeNewBuffer(long, java.nio.ByteBuffer[])">makeNewBuffer(long, ByteBuffer[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb">Volume.MappedFileVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.MemoryVol.html#makeNewBuffer(long, java.nio.ByteBuffer[])">makeNewBuffer(long, ByteBuffer[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.MemoryVol.html" title="class in org.mapdb">Volume.MemoryVol</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#makeStringMap()">makeStringMap()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>
+<div class="block">creates map optimized for using <code>String</code> keys</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/TxMaker.html#makeTx()">makeTx()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/TxMaker.html" title="class in org.mapdb">TxMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#makeTxMaker()">makeTxMaker()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
@@ -2217,11 +2485,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.MappedFileVol.html#mapMode">mapMode</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb">Volume.MappedFileVol</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#MASK_IS_LINKED">MASK_IS_LINKED</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#MASK_ARCHIVE">MASK_ARCHIVE</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#MASK_DISCARD">MASK_DISCARD</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#MASK_LINKED">MASK_LINKED</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#MASK_OFFSET">MASK_OFFSET</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#MASK_SIZE">MASK_SIZE</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#MAX_REC_SIZE">MAX_REC_SIZE</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>
@@ -2237,7 +2507,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreHeap.html#maxRecid">maxRecid</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#memoryFactory(boolean)">memoryFactory(boolean)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.html#memoryFactory(boolean, long)">memoryFactory(boolean, long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#modified">modified</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>
@@ -2265,6 +2535,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 </a>
 <h2 class="title">N</h2>
 <dl>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#name">name</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#name">name</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.ClassInfo.html#name">name</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.ClassInfo.html" title="class in org.mapdb">SerializerPojo.ClassInfo</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.FieldInfo.html#name">name</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.FieldInfo.html" title="class in org.mapdb">SerializerPojo.FieldInfo</a></dt>
@@ -2273,12 +2547,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.ClassInfo.html#name2fieldInfo">name2fieldInfo</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.ClassInfo.html" title="class in org.mapdb">SerializerPojo.ClassInfo</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Engine.html#NAME_DIR_RECID">NAME_DIR_RECID</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#navigableKeySet()">navigableKeySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.html#nameDir">nameDir</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
-<dd>
-<div class="block">view over named records</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#navigableKeySet()">navigableKeySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#navigableKeySet()">navigableKeySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
@@ -2335,6 +2605,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.LeafNode.html#next()">next()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.LeafNode.html" title="class in org.mapdb">BTreeMap.LeafNode</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#next">next</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.LinkedNode.html#next">next</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.Node.html#next">next</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.Node.html" title="class in org.mapdb">Queues.SimpleQueue.Node</a></dt>
@@ -2353,6 +2625,12 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.html#nodeSerializer">nodeSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#nodeSize">nodeSize</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#nodeSize(int)">nodeSize(int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>
+<div class="block">nodeSize maximal size of node, larger node causes overflow and creation of new BTree node.</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/SnapshotEngine.html#NOT_EXIST">NOT_EXIST</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SnapshotEngine.html#NOT_INIT_YET">NOT_INIT_YET</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a></dt>
@@ -2399,6 +2677,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Compile with more assertions and verifications.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.KeySet.html#parent()">parent()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb">HTreeMap.KeySet</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueue.html#peek()">peek()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.CircularQueue.html" title="class in org.mapdb">Queues.CircularQueue</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.Queue.html#peek()">peek()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.Queue.html" title="class in org.mapdb">Queues.Queue</a></dt>
@@ -2421,9 +2701,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.Stack.html#poll()">poll()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.Stack.html" title="class in org.mapdb">Queues.Stack</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#pollFirstEntry()">pollFirstEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#pollFirstEntry()">pollFirstEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#pollFirstEntry()">pollFirstEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#pollLastEntry()">pollLastEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#pollLastEntry()">pollLastEntry()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -2433,9 +2717,19 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DataOutput2.html#pos">pos</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#preallocateSegments(org.mapdb.Engine)">preallocateSegments(Engine)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#preinitCatalog(org.mapdb.DB)">preinitCatalog(DB)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dd>
+<div class="block">hack used for DB Catalog</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#prev">prev</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.FieldInfo.html#primitive">primitive</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.FieldInfo.html" title="class in org.mapdb">SerializerPojo.FieldInfo</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Utils.html#printProgress(java.util.concurrent.atomic.AtomicLong)">printProgress(AtomicLong)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Utils.html" title="class in org.mapdb">Utils</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#printStatistics()">printStatistics()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#printTreeStructure()">printTreeStructure()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -2449,6 +2743,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Insert new record.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#put(K, V)">put(K, V)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#put(K, V)">put(K, V)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#put(K, V)">put(K, V)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
@@ -2525,6 +2821,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.html#putData(long, java.nio.ByteBuffer)">putData(long, ByteBuffer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#putIfAbsent(K, V)">putIfAbsent(K, V)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#putIfAbsent(K, V)">putIfAbsent(K, V)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#putIfAbsent(K, V)">putIfAbsent(K, V)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
@@ -2575,27 +2873,11 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueue.html#Queues.CircularQueue(org.mapdb.Engine, org.mapdb.Serializer, long, long, long)">Queues.CircularQueue(Engine, Serializer, long, long, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.CircularQueue.html" title="class in org.mapdb">Queues.CircularQueue</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/Queues.CircularQueueRoot.html" title="class in org.mapdb"><span class="strong">Queues.CircularQueueRoot</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueueRoot.html#Queues.CircularQueueRoot(long, long, long, org.mapdb.Serializer)">Queues.CircularQueueRoot(long, long, long, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.CircularQueueRoot.html" title="class in org.mapdb">Queues.CircularQueueRoot</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/Queues.CircularQueueRootSerializer.html" title="class in org.mapdb"><span class="strong">Queues.CircularQueueRootSerializer</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueueRootSerializer.html#Queues.CircularQueueRootSerializer(org.mapdb.Serializer)">Queues.CircularQueueRootSerializer(Serializer&lt;Serializer&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.CircularQueueRootSerializer.html" title="class in org.mapdb">Queues.CircularQueueRootSerializer</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Queues.Queue.html" title="class in org.mapdb"><span class="strong">Queues.Queue</span></a>&lt;<a href="./org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">First in first out lock-free queue</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.Queue.html#Queues.Queue(org.mapdb.Engine, org.mapdb.Serializer, long, long, long)">Queues.Queue(Engine, Serializer&lt;E&gt;, long, long, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.Queue.html" title="class in org.mapdb">Queues.Queue</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/Queues.QueueRoot.html" title="class in org.mapdb"><span class="strong">Queues.QueueRoot</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.QueueRoot.html#Queues.QueueRoot(long, long, long, org.mapdb.Serializer)">Queues.QueueRoot(long, long, long, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.QueueRoot.html" title="class in org.mapdb">Queues.QueueRoot</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/Queues.QueueRootSerializer.html" title="class in org.mapdb"><span class="strong">Queues.QueueRootSerializer</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.QueueRootSerializer.html#Queues.QueueRootSerializer(org.mapdb.Serializer)">Queues.QueueRootSerializer(Serializer&lt;Serializer&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.QueueRootSerializer.html" title="class in org.mapdb">Queues.QueueRootSerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb"><span class="strong">Queues.SimpleQueue</span></a>&lt;<a href="./org/mapdb/Queues.SimpleQueue.html" title="type parameter in Queues.SimpleQueue">E</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
@@ -2614,14 +2896,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <div class="block">Last in first out lock-free queue</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.Stack.html#Queues.Stack(org.mapdb.Engine, org.mapdb.Serializer, long, boolean)">Queues.Stack(Engine, Serializer&lt;E&gt;, long, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.Stack.html" title="class in org.mapdb">Queues.Stack</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/Queues.StackRoot.html" title="class in org.mapdb"><span class="strong">Queues.StackRoot</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.StackRoot.html#Queues.StackRoot(long, boolean, org.mapdb.Serializer)">Queues.StackRoot(long, boolean, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.StackRoot.html" title="class in org.mapdb">Queues.StackRoot</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/Queues.StackRootSerializer.html" title="class in org.mapdb"><span class="strong">Queues.StackRootSerializer</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.StackRootSerializer.html#Queues.StackRootSerializer(org.mapdb.Serializer)">Queues.StackRootSerializer(Serializer&lt;Serializer&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.StackRootSerializer.html" title="class in org.mapdb">Queues.StackRootSerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/CacheWeakSoftRef.html#queueThread">queueThread</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a></dt>
 <dd>&nbsp;</dd>
@@ -2723,6 +2997,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.BTreeIterator.html#remove()">remove()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.BTreeIterator.html" title="class in org.mapdb">BTreeMap.BTreeIterator</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#remove(java.lang.Object)">remove(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#remove(java.lang.Object, java.lang.Object)">remove(Object, Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#remove(java.lang.Object)">remove(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#remove(java.lang.Object, java.lang.Object)">remove(Object, Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
@@ -2730,6 +3008,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#remove(java.lang.Object)">remove(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#remove(java.lang.Object, java.lang.Object)">remove(Object, Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.KeySet.html#remove(java.lang.Object)">remove(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb">HTreeMap.KeySet</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#remove(java.lang.Object)">remove(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -2759,6 +3039,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.html#removeAll(java.util.Collection)">removeAll(Collection&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#removeInternal(java.lang.Object, int, int, boolean)">removeInternal(Object, int, int, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Bind.MapWithModificationListener.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a></dt>
 <dd>
 <div class="block">Remove registered notification listener</div>
@@ -2766,6 +3048,14 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#rename(java.lang.String, java.lang.String)">rename(String, String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>
+<div class="block">rename named record into newName</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#replace(K, V, V)">replace(K, V, V)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#replace(K, V)">replace(K, V)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#replace(K, V, V)">replace(K, V, V)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -2835,8 +3125,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#rollover()">rollover()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#rootRecid">rootRecid</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#rootRecidRef">rootRecidRef</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>
 <div class="block">recid under which reference to rootRecid is stored</div>
@@ -2850,6 +3138,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Runnable2.html#run(A, B)">run(A, B)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Fun.Runnable2.html" title="interface in org.mapdb">Fun.Runnable2</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Runnable3.html#run(A, B, C)">run(A, B, C)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Fun.Runnable3.html" title="interface in org.mapdb">Fun.Runnable3</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireRunnable.html#run()">run()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireRunnable.html" title="class in org.mapdb">HTreeMap.ExpireRunnable</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/CacheWeakSoftRef.html#runRefQueue()">runRefQueue()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a></dt>
 <dd>
@@ -2897,19 +3187,11 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html#serialize(java.io.DataOutput, int, int, java.lang.Object[])">serialize(DataOutput, int, int, Object[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple4KeySerializer</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.BTreeRootSerializer.html#serialize(java.io.DataOutput, org.mapdb.BTreeMap.BTreeRoot)">serialize(DataOutput, BTreeMap.BTreeRoot)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.BTreeRootSerializer.html" title="class in org.mapdb">BTreeMap.BTreeRootSerializer</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.NodeSerializer.html#serialize(java.io.DataOutput, org.mapdb.BTreeMap.BNode)">serialize(DataOutput, BTreeMap.BNode)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EncryptionXTEA.html#serialize(java.io.DataOutput, byte[])">serialize(DataOutput, byte[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EncryptionXTEA.html" title="class in org.mapdb">EncryptionXTEA</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.HashRootSerializer.html#serialize(java.io.DataOutput, org.mapdb.HTreeMap.HashRoot)">serialize(DataOutput, HTreeMap.HashRoot)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.HashRootSerializer.html" title="class in org.mapdb">HTreeMap.HashRootSerializer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueueRootSerializer.html#serialize(java.io.DataOutput, org.mapdb.Queues.CircularQueueRoot)">serialize(DataOutput, Queues.CircularQueueRoot)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.CircularQueueRootSerializer.html" title="class in org.mapdb">Queues.CircularQueueRootSerializer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.QueueRootSerializer.html#serialize(java.io.DataOutput, org.mapdb.Queues.QueueRoot)">serialize(DataOutput, Queues.QueueRoot)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.QueueRootSerializer.html" title="class in org.mapdb">Queues.QueueRootSerializer</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.NodeSerializer.html#serialize(java.io.DataOutput, org.mapdb.Queues.SimpleQueue.Node)">serialize(DataOutput, Queues.SimpleQueue.Node&lt;E&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.NodeSerializer.html" title="class in org.mapdb">Queues.SimpleQueue.NodeSerializer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.StackRootSerializer.html#serialize(java.io.DataOutput, org.mapdb.Queues.StackRoot)">serialize(DataOutput, Queues.StackRoot)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.StackRootSerializer.html" title="class in org.mapdb">Queues.StackRootSerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Serializer.CompressSerializerWrapper.html#serialize(java.io.DataOutput, E)">serialize(DataOutput, E)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Serializer.CompressSerializerWrapper.html" title="class in org.mapdb">Serializer.CompressSerializerWrapper</a></dt>
 <dd>&nbsp;</dd>
@@ -2928,6 +3210,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/Atomic.Var.html#serializer">serializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Atomic.Var.html" title="class in org.mapdb">Atomic.Var</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/CompressLZF.html#SERIALIZER">SERIALIZER</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/CompressLZF.html" title="class in org.mapdb">CompressLZF</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#SERIALIZER">SERIALIZER</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.html#serializer">serializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></dt>
 <dd>&nbsp;</dd>
@@ -3027,9 +3311,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Binds <a href="./org/mapdb/Atomic.Long.html" title="class in org.mapdb"><code>Atomic.Long</code></a> to Primary Map so the Atomic.Long contains size of Map.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#size()">size()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#size()">size()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#size()">size()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.KeySet.html#size()">size()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.KeySet.html" title="class in org.mapdb">HTreeMap.KeySet</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#size()">size()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -3058,6 +3346,16 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#size">size</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#size2ListIoRecid(long)">size2ListIoRecid(long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.html#sizeLimit(double)">sizeLimit(double)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
+<dd>
+<div class="block">Sets store size limit.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#sizeLimit">sizeLimit</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#sizeLimit">sizeLimit</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#sizeLimit">sizeLimit</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#SIZEP">SIZEP</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>
@@ -3121,10 +3419,12 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Starts background threads.</div>
 </dd>
-<dt><a href="./org/mapdb/Store.html" title="interface in org.mapdb"><span class="strong">Store</span></a> - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dt><a href="./org/mapdb/Store.html" title="class in org.mapdb"><span class="strong">Store</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">Low level record store.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#Store()">Store()</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb"><span class="strong">StoreAppend</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">Append only store.</div>
@@ -3137,13 +3437,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Storage Engine which saves record directly into file.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean)">StoreDirect(Volume.Factory, boolean, boolean, int, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long)">StoreDirect(Volume.Factory, boolean, boolean, int, boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory)">StoreDirect(Volume.Factory)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Pump.html#storeForDB(org.mapdb.DB)">storeForDB(DB)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Pump.html" title="class in org.mapdb">Pump</a></dt>
 <dd>
-<div class="block">traverses <a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s and returns underlying <a href="./org/mapdb/Store.html" title="interface in org.mapdb"><code>Store</code></a></div>
+<div class="block">traverses <a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s and returns underlying <a href="./org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a></div>
 </dd>
 <dt><a href="./org/mapdb/StoreHeap.html" title="class in org.mapdb"><span class="strong">StoreHeap</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
@@ -3157,8 +3457,14 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory)">StoreWAL(Volume.Factory)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean)">StoreWAL(Volume.Factory, boolean, boolean, int, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long)">StoreWAL(Volume.Factory, boolean, boolean, int, boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#strictDBGet">strictDBGet</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.html#strictDBGet()">strictDBGet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
+<dd>
+<div class="block">DB Get methods such as <a href="./org/mapdb/DB.html#getTreeMap(java.lang.String)"><code>DB.getTreeMap(String)</code></a> or <a href="./org/mapdb/DB.html#getAtomicLong(java.lang.String)"><code>DB.getAtomicLong(String)</code></a> auto create new record with default values, if record with given name does not exist.</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.html#STRING">STRING</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></dt>
 <dd>
 <div class="block">Applies delta packing on <code>java.lang.String</code>.</div>
@@ -3170,6 +3476,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#structuralLock">structuralLock</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#structuralLock">structuralLock</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#subMap(K, boolean, K, boolean)">subMap(K, boolean, K, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#subMap(K, K)">subMap(K, K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#subMap(K, boolean, K, boolean)">subMap(K, boolean, K, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -3213,6 +3523,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.Queue.html#tail">tail</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Queues.Queue.html" title="class in org.mapdb">Queues.Queue</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#tailMap(K, boolean)">tailMap(K, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.DescendingMap.html#tailMap(K)">tailMap(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#tailMap(K, boolean)">tailMap(K, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.SubMap.html#tailMap(K)">tailMap(K)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a></dt>
@@ -3233,6 +3547,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">If background thread fails with exception, it is stored here, and rethrown to all callers.</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireLinkNode.html#time">time</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.html#toArray()">toArray()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.html#toArray(T[])">toArray(T[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></dt>
@@ -3277,7 +3593,11 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#TRANS_LOG_FILE_EXT">TRANS_LOG_FILE_EXT</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#treeRecid">treeRecid</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#tryAvailable(long)">tryAvailable(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#tryAvailable(long)">tryAvailable(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.html#tryAvailable(long)">tryAvailable(long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.html#TUPLE2">TUPLE2</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></dt>
 <dd>
@@ -3389,7 +3709,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#updateNoLock(long, org.mapdb.DataOutput2)">updateNoLock(long, DataOutput2)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Store.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw(long, ByteBuffer)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Store.html" title="interface in org.mapdb">Store</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw(long, ByteBuffer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw(long, ByteBuffer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>&nbsp;</dd>
@@ -3431,6 +3751,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.LeafNode.html#vals()">vals()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.LeafNode.html" title="class in org.mapdb">BTreeMap.LeafNode</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.NodeSerializer.html#valsOutsideNodes">valsOutsideNodes</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#valsOutsideNodes">valsOutsideNodes</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>
 <div class="block">store values as part of BTree nodes</div>
@@ -3447,9 +3769,23 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#values()">values()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.NodeSerializer.html#valueSerializer">valueSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#valueSerializer">valueSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>
 <div class="block">Serializer used to convert keys from/into binary form</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#valueSerializer">valueSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer(Serializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>
+<div class="block">valueSerializer used to convert values into/from binary form.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#valueSerializer">valueSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer(Serializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dd>
+<div class="block">valueSerializer used to convert values into/from binary form.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#valueSerializer">valueSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -3461,6 +3797,12 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/LongMap.html#valuesIterator()">valuesIterator()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/LongMap.html" title="class in org.mapdb">LongMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#valuesStoredOutsideNodes">valuesStoredOutsideNodes</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#valuesStoredOutsideNodes(boolean)">valuesStoredOutsideNodes(boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>
+<div class="block">valuesStoredOutsideNodes if true, values are stored outside of BTree nodes.</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#volFac">volFac</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Volume.html" title="class in org.mapdb"><span class="strong">Volume</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
@@ -3473,7 +3815,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Abstract Volume over bunch of ByteBuffers It leaves ByteBufferVol details (allocation, disposal) on subclasses.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#Volume.ByteBufferVol(boolean)">Volume.ByteBufferVol(boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#Volume.ByteBufferVol(boolean, long)">Volume.ByteBufferVol(boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Volume.Factory.html" title="interface in org.mapdb"><span class="strong">Volume.Factory</span></a> - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
@@ -3483,17 +3825,17 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Volume which uses FileChannel.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#Volume.FileChannelVol(java.io.File, boolean)">Volume.FileChannelVol(File, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#Volume.FileChannelVol(java.io.File, boolean, long)">Volume.FileChannelVol(File, boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb"><span class="strong">Volume.MappedFileVol</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.MappedFileVol.html#Volume.MappedFileVol(java.io.File, boolean)">Volume.MappedFileVol(File, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb">Volume.MappedFileVol</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.MappedFileVol.html#Volume.MappedFileVol(java.io.File, boolean, long)">Volume.MappedFileVol(File, boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb">Volume.MappedFileVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Volume.MemoryVol.html" title="class in org.mapdb"><span class="strong">Volume.MemoryVol</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.MemoryVol.html#Volume.MemoryVol(boolean)">Volume.MemoryVol(boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.MemoryVol.html" title="class in org.mapdb">Volume.MemoryVol</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.MemoryVol.html#Volume.MemoryVol(boolean, long)">Volume.MemoryVol(boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.MemoryVol.html" title="class in org.mapdb">Volume.MemoryVol</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean)">volumeForFile(File, boolean, boolean)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long)">volumeForFile(File, boolean, boolean, long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreAppend.html#volumes">volumes</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></dt>
 <dd>
@@ -3613,7 +3955,11 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#_readOnly">_readOnly</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.html#_sizeLimit">_sizeLimit</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#_snapshotDisabled">_snapshotDisabled</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.html#_strictDBGet">_strictDBGet</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#_syncOnCommitDisabled">_syncOnCommitDisabled</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>&nbsp;</dd>

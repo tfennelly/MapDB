@@ -34,7 +34,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapdb/Store.html" title="interface in org.mapdb"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../org/mapdb/Store.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -85,7 +85,12 @@
 <li><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
+<li><a href="../../org/mapdb/Store.html" title="class in org.mapdb">org.mapdb.Store</a></li>
+<li>
+<ul class="inheritance">
 <li>org.mapdb.StoreAppend</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -94,13 +99,12 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>, <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></dd>
+<dd><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="strong">StoreAppend</span>
-extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></pre>
+extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></pre>
 <div class="block"><p>Append only store. Uses different file format than Direct and WAL store</p></div>
 </li>
 </ul>
@@ -276,7 +280,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <!--   -->
 </a>
 <h3>Fields inherited from interface&nbsp;org.mapdb.<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></h3>
-<code><a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a>, <a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a>, <a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a>, <a href="../../org/mapdb/Engine.html#NAME_DIR_RECID">NAME_DIR_RECID</a></code></li>
+<code><a href="../../org/mapdb/Engine.html#CATALOG_RECID">CATALOG_RECID</a>, <a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a>, <a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a>, <a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a></code></li>
 </ul>
 </li>
 </ul>
@@ -318,32 +322,38 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#calculateStatistics()">calculateStatistics</a></strong>()</code>
+<div class="block">get some statistics about store.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#canRollback()">canRollback</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#clearCache()">clearCache</a></strong>()</code>
 <div class="block">clears any underlying cache</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#close()">close</a></strong>()</code>
 <div class="block">Close store/cache.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#commit()">commit</a></strong>()</code>
 <div class="block">Makes all changes made since the previous commit/rollback permanent.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#compact()">compact</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
@@ -352,18 +362,24 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <div class="block">Updates existing record in atomic <a href="http://en.wikipedia.org/wiki/Compare-and-swap">(Compare And Swap)</a> manner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
       <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Remove existing record from store/cache</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Get existing record.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#getCurrSize()">getCurrSize</a></strong>()</code>
+<div class="block">returns current size occupied by physical store (does not include index).</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -376,16 +392,28 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#getMaxRecid()">getMaxRecid</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#getFreeSize()">getFreeSize</a></strong>()</code>
+<div class="block">returns free size in physical store (does not include index).</div>
+</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#getMaxRecid()">getMaxRecid</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected &lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#getNoLock(long, org.mapdb.Serializer)">getNoLock</a></strong>(long&nbsp;recid,
          <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#getRaw(long)">getRaw</a></strong>(long&nbsp;recid)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreAppend.html#getSizeLimit()">getSizeLimit</a></strong>()</code>
+<div class="block">returns maximal store size or <code>0</code> if there is no limit</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
@@ -444,6 +472,13 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
          <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;data)</code>&nbsp;</td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.mapdb.Store">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></h3>
+<code><a href="../../org/mapdb/Store.html#printStatistics()">printStatistics</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
@@ -824,10 +859,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
            <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#put(A, org.mapdb.Serializer)">Engine</a></code></strong></div>
 <div class="block"><p>Insert new record.</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#put(A, org.mapdb.Serializer)">put</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>value</code> - records to be added</dd><dd><code>serializer</code> - used to convert record into/from binary form</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>value</code> - records to be added</dd><dd><code>serializer</code> - used to convert record into/from binary form</dd>
 <dt><span class="strong">Returns:</span></dt><dd>recid (record identifier) under which record is stored.</dd></dl>
 </li>
 </ul>
@@ -841,10 +873,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
         <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#get(long, org.mapdb.Serializer)">Engine</a></code></strong></div>
 <div class="block"><p>Get existing record. <p/> Recid must be a number returned by &lsquo;put&rsquo; method. Behaviour for invalid recid (random number or already deleted record) is not defined, typically it returns null or throws &lsquo;EndOfFileException&rsquo;</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#get(long, org.mapdb.Serializer)">get</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted</dd><dd><code>serializer</code> - used to deserialize record from binary form</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted</dd><dd><code>serializer</code> - used to deserialize record from binary form</dd>
 <dt><span class="strong">Returns:</span></dt><dd>record matching given recid, or null if record is not found under given recid.</dd></dl>
 </li>
 </ul>
@@ -874,10 +903,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
               <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#update(long, A, org.mapdb.Serializer)">Engine</a></code></strong></div>
 <div class="block"><p>Update existing record with new value. <p/> Recid must be a number returned by &lsquo;put&rsquo; method. Behaviour for invalid recid (random number or already deleted record) is not defined, typically it throws &lsquo;EndOfFileException&rsquo;, but it may also corrupt store.</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#update(long, A, org.mapdb.Serializer)">update</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>value</code> - new record value to be stored</dd><dd><code>serializer</code> - used to serialize record into binary form</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>value</code> - new record value to be stored</dd><dd><code>serializer</code> - used to serialize record into binary form</dd></dl>
 </li>
 </ul>
 <a name="updateNoLock(long, org.mapdb.DataOutput2)">
@@ -904,10 +930,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
                          <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">Engine</a></code></strong></div>
 <div class="block"><p>Updates existing record in atomic <a href="http://en.wikipedia.org/wiki/Compare-and-swap">(Compare And Swap)</a> manner. Value is modified only if old value matches expected value. There are three ways to match values, MapDB may use any of them: <ol>  <li>Equality check <code>oldValue==expectedOldValue</code> when old value is found in instance cache</li>  <li>Deserializing <code>oldValue</code> using <code>serializer</code> and checking <code>oldValue.equals(expectedOldValue)</code></li>  <li>Serializing <code>expectedOldValue</code> using <code>serializer </code> and comparing binary array with already serialized <code>oldValue</code> </ol> <p/> Recid must be a number returned by &lsquo;put&rsquo; method. Behaviour for invalid recid (random number or already deleted record) is not defined, typically it throws &lsquo;EndOfFileException&rsquo;, but it may also corrupt store.</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>expectedOldValue</code> - old value to be compared with existing record</dd><dd><code>newValue</code> - to be written if values are matching</dd><dd><code>serializer</code> - used to serialize record into binary form</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>expectedOldValue</code> - old value to be compared with existing record</dd><dd><code>newValue</code> - to be written if values are matching</dd><dd><code>serializer</code> - used to serialize record into binary form</dd>
 <dt><span class="strong">Returns:</span></dt><dd>true if values matched and newValue was written</dd></dl>
 </li>
 </ul>
@@ -922,10 +945,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#delete(long, org.mapdb.Serializer)">Engine</a></code></strong></div>
 <div class="block"><p>Remove existing record from store/cache</p>
 <p/><p>Recid must be a number returned by &lsquo;put&rsquo; method. Behaviour for invalid recid (random number or already deleted record) is not defined, typically it throws &lsquo;EndOfFileException&rsquo;, but it may also corrupt store.</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#delete(long, org.mapdb.Serializer)">delete</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which was record persisted</dd><dd><code>serializer</code> - which may be used in some circumstances to deserialize and store old object</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which was record persisted</dd><dd><code>serializer</code> - which may be used in some circumstances to deserialize and store old object</dd></dl>
 </li>
 </ul>
 <a name="close()">
@@ -937,10 +957,6 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;void&nbsp;close()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#close()">Engine</a></code></strong></div>
 <div class="block"><p>Close store/cache. This method must be called before JVM exits to flush all caches and prevent store corruption. Also it releases resources used by MapDB (disk, memory..). <p/> Engine can no longer be used after this method was called. If Engine is used after closing, it may throw any exception including <code>NullPointerException</code> </p> There is an configuration option <a href="../../org/mapdb/DBMaker.html#closeOnJvmShutdown()"><code>DBMaker.closeOnJvmShutdown()</code></a> which uses shutdown hook to automatically close Engine when JVM shutdowns.</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#close()">close</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-</dl>
 </li>
 </ul>
 <a name="isClosed()">
@@ -952,10 +968,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;boolean&nbsp;isClosed()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#isClosed()">Engine</a></code></strong></div>
 <div class="block"><p>Checks whether Engine was closed.</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#isClosed()">isClosed</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><span class="strong">Returns:</span></dt><dd>true if engine was closed</dd></dl>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if engine was closed</dd></dl>
 </li>
 </ul>
 <a name="commit()">
@@ -967,10 +980,6 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;void&nbsp;commit()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#commit()">Engine</a></code></strong></div>
 <div class="block"><p>Makes all changes made since the previous commit/rollback permanent. In transactional mode (on by default) it means creating journal file and replaying it to storage. In other modes it may flush disk caches or do nothing at all (check your config options)</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#commit()">commit</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-</dl>
 </li>
 </ul>
 <a name="rollback()">
@@ -983,10 +992,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
               throws <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#rollback()">Engine</a></code></strong></div>
 <div class="block"><p>Undoes all changes made in the current transaction. If transactions are disabled it throws <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang"><code>UnsupportedOperationException</code></a>.</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#rollback()">rollback</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><span class="strong">Throws:</span></dt>
+<dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if transactions are disabled</dd></dl>
 </li>
 </ul>
@@ -997,10 +1003,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <li class="blockList">
 <h4>canRollback</h4>
 <pre>public&nbsp;boolean&nbsp;canRollback()</pre>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#canRollback()">canRollback</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><span class="strong">Returns:</span></dt><dd>true if engine supports rollback</dd></dl>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if engine supports rollback</dd></dl>
 </li>
 </ul>
 <a name="isReadOnly()">
@@ -1012,10 +1015,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;boolean&nbsp;isReadOnly()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#isReadOnly()">Engine</a></code></strong></div>
 <div class="block"><p>Check if you can write into this Engine. It may be readonly in some cases (snapshot, read-only files).</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#isReadOnly()">isReadOnly</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><span class="strong">Returns:</span></dt><dd>true if engine is read-only</dd></dl>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if engine is read-only</dd></dl>
 </li>
 </ul>
 <a name="clearCache()">
@@ -1027,10 +1027,6 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;void&nbsp;clearCache()</pre>
 <div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#clearCache()">Engine</a></code></strong></div>
 <div class="block"><p>clears any underlying cache</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#clearCache()">clearCache</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-</dl>
 </li>
 </ul>
 <a name="compact()">
@@ -1040,10 +1036,6 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <li class="blockList">
 <h4>compact</h4>
 <pre>public&nbsp;void&nbsp;compact()</pre>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#compact()">compact</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-</dl>
 </li>
 </ul>
 <a name="getMaxRecid()">
@@ -1055,7 +1047,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;long&nbsp;getMaxRecid()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Store.html#getMaxRecid()">getMaxRecid</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></code></dd>
+<dd><code><a href="../../org/mapdb/Store.html#getMaxRecid()">getMaxRecid</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1068,7 +1060,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;getRaw(long&nbsp;recid)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Store.html#getRaw(long)">getRaw</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></code></dd>
+<dd><code><a href="../../org/mapdb/Store.html#getRaw(long)">getRaw</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1081,21 +1073,81 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;getFreeRecids()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Store.html#getFreeRecids()">getFreeRecids</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></code></dd>
+<dd><code><a href="../../org/mapdb/Store.html#getFreeRecids()">getFreeRecids</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
 </dl>
 </li>
 </ul>
 <a name="updateRaw(long, java.nio.ByteBuffer)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>updateRaw</h4>
 <pre>public&nbsp;void&nbsp;updateRaw(long&nbsp;recid,
              <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;data)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Store.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></code></dd>
+<dd><code><a href="../../org/mapdb/Store.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getSizeLimit()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSizeLimit</h4>
+<pre>public&nbsp;long&nbsp;getSizeLimit()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../org/mapdb/Store.html#getSizeLimit()">Store</a></code></strong></div>
+<div class="block"><p>returns maximal store size or <code>0</code> if there is no limit</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Store.html#getSizeLimit()">getSizeLimit</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getCurrSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrSize</h4>
+<pre>public&nbsp;long&nbsp;getCurrSize()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../org/mapdb/Store.html#getCurrSize()">Store</a></code></strong></div>
+<div class="block"><p>returns current size occupied by physical store (does not include index). It means file allocated by physical file</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Store.html#getCurrSize()">getCurrSize</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getFreeSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFreeSize</h4>
+<pre>public&nbsp;long&nbsp;getFreeSize()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../org/mapdb/Store.html#getFreeSize()">Store</a></code></strong></div>
+<div class="block"><p>returns free size in physical store (does not include index).</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Store.html#getFreeSize()">getFreeSize</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="calculateStatistics()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>calculateStatistics</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;calculateStatistics()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../org/mapdb/Store.html#calculateStatistics()">Store</a></code></strong></div>
+<div class="block"><p>get some statistics about store. This may require traversing entire store, so it can take some time.</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Store.html#calculateStatistics()">calculateStatistics</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -1128,7 +1180,7 @@ hljs.initHighlightingOnLoad();
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapdb/Store.html" title="interface in org.mapdb"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../org/mapdb/Store.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

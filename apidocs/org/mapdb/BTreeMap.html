@@ -140,7 +140,7 @@ ordering</a> of its keys, or by a <a href="http://docs.oracle.com/javase/6/docs/
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.BTreeRootSerializer.html" title="class in org.mapdb">BTreeMap.BTreeRootSerializer</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.DescendingMap.html" title="class in org.mapdb">BTreeMap.DescendingMap</a>&lt;<a href="../../org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">K</a>,<a href="../../org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">V</a>&gt;</strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected static class&nbsp;</code></td>
@@ -152,9 +152,13 @@ ordering</a> of its keys, or by a <a href="http://docs.oracle.com/javase/6/docs/
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a>&lt;<a href="../../org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">K</a>,<a href="../../org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">V</a>&gt;</strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.SubMap.html" title="class in org.mapdb">BTreeMap.SubMap</a>&lt;<a href="../../org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">K</a>,<a href="../../org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">V</a>&gt;</strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected static class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.ValRef.html" title="class in org.mapdb">BTreeMap.ValRef</a></strong></code>
 <div class="block">if <code>valsOutsideNodes</code> is true, this class is used instead of values.</div>
@@ -200,60 +204,52 @@ ordering</a> of its keys, or by a <a href="http://docs.oracle.com/javase/6/docs/
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#counter">counter</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#defaultSerializer">defaultSerializer</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#engine">engine</a></strong></code>
 <div class="block">DB Engine in which entries are persisted</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#hasValues">hasValues</a></strong></code>
 <div class="block">is this a Map or Set? if false, entries do not have values, only keys are allowed</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#keySerializer">keySerializer</a></strong></code>
 <div class="block">Serializer used to convert keys from/into binary form.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#maxNodeSize">maxNodeSize</a></strong></code>
 <div class="block">maximal node size allowed in this BTree</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#modListeners">modListeners</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#modListenersLock">modListenersLock</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/LongConcurrentHashMap.html" title="class in org.mapdb">LongConcurrentHashMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#nodeLocks">nodeLocks</a></strong></code>
 <div class="block">holds node level locks</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/BTreeMap.BNode.html" title="interface in org.mapdb">BTreeMap.BNode</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#nodeSerializer">nodeSerializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#rootRecidRef">rootRecidRef</a></strong></code>
 <div class="block">recid under which reference to rootRecid is stored</div>
 </td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#treeRecid">treeRecid</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
@@ -282,23 +278,15 @@ ordering</a> of its keys, or by a <a href="http://docs.oracle.com/javase/6/docs/
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, int, boolean, boolean, boolean, org.mapdb.Serializer, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colOne"><code><strong><a href="../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+        long&nbsp;rootRecidRef,
         int&nbsp;maxNodeSize,
-        boolean&nbsp;hasValues,
         boolean&nbsp;valsOutsideNodes,
-        boolean&nbsp;keepCounter,
-        <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer,
+        long&nbsp;counterRecid,
         <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;keySerializer,
         <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;&nbsp;valueSerializer,
         <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;comparator)</code>
-<div class="block">Constructor used to create new BTreeMap without existing record (recid) in Engine.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, org.mapdb.Serializer)">BTreeMap</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-        long&nbsp;recid,
-        <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer)</code>
-<div class="block">Constructor used to load existing BTreeMap (with assigned recid).</div>
+<div class="block">Constructor used to create new BTreeMap.</div>
 </td>
 </tr>
 </table>
@@ -353,127 +341,141 @@ ordering</a> of its keys, or by a <a href="http://docs.oracle.com/javase/6/docs/
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#containsValue(java.lang.Object)">containsValue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected static long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#createRootRef(org.mapdb.Engine, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer)">createRootRef</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+             <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;keySer,
+             <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSer)</code>
+<div class="block">creates empty root node and returns recid of its reference</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#descendingKeySet()">descendingKeySet</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#descendingMap()">descendingMap</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#entrySet()">entrySet</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#findChildren(java.lang.Object, java.lang.Object[])">findChildren</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key,
             <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;keys)</code>
 <div class="block">Find the first children node with a key equal or greater than the given key.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#findLarger(K, boolean)">findLarger</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key,
           boolean&nbsp;inclusive)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="../../org/mapdb/BTreeMap.LeafNode.html" title="class in org.mapdb">BTreeMap.LeafNode</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#findLargerNode(K, boolean)">findLargerNode</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key,
               boolean&nbsp;inclusive)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#findSmaller(K, boolean)">findSmaller</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key,
            boolean&nbsp;inclusive)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#firstEntry()">firstEntry</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#firstKey()">firstKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#floorEntry(K)">floorEntry</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#floorKey(K)">floorKey</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#get(java.lang.Object)">get</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#headMap(K)">headMap</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;toKey)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#headMap(K, boolean)">headMap</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;toKey,
        boolean&nbsp;inclusive)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#higherEntry(K)">higherEntry</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#higherKey(K)">higherKey</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#isEmpty()">isEmpty</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#keySet()">keySet</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#lastEntry()">lastEntry</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#lastKey()">lastKey</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#lowerEntry(K)">lowerEntry</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#lowerKey(K)">lowerKey</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#makeEntry(java.lang.Object, java.lang.Object)">makeEntry</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key,
          <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#navigableKeySet()">navigableKeySet</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#nextDir(org.mapdb.BTreeMap.DirNode, java.lang.Object)">nextDir</a></strong>(<a href="../../org/mapdb/BTreeMap.DirNode.html" title="class in org.mapdb">BTreeMap.DirNode</a>&nbsp;d,
        <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#notify(K, V, V)">notify</a></strong>(<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&nbsp;key,
       <a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&nbsp;oldValue,
       <a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&nbsp;newValue)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#pollFirstEntry()">pollFirstEntry</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>,<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#pollLastEntry()">pollLastEntry</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeMap.html#preinitCatalog(org.mapdb.DB)">preinitCatalog</a></strong>(<a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db)</code>
+<div class="block">hack used for DB Catalog</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -686,24 +688,6 @@ ordering</a> of its keys, or by a <a href="http://docs.oracle.com/javase/6/docs/
 <div class="block"><p>store values as part of BTree nodes</p></div>
 </li>
 </ul>
-<a name="treeRecid">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>treeRecid</h4>
-<pre>protected final&nbsp;long treeRecid</pre>
-</li>
-</ul>
-<a name="defaultSerializer">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>defaultSerializer</h4>
-<pre>protected final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a> defaultSerializer</pre>
-</li>
-</ul>
 <a name="counter">
 <!--   -->
 </a>
@@ -748,36 +732,22 @@ ordering</a> of its keys, or by a <a href="http://docs.oracle.com/javase/6/docs/
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="BTreeMap(org.mapdb.Engine, int, boolean, boolean, boolean, org.mapdb.Serializer, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>BTreeMap</h4>
-<pre>public&nbsp;BTreeMap(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-        int&nbsp;maxNodeSize,
-        boolean&nbsp;hasValues,
-        boolean&nbsp;valsOutsideNodes,
-        boolean&nbsp;keepCounter,
-        <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer,
-        <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;keySerializer,
-        <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;&nbsp;valueSerializer,
-        <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;comparator)</pre>
-<div class="block"><p>Constructor used to create new BTreeMap without existing record (recid) in Engine.  This constructor creates new record and saves all configuration parameters there.  Constructor args are defining BTreeMap format, are stored in db and can not be changed latter.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>engine</code> - used for persistence</dd><dd><code>maxNodeSize</code> - maximal BTree Node size. Node will split if number of entries is higher</dd><dd><code>hasValues</code> - is Map or Set? If true only keys will be stored, no values</dd><dd><code>valsOutsideNodes</code> - Store Values outside of BTree Nodes in separate record?</dd><dd><code>defaultSerializer</code> - serialier used to serialize/deserialize other serializers. May be null for default value.</dd><dd><code>keySerializer</code> - Serialzier used for keys. May be null for defualt value. TODO delta packing</dd><dd><code>valueSerializer</code> - Serializer used for values. May be null for default value</dd><dd><code>comparator</code> - Comparator to sort keys in this BTree, may be null.</dd></dl>
-</li>
-</ul>
-<a name="BTreeMap(org.mapdb.Engine, long, org.mapdb.Serializer)">
+<a name="BTreeMap(org.mapdb.Engine, long, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>BTreeMap</h4>
 <pre>public&nbsp;BTreeMap(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-        long&nbsp;recid,
-        <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer)</pre>
-<div class="block"><p>Constructor used to load existing BTreeMap (with assigned recid). Map was already created and saved to Engine, this constructor just loads it.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>engine</code> - used for persistence</dd><dd><code>recid</code> - under which BTreeMap was stored</dd><dd><code>defaultSerializer</code> - used to deserialize other serializers and comparator</dd></dl>
+        long&nbsp;rootRecidRef,
+        int&nbsp;maxNodeSize,
+        boolean&nbsp;valsOutsideNodes,
+        long&nbsp;counterRecid,
+        <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;keySerializer,
+        <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;&nbsp;valueSerializer,
+        <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;comparator)</pre>
+<div class="block"><p>Constructor used to create new BTreeMap.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>engine</code> - used for persistence</dd><dd><code>rootRecidRef</code> - reference to root recid</dd><dd><code>maxNodeSize</code> - maximal BTree Node size. Node will split if number of entries is higher</dd><dd><code>valsOutsideNodes</code> - Store Values outside of BTree Nodes in separate record?</dd><dd><code>counterRecid</code> - recid under which <code>Atomic.Long</code> is stored, or <code>0</code> for no counter</dd><dd><code>keySerializer</code> - Serializer used for keys. May be null for default value. TODO delta packing</dd><dd><code>valueSerializer</code> - Serializer used for values. May be null for default value</dd><dd><code>comparator</code> - Comparator to sort keys in this BTree, may be null.</dd></dl>
 </li>
 </ul>
 </li>
@@ -788,6 +758,28 @@ ordering</a> of its keys, or by a <a href="http://docs.oracle.com/javase/6/docs/
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="preinitCatalog(org.mapdb.DB)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preinitCatalog</h4>
+<pre>protected static&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;preinitCatalog(<a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db)</pre>
+<div class="block"><p>hack used for DB Catalog</p></div>
+</li>
+</ul>
+<a name="createRootRef(org.mapdb.Engine, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createRootRef</h4>
+<pre>protected static&nbsp;long&nbsp;createRootRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+                 <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;keySer,
+                 <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSer)</pre>
+<div class="block"><p>creates empty root node and returns recid of its reference</p></div>
+</li>
+</ul>
 <a name="findChildren(java.lang.Object, java.lang.Object[])">
 <!--   -->
 </a>

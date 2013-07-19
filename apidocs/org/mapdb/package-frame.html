@@ -23,7 +23,6 @@
 <li><a href="Fun.Runnable3.html" title="interface in org.mapdb" target="classFrame"><i>Fun.Runnable3</i></a></li>
 <li><a href="LongMap.LongMapIterator.html" title="interface in org.mapdb" target="classFrame"><i>LongMap.LongMapIterator</i></a></li>
 <li><a href="Serializer.html" title="interface in org.mapdb" target="classFrame"><i>Serializer</i></a></li>
-<li><a href="Store.html" title="interface in org.mapdb" target="classFrame"><i>Store</i></a></li>
 <li><a href="TxBlock.html" title="interface in org.mapdb" target="classFrame"><i>TxBlock</i></a></li>
 <li><a href="Volume.Factory.html" title="interface in org.mapdb" target="classFrame"><i>Volume.Factory</i></a></li>
 </ul>
@@ -44,9 +43,10 @@
 <li><a href="BTreeKeySerializer.Tuple4KeySerializer.html" title="class in org.mapdb" target="classFrame">BTreeKeySerializer.Tuple4KeySerializer</a></li>
 <li><a href="BTreeMap.html" title="class in org.mapdb" target="classFrame">BTreeMap</a></li>
 <li><a href="BTreeMap.BTreeIterator.html" title="class in org.mapdb" target="classFrame">BTreeMap.BTreeIterator</a></li>
-<li><a href="BTreeMap.BTreeRootSerializer.html" title="class in org.mapdb" target="classFrame">BTreeMap.BTreeRootSerializer</a></li>
+<li><a href="BTreeMap.DescendingMap.html" title="class in org.mapdb" target="classFrame">BTreeMap.DescendingMap</a></li>
 <li><a href="BTreeMap.DirNode.html" title="class in org.mapdb" target="classFrame">BTreeMap.DirNode</a></li>
 <li><a href="BTreeMap.LeafNode.html" title="class in org.mapdb" target="classFrame">BTreeMap.LeafNode</a></li>
+<li><a href="BTreeMap.NodeSerializer.html" title="class in org.mapdb" target="classFrame">BTreeMap.NodeSerializer</a></li>
 <li><a href="BTreeMap.SubMap.html" title="class in org.mapdb" target="classFrame">BTreeMap.SubMap</a></li>
 <li><a href="BTreeMap.ValRef.html" title="class in org.mapdb" target="classFrame">BTreeMap.ValRef</a></li>
 <li><a href="CacheHardRef.html" title="class in org.mapdb" target="classFrame">CacheHardRef</a></li>
@@ -74,8 +74,8 @@
 <li><a href="Fun.Tuple3.html" title="class in org.mapdb" target="classFrame">Fun.Tuple3</a></li>
 <li><a href="Fun.Tuple4.html" title="class in org.mapdb" target="classFrame">Fun.Tuple4</a></li>
 <li><a href="HTreeMap.html" title="class in org.mapdb" target="classFrame">HTreeMap</a></li>
-<li><a href="HTreeMap.HashRoot.html" title="class in org.mapdb" target="classFrame">HTreeMap.HashRoot</a></li>
-<li><a href="HTreeMap.HashRootSerializer.html" title="class in org.mapdb" target="classFrame">HTreeMap.HashRootSerializer</a></li>
+<li><a href="HTreeMap.ExpireLinkNode.html" title="class in org.mapdb" target="classFrame">HTreeMap.ExpireLinkNode</a></li>
+<li><a href="HTreeMap.ExpireRunnable.html" title="class in org.mapdb" target="classFrame">HTreeMap.ExpireRunnable</a></li>
 <li><a href="HTreeMap.LinkedNode.html" title="class in org.mapdb" target="classFrame">HTreeMap.LinkedNode</a></li>
 <li><a href="LongConcurrentHashMap.html" title="class in org.mapdb" target="classFrame">LongConcurrentHashMap</a></li>
 <li><a href="LongConcurrentLRUMap.html" title="class in org.mapdb" target="classFrame">LongConcurrentLRUMap</a></li>
@@ -85,17 +85,11 @@
 <li><a href="Pump.html" title="class in org.mapdb" target="classFrame">Pump</a></li>
 <li><a href="Queues.html" title="class in org.mapdb" target="classFrame">Queues</a></li>
 <li><a href="Queues.CircularQueue.html" title="class in org.mapdb" target="classFrame">Queues.CircularQueue</a></li>
-<li><a href="Queues.CircularQueueRoot.html" title="class in org.mapdb" target="classFrame">Queues.CircularQueueRoot</a></li>
-<li><a href="Queues.CircularQueueRootSerializer.html" title="class in org.mapdb" target="classFrame">Queues.CircularQueueRootSerializer</a></li>
 <li><a href="Queues.Queue.html" title="class in org.mapdb" target="classFrame">Queues.Queue</a></li>
-<li><a href="Queues.QueueRoot.html" title="class in org.mapdb" target="classFrame">Queues.QueueRoot</a></li>
-<li><a href="Queues.QueueRootSerializer.html" title="class in org.mapdb" target="classFrame">Queues.QueueRootSerializer</a></li>
 <li><a href="Queues.SimpleQueue.html" title="class in org.mapdb" target="classFrame">Queues.SimpleQueue</a></li>
 <li><a href="Queues.SimpleQueue.Node.html" title="class in org.mapdb" target="classFrame">Queues.SimpleQueue.Node</a></li>
 <li><a href="Queues.SimpleQueue.NodeSerializer.html" title="class in org.mapdb" target="classFrame">Queues.SimpleQueue.NodeSerializer</a></li>
 <li><a href="Queues.Stack.html" title="class in org.mapdb" target="classFrame">Queues.Stack</a></li>
-<li><a href="Queues.StackRoot.html" title="class in org.mapdb" target="classFrame">Queues.StackRoot</a></li>
-<li><a href="Queues.StackRootSerializer.html" title="class in org.mapdb" target="classFrame">Queues.StackRootSerializer</a></li>
 <li><a href="Serializer.CompressSerializerWrapper.html" title="class in org.mapdb" target="classFrame">Serializer.CompressSerializerWrapper</a></li>
 <li><a href="SerializerBase.html" title="class in org.mapdb" target="classFrame">SerializerBase</a></li>
 <li><a href="SerializerBase.FastArrayList.html" title="class in org.mapdb" target="classFrame">SerializerBase.FastArrayList</a></li>
@@ -103,6 +97,7 @@
 <li><a href="SerializerPojo.ClassInfo.html" title="class in org.mapdb" target="classFrame">SerializerPojo.ClassInfo</a></li>
 <li><a href="SerializerPojo.FieldInfo.html" title="class in org.mapdb" target="classFrame">SerializerPojo.FieldInfo</a></li>
 <li><a href="SnapshotEngine.html" title="class in org.mapdb" target="classFrame">SnapshotEngine</a></li>
+<li><a href="Store.html" title="class in org.mapdb" target="classFrame">Store</a></li>
 <li><a href="StoreAppend.html" title="class in org.mapdb" target="classFrame">StoreAppend</a></li>
 <li><a href="StoreDirect.html" title="class in org.mapdb" target="classFrame">StoreDirect</a></li>
 <li><a href="StoreHeap.html" title="class in org.mapdb" target="classFrame">StoreHeap</a></li>

@@ -85,7 +85,12 @@
 <li><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
+<li><a href="../../org/mapdb/Store.html" title="class in org.mapdb">org.mapdb.Store</a></li>
+<li>
+<ul class="inheritance">
 <li>org.mapdb.StoreHeap</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -94,13 +99,13 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>, <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></dd>
+<dd><a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="strong">StoreHeap</span>
-extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
+extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>
+implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
 <div class="block"><p>Store which keeps all instances on heap. It does not use serialization.</p></div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../serialized-form.html#org.mapdb.StoreHeap">Serialized Form</a></dd></dl>
 </li>
@@ -139,7 +144,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <!--   -->
 </a>
 <h3>Fields inherited from interface&nbsp;org.mapdb.<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></h3>
-<code><a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a>, <a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a>, <a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a>, <a href="../../org/mapdb/Engine.html#NAME_DIR_RECID">NAME_DIR_RECID</a></code></li>
+<code><a href="../../org/mapdb/Engine.html#CATALOG_RECID">CATALOG_RECID</a>, <a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a>, <a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a>, <a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a></code></li>
 </ul>
 </li>
 </ul>
@@ -173,32 +178,38 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#calculateStatistics()">calculateStatistics</a></strong>()</code>
+<div class="block">get some statistics about store.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#canRollback()">canRollback</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#clearCache()">clearCache</a></strong>()</code>
 <div class="block">clears any underlying cache</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#close()">close</a></strong>()</code>
 <div class="block">Close store/cache.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#commit()">commit</a></strong>()</code>
 <div class="block">Makes all changes made since the previous commit/rollback permanent.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#compact()">compact</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
@@ -207,18 +218,24 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <div class="block">Updates existing record in atomic <a href="http://en.wikipedia.org/wiki/Compare-and-swap">(Compare And Swap)</a> manner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
       <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Remove existing record from store/cache</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Get existing record.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#getCurrSize()">getCurrSize</a></strong>()</code>
+<div class="block">returns current size occupied by physical store (does not include index).</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -227,11 +244,23 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#getMaxRecid()">getMaxRecid</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#getFreeSize()">getFreeSize</a></strong>()</code>
+<div class="block">returns free size in physical store (does not include index).</div>
+</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#getMaxRecid()">getMaxRecid</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#getRaw(long)">getRaw</a></strong>(long&nbsp;recid)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#getSizeLimit()">getSizeLimit</a></strong>()</code>
+<div class="block">returns maximal store size or <code>0</code> if there is no limit</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -272,6 +301,13 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
          <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;data)</code>&nbsp;</td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.mapdb.Store">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></h3>
+<code><a href="../../org/mapdb/Store.html#printStatistics()">printStatistics</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
@@ -565,7 +601,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;long&nbsp;getMaxRecid()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Store.html#getMaxRecid()">getMaxRecid</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></code></dd>
+<dd><code><a href="../../org/mapdb/Store.html#getMaxRecid()">getMaxRecid</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -578,7 +614,7 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;getRaw(long&nbsp;recid)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Store.html#getRaw(long)">getRaw</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></code></dd>
+<dd><code><a href="../../org/mapdb/Store.html#getRaw(long)">getRaw</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -591,21 +627,81 @@ implements <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">S
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;getFreeRecids()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Store.html#getFreeRecids()">getFreeRecids</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></code></dd>
+<dd><code><a href="../../org/mapdb/Store.html#getFreeRecids()">getFreeRecids</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
 </dl>
 </li>
 </ul>
 <a name="updateRaw(long, java.nio.ByteBuffer)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>updateRaw</h4>
 <pre>public&nbsp;void&nbsp;updateRaw(long&nbsp;recid,
              <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;data)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Store.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></code></dd>
+<dd><code><a href="../../org/mapdb/Store.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getSizeLimit()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSizeLimit</h4>
+<pre>public&nbsp;long&nbsp;getSizeLimit()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../org/mapdb/Store.html#getSizeLimit()">Store</a></code></strong></div>
+<div class="block"><p>returns maximal store size or <code>0</code> if there is no limit</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Store.html#getSizeLimit()">getSizeLimit</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getCurrSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrSize</h4>
+<pre>public&nbsp;long&nbsp;getCurrSize()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../org/mapdb/Store.html#getCurrSize()">Store</a></code></strong></div>
+<div class="block"><p>returns current size occupied by physical store (does not include index). It means file allocated by physical file</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Store.html#getCurrSize()">getCurrSize</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getFreeSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFreeSize</h4>
+<pre>public&nbsp;long&nbsp;getFreeSize()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../org/mapdb/Store.html#getFreeSize()">Store</a></code></strong></div>
+<div class="block"><p>returns free size in physical store (does not include index).</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Store.html#getFreeSize()">getFreeSize</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="calculateStatistics()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>calculateStatistics</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;calculateStatistics()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../org/mapdb/Store.html#calculateStatistics()">Store</a></code></strong></div>
+<div class="block"><p>get some statistics about store. This may require traversing entire store, so it can take some time.</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Store.html#calculateStatistics()">calculateStatistics</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></dd>
 </dl>
 </li>
 </ul>

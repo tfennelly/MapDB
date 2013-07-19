@@ -93,21 +93,24 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
-<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File)">fileFactory</a></strong>(boolean&nbsp;readOnly,
+<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long)">fileFactory</a></strong>(boolean&nbsp;readOnly,
            int&nbsp;rafMode,
-           <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile)</code>&nbsp;</td>
+           <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
+           long&nbsp;sizeLimit)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
-<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, java.io.File, java.io.File)">fileFactory</a></strong>(boolean&nbsp;readOnly,
+<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">fileFactory</a></strong>(boolean&nbsp;readOnly,
            int&nbsp;rafMode,
+           long&nbsp;sizeLimit,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;physFile,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;transLogFile)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
-<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#memoryFactory(boolean)">memoryFactory</a></strong>(boolean&nbsp;useDirectBuffer)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#memoryFactory(boolean, long)">memoryFactory</a></strong>(boolean&nbsp;useDirectBuffer,
+             long&nbsp;sizeLimit)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -121,21 +124,23 @@
 <td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory)">StoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean)">StoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long)">StoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
            boolean&nbsp;readOnly,
            boolean&nbsp;deleteFilesAfterClose,
            int&nbsp;spaceReclaimMode,
-           boolean&nbsp;syncOnCommitDisabled)</code>&nbsp;</td>
+           boolean&nbsp;syncOnCommitDisabled,
+           long&nbsp;sizeLimit)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory)">StoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean)">StoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long)">StoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
         boolean&nbsp;readOnly,
         boolean&nbsp;deleteFilesAfterClose,
         int&nbsp;spaceReclaimMode,
-        boolean&nbsp;syncOnCommitDisabled)</code>&nbsp;</td>
+        boolean&nbsp;syncOnCommitDisabled,
+        long&nbsp;sizeLimit)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

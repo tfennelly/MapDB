@@ -34,7 +34,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapdb/DB.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../org/mapdb/EncryptionXTEA.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -176,8 +176,16 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_readOnly">_readOnly</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_sizeLimit">_sizeLimit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_snapshotDisabled">_snapshotDisabled</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_strictDBGet">_strictDBGet</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
@@ -437,8 +445,20 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#sizeLimit(double)">sizeLimit</a></strong>(double&nbsp;maxSize)</code>
+<div class="block">Sets store size limit.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#snapshotDisable()">snapshotDisable</a></strong>()</code>
 <div class="block">MapDB supports snapshots.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#strictDBGet()">strictDBGet</a></strong>()</code>
+<div class="block">DB Get methods such as <a href="../../org/mapdb/DB.html#getTreeMap(java.lang.String)"><code>DB.getTreeMap(String)</code></a> or <a href="../../org/mapdb/DB.html#getAtomicLong(java.lang.String)"><code>DB.getAtomicLong(String)</code></a> auto create new record with default values, if record with given name does not exist.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -680,6 +700,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>protected&nbsp;boolean _snapshotDisabled</pre>
 </li>
 </ul>
+<a name="_sizeLimit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>_sizeLimit</h4>
+<pre>protected&nbsp;long _sizeLimit</pre>
+</li>
+</ul>
 <a name="_rafMode">
 <!--   -->
 </a>
@@ -687,6 +716,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>_rafMode</h4>
 <pre>protected&nbsp;int _rafMode</pre>
+</li>
+</ul>
+<a name="_strictDBGet">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>_strictDBGet</h4>
+<pre>protected&nbsp;boolean _strictDBGet</pre>
 </li>
 </ul>
 <a name="_appendStorage">
@@ -1028,6 +1066,17 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
 </ul>
+<a name="strictDBGet()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>strictDBGet</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;strictDBGet()</pre>
+<div class="block"><p>DB Get methods such as <a href="../../org/mapdb/DB.html#getTreeMap(java.lang.String)"><code>DB.getTreeMap(String)</code></a> or <a href="../../org/mapdb/DB.html#getAtomicLong(java.lang.String)"><code>DB.getAtomicLong(String)</code></a> auto create new record with default values, if record with given name does not exist. This could be problem if you would like to enforce stricter database schema. So this parameter disables record auto creation.</p><p>If this set, <code>DB.getXX()</code> will throw an exception if given name does not exist, instead of creating new record (or collection)</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
+</li>
+</ul>
 <a name="readOnly()">
 <!--   -->
 </a>
@@ -1059,6 +1108,18 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;syncOnCommitDisable()</pre>
 <div class="block"><p>Disables file sync on commit. This way transactions are preserved (rollback works), but commits are not &lsquo;durable&rsquo; and data may be lost if store is not properly closed. File store will get properly synced when closed. Disabling this will make commits faster.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
+</li>
+</ul>
+<a name="sizeLimit(double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sizeLimit</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;sizeLimit(double&nbsp;maxSize)</pre>
+<div class="block"><p>Sets store size limit. Disk or memory space consumed be storage should not grow over this space. Limit is not strict and does not apply to some parts such as index table. Actual store size might be 10% or more bigger.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>maxSize</code> - maximal store size in GB</dd>
+<dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
 </ul>
 <a name="make()">
@@ -1119,7 +1180,7 @@ hljs.initHighlightingOnLoad();
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapdb/DB.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../org/mapdb/EncryptionXTEA.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">

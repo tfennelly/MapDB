@@ -82,6 +82,10 @@
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;<a href="../../../org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">K</a>,<a href="../../../org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">V</a>&gt;</code></td>
 <td class="colLast"><span class="strong">BTreeMap.SubMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.SubMap.html#m">m</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;<a href="../../../org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">K</a>,<a href="../../../org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">V</a>&gt;</code></td>
+<td class="colLast"><span class="strong">BTreeMap.DescendingMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.DescendingMap.html#m">m</a></strong></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -92,16 +96,8 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
-<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createTreeMap(java.lang.String, int, boolean, boolean, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">createTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-             int&nbsp;nodeSize,
-             boolean&nbsp;valuesStoredOutsideNodes,
-             boolean&nbsp;keepCounter,
-             <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;keySerializer,
-             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;V&gt;&nbsp;valueSerializer,
-             <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;K&gt;&nbsp;comparator)</code>
-<div class="block">Creates new TreeMap</div>
-</td>
+<td class="colFirst"><code>protected &lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
+<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createTreeMap(org.mapdb.DB.BTreeMapMaker)">createTreeMap</a></strong>(<a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a>&nbsp;m)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
@@ -110,6 +106,10 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#make()">make</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
 <td class="colLast"><span class="strong">DBMaker.</span><code><strong><a href="../../../org/mapdb/DBMaker.html#newTempTreeMap()">newTempTreeMap</a></strong>()</code>
 <div class="block">Create new BTreeMap backed by temporary file storage.</div>
@@ -124,6 +124,13 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.DescendingMap.html#BTreeMap.DescendingMap(org.mapdb.BTreeMap, K, boolean, K, boolean)">BTreeMap.DescendingMap</a></strong>(<a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;<a href="../../../org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">K</a>,<a href="../../../org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">V</a>&gt;&nbsp;m,
+                      <a href="../../../org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">K</a>&nbsp;lo,
+                      boolean&nbsp;loInclusive,
+                      <a href="../../../org/mapdb/BTreeMap.DescendingMap.html" title="type parameter in BTreeMap.DescendingMap">K</a>&nbsp;hi,
+                      boolean&nbsp;hiInclusive)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.SubMap.html#BTreeMap.SubMap(org.mapdb.BTreeMap, K, boolean, K, boolean)">BTreeMap.SubMap</a></strong>(<a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;<a href="../../../org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">K</a>,<a href="../../../org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">V</a>&gt;&nbsp;m,
                <a href="../../../org/mapdb/BTreeMap.SubMap.html" title="type parameter in BTreeMap.SubMap">K</a>&nbsp;lo,
                boolean&nbsp;loInclusive,

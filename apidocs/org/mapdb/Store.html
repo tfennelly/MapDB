@@ -61,13 +61,13 @@
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>
@@ -78,24 +78,33 @@
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle">org.mapdb</div>
-<h2 title="Interface Store" class="title">Interface Store</h2>
+<h2 title="Class Store" class="title">Class Store</h2>
 </div>
 <div class="contentContainer">
+<ul class="inheritance">
+<li><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>org.mapdb.Store</li>
+</ul>
+</li>
+</ul>
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
 <dl>
-<dt>All Superinterfaces:</dt>
+<dt>All Implemented Interfaces:</dt>
 <dd><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dd>
 </dl>
 <dl>
-<dt>All Known Implementing Classes:</dt>
-<dd><a href="../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a>, <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a>, <a href="../../org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a>, <a href="../../org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dd>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a>, <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a>, <a href="../../org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></dd>
 </dl>
 <hr>
 <br>
-<pre>public interface <span class="strong">Store</span>
-extends <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></pre>
+<pre>public abstract class <span class="strong">Store</span>
+extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></pre>
 <div class="block"><p>Low level record store.</p></div>
 </li>
 </ul>
@@ -114,8 +123,25 @@ extends <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Eng
 <!--   -->
 </a>
 <h3>Fields inherited from interface&nbsp;org.mapdb.<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></h3>
-<code><a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a>, <a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a>, <a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a>, <a href="../../org/mapdb/Engine.html#NAME_DIR_RECID">NAME_DIR_RECID</a></code></li>
+<code><a href="../../org/mapdb/Engine.html#CATALOG_RECID">CATALOG_RECID</a>, <a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a>, <a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a>, <a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a></code></li>
 </ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><strong><a href="../../org/mapdb/Store.html#Store()">Store</a></strong>()</code>&nbsp;</td>
+</tr>
+</table>
 </li>
 </ul>
 <!-- ========== METHOD SUMMARY =========== -->
@@ -131,23 +157,58 @@ extends <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Eng
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
+<td class="colFirst"><code>abstract <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#calculateStatistics()">calculateStatistics</a></strong>()</code>
+<div class="block">get some statistics about store.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getCurrSize()">getCurrSize</a></strong>()</code>
+<div class="block">returns current size occupied by physical store (does not include index).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getFreeRecids()">getFreeRecids</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getMaxRecid()">getMaxRecid</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>abstract long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getFreeSize()">getFreeSize</a></strong>()</code>
+<div class="block">returns free size in physical store (does not include index).</div>
+</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
+<td class="colFirst"><code>abstract long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getMaxRecid()">getMaxRecid</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>abstract <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getRaw(long)">getRaw</a></strong>(long&nbsp;recid)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getSizeLimit()">getSizeLimit</a></strong>()</code>
+<div class="block">returns maximal store size or <code>0</code> if there is no limit</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#printStatistics()">printStatistics</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw</a></strong>(long&nbsp;recid,
          <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;data)</code>&nbsp;</td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.mapdb.Engine">
 <!--   -->
@@ -163,6 +224,23 @@ extends <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Eng
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor_detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Store()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Store</h4>
+<pre>public&nbsp;Store()</pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method_detail">
@@ -175,7 +253,7 @@ extends <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Eng
 <ul class="blockList">
 <li class="blockList">
 <h4>getMaxRecid</h4>
-<pre>long&nbsp;getMaxRecid()</pre>
+<pre>public abstract&nbsp;long&nbsp;getMaxRecid()</pre>
 </li>
 </ul>
 <a name="getRaw(long)">
@@ -184,7 +262,7 @@ extends <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Eng
 <ul class="blockList">
 <li class="blockList">
 <h4>getRaw</h4>
-<pre><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;getRaw(long&nbsp;recid)</pre>
+<pre>public abstract&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;getRaw(long&nbsp;recid)</pre>
 </li>
 </ul>
 <a name="getFreeRecids()">
@@ -193,17 +271,66 @@ extends <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Eng
 <ul class="blockList">
 <li class="blockList">
 <h4>getFreeRecids</h4>
-<pre><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;getFreeRecids()</pre>
+<pre>public abstract&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;getFreeRecids()</pre>
 </li>
 </ul>
 <a name="updateRaw(long, java.nio.ByteBuffer)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>updateRaw</h4>
-<pre>void&nbsp;updateRaw(long&nbsp;recid,
+<pre>public abstract&nbsp;void&nbsp;updateRaw(long&nbsp;recid,
              <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;data)</pre>
+</li>
+</ul>
+<a name="getSizeLimit()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSizeLimit</h4>
+<pre>public abstract&nbsp;long&nbsp;getSizeLimit()</pre>
+<div class="block"><p>returns maximal store size or <code>0</code> if there is no limit</p></div>
+</li>
+</ul>
+<a name="getCurrSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCurrSize</h4>
+<pre>public abstract&nbsp;long&nbsp;getCurrSize()</pre>
+<div class="block"><p>returns current size occupied by physical store (does not include index). It means file allocated by physical file</p></div>
+</li>
+</ul>
+<a name="getFreeSize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFreeSize</h4>
+<pre>public abstract&nbsp;long&nbsp;getFreeSize()</pre>
+<div class="block"><p>returns free size in physical store (does not include index).</p></div>
+</li>
+</ul>
+<a name="calculateStatistics()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>calculateStatistics</h4>
+<pre>public abstract&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;calculateStatistics()</pre>
+<div class="block"><p>get some statistics about store. This may require traversing entire store, so it can take some time.</p></div>
+</li>
+</ul>
+<a name="printStatistics()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>printStatistics</h4>
+<pre>public&nbsp;void&nbsp;printStatistics()</pre>
 </li>
 </ul>
 </li>
@@ -262,13 +389,13 @@ hljs.initHighlightingOnLoad();
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li>Constr&nbsp;|&nbsp;</li>
+<li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
 </div>

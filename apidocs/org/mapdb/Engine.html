@@ -85,17 +85,13 @@
 <ul class="blockList">
 <li class="blockList">
 <dl>
-<dt>All Known Subinterfaces:</dt>
-<dd><a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></dd>
-</dl>
-<dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a>, <a href="../../org/mapdb/CacheHardRef.html" title="class in org.mapdb">CacheHardRef</a>, <a href="../../org/mapdb/CacheHashTable.html" title="class in org.mapdb">CacheHashTable</a>, <a href="../../org/mapdb/CacheLRU.html" title="class in org.mapdb">CacheLRU</a>, <a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a>, <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a>, <a href="../../org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a>, <a href="../../org/mapdb/SnapshotEngine.Snapshot.html" title="class in org.mapdb">SnapshotEngine.Snapshot</a>, <a href="../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a>, <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a>, <a href="../../org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a>, <a href="../../org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a>, <a href="../../org/mapdb/TxMaker.TxEngine.html" title="class in org.mapdb">TxMaker.TxEngine</a></dd>
+<dd><a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a>, <a href="../../org/mapdb/CacheHardRef.html" title="class in org.mapdb">CacheHardRef</a>, <a href="../../org/mapdb/CacheHashTable.html" title="class in org.mapdb">CacheHashTable</a>, <a href="../../org/mapdb/CacheLRU.html" title="class in org.mapdb">CacheLRU</a>, <a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a>, <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a>, <a href="../../org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a>, <a href="../../org/mapdb/SnapshotEngine.Snapshot.html" title="class in org.mapdb">SnapshotEngine.Snapshot</a>, <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>, <a href="../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a>, <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a>, <a href="../../org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a>, <a href="../../org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a>, <a href="../../org/mapdb/TxMaker.TxEngine.html" title="class in org.mapdb">TxMaker.TxEngine</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public interface <span class="strong">Engine</span></pre>
-<div class="block"><p>Centerpiece for record management, <code>Engine</code> is simple key value store. Engine is low-level interface and is not meant to be used directly by user. For most operations user should use <a href="../../org/mapdb/DB.html" title="class in org.mapdb"><code>DB</code></a> class.</p><p>In this store key is primitive <code>long</code> number, typically pointer to index table. Value is class instance. To turn value into/from binary form serializer is required as extra argument for most operations.</p><p>Unlike other DBs MapDB does not expect user to (de)serialize data before they are passed as arguments. Instead MapDB controls (de)serialization itself. This gives DB a lot of flexibility: for example instances may be held in cache to minimise number of deserializations, or modified instance can be placed into queue and asynchronously written on background thread.</p><p>There is <a href="../../org/mapdb/Store.html" title="interface in org.mapdb"><code>Store</code></a> subinterface for raw persistence Most of MapDB features comes from <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s, which are stacked on top of each other to provide asynchronous writes, instance cache, encryption etc.. <code>Engine</code> stack is very elegant and uniform way to handle additional functionality. Other DBs need an ORM framework to achieve similar features.</p><p>In default configuration MapDB runs with this <code>Engine</code> stack:</p>
+<div class="block"><p>Centerpiece for record management, <code>Engine</code> is simple key value store. Engine is low-level interface and is not meant to be used directly by user. For most operations user should use <a href="../../org/mapdb/DB.html" title="class in org.mapdb"><code>DB</code></a> class.</p><p>In this store key is primitive <code>long</code> number, typically pointer to index table. Value is class instance. To turn value into/from binary form serializer is required as extra argument for most operations.</p><p>Unlike other DBs MapDB does not expect user to (de)serialize data before they are passed as arguments. Instead MapDB controls (de)serialization itself. This gives DB a lot of flexibility: for example instances may be held in cache to minimise number of deserializations, or modified instance can be placed into queue and asynchronously written on background thread.</p><p>There is <a href="../../org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a> subinterface for raw persistence Most of MapDB features comes from <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s, which are stacked on top of each other to provide asynchronous writes, instance cache, encryption etc.. <code>Engine</code> stack is very elegant and uniform way to handle additional functionality. Other DBs need an ORM framework to achieve similar features.</p><p>In default configuration MapDB runs with this <code>Engine</code> stack:</p>
 <ul>
   <li><strong>DISK</strong> - raw file or memory</li>
   <li><code>StoraWAL</code> - permanent record store with transactions</li>
@@ -127,19 +123,19 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#CATALOG_RECID">CATALOG_RECID</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#NAME_DIR_RECID">NAME_DIR_RECID</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -253,14 +249,14 @@
 <!--   -->
 </a>
 <h3>Field Detail</h3>
-<a name="NAME_DIR_RECID">
+<a name="CATALOG_RECID">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>NAME_DIR_RECID</h4>
-<pre>static final&nbsp;long NAME_DIR_RECID</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.Engine.NAME_DIR_RECID">Constant Field Values</a></dd></dl>
+<h4>CATALOG_RECID</h4>
+<pre>static final&nbsp;long CATALOG_RECID</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.Engine.CATALOG_RECID">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="CLASS_INFO_RECID">

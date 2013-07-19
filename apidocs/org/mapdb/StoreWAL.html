@@ -85,10 +85,15 @@
 <li><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
+<li><a href="../../org/mapdb/Store.html" title="class in org.mapdb">org.mapdb.Store</a></li>
+<li>
+<ul class="inheritance">
 <li><a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">org.mapdb.StoreDirect</a></li>
 <li>
 <ul class="inheritance">
 <li>org.mapdb.StoreWAL</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -99,7 +104,7 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>, <a href="../../org/mapdb/Store.html" title="interface in org.mapdb">Store</a></dd>
+<dd><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dd>
 </dl>
 <hr>
 <br>
@@ -138,57 +143,61 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected static long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#LOG_MASK_OFFSET">LOG_MASK_OFFSET</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#LOG_SEAL">LOG_SEAL</a></strong></code>
 <div class="block">added to offset 8 into log file, indicates that log was synced and closed</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#logSize">logSize</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/LongMap.html" title="class in org.mapdb">LongMap</a>&lt;long[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#longStackPages">longStackPages</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/LongConcurrentHashMap.html" title="class in org.mapdb">LongConcurrentHashMap</a>&lt;long[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#modified">modified</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#TOMBSTONE">TOMBSTONE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#TRANS_LOG_FILE_EXT">TRANS_LOG_FILE_EXT</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#volFac">volFac</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_INDEX_LONG">WAL_INDEX_LONG</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_PHYS_ARRAY">WAL_PHYS_ARRAY</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_PHYS_LONG">WAL_PHYS_LONG</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_PHYS_SIX_LONG">WAL_PHYS_SIX_LONG</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_SEAL">WAL_SEAL</a></strong></code>
 <div class="block">last instruction in log file</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_SKIP_REST_OF_BLOCK">WAL_SKIP_REST_OF_BLOCK</a></strong></code>&nbsp;</td>
 </tr>
@@ -198,14 +207,14 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></h3>
-<code><a href="../../org/mapdb/StoreDirect.html#DATA_FILE_EXT">DATA_FILE_EXT</a>, <a href="../../org/mapdb/StoreDirect.html#deleteFilesAfterClose">deleteFilesAfterClose</a>, <a href="../../org/mapdb/StoreDirect.html#HEADER">HEADER</a>, <a href="../../org/mapdb/StoreDirect.html#index">index</a>, <a href="../../org/mapdb/StoreDirect.html#indexSize">indexSize</a>, <a href="../../org/mapdb/StoreDirect.html#IO_FREE_RECID">IO_FREE_RECID</a>, <a href="../../org/mapdb/StoreDirect.html#IO_INDEX_SIZE">IO_INDEX_SIZE</a>, <a href="../../org/mapdb/StoreDirect.html#IO_PHYS_SIZE">IO_PHYS_SIZE</a>, <a href="../../org/mapdb/StoreDirect.html#IO_USER_START">IO_USER_START</a>, <a href="../../org/mapdb/StoreDirect.html#locks">locks</a>, <a href="../../org/mapdb/StoreDirect.html#MASK_IS_LINKED">MASK_IS_LINKED</a>, <a href="../../org/mapdb/StoreDirect.html#MASK_OFFSET">MASK_OFFSET</a>, <a href="../../org/mapdb/StoreDirect.html#MASK_SIZE">MASK_SIZE</a>, <a href="../../org/mapdb/StoreDirect.html#MAX_REC_SIZE">MAX_REC_SIZE</a>, <a href="../../org/mapdb/StoreDirect.html#phys">phys</a>, <a href="../../org/mapdb/StoreDirect.html#PHYS_FREE_SLOTS_COUNT">PHYS_FREE_SLOTS_COUNT</a>, <a href="../../org/mapdb/StoreDirect.html#physSize">physSize</a>, <a href="../../org/mapdb/StoreDirect.html#readOnly">readOnly</a>, <a href="../../org/mapdb/StoreDirect.html#recycledDataOuts">recycledDataOuts</a>, <a href="../../org/mapdb/StoreDirect.html#spaceReclaimReuse">spaceReclaimReuse</a>, <a href="../../org/mapdb/StoreDirect.html#spaceReclaimTrack">spaceReclaimTrack</a>, <a href="../../org/mapdb/StoreDirect.html#structuralLock">structuralLock</a>, <a href="../../org/mapdb/StoreDirect.html#syncOnCommitDisabled">syncOnCommitDisabled</a></code></li>
+<code><a href="../../org/mapdb/StoreDirect.html#DATA_FILE_EXT">DATA_FILE_EXT</a>, <a href="../../org/mapdb/StoreDirect.html#deleteFilesAfterClose">deleteFilesAfterClose</a>, <a href="../../org/mapdb/StoreDirect.html#freeSize">freeSize</a>, <a href="../../org/mapdb/StoreDirect.html#HEADER">HEADER</a>, <a href="../../org/mapdb/StoreDirect.html#index">index</a>, <a href="../../org/mapdb/StoreDirect.html#indexSize">indexSize</a>, <a href="../../org/mapdb/StoreDirect.html#IO_FREE_RECID">IO_FREE_RECID</a>, <a href="../../org/mapdb/StoreDirect.html#IO_FREE_SIZE">IO_FREE_SIZE</a>, <a href="../../org/mapdb/StoreDirect.html#IO_INDEX_SIZE">IO_INDEX_SIZE</a>, <a href="../../org/mapdb/StoreDirect.html#IO_PHYS_SIZE">IO_PHYS_SIZE</a>, <a href="../../org/mapdb/StoreDirect.html#IO_USER_START">IO_USER_START</a>, <a href="../../org/mapdb/StoreDirect.html#locks">locks</a>, <a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_COUNT">LONG_STACK_PREF_COUNT</a>, <a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_SIZE">LONG_STACK_PREF_SIZE</a>, <a href="../../org/mapdb/StoreDirect.html#MASK_ARCHIVE">MASK_ARCHIVE</a>, <a href="../../org/mapdb/StoreDirect.html#MASK_DISCARD">MASK_DISCARD</a>, <a href="../../org/mapdb/StoreDirect.html#MASK_LINKED">MASK_LINKED</a>, <a href="../../org/mapdb/StoreDirect.html#MASK_OFFSET">MASK_OFFSET</a>, <a href="../../org/mapdb/StoreDirect.html#MAX_REC_SIZE">MAX_REC_SIZE</a>, <a href="../../org/mapdb/StoreDirect.html#phys">phys</a>, <a href="../../org/mapdb/StoreDirect.html#PHYS_FREE_SLOTS_COUNT">PHYS_FREE_SLOTS_COUNT</a>, <a href="../../org/mapdb/StoreDirect.html#physSize">physSize</a>, <a href="../../org/mapdb/StoreDirect.html#readOnly">readOnly</a>, <a href="../../org/mapdb/StoreDirect.html#recycledDataOuts">recycledDataOuts</a>, <a href="../../org/mapdb/StoreDirect.html#sizeLimit">sizeLimit</a>, <a href="../../org/mapdb/StoreDirect.html#spaceReclaimReuse">spaceReclaimReuse</a>, <a href="../../org/mapdb/StoreDirect.html#spaceReclaimTrack">spaceReclaimTrack</a>, <a href="../../org/mapdb/StoreDirect.html#structuralLock">structuralLock</a>, <a href="../../org/mapdb/StoreDirect.html#syncOnCommitDisabled">syncOnCommitDisabled</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.mapdb.Engine">
 <!--   -->
 </a>
 <h3>Fields inherited from interface&nbsp;org.mapdb.<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></h3>
-<code><a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a>, <a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a>, <a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a>, <a href="../../org/mapdb/Engine.html#NAME_DIR_RECID">NAME_DIR_RECID</a></code></li>
+<code><a href="../../org/mapdb/Engine.html#CATALOG_RECID">CATALOG_RECID</a>, <a href="../../org/mapdb/Engine.html#CHECK_RECORD">CHECK_RECORD</a>, <a href="../../org/mapdb/Engine.html#CLASS_INFO_RECID">CLASS_INFO_RECID</a>, <a href="../../org/mapdb/Engine.html#LAST_RESERVED_RECID">LAST_RESERVED_RECID</a></code></li>
 </ul>
 </li>
 </ul>
@@ -224,11 +233,12 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <td class="colOne"><code><strong><a href="../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory)">StoreWAL</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean)">StoreWAL</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
+<td class="colOne"><code><strong><a href="../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long)">StoreWAL</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
         boolean&nbsp;readOnly,
         boolean&nbsp;deleteFilesAfterClose,
         int&nbsp;spaceReclaimMode,
-        boolean&nbsp;syncOnCommitDisabled)</code>&nbsp;</td>
+        boolean&nbsp;syncOnCommitDisabled,
+        long&nbsp;sizeLimit)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -365,7 +375,14 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></h3>
-<code><a href="../../org/mapdb/StoreDirect.html#ccc(int, int)">ccc</a>, <a href="../../org/mapdb/StoreDirect.html#checkHeaders()">checkHeaders</a>, <a href="../../org/mapdb/StoreDirect.html#clearCache()">clearCache</a>, <a href="../../org/mapdb/StoreDirect.html#createStructure()">createStructure</a>, <a href="../../org/mapdb/StoreDirect.html#freeIoRecidPut(long)">freeIoRecidPut</a>, <a href="../../org/mapdb/StoreDirect.html#freeIoRecidTake(boolean)">freeIoRecidTake</a>, <a href="../../org/mapdb/StoreDirect.html#freePhysPut(long)">freePhysPut</a>, <a href="../../org/mapdb/StoreDirect.html#freePhysTake(int, boolean)">freePhysTake</a>, <a href="../../org/mapdb/StoreDirect.html#getFreeRecids()">getFreeRecids</a>, <a href="../../org/mapdb/StoreDirect.html#getLinkedRecordsIndexVals(long)">getLinkedRecordsIndexVals</a>, <a href="../../org/mapdb/StoreDirect.html#getMaxRecid()">getMaxRecid</a>, <a href="../../org/mapdb/StoreDirect.html#getRaw(long)">getRaw</a>, <a href="../../org/mapdb/StoreDirect.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/StoreDirect.html#isReadOnly()">isReadOnly</a>, <a href="../../org/mapdb/StoreDirect.html#physAllocate(int, boolean)">physAllocate</a>, <a href="../../org/mapdb/StoreDirect.html#roundTo16(long)">roundTo16</a>, <a href="../../org/mapdb/StoreDirect.html#serialize(A, org.mapdb.Serializer)">serialize</a>, <a href="../../org/mapdb/StoreDirect.html#size2ListIoRecid(long)">size2ListIoRecid</a>, <a href="../../org/mapdb/StoreDirect.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw</a></code></li>
+<code><a href="../../org/mapdb/StoreDirect.html#calculateStatistics()">calculateStatistics</a>, <a href="../../org/mapdb/StoreDirect.html#checkHeaders()">checkHeaders</a>, <a href="../../org/mapdb/StoreDirect.html#clearCache()">clearCache</a>, <a href="../../org/mapdb/StoreDirect.html#countLongStackItems(long)">countLongStackItems</a>, <a href="../../org/mapdb/StoreDirect.html#createStructure()">createStructure</a>, <a href="../../org/mapdb/StoreDirect.html#freeIoRecidPut(long)">freeIoRecidPut</a>, <a href="../../org/mapdb/StoreDirect.html#freeIoRecidTake(boolean)">freeIoRecidTake</a>, <a href="../../org/mapdb/StoreDirect.html#freePhysPut(long)">freePhysPut</a>, <a href="../../org/mapdb/StoreDirect.html#freePhysTake(int, boolean)">freePhysTake</a>, <a href="../../org/mapdb/StoreDirect.html#getCurrSize()">getCurrSize</a>, <a href="../../org/mapdb/StoreDirect.html#getFreeRecids()">getFreeRecids</a>, <a href="../../org/mapdb/StoreDirect.html#getFreeSize()">getFreeSize</a>, <a href="../../org/mapdb/StoreDirect.html#getLinkedRecordsIndexVals(long)">getLinkedRecordsIndexVals</a>, <a href="../../org/mapdb/StoreDirect.html#getMaxRecid()">getMaxRecid</a>, <a href="../../org/mapdb/StoreDirect.html#getRaw(long)">getRaw</a>, <a href="../../org/mapdb/StoreDirect.html#getSizeLimit()">getSizeLimit</a>, <a href="../../org/mapdb/StoreDirect.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/StoreDirect.html#isReadOnly()">isReadOnly</a>, <a href="../../org/mapdb/StoreDirect.html#physAllocate(int, boolean)">physAllocate</a>, <a href="../../org/mapdb/StoreDirect.html#roundTo16(long)">roundTo16</a>, <a href="../../org/mapdb/StoreDirect.html#serialize(A, org.mapdb.Serializer)">serialize</a>, <a href="../../org/mapdb/StoreDirect.html#size2ListIoRecid(long)">size2ListIoRecid</a>, <a href="../../org/mapdb/StoreDirect.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_org.mapdb.Store">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></h3>
+<code><a href="../../org/mapdb/Store.html#printStatistics()">printStatistics</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -388,6 +405,16 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="LOG_MASK_OFFSET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LOG_MASK_OFFSET</h4>
+<pre>protected static final&nbsp;long LOG_MASK_OFFSET</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.StoreWAL.LOG_MASK_OFFSET">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="WAL_INDEX_LONG">
 <!--   -->
 </a>
@@ -559,7 +586,7 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <pre>public&nbsp;StoreWAL(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</pre>
 </li>
 </ul>
-<a name="StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean)">
+<a name="StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -569,7 +596,8 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
         boolean&nbsp;readOnly,
         boolean&nbsp;deleteFilesAfterClose,
         int&nbsp;spaceReclaimMode,
-        boolean&nbsp;syncOnCommitDisabled)</pre>
+        boolean&nbsp;syncOnCommitDisabled,
+        long&nbsp;sizeLimit)</pre>
 </li>
 </ul>
 </li>

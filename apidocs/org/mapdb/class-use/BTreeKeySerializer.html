@@ -112,24 +112,36 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></code></td>
+<td class="colLast"><span class="strong">BTreeKeySerializer.</span><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.html#BASIC">BASIC</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></code></td>
 <td class="colLast"><span class="strong">BTreeMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.html#keySerializer">keySerializer</a></strong></code>
 <div class="block">Serializer used to convert keys from/into binary form.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></code></td>
+<td class="colLast"><span class="strong">BTreeMap.NodeSerializer.</span><code><strong><a href="../../../org/mapdb/BTreeMap.NodeSerializer.html#keySerializer">keySerializer</a></strong></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></code></td>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#keySerializer">keySerializer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><span class="strong">BTreeKeySerializer.</span><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.html#STRING">STRING</a></strong></code>
 <div class="block">Applies delta packing on <code>java.lang.String</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
 <td class="colLast"><span class="strong">BTreeKeySerializer.</span><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.html#ZERO_OR_POSITIVE_INT">ZERO_OR_POSITIVE_INT</a></strong></code>
 <div class="block">Applies delta packing on <code>java.lang.Integer</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
 <td class="colLast"><span class="strong">BTreeKeySerializer.</span><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.html#ZERO_OR_POSITIVE_LONG">ZERO_OR_POSITIVE_LONG</a></strong></code>
 <div class="block">Applies delta packing on <code>java.lang.Long</code>.</div>
@@ -215,15 +227,11 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
-<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createTreeMap(java.lang.String, int, boolean, boolean, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">createTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-             int&nbsp;nodeSize,
-             boolean&nbsp;valuesStoredOutsideNodes,
-             boolean&nbsp;keepCounter,
-             <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;keySerializer,
-             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;V&gt;&nbsp;valueSerializer,
-             <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;K&gt;&nbsp;comparator)</code>
-<div class="block">Creates new TreeMap</div>
+<td class="colFirst"><code>protected static long</code></td>
+<td class="colLast"><span class="strong">BTreeMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.html#createRootRef(org.mapdb.Engine, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer)">createRootRef</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+             <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;keySer,
+             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSer)</code>
+<div class="block">creates empty root node and returns recid of its reference</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -240,6 +248,12 @@
 <td class="colFirst"><code>protected &lt;K&gt;&nbsp;<a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#fillNulls(org.mapdb.BTreeKeySerializer)">fillNulls</a></strong>(<a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;keySerializer)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#keySerializer(org.mapdb.BTreeKeySerializer)">keySerializer</a></strong>(<a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;keySerializer)</code>
+<div class="block">keySerializer used to convert keys into/from binary form.</div>
+</td>
+</tr>
 </tbody>
 </table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
@@ -249,16 +263,21 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, int, boolean, boolean, boolean, org.mapdb.Serializer, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.NodeSerializer.html#BTreeMap.NodeSerializer(boolean, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap.NodeSerializer</a></strong>(boolean&nbsp;valsOutsideNodes,
+                       <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;keySerializer,
+                       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer,
+                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">BTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+        long&nbsp;rootRecidRef,
         int&nbsp;maxNodeSize,
-        boolean&nbsp;hasValues,
         boolean&nbsp;valsOutsideNodes,
-        boolean&nbsp;keepCounter,
-        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;defaultSerializer,
+        long&nbsp;counterRecid,
         <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;keySerializer,
         <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;&nbsp;valueSerializer,
         <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;comparator)</code>
-<div class="block">Constructor used to create new BTreeMap without existing record (recid) in Engine.</div>
+<div class="block">Constructor used to create new BTreeMap.</div>
 </td>
 </tr>
 </tbody>

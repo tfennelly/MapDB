@@ -153,11 +153,19 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#hasLimit">hasLimit</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#readOnly">readOnly</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#size">size</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#size">size</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#sizeLimit">sizeLimit</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -181,8 +189,9 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#Volume.FileChannelVol(java.io.File, boolean)">Volume.FileChannelVol</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
-                     boolean&nbsp;readOnly)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#Volume.FileChannelVol(java.io.File, boolean, long)">Volume.FileChannelVol</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                     boolean&nbsp;readOnly,
+                     long&nbsp;sizeLimit)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -208,88 +217,88 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#deleteFile()">deleteFile</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#ensureAvailable(long)">ensureAvailable</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#getByte(long)">getByte</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DataInput2.html" title="class in org.mapdb">DataInput2</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#getDataInput(long, int)">getDataInput</a></strong>(long&nbsp;offset,
             int&nbsp;size)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#getFile()">getFile</a></strong>()</code>
 <div class="block">returns underlying file if it exists</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#getInt(long)">getInt</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#getLong(long)">getLong</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#getSixLong(long)">getSixLong</a></strong>(long&nbsp;offset)</code>
 <div class="block">Reads a long from the indicated position</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#isEmpty()">isEmpty</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#isSliced()">isSliced</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#putByte(long, byte)">putByte</a></strong>(long&nbsp;offset,
        byte&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#putData(long, byte[], int, int)">putData</a></strong>(long&nbsp;offset,
        byte[]&nbsp;src,
        int&nbsp;srcPos,
        int&nbsp;srcSize)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#putData(long, java.nio.ByteBuffer)">putData</a></strong>(long&nbsp;offset,
        <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buf)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#putInt(long, int)">putInt</a></strong>(long&nbsp;offset,
       int&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#putLong(long, long)">putLong</a></strong>(long&nbsp;offset,
        long&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#putSixLong(long, long)">putSixLong</a></strong>(long&nbsp;offset,
           long&nbsp;value)</code>
 <div class="block">Writes a long to the indicated position</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#readFully(long, java.nio.ByteBuffer)">readFully</a></strong>(long&nbsp;offset,
          <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buf)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#sync()">sync</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.FileChannelVol.html#tryAvailable(long)">tryAvailable</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
@@ -302,7 +311,7 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></h3>
-<code><a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, java.io.File, java.io.File)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#getPackedLong(long)">getPackedLong</a>, <a href="../../org/mapdb/Volume.html#getUnsignedByte(long)">getUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#getUnsignedShort(long)">getUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#memoryFactory(boolean)">memoryFactory</a>, <a href="../../org/mapdb/Volume.html#putPackedLong(long, long)">putPackedLong</a>, <a href="../../org/mapdb/Volume.html#putUnsignedByte(long, int)">putUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#putUnsignedShort(long, int)">putUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean)">volumeForFile</a></code></li>
+<code><a href="../../org/mapdb/Volume.html#ensureAvailable(long)">ensureAvailable</a>, <a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#getPackedLong(long)">getPackedLong</a>, <a href="../../org/mapdb/Volume.html#getUnsignedByte(long)">getUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#getUnsignedShort(long)">getUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#memoryFactory(boolean, long)">memoryFactory</a>, <a href="../../org/mapdb/Volume.html#putPackedLong(long, long)">putPackedLong</a>, <a href="../../org/mapdb/Volume.html#putUnsignedByte(long, int)">putUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#putUnsignedShort(long, int)">putUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long)">volumeForFile</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -352,6 +361,24 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <pre>protected final&nbsp;boolean readOnly</pre>
 </li>
 </ul>
+<a name="sizeLimit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sizeLimit</h4>
+<pre>protected final&nbsp;long sizeLimit</pre>
+</li>
+</ul>
+<a name="hasLimit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasLimit</h4>
+<pre>protected final&nbsp;boolean hasLimit</pre>
+</li>
+</ul>
 <a name="size">
 <!--   -->
 </a>
@@ -378,14 +405,15 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="Volume.FileChannelVol(java.io.File, boolean)">
+<a name="Volume.FileChannelVol(java.io.File, boolean, long)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Volume.FileChannelVol</h4>
 <pre>public&nbsp;Volume.FileChannelVol(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
-                     boolean&nbsp;readOnly)</pre>
+                     boolean&nbsp;readOnly,
+                     long&nbsp;sizeLimit)</pre>
 </li>
 </ul>
 </li>
@@ -396,16 +424,16 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="ensureAvailable(long)">
+<a name="tryAvailable(long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>ensureAvailable</h4>
-<pre>public&nbsp;void&nbsp;ensureAvailable(long&nbsp;offset)</pre>
+<h4>tryAvailable</h4>
+<pre>public&nbsp;boolean&nbsp;tryAvailable(long&nbsp;offset)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Volume.html#ensureAvailable(long)">ensureAvailable</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></code></dd>
+<dd><code><a href="../../org/mapdb/Volume.html#tryAvailable(long)">tryAvailable</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></code></dd>
 </dl>
 </li>
 </ul>
