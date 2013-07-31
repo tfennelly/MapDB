@@ -419,53 +419,60 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getHashMap(java.lang.String, org.mapdb.Fun.Function1)">getHashMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+          <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueCreator)</code>
+<div class="block">Opens existing or creates new Hash Tree Map.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;K&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getHashSet(java.lang.String)">getHashSet</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Opens existing or creates new Hash Tree Set.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getQueue(java.lang.String)">getQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getStack(java.lang.String)">getStack</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getTreeMap(java.lang.String)">getTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Opens existing or creates new B-linked-tree Map.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getTreeSet(java.lang.String)">getTreeSet</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Opens existing or creates new B-linked-tree Set.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#isClosed()">isClosed</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#reinit()">reinit</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#rename(java.lang.String, java.lang.String)">rename</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldName,
       <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;newName)</code>
 <div class="block">rename named record into newName</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Rollback changes made on collections loaded by this DB</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#snapshot()">snapshot</a></strong>()</code>
 <div class="block">Make readonly snapshot view of DB and all of its collection Collections loaded by this instance are not affected (are still mutable).</div>
@@ -643,6 +650,19 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;&nbsp;getHashMap(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <div class="block"><p>Opens existing or creates new Hash Tree Map. This collection perform well under concurrent access. Is best for large keys and large values.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of map</dd><dd><code>K</code> - key</dd><dd><code>V</code> - value</dd>
+<dt><span class="strong">Returns:</span></dt><dd>map</dd></dl>
+</li>
+</ul>
+<a name="getHashMap(java.lang.String, org.mapdb.Fun.Function1)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHashMap</h4>
+<pre>public&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;&nbsp;getHashMap(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                             <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueCreator)</pre>
+<div class="block"><p>Opens existing or creates new Hash Tree Map. This collection perform well under concurrent access. Is best for large keys and large values.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of map</dd><dd><code>valueCreator</code> - if value is not found, new is created and placed into map.</dd><dd><code>K</code> - key</dd><dd><code>V</code> - value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>map</dd></dl>
 </li>
 </ul>

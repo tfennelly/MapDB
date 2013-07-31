@@ -92,13 +92,17 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
+<td class="colLast"><span class="strong">DBMaker.</span><code><strong><a href="../../../org/mapdb/DBMaker.html#extendStoreVolumeFactory()">extendStoreVolumeFactory</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
 <td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long)">fileFactory</a></strong>(boolean&nbsp;readOnly,
            int&nbsp;rafMode,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
            long&nbsp;sizeLimit)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
 <td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">fileFactory</a></strong>(boolean&nbsp;readOnly,
            int&nbsp;rafMode,
@@ -107,10 +111,27 @@
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;physFile,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;transLogFile)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
 <td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#memoryFactory(boolean, long)">memoryFactory</a></strong>(boolean&nbsp;useDirectBuffer,
              long&nbsp;sizeLimit)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../org/mapdb/package-summary.html">org.mapdb</a> with parameters of type <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
+<td class="colLast"><span class="strong">DBMaker.</span><code><strong><a href="../../../org/mapdb/DBMaker.html#extendStoreDirect(org.mapdb.Volume.Factory)">extendStoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;folFac)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
+<td class="colLast"><span class="strong">DBMaker.</span><code><strong><a href="../../../org/mapdb/DBMaker.html#extendStoreWAL(org.mapdb.Volume.Factory)">extendStoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;folFac)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

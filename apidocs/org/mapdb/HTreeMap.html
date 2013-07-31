@@ -187,64 +187,72 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#DIR_SERIALIZER">DIR_SERIALIZER</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected static int</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#DIV8">DIV8</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#engine">engine</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expire">expire</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireAccess">expireAccess</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireAccessFlag">expireAccessFlag</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireFlag">expireFlag</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireHeads">expireHeads</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireMaxSize">expireMaxSize</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireMaxSizeFlag">expireMaxSizeFlag</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireTails">expireTails</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireTimeStart">expireTimeStart</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#hashSalt">hashSalt</a></strong></code>
 <div class="block">Salt added to hash before rehashing, so it is harder to trigger hash collision attack.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#hasValues">hasValues</a></strong></code>
 <div class="block">is this a Map or Set? if false, entries do not have values, only keys are allowed</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#keySerializer">keySerializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#LN_SERIALIZER">LN_SERIALIZER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static int</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#MOD8">MOD8</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;[]</code></td>
@@ -265,6 +273,10 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#valueCreator">valueCreator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
@@ -283,7 +295,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[])">HTreeMap</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colOne"><code><strong><a href="../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[], org.mapdb.Fun.Function1)">HTreeMap</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
         long&nbsp;counterRecid,
         int&nbsp;hashSalt,
         long[]&nbsp;segmentRecids,
@@ -294,7 +306,8 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
         long&nbsp;expireAccess,
         long&nbsp;expireMaxSize,
         long[]&nbsp;expireHeads,
-        long[]&nbsp;expireTails)</code>
+        long[]&nbsp;expireTails,
+        <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator)</code>
 <div class="block">Opens HTreeMap</div>
 </td>
 </tr>
@@ -340,6 +353,15 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#entrySet()">entrySet</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#exirePurgeSegment(int, long)">exirePurgeSegment</a></strong>(int&nbsp;seg,
+                 long&nbsp;removePerSegment)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireCheckSegment(int)">expireCheckSegment</a></strong>(int&nbsp;segment)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
@@ -392,7 +414,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getPeek(java.lang.Object)">getPeek</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</code>
-<div class="block">Return given value, without updating cache statistics if <code>expireAccess()</code> is true</div>
+<div class="block">Return given value, without updating cache statistics if <code>expireAccess()</code> is true It also does not use <code>valueCreator</code> if value is not found (always returns null if not found)</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -522,6 +544,26 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <h4>BUCKET_OVERFLOW</h4>
 <pre>protected static final&nbsp;int BUCKET_OVERFLOW</pre>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.HTreeMap.BUCKET_OVERFLOW">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="DIV8">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DIV8</h4>
+<pre>protected static final&nbsp;int DIV8</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.HTreeMap.DIV8">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="MOD8">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MOD8</h4>
+<pre>protected static final&nbsp;int MOD8</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.HTreeMap.MOD8">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="hasValues">
@@ -661,6 +703,15 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <pre>protected final&nbsp;long[] expireTails</pre>
 </li>
 </ul>
+<a name="valueCreator">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>valueCreator</h4>
+<pre>protected final&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt; valueCreator</pre>
+</li>
+</ul>
 <a name="LN_SERIALIZER">
 <!--   -->
 </a>
@@ -724,7 +775,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[])">
+<a name="HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[], org.mapdb.Fun.Function1)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -741,7 +792,8 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
         long&nbsp;expireAccess,
         long&nbsp;expireMaxSize,
         long[]&nbsp;expireHeads,
-        long[]&nbsp;expireTails)</pre>
+        long[]&nbsp;expireTails,
+        <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator)</pre>
 <div class="block"><p>Opens HTreeMap</p></div>
 </li>
 </ul>
@@ -829,7 +881,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <li class="blockList">
 <h4>getPeek</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;getPeek(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</pre>
-<div class="block"><p>Return given value, without updating cache statistics if <code>expireAccess()</code> is true</p></div>
+<div class="block"><p>Return given value, without updating cache statistics if <code>expireAccess()</code> is true It also does not use <code>valueCreator</code> if value is not found (always returns null if not found)</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>key</code> - key to lookup</dd>
 <dt><span class="strong">Returns:</span></dt><dd>value associated with key or null</dd></dl>
 </li>
@@ -1121,6 +1173,25 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <li class="blockList">
 <h4>expirePurge</h4>
 <pre>protected&nbsp;void&nbsp;expirePurge()</pre>
+</li>
+</ul>
+<a name="exirePurgeSegment(int, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>exirePurgeSegment</h4>
+<pre>protected&nbsp;void&nbsp;exirePurgeSegment(int&nbsp;seg,
+                     long&nbsp;removePerSegment)</pre>
+</li>
+</ul>
+<a name="expireCheckSegment(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>expireCheckSegment</h4>
+<pre>protected&nbsp;void&nbsp;expireCheckSegment(int&nbsp;segment)</pre>
 </li>
 </ul>
 <a name="snapshot()">

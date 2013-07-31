@@ -143,6 +143,10 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#name">name</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueCreator">valueCreator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
@@ -228,6 +232,12 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueCreator(org.mapdb.Fun.Function1)">valueCreator</a></strong>(<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&nbsp;valueCreator)</code>
+<div class="block">If value is not found, HTreeMap can fetch and insert default value.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</code>
 <div class="block">valueSerializer used to convert values into/from binary form.</div>
 </td>
@@ -311,10 +321,19 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <a name="expireAccess">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>expireAccess</h4>
 <pre>protected&nbsp;long expireAccess</pre>
+</li>
+</ul>
+<a name="valueCreator">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>valueCreator</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a> valueCreator</pre>
 </li>
 </ul>
 </li>
@@ -422,6 +441,16 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>expireAfterAccess</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;expireAfterAccess(long&nbsp;interval)</pre>
 <div class="block"><p>Specifies that each entry should be automatically removed from the map once a fixed duration has elapsed after the entry&rsquo;s creation, the most recent replacement of its value, or its last access. Access time is reset by all map read and write operations</p></div>
+</li>
+</ul>
+<a name="valueCreator(org.mapdb.Fun.Function1)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>valueCreator</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;valueCreator(<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&nbsp;valueCreator)</pre>
+<div class="block"><p>If value is not found, HTreeMap can fetch and insert default value. <code>valueCreator</code> is used to return new value. This way <code>HTreeMap.get()</code> never returns null</p></div>
 </li>
 </ul>
 <a name="make()">

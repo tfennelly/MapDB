@@ -126,7 +126,7 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></h3>
-<code><a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
+<code><a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
 </ul>
 </li>
 </ul>
@@ -147,16 +147,20 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#cacheMaxSize">cacheMaxSize</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#cacheMaxSizeMask">cacheMaxSizeMask</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#hashSalt">hashSalt</a></strong></code>
 <div class="block">Salt added to keys before hashing, so it is harder to trigger hash collision attack.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected org.mapdb.CacheHashTable.HashItem[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#items">items</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantLock</a>[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#locks">locks</a></strong></code>&nbsp;</td>
 </tr>
@@ -317,6 +321,15 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <li class="blockList">
 <h4>cacheMaxSize</h4>
 <pre>protected final&nbsp;int cacheMaxSize</pre>
+</li>
+</ul>
+<a name="cacheMaxSizeMask">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>cacheMaxSizeMask</h4>
+<pre>protected final&nbsp;int cacheMaxSizeMask</pre>
 </li>
 </ul>
 <a name="hashSalt">

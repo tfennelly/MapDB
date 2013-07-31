@@ -191,27 +191,39 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#assertSerializable(java.lang.Object)">assertSerializable</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#booleanToByteArray(boolean[])">booleanToByteArray</a></strong>(boolean[]&nbsp;bool)</code>
+<div class="block">Builds a byte array from the array of booleans, compressing up to 8 booleans per byte.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#deserialize(java.io.DataInput, int)">deserialize</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;is,
            int&nbsp;capacity)</code>
 <div class="block">Deserialize the content of an object from a DataInput.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#deserialize(java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">deserialize</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;is,
            <a href="../../org/mapdb/SerializerBase.FastArrayList.html" title="class in org.mapdb">SerializerBase.FastArrayList</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;objectStack)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#deserializeClass(java.io.DataInput)">deserializeClass</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;is)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#deserializeUnknownHeader(java.io.DataInput, int, org.mapdb.SerializerBase.FastArrayList)">deserializeUnknownHeader</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;is,
                         int&nbsp;head,
                         <a href="../../org/mapdb/SerializerBase.FastArrayList.html" title="class in org.mapdb">SerializerBase.FastArrayList</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;objectStack)</code>
 <div class="block">override this method to extend SerializerBase functionality</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static boolean[]</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#readBooleanArray(java.io.DataInput)">readBooleanArray</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;is)</code>
+<div class="block">Unpacks an integer from the DataInput indicating the number of booleans that are compressed.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -397,7 +409,7 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <a name="deserializeUnknownHeader(java.io.DataInput, int, org.mapdb.SerializerBase.FastArrayList)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>deserializeUnknownHeader</h4>
 <pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;deserializeUnknownHeader(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;is,
@@ -407,6 +419,32 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <div class="block"><p>override this method to extend SerializerBase functionality</p></div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="booleanToByteArray(boolean[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>booleanToByteArray</h4>
+<pre>protected static&nbsp;byte[]&nbsp;booleanToByteArray(boolean[]&nbsp;bool)</pre>
+<div class="block"><p>Builds a byte array from the array of booleans, compressing up to 8 booleans per byte.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>bool</code> - The booleans to be compressed.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>The fully compressed byte array.</dd></dl>
+</li>
+</ul>
+<a name="readBooleanArray(java.io.DataInput)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>readBooleanArray</h4>
+<pre>protected static&nbsp;boolean[]&nbsp;readBooleanArray(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;is)
+                                     throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><p>Unpacks an integer from the DataInput indicating the number of booleans that are compressed. It then calculates the number of bytes, reads them in, and decompresses and converts them into an array of booleans using the toBooleanArray(byte[]); method. The array of booleans are trimmed to <code>numBools</code> elements. This is necessary in situations where the number of booleans is not a multiple of 8.</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>The boolean array decompressed from the bytes read in.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If an error occurred while reading.</dd></dl>
 </li>
 </ul>
 </li>

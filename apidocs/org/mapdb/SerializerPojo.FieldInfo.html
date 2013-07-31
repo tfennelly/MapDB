@@ -124,8 +124,8 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#clazz">clazz</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#getter">getter</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#field">field</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -136,14 +136,10 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#primitive">primitive</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#setter">setter</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#type">type</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#typeClass">typeClass</a></strong></code>&nbsp;</td>
 </tr>
@@ -197,14 +193,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#getType()">getType</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#initGetter()">initGetter</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.FieldInfo.html#initSetter()">initSetter</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -277,22 +265,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt; clazz</pre>
 </li>
 </ul>
-<a name="setter">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setter</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> setter</pre>
-</li>
-</ul>
-<a name="getter">
+<a name="field">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getter</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> getter</pre>
+<h4>field</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a> field</pre>
 </li>
 </ul>
 </li>
@@ -333,24 +312,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="initSetter()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>initSetter</h4>
-<pre>protected&nbsp;void&nbsp;initSetter()</pre>
-</li>
-</ul>
-<a name="initGetter()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>initGetter</h4>
-<pre>protected&nbsp;void&nbsp;initGetter()</pre>
-</li>
-</ul>
 <a name="getName()">
 <!--   -->
 </a>

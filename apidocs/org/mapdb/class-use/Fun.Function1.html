@@ -71,6 +71,23 @@
 <!--   -->
 </a>
 <h3>Uses of <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a> in <a href="../../../org/mapdb/package-summary.html">org.mapdb</a></h3>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../org/mapdb/package-summary.html">org.mapdb</a> declared as <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></code></td>
+<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueCreator">valueCreator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
+<td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#valueCreator">valueCreator</a></strong></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../org/mapdb/package-summary.html">org.mapdb</a> that return <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
@@ -149,6 +166,44 @@
             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;V&gt;&nbsp;valueSerializer,
             <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator)</code>
 <div class="block">Build BTreeMap from presorted data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;</code></td>
+<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#getHashMap(java.lang.String, org.mapdb.Fun.Function1)">getHashMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+          <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueCreator)</code>
+<div class="block">Opens existing or creates new Hash Tree Map.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
+<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueCreator(org.mapdb.Fun.Function1)">valueCreator</a></strong>(<a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&nbsp;valueCreator)</code>
+<div class="block">If value is not found, HTreeMap can fetch and insert default value.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../org/mapdb/package-summary.html">org.mapdb</a> with parameters of type <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[], org.mapdb.Fun.Function1)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+        long&nbsp;counterRecid,
+        int&nbsp;hashSalt,
+        long[]&nbsp;segmentRecids,
+        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;keySerializer,
+        <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;valueSerializer,
+        long&nbsp;expireTimeStart,
+        long&nbsp;expire,
+        long&nbsp;expireAccess,
+        long&nbsp;expireMaxSize,
+        long[]&nbsp;expireHeads,
+        long[]&nbsp;expireTails,
+        <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator)</code>
+<div class="block">Opens HTreeMap</div>
 </td>
 </tr>
 </tbody>

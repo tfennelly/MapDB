@@ -78,14 +78,14 @@
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle">org.mapdb</div>
-<h2 title="Class DBMaker" class="title">Class DBMaker</h2>
+<h2 title="Class DBMaker" class="title">Class DBMaker&lt;DBMakerT extends DBMaker&lt;DBMakerT&gt;&gt;</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
 <li><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapdb.DBMaker</li>
+<li>org.mapdb.DBMaker&lt;DBMakerT&gt;</li>
 </ul>
 </li>
 </ul>
@@ -94,7 +94,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <span class="strong">DBMaker</span>
+<pre>public class <span class="strong">DBMaker&lt;DBMakerT extends DBMaker&lt;DBMakerT&gt;&gt;</span>
 extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block"><p>A builder class for creating and opening a database.</p></div>
 <dl><dt><span class="strong">Author:</span></dt>
@@ -244,6 +244,10 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block">use static factory methods, or make subclass</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#DBMaker(java.io.File)">DBMaker</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -260,94 +264,198 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_newAppendFileDB(java.io.File)">_newAppendFileDB</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_newDirectMemoryDB()">_newDirectMemoryDB</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_newFileDB(java.io.File)">_newFileDB</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_newMemoryDB()">_newMemoryDB</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#asyncFlushDelay(int)">asyncFlushDelay</a></strong>(int&nbsp;delay)</code>
 <div class="block">Set flush iterval for write cache, by default is 0 <p/> When BTreeMap is constructed from ordered set, tree node size is increasing linearly with each item added.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#asyncWriteDisable()">asyncWriteDisable</a></strong>()</code>
 <div class="block">By default all modifications are queued and written into disk on Background Writer Thread.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#cacheDisable()">cacheDisable</a></strong>()</code>
 <div class="block">Instance cache is enabled by default.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#cacheHardRefEnable()">cacheHardRefEnable</a></strong>()</code>
 <div class="block">Enables unbounded hard reference cache.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#cacheLRUEnable()">cacheLRUEnable</a></strong>()</code>
 <div class="block">Enables Least Recently Used cache.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#cacheSize(int)">cacheSize</a></strong>(int&nbsp;cacheSize)</code>
 <div class="block">Set cache size.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#cacheSoftRefEnable()">cacheSoftRefEnable</a></strong>()</code>
 <div class="block">Enables unbounded cache which uses <code>SoftReference</code>.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#cacheWeakRefEnable()">cacheWeakRefEnable</a></strong>()</code>
 <div class="block">Enables unbounded cache which uses <code>WeakReference</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#checksumEnable()">checksumEnable</a></strong>()</code>
 <div class="block">Adds CRC32 checksum at end of each record to check data integrity.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#closeOnJvmShutdown()">closeOnJvmShutdown</a></strong>()</code>
 <div class="block">Adds JVM shutdown hook and closes DB just before JVM;</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#compressionEnable()">compressionEnable</a></strong>()</code>
 <div class="block">Enables record compression.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#deleteFilesAfterClose()">deleteFilesAfterClose</a></strong>()</code>
 <div class="block">Try to delete files after DB is closed.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#encryptionEnable(byte[])">encryptionEnable</a></strong>(byte[]&nbsp;password)</code>
 <div class="block">Encrypt storage using XTEA algorithm.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#encryptionEnable(java.lang.String)">encryptionEnable</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password)</code>
 <div class="block">Encrypt storage using XTEA algorithm.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendArgumentCheck()">extendArgumentCheck</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendAsyncWriteEngine(org.mapdb.Engine)">extendAsyncWriteEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheHardRef.html" title="class in org.mapdb">CacheHardRef</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheHardRef(org.mapdb.Engine)">extendCacheHardRef</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheHashTable.html" title="class in org.mapdb">CacheHashTable</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheHashTable(org.mapdb.Engine)">extendCacheHashTable</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheLRU.html" title="class in org.mapdb">CacheLRU</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheLRU(org.mapdb.Engine)">extendCacheLRU</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheSoftRef(org.mapdb.Engine)">extendCacheSoftRef</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheWeakRef(org.mapdb.Engine)">extendCacheWeakRef</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendChecksum(org.mapdb.Engine)">extendChecksum</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCompression(org.mapdb.Engine)">extendCompression</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendEncryption(org.mapdb.Engine)">extendEncryption</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendShutdownHookAfter(org.mapdb.Engine)">extendShutdownHookAfter</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendShutdownHookBefore(org.mapdb.Engine)">extendShutdownHookBefore</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendSnapshotEngine(org.mapdb.Engine)">extendSnapshotEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendStoreAppend()">extendStoreAppend</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendStoreDirect(org.mapdb.Volume.Factory)">extendStoreDirect</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;folFac)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendStoreVolumeFactory()">extendStoreVolumeFactory</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendStoreWAL(org.mapdb.Volume.Factory)">extendStoreWAL</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;folFac)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendWrapByteTransform(org.mapdb.Engine)">extendWrapByteTransform</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendWrapCache(org.mapdb.Engine)">extendWrapCache</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendWrapSnapshotEngine(org.mapdb.Engine)">extendWrapSnapshotEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendWrapStore(org.mapdb.Engine)">extendWrapStore</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#freeSpaceReclaimQ(int)">freeSpaceReclaimQ</a></strong>(int&nbsp;q)</code>
 <div class="block">Set free space reclaim Q.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#getThis()">getThis</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a></code></td>
@@ -420,55 +528,55 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#randomAccessFileEnable()">randomAccessFileEnable</a></strong>()</code>
 <div class="block">Enables compatibility storage mode for 32bit JVMs.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#randomAccessFileEnableIfNeeded()">randomAccessFileEnableIfNeeded</a></strong>()</code>
 <div class="block">Check current JVM for known problems.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#randomAccessFileEnableKeepIndexMapped()">randomAccessFileEnableKeepIndexMapped</a></strong>()</code>
 <div class="block">Same as <code>randomAccessFileEnable()</code>, but part of storage is kept memory mapped.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#readOnly()">readOnly</a></strong>()</code>
 <div class="block">Open store in read-only mode.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#sizeLimit(double)">sizeLimit</a></strong>(double&nbsp;maxSize)</code>
 <div class="block">Sets store size limit.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#snapshotDisable()">snapshotDisable</a></strong>()</code>
 <div class="block">MapDB supports snapshots.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#strictDBGet()">strictDBGet</a></strong>()</code>
 <div class="block">DB Get methods such as <a href="../../org/mapdb/DB.html#getTreeMap(java.lang.String)"><code>DB.getTreeMap(String)</code></a> or <a href="../../org/mapdb/DB.html#getAtomicLong(java.lang.String)"><code>DB.getAtomicLong(String)</code></a> auto create new record with default values, if record with given name does not exist.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#syncOnCommitDisable()">syncOnCommitDisable</a></strong>()</code>
 <div class="block">Disables file sync on commit.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#writeAheadLogDisable()">writeAheadLogDisable</a></strong>()</code>
 <div class="block">Transaction journal is enabled by default You must call <b>DB.commit()</b> to save your changes.</div>
 </td>
@@ -747,11 +855,20 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <a name="DBMaker()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>DBMaker</h4>
 <pre>protected&nbsp;DBMaker()</pre>
 <div class="block"><p>use static factory methods, or make subclass</p></div>
+</li>
+</ul>
+<a name="DBMaker(java.io.File)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DBMaker</h4>
+<pre>protected&nbsp;DBMaker(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
 </li>
 </ul>
 </li>
@@ -772,6 +889,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block"><p>Creates new in-memory database. Changes are lost after JVM exits. <p/> This will use HEAP memory so Garbage Collector is affected.</p></div>
 </li>
 </ul>
+<a name="_newMemoryDB()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>_newMemoryDB</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;_newMemoryDB()</pre>
+</li>
+</ul>
 <a name="newDirectMemoryDB()">
 <!--   -->
 </a>
@@ -780,6 +906,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>newDirectMemoryDB</h4>
 <pre>public static&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;newDirectMemoryDB()</pre>
 <div class="block"><p>Creates new in-memory database. Changes are lost after JVM exits. <p/> This will use DirectByteBuffer outside of HEAP, so Garbage Collector is not affected</p></div>
+</li>
+</ul>
+<a name="_newDirectMemoryDB()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>_newDirectMemoryDB</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;_newDirectMemoryDB()</pre>
 </li>
 </ul>
 <a name="newAppendFileDB(java.io.File)">
@@ -792,6 +927,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block"><p>Creates or open append-only database stored in file. This database uses format otherthan usual file db</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>file</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>maker</dd></dl>
+</li>
+</ul>
+<a name="_newAppendFileDB(java.io.File)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>_newAppendFileDB</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;_newAppendFileDB(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
 </li>
 </ul>
 <a name="newTempTreeMap()">
@@ -855,13 +999,31 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block"><p>Creates or open database stored in file.</p></div>
 </li>
 </ul>
+<a name="_newFileDB(java.io.File)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>_newFileDB</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;_newFileDB(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
+</li>
+</ul>
+<a name="getThis()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getThis</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;getThis()</pre>
+</li>
+</ul>
 <a name="writeAheadLogDisable()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>writeAheadLogDisable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;writeAheadLogDisable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;writeAheadLogDisable()</pre>
 <div class="block"><p>Transaction journal is enabled by default You must call <b>DB.commit()</b> to save your changes. It is possible to disable transaction journal for better write performance In this case all integrity checks are sacrificed for faster speed. <p/> If transaction journal is disabled, all changes are written DIRECTLY into store. You must call DB.close() method before exit, otherwise your store <b>WILL BE CORRUPTED</b></p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -872,7 +1034,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cacheDisable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;cacheDisable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;cacheDisable()</pre>
 <div class="block"><p>Instance cache is enabled by default. This greatly decreases serialization overhead and improves performance. Call this method to disable instance cache, so an object will always be deserialized. <p/> This may workaround some problems</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -883,7 +1045,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cacheHardRefEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;cacheHardRefEnable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;cacheHardRefEnable()</pre>
 <div class="block"><p>Enables unbounded hard reference cache. This cache is good if you have lot of available memory. <p/> All fetched records are added to HashMap and stored with hard reference. To prevent OutOfMemoryExceptions MapDB monitors free memory, if it is bellow 25% cache is cleared.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -894,7 +1056,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cacheWeakRefEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;cacheWeakRefEnable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;cacheWeakRefEnable()</pre>
 <div class="block"><p>Enables unbounded cache which uses <code>WeakReference</code>. Items are removed from cache by Garbage Collector</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -905,7 +1067,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cacheSoftRefEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;cacheSoftRefEnable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;cacheSoftRefEnable()</pre>
 <div class="block"><p>Enables unbounded cache which uses <code>SoftReference</code>. Items are removed from cache by Garbage Collector</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -916,7 +1078,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cacheLRUEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;cacheLRUEnable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;cacheLRUEnable()</pre>
 <div class="block"><p>Enables Least Recently Used cache. It is fixed size cache and it removes less used items to make space.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -927,7 +1089,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>randomAccessFileEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;randomAccessFileEnable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;randomAccessFileEnable()</pre>
 <div class="block"><p>Enables compatibility storage mode for 32bit JVMs. <p/> By default MapDB uses memory mapped files. However 32bit JVM can only address 4GB of memory. Also some older JVMs do not handle large memory mapped files well. We can use <code>FileChannel</code> which does not use memory mapped files, but is slower. Use this if you are experiencing <b>java.lang.OutOfMemoryError: Map failed</b> exceptions <p/> This options disables memory mapped files but causes storage to be slower.</p></div>
 </li>
 </ul>
@@ -937,7 +1099,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>randomAccessFileEnableKeepIndexMapped</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;randomAccessFileEnableKeepIndexMapped()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;randomAccessFileEnableKeepIndexMapped()</pre>
 <div class="block"><p>Same as <code>randomAccessFileEnable()</code>, but part of storage is kept memory mapped.  This mode is good performance compromise between memory mapped files and RAF.  <p/>  Index file is typically 5% of storage. It contains small frequently read values,  which is where memory mapped file excel.  <p/>  With this mode you will experience <b>java.lang.OutOfMemoryError: Map failed</b> exceptions  eventually. But storage size limit is pushed to somewhere around 40GB.</p></div>
 </li>
 </ul>
@@ -947,7 +1109,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>randomAccessFileEnableIfNeeded</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;randomAccessFileEnableIfNeeded()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;randomAccessFileEnableIfNeeded()</pre>
 <div class="block"><p>Check current JVM for known problems. If JVM does not handle large memory files well, this option disables memory mapped files, and use safer and slower <code>RandomAccessFile</code> instead.</p></div>
 </li>
 </ul>
@@ -957,7 +1119,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>cacheSize</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;cacheSize(int&nbsp;cacheSize)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;cacheSize(int&nbsp;cacheSize)</pre>
 <div class="block"><p>Set cache size. Interpretations depends on cache type. For fixed size caches (such as FixedHashTable cache) it is maximal number of items in cache. <p/> For unbounded caches (such as HardRef cache) it is initial capacity of underlying table (HashMap). <p/> Default cache size is 32768.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>cacheSize</code> - new cache size</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
@@ -969,7 +1131,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>snapshotDisable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;snapshotDisable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;snapshotDisable()</pre>
 <div class="block"><p>MapDB supports snapshots. <code>SnapshotEngine</code> requires additional locking which has small overhead when not used. So it is possible to disable snapshots in order to maximize performance when snapshots are not used.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -980,7 +1142,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>asyncWriteDisable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;asyncWriteDisable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;asyncWriteDisable()</pre>
 <div class="block"><p>By default all modifications are queued and written into disk on Background Writer Thread. So all modifications are performed in asynchronous mode and do not block. <p/> It is possible to disable Background Writer Thread, but this greatly hurts concurrency. Without async writes, all threads blocks until all previous writes are not finished (single big lock).</p>
 <p/><p>This may workaround some problems</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
@@ -992,7 +1154,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>asyncFlushDelay</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;asyncFlushDelay(int&nbsp;delay)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;asyncFlushDelay(int&nbsp;delay)</pre>
 <div class="block"><p>Set flush iterval for write cache, by default is 0 <p/> When BTreeMap is constructed from ordered set, tree node size is increasing linearly with each item added. Each time new key is added to tree node, its size changes and storage needs to find new place. So constructing BTreeMap from ordered set leads to large store fragmentation. <p/>  Setting flush interval is workaround as BTreeMap node is always updated in memory (write cache)  and only final version of node is stored on disk.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>delay</code> - flush write cache every N miliseconds</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
@@ -1004,7 +1166,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteFilesAfterClose</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;deleteFilesAfterClose()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;deleteFilesAfterClose()</pre>
 <div class="block"><p>Try to delete files after DB is closed. File deletion may silently fail, especially on Windows where buffer needs to be unmapped file delete.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -1015,7 +1177,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>closeOnJvmShutdown</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;closeOnJvmShutdown()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;closeOnJvmShutdown()</pre>
 <div class="block"><p>Adds JVM shutdown hook and closes DB just before JVM;</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -1026,7 +1188,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>compressionEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;compressionEnable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;compressionEnable()</pre>
 <div class="block"><p>Enables record compression. <p/> Make sure you enable this every time you reopen store, otherwise record de-serialization fails unpredictably.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -1037,7 +1199,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>encryptionEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;encryptionEnable(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;encryptionEnable(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;password)</pre>
 <div class="block"><p>Encrypt storage using XTEA algorithm. <p/> XTEA is sound encryption algorithm. However implementation in MapDB was not peer-reviewed. MapDB only encrypts records data, so attacker may see number of records and their sizes. <p/> Make sure you enable this every time you reopen store, otherwise record de-serialization fails unpredictably.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>password</code> - for encryption</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
@@ -1049,7 +1211,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>encryptionEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;encryptionEnable(byte[]&nbsp;password)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;encryptionEnable(byte[]&nbsp;password)</pre>
 <div class="block"><p>Encrypt storage using XTEA algorithm. <p/> XTEA is sound encryption algorithm. However implementation in MapDB was not peer-reviewed. MapDB only encrypts records data, so attacker may see number of records and their sizes. <p/> Make sure you enable this every time you reopen store, otherwise record de-serialization fails unpredictably.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>password</code> - for encryption</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
@@ -1061,7 +1223,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>checksumEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;checksumEnable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;checksumEnable()</pre>
 <div class="block"><p>Adds CRC32 checksum at end of each record to check data integrity. It throws &lsquo;IOException(&ldquo;CRC32 does not match, data broken&rdquo;)&rsquo; on de-serialization if data are corrupted <p/> Make sure you enable this every time you reopen store, otherwise record de-serialization fails.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -1072,7 +1234,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>strictDBGet</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;strictDBGet()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;strictDBGet()</pre>
 <div class="block"><p>DB Get methods such as <a href="../../org/mapdb/DB.html#getTreeMap(java.lang.String)"><code>DB.getTreeMap(String)</code></a> or <a href="../../org/mapdb/DB.html#getAtomicLong(java.lang.String)"><code>DB.getAtomicLong(String)</code></a> auto create new record with default values, if record with given name does not exist. This could be problem if you would like to enforce stricter database schema. So this parameter disables record auto creation.</p><p>If this set, <code>DB.getXX()</code> will throw an exception if given name does not exist, instead of creating new record (or collection)</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -1083,7 +1245,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>readOnly</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;readOnly()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;readOnly()</pre>
 <div class="block"><p>Open store in read-only mode. Any modification attempt will throw <code>UnsupportedOperationException(&ldquo;Read-only&rdquo;)</code></p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -1094,7 +1256,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>freeSpaceReclaimQ</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;freeSpaceReclaimQ(int&nbsp;q)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;freeSpaceReclaimQ(int&nbsp;q)</pre>
 <div class="block"><p>Set free space reclaim Q. It is value from 0 to 10, indicating how eagerly MapDB searchs for free space inside store to reuse, before expanding store file. 0 means that no free space will be reused and store file will just grow (effectively append only). 10 means that MapDB tries really hard to reuse free space, even if it may hurt performance. Default value is 5;</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -1105,7 +1267,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>syncOnCommitDisable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;syncOnCommitDisable()</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;syncOnCommitDisable()</pre>
 <div class="block"><p>Disables file sync on commit. This way transactions are preserved (rollback works), but commits are not &lsquo;durable&rsquo; and data may be lost if store is not properly closed. File store will get properly synced when closed. Disabling this will make commits faster.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -1116,7 +1278,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>sizeLimit</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;sizeLimit(double&nbsp;maxSize)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;sizeLimit(double&nbsp;maxSize)</pre>
 <div class="block"><p>Sets store size limit. Disk or memory space consumed be storage should not grow over this space. Limit is not strict and does not apply to some parts such as index table. Actual store size might be 10% or more bigger.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>maxSize</code> - maximal store size in GB</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
@@ -1144,11 +1306,200 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <a name="makeEngine()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>makeEngine</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;makeEngine()</pre>
 <div class="block"><p>constructs Engine using current settings</p></div>
+</li>
+</ul>
+<a name="extendShutdownHookBefore(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendShutdownHookBefore</h4>
+<pre>protected&nbsp;void&nbsp;extendShutdownHookBefore(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendShutdownHookAfter(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendShutdownHookAfter</h4>
+<pre>protected&nbsp;void&nbsp;extendShutdownHookAfter(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendSnapshotEngine(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendSnapshotEngine</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a>&nbsp;extendSnapshotEngine(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendCacheLRU(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendCacheLRU</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/CacheLRU.html" title="class in org.mapdb">CacheLRU</a>&nbsp;extendCacheLRU(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendCacheWeakRef(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendCacheWeakRef</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a>&nbsp;extendCacheWeakRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendCacheSoftRef(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendCacheSoftRef</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a>&nbsp;extendCacheSoftRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendCacheHardRef(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendCacheHardRef</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/CacheHardRef.html" title="class in org.mapdb">CacheHardRef</a>&nbsp;extendCacheHardRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendCacheHashTable(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendCacheHashTable</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/CacheHashTable.html" title="class in org.mapdb">CacheHashTable</a>&nbsp;extendCacheHashTable(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendAsyncWriteEngine(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendAsyncWriteEngine</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a>&nbsp;extendAsyncWriteEngine(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendCompression(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendCompression</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>&nbsp;extendCompression(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendEncryption(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendEncryption</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>&nbsp;extendEncryption(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendChecksum(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendChecksum</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>&nbsp;extendChecksum(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendArgumentCheck()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendArgumentCheck</h4>
+<pre>protected&nbsp;void&nbsp;extendArgumentCheck()</pre>
+</li>
+</ul>
+<a name="extendWrapStore(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendWrapStore</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;extendWrapStore(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendWrapByteTransform(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendWrapByteTransform</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;extendWrapByteTransform(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendWrapCache(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendWrapCache</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;extendWrapCache(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendWrapSnapshotEngine(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendWrapSnapshotEngine</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;extendWrapSnapshotEngine(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+</li>
+</ul>
+<a name="extendStoreAppend()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendStoreAppend</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a>&nbsp;extendStoreAppend()</pre>
+</li>
+</ul>
+<a name="extendStoreDirect(org.mapdb.Volume.Factory)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendStoreDirect</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>&nbsp;extendStoreDirect(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;folFac)</pre>
+</li>
+</ul>
+<a name="extendStoreWAL(org.mapdb.Volume.Factory)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendStoreWAL</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>&nbsp;extendStoreWAL(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;folFac)</pre>
+</li>
+</ul>
+<a name="extendStoreVolumeFactory()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>extendStoreVolumeFactory</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;extendStoreVolumeFactory()</pre>
 </li>
 </ul>
 </li>

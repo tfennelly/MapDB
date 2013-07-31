@@ -353,8 +353,16 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_COUNT">LONG_STACK_PREF_COUNT</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected static int</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_COUNT_ALTER">LONG_STACK_PREF_COUNT_ALTER</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_SIZE">LONG_STACK_PREF_SIZE</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected static long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_SIZE_ALTER">LONG_STACK_PREF_SIZE_ALTER</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected static long</code></td>
@@ -410,13 +418,17 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#spaceReclaimTrack">spaceReclaimTrack</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#spaceReclaimSplit">spaceReclaimSplit</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#spaceReclaimTrack">spaceReclaimTrack</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantLock</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#structuralLock">structuralLock</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#syncOnCommitDisabled">syncOnCommitDisabled</a></strong></code>&nbsp;</td>
 </tr>
@@ -537,12 +549,14 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#freePhysPut(long)">freePhysPut</a></strong>(long&nbsp;indexVal)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#freePhysPut(long, boolean)">freePhysPut</a></strong>(long&nbsp;indexVal,
+           boolean&nbsp;recursive)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#freePhysTake(int, boolean)">freePhysTake</a></strong>(int&nbsp;size,
-            boolean&nbsp;ensureAvail)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#freePhysTake(int, boolean, boolean)">freePhysTake</a></strong>(int&nbsp;size,
+            boolean&nbsp;ensureAvail,
+            boolean&nbsp;recursive)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
@@ -604,17 +618,20 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#longStackPut(long, long)">longStackPut</a></strong>(long&nbsp;ioList,
-            long&nbsp;offset)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#longStackPut(long, long, boolean)">longStackPut</a></strong>(long&nbsp;ioList,
+            long&nbsp;offset,
+            boolean&nbsp;recursive)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#longStackTake(long)">longStackTake</a></strong>(long&nbsp;ioList)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#longStackTake(long, boolean)">longStackTake</a></strong>(long&nbsp;ioList,
+             boolean&nbsp;recursive)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected long[]</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#physAllocate(int, boolean)">physAllocate</a></strong>(int&nbsp;size,
-            boolean&nbsp;ensureAvail)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#physAllocate(int, boolean, boolean)">physAllocate</a></strong>(int&nbsp;size,
+            boolean&nbsp;ensureAvail,
+            boolean&nbsp;recursive)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
@@ -624,31 +641,42 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#put2(org.mapdb.DataOutput2, long, long[])">put2</a></strong>(<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a>&nbsp;out,
+    long&nbsp;ioRecid,
+    long[]&nbsp;indexVals)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Undoes all changes made in the current transaction.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#roundTo16(long)">roundTo16</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected &lt;A&gt;&nbsp;<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#serialize(A, org.mapdb.Serializer)">serialize</a></strong>(A&nbsp;value,
          <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#size2ListIoRecid(long)">size2ListIoRecid</a></strong>(long&nbsp;size)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Update existing record with new value.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#update2(org.mapdb.DataOutput2, long)">update2</a></strong>(<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a>&nbsp;out,
+       long&nbsp;ioRecid)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -841,6 +869,26 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.StoreDirect.LONG_STACK_PREF_SIZE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
+<a name="LONG_STACK_PREF_COUNT_ALTER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LONG_STACK_PREF_COUNT_ALTER</h4>
+<pre>protected static final&nbsp;int LONG_STACK_PREF_COUNT_ALTER</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.StoreDirect.LONG_STACK_PREF_COUNT_ALTER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="LONG_STACK_PREF_SIZE_ALTER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LONG_STACK_PREF_SIZE_ALTER</h4>
+<pre>protected static final&nbsp;long LONG_STACK_PREF_SIZE_ALTER</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.StoreDirect.LONG_STACK_PREF_SIZE_ALTER">Constant Field Values</a></dd></dl>
+</li>
+</ul>
 <a name="locks">
 <!--   -->
 </a>
@@ -938,6 +986,15 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <li class="blockList">
 <h4>spaceReclaimReuse</h4>
 <pre>protected final&nbsp;boolean spaceReclaimReuse</pre>
+</li>
+</ul>
+<a name="spaceReclaimSplit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>spaceReclaimSplit</h4>
+<pre>protected final&nbsp;boolean spaceReclaimSplit</pre>
 </li>
 </ul>
 <a name="spaceReclaimTrack">
@@ -1040,6 +1097,17 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <dt><span class="strong">Returns:</span></dt><dd>recid (record identifier) under which record is stored.</dd></dl>
 </li>
 </ul>
+<a name="put2(org.mapdb.DataOutput2, long, long[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>put2</h4>
+<pre>protected&nbsp;void&nbsp;put2(<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a>&nbsp;out,
+        long&nbsp;ioRecid,
+        long[]&nbsp;indexVals)</pre>
+</li>
+</ul>
 <a name="get(long, org.mapdb.Serializer)">
 <!--   -->
 </a>
@@ -1083,6 +1151,16 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>value</code> - new record value to be stored</dd><dd><code>serializer</code> - used to serialize record into binary form</dd></dl>
 </li>
 </ul>
+<a name="update2(org.mapdb.DataOutput2, long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>update2</h4>
+<pre>protected&nbsp;void&nbsp;update2(<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a>&nbsp;out,
+           long&nbsp;ioRecid)</pre>
+</li>
+</ul>
 <a name="compareAndSwap(long,java.lang.Object,java.lang.Object,org.mapdb.Serializer)">
 <!--   -->
 </a><a name="compareAndSwap(long, A, A, org.mapdb.Serializer)">
@@ -1124,14 +1202,15 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <pre>protected&nbsp;long[]&nbsp;getLinkedRecordsIndexVals(long&nbsp;indexVal)</pre>
 </li>
 </ul>
-<a name="physAllocate(int, boolean)">
+<a name="physAllocate(int, boolean, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>physAllocate</h4>
 <pre>protected&nbsp;long[]&nbsp;physAllocate(int&nbsp;size,
-                  boolean&nbsp;ensureAvail)</pre>
+                  boolean&nbsp;ensureAvail,
+                  boolean&nbsp;recursive)</pre>
 </li>
 </ul>
 <a name="roundTo16(long)">
@@ -1233,23 +1312,25 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <pre>public&nbsp;void&nbsp;compact()</pre>
 </li>
 </ul>
-<a name="longStackTake(long)">
+<a name="longStackTake(long, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>longStackTake</h4>
-<pre>protected&nbsp;long&nbsp;longStackTake(long&nbsp;ioList)</pre>
+<pre>protected&nbsp;long&nbsp;longStackTake(long&nbsp;ioList,
+                 boolean&nbsp;recursive)</pre>
 </li>
 </ul>
-<a name="longStackPut(long, long)">
+<a name="longStackPut(long, long, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>longStackPut</h4>
 <pre>protected&nbsp;void&nbsp;longStackPut(long&nbsp;ioList,
-                long&nbsp;offset)</pre>
+                long&nbsp;offset,
+                boolean&nbsp;recursive)</pre>
 </li>
 </ul>
 <a name="freeIoRecidPut(long)">
@@ -1279,23 +1360,25 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <pre>protected static&nbsp;long&nbsp;size2ListIoRecid(long&nbsp;size)</pre>
 </li>
 </ul>
-<a name="freePhysPut(long)">
+<a name="freePhysPut(long, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>freePhysPut</h4>
-<pre>protected&nbsp;void&nbsp;freePhysPut(long&nbsp;indexVal)</pre>
+<pre>protected&nbsp;void&nbsp;freePhysPut(long&nbsp;indexVal,
+               boolean&nbsp;recursive)</pre>
 </li>
 </ul>
-<a name="freePhysTake(int, boolean)">
+<a name="freePhysTake(int, boolean, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>freePhysTake</h4>
 <pre>protected&nbsp;long&nbsp;freePhysTake(int&nbsp;size,
-                boolean&nbsp;ensureAvail)</pre>
+                boolean&nbsp;ensureAvail,
+                boolean&nbsp;recursive)</pre>
 </li>
 </ul>
 <a name="serialize(java.lang.Object,org.mapdb.Serializer)">
