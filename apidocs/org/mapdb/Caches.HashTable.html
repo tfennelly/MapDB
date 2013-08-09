@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>CacheHashTable (mapdb 0.9.4-SNAPSHOT API)</title>
+<title>Caches.HashTable (mapdb 0.9.5-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="CacheHashTable (mapdb 0.9.4-SNAPSHOT API)";
+        parent.document.title="Caches.HashTable (mapdb 0.9.5-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -25,7 +25,7 @@
 <ul class="navList" title="Navigation">
 <li><a href="../../org/mapdb/package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
-<li><a href="class-use/CacheHashTable.html">Use</a></li>
+<li><a href="class-use/Caches.HashTable.html">Use</a></li>
 <li><a href="package-tree.html">Tree</a></li>
 <li><a href="../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../index-all.html">Index</a></li>
@@ -34,12 +34,12 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapdb/CacheHardRef.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../org/mapdb/CacheLRU.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
+<li><a href="../../org/mapdb/Caches.HardRef.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../org/mapdb/Caches.LRU.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapdb/CacheHashTable.html" target="_top">Frames</a></li>
-<li><a href="CacheHashTable.html" target="_top">No Frames</a></li>
+<li><a href="../../index.html?org/mapdb/Caches.HashTable.html" target="_top">Frames</a></li>
+<li><a href="Caches.HashTable.html" target="_top">No Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
 <li><a href="../../allclasses-noframe.html">All Classes</a></li>
@@ -78,7 +78,7 @@
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="subTitle">org.mapdb</div>
-<h2 title="Class CacheHashTable" class="title">Class CacheHashTable</h2>
+<h2 title="Class Caches.HashTable" class="title">Class Caches.HashTable</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
@@ -88,7 +88,7 @@
 <li><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">org.mapdb.EngineWrapper</a></li>
 <li>
 <ul class="inheritance">
-<li>org.mapdb.CacheHashTable</li>
+<li>org.mapdb.Caches.HashTable</li>
 </ul>
 </li>
 </ul>
@@ -101,9 +101,13 @@
 <dt>All Implemented Interfaces:</dt>
 <dd><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dd>
 </dl>
+<dl>
+<dt>Enclosing class:</dt>
+<dd><a href="../../org/mapdb/Caches.html" title="class in org.mapdb">Caches</a></dd>
+</dl>
 <hr>
 <br>
-<pre>public class <span class="strong">CacheHashTable</span>
+<pre>public static class <span class="strong">Caches.HashTable</span>
 extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a>
 implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></pre>
 <div class="block"><p>Fixed size cache which uses hash table. Is thread-safe and requires only minimal locking. Items are randomly removed and replaced by hash collisions. <p/> This is simple, concurrent, small-overhead, random cache.</p></div>
@@ -126,7 +130,7 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></h3>
-<code><a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
+<code><a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
 </ul>
 </li>
 </ul>
@@ -144,25 +148,25 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#cacheMaxSize">cacheMaxSize</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#cacheMaxSize">cacheMaxSize</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#cacheMaxSizeMask">cacheMaxSizeMask</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#cacheMaxSizeMask">cacheMaxSizeMask</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#hashSalt">hashSalt</a></strong></code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#hashSalt">hashSalt</a></strong></code>
 <div class="block">Salt added to keys before hashing, so it is harder to trigger hash collision attack.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected org.mapdb.CacheHashTable.HashItem[]</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#items">items</a></strong></code>&nbsp;</td>
+<td class="colFirst"><code>protected org.mapdb.Caches.HashTable.HashItem[]</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#items">items</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantLock</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#locks">locks</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#locks">locks</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -186,8 +190,8 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/CacheHashTable.html#CacheHashTable(org.mapdb.Engine, int)">CacheHashTable</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-              int&nbsp;cacheMaxSize)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#Caches.HashTable(org.mapdb.Engine, int)">Caches.HashTable</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+                int&nbsp;cacheMaxSize)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -206,19 +210,19 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#clearCache()">clearCache</a></strong>()</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#clearCache()">clearCache</a></strong>()</code>
 <div class="block">clears any underlying cache</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#close()">close</a></strong>()</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#close()">close</a></strong>()</code>
 <div class="block">Close store/cache.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
@@ -227,34 +231,34 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
       <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Remove existing record from store/cache</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Get existing record.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Insert new record.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#rollback()">rollback</a></strong>()</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Undoes all changes made in the current transaction.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CacheHashTable.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Caches.HashTable.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Update existing record with new value.</div>
@@ -311,7 +315,7 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <ul class="blockList">
 <li class="blockList">
 <h4>items</h4>
-<pre>protected&nbsp;org.mapdb.CacheHashTable.HashItem[] items</pre>
+<pre>protected&nbsp;org.mapdb.Caches.HashTable.HashItem[] items</pre>
 </li>
 </ul>
 <a name="cacheMaxSize">
@@ -350,14 +354,14 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="CacheHashTable(org.mapdb.Engine, int)">
+<a name="Caches.HashTable(org.mapdb.Engine, int)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>CacheHashTable</h4>
-<pre>public&nbsp;CacheHashTable(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-              int&nbsp;cacheMaxSize)</pre>
+<h4>Caches.HashTable</h4>
+<pre>public&nbsp;Caches.HashTable(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+                int&nbsp;cacheMaxSize)</pre>
 </li>
 </ul>
 </li>
@@ -538,7 +542,7 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <ul class="navList" title="Navigation">
 <li><a href="../../org/mapdb/package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
-<li><a href="class-use/CacheHashTable.html">Use</a></li>
+<li><a href="class-use/Caches.HashTable.html">Use</a></li>
 <li><a href="package-tree.html">Tree</a></li>
 <li><a href="../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../index-all.html">Index</a></li>
@@ -551,12 +555,12 @@ hljs.initHighlightingOnLoad();
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapdb/CacheHardRef.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../org/mapdb/CacheLRU.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
+<li><a href="../../org/mapdb/Caches.HardRef.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../org/mapdb/Caches.LRU.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
-<li><a href="../../index.html?org/mapdb/CacheHashTable.html" target="_top">Frames</a></li>
-<li><a href="CacheHashTable.html" target="_top">No Frames</a></li>
+<li><a href="../../index.html?org/mapdb/Caches.HashTable.html" target="_top">Frames</a></li>
+<li><a href="Caches.HashTable.html" target="_top">No Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
 <li><a href="../../allclasses-noframe.html">All Classes</a></li>

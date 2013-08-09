@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>DB.BTreeMapMaker (mapdb 0.9.4-SNAPSHOT API)</title>
+<title>DB.BTreeMapMaker (mapdb 0.9.5-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="DB.BTreeMapMaker (mapdb 0.9.4-SNAPSHOT API)";
+        parent.document.title="DB.BTreeMapMaker (mapdb 0.9.5-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -35,7 +35,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../org/mapdb/DB.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
+<li><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../index.html?org/mapdb/DB.BTreeMapMaker.html" target="_top">Frames</a></li>
@@ -139,6 +139,22 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#nodeSize">nodeSize</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#pumpKeyExtractor">pumpKeyExtractor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#pumpPresortBatchSize">pumpPresortBatchSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#pumpSource">pumpSource</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#pumpValueExtractor">pumpValueExtractor</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
@@ -220,11 +236,24 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#pumpPresort(int)">pumpPresort</a></strong>(int&nbsp;batchSize)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#pumpSource(java.util.Iterator)">pumpSource</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;&nbsp;entriesSource)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#pumpSource(java.util.Iterator, org.mapdb.Fun.Function1)">pumpSource</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;K&gt;&nbsp;keysSource,
+          <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueExtractor)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</code>
 <div class="block">valueSerializer used to convert values into/from binary form.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html#valuesStoredOutsideNodes(boolean)">valuesStoredOutsideNodes</a></strong>(boolean&nbsp;outside)</code>
 <div class="block">valuesStoredOutsideNodes if true, values are stored outside of BTree nodes.</div>
@@ -309,10 +338,46 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <a name="comparator">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>comparator</h4>
 <pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a> comparator</pre>
+</li>
+</ul>
+<a name="pumpSource">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pumpSource</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a> pumpSource</pre>
+</li>
+</ul>
+<a name="pumpKeyExtractor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pumpKeyExtractor</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a> pumpKeyExtractor</pre>
+</li>
+</ul>
+<a name="pumpValueExtractor">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pumpValueExtractor</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a> pumpValueExtractor</pre>
+</li>
+</ul>
+<a name="pumpPresortBatchSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>pumpPresortBatchSize</h4>
+<pre>protected&nbsp;int pumpPresortBatchSize</pre>
 </li>
 </ul>
 </li>
@@ -400,6 +465,34 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block"><p>comparator used to sort keys.</p></div>
 </li>
 </ul>
+<a name="pumpSource(java.util.Iterator, org.mapdb.Fun.Function1)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pumpSource</h4>
+<pre>public&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a>&nbsp;pumpSource(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;K&gt;&nbsp;keysSource,
+                                <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueExtractor)</pre>
+</li>
+</ul>
+<a name="pumpSource(java.util.Iterator)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pumpSource</h4>
+<pre>public&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a>&nbsp;pumpSource(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;&nbsp;entriesSource)</pre>
+</li>
+</ul>
+<a name="pumpPresort(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pumpPresort</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a>&nbsp;pumpPresort(int&nbsp;batchSize)</pre>
+</li>
+</ul>
 <a name="make()">
 <!--   -->
 </a>
@@ -459,7 +552,7 @@ hljs.initHighlightingOnLoad();
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../org/mapdb/DB.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
+<li><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../index.html?org/mapdb/DB.BTreeMapMaker.html" target="_top">Frames</a></li>

@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>DBMaker (mapdb 0.9.4-SNAPSHOT API)</title>
+<title>DBMaker (mapdb 0.9.5-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="DBMaker (mapdb 0.9.4-SNAPSHOT API)";
+        parent.document.title="DBMaker (mapdb 0.9.5-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -193,7 +193,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_writeAheadLogEnabled">_writeAheadLogEnabled</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_transactionEnabled">_transactionEnabled</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected byte[]</code></td>
@@ -372,68 +372,52 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendAsyncWriteEngine(org.mapdb.Engine)">extendAsyncWriteEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheHardRef.html" title="class in org.mapdb">CacheHardRef</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Caches.HardRef.html" title="class in org.mapdb">Caches.HardRef</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheHardRef(org.mapdb.Engine)">extendCacheHardRef</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheHashTable.html" title="class in org.mapdb">CacheHashTable</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Caches.HashTable.html" title="class in org.mapdb">Caches.HashTable</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheHashTable(org.mapdb.Engine)">extendCacheHashTable</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheLRU.html" title="class in org.mapdb">CacheLRU</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheLRU(org.mapdb.Engine)">extendCacheLRU</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheSoftRef(org.mapdb.Engine)">extendCacheSoftRef</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCacheWeakRef(org.mapdb.Engine)">extendCacheWeakRef</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendChecksum(org.mapdb.Engine)">extendChecksum</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendCompression(org.mapdb.Engine)">extendCompression</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendEncryption(org.mapdb.Engine)">extendEncryption</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendShutdownHookAfter(org.mapdb.Engine)">extendShutdownHookAfter</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendShutdownHookBefore(org.mapdb.Engine)">extendShutdownHookBefore</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendSnapshotEngine(org.mapdb.Engine)">extendSnapshotEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendStoreAppend()">extendStoreAppend</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendStoreDirect(org.mapdb.Volume.Factory)">extendStoreDirect</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;folFac)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendStoreVolumeFactory()">extendStoreVolumeFactory</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendStoreWAL(org.mapdb.Volume.Factory)">extendStoreWAL</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;folFac)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendWrapByteTransform(org.mapdb.Engine)">extendWrapByteTransform</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
@@ -577,8 +561,16 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#writeAheadLogDisable()">writeAheadLogDisable</a></strong>()</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#transactionDisable()">transactionDisable</a></strong>()</code>
 <div class="block">Transaction journal is enabled by default You must call <b>DB.commit()</b> to save your changes.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#writeAheadLogDisable()">writeAheadLogDisable</a></strong>()</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>use <a href="../../org/mapdb/DBMaker.html#transactionDisable()"><code>transactionDisable()</code></a> instead.</i></div>
+</div>
 </td>
 </tr>
 </table>
@@ -691,13 +683,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block"><p>file to open, if null opens in memory store</p></div>
 </li>
 </ul>
-<a name="_writeAheadLogEnabled">
+<a name="_transactionEnabled">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>_writeAheadLogEnabled</h4>
-<pre>protected&nbsp;boolean _writeAheadLogEnabled</pre>
+<h4>_transactionEnabled</h4>
+<pre>protected&nbsp;boolean _transactionEnabled</pre>
 </li>
 </ul>
 <a name="_asyncWriteEnabled">
@@ -1024,6 +1016,18 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>writeAheadLogDisable</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;writeAheadLogDisable()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>use <a href="../../org/mapdb/DBMaker.html#transactionDisable()"><code>transactionDisable()</code></a> instead.</i></div>
+<div class="block"><p>Transaction journal is enabled by default You must call <b>DB.commit()</b> to save your changes. It is possible to disable transaction journal for better write performance In this case all integrity checks are sacrificed for faster speed. <p/> If transaction journal is disabled, all changes are written DIRECTLY into store. You must call DB.close() method before exit, otherwise your store <b>WILL BE CORRUPTED</b></p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
+</li>
+</ul>
+<a name="transactionDisable()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>transactionDisable</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;transactionDisable()</pre>
 <div class="block"><p>Transaction journal is enabled by default You must call <b>DB.commit()</b> to save your changes. It is possible to disable transaction journal for better write performance In this case all integrity checks are sacrificed for faster speed. <p/> If transaction journal is disabled, all changes are written DIRECTLY into store. You must call DB.close() method before exit, otherwise your store <b>WILL BE CORRUPTED</b></p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
@@ -1346,7 +1350,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>extendCacheLRU</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/CacheLRU.html" title="class in org.mapdb">CacheLRU</a>&nbsp;extendCacheLRU(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a>&nbsp;extendCacheLRU(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
 </li>
 </ul>
 <a name="extendCacheWeakRef(org.mapdb.Engine)">
@@ -1355,7 +1359,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>extendCacheWeakRef</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a>&nbsp;extendCacheWeakRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a>&nbsp;extendCacheWeakRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
 </li>
 </ul>
 <a name="extendCacheSoftRef(org.mapdb.Engine)">
@@ -1364,7 +1368,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>extendCacheSoftRef</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/CacheWeakSoftRef.html" title="class in org.mapdb">CacheWeakSoftRef</a>&nbsp;extendCacheSoftRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a>&nbsp;extendCacheSoftRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
 </li>
 </ul>
 <a name="extendCacheHardRef(org.mapdb.Engine)">
@@ -1373,7 +1377,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>extendCacheHardRef</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/CacheHardRef.html" title="class in org.mapdb">CacheHardRef</a>&nbsp;extendCacheHardRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Caches.HardRef.html" title="class in org.mapdb">Caches.HardRef</a>&nbsp;extendCacheHardRef(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
 </li>
 </ul>
 <a name="extendCacheHashTable(org.mapdb.Engine)">
@@ -1382,7 +1386,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>extendCacheHashTable</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/CacheHashTable.html" title="class in org.mapdb">CacheHashTable</a>&nbsp;extendCacheHashTable(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Caches.HashTable.html" title="class in org.mapdb">Caches.HashTable</a>&nbsp;extendCacheHashTable(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
 </li>
 </ul>
 <a name="extendAsyncWriteEngine(org.mapdb.Engine)">
@@ -1392,33 +1396,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>extendAsyncWriteEngine</h4>
 <pre>protected&nbsp;<a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a>&nbsp;extendAsyncWriteEngine(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
-</li>
-</ul>
-<a name="extendCompression(org.mapdb.Engine)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>extendCompression</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>&nbsp;extendCompression(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
-</li>
-</ul>
-<a name="extendEncryption(org.mapdb.Engine)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>extendEncryption</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>&nbsp;extendEncryption(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
-</li>
-</ul>
-<a name="extendChecksum(org.mapdb.Engine)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>extendChecksum</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/EngineWrapper.ByteTransformEngine.html" title="class in org.mapdb">EngineWrapper.ByteTransformEngine</a>&nbsp;extendChecksum(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
 </li>
 </ul>
 <a name="extendArgumentCheck()">
@@ -1437,15 +1414,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>extendWrapStore</h4>
 <pre>protected&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;extendWrapStore(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
-</li>
-</ul>
-<a name="extendWrapByteTransform(org.mapdb.Engine)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>extendWrapByteTransform</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;extendWrapByteTransform(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
 </li>
 </ul>
 <a name="extendWrapCache(org.mapdb.Engine)">

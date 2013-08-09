@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Store (mapdb 0.9.4-SNAPSHOT API)</title>
+<title>Store (mapdb 0.9.5-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Store (mapdb 0.9.4-SNAPSHOT API)";
+        parent.document.title="Store (mapdb 0.9.5-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -60,13 +60,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -118,6 +118,41 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#checksum">checksum</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#compress">compress</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#encrypt">encrypt</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/EncryptionXTEA.html" title="class in org.mapdb">EncryptionXTEA</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#encryptionXTEA">encryptionXTEA</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ThreadLocal.html?is-external=true" title="class or interface in java.lang">ThreadLocal</a>&lt;<a href="../../org/mapdb/CompressLZF.html" title="class in org.mapdb">CompressLZF</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#LZF">LZF</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#password">password</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#recycledDataOuts">recycledDataOuts</a></strong></code>&nbsp;</td>
+</tr>
+</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.mapdb.Engine">
 <!--   -->
@@ -136,10 +171,14 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/Store.html#Store()">Store</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#Store(boolean, boolean, byte[])">Store</a></strong>(boolean&nbsp;checksum,
+     boolean&nbsp;compress,
+     byte[]&nbsp;password)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -163,40 +202,55 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected &lt;A&gt;&nbsp;A</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, org.mapdb.DataInput2)">deserialize</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer,
+           int&nbsp;size,
+           <a href="../../org/mapdb/DataInput2.html" title="class in org.mapdb">DataInput2</a>&nbsp;di)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>abstract long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getCurrSize()">getCurrSize</a></strong>()</code>
 <div class="block">returns current size occupied by physical store (does not include index).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getFreeRecids()">getFreeRecids</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>abstract long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getFreeSize()">getFreeSize</a></strong>()</code>
 <div class="block">returns free size in physical store (does not include index).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getMaxRecid()">getMaxRecid</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>abstract <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getRaw(long)">getRaw</a></strong>(long&nbsp;recid)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#getSizeLimit()">getSizeLimit</a></strong>()</code>
 <div class="block">returns maximal store size or <code>0</code> if there is no limit</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#newDataOut2()">newDataOut2</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#printStatistics()">printStatistics</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected &lt;A&gt;&nbsp;<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#serialize(A, org.mapdb.Serializer)">serialize</a></strong>(A&nbsp;value,
+         <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Store.html#updateRaw(long, java.nio.ByteBuffer)">updateRaw</a></strong>(long&nbsp;recid,
          <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;data)</code>&nbsp;</td>
@@ -224,19 +278,92 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field_detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="checksum">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>checksum</h4>
+<pre>protected final&nbsp;boolean checksum</pre>
+</li>
+</ul>
+<a name="compress">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compress</h4>
+<pre>protected final&nbsp;boolean compress</pre>
+</li>
+</ul>
+<a name="encrypt">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encrypt</h4>
+<pre>protected final&nbsp;boolean encrypt</pre>
+</li>
+</ul>
+<a name="password">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>password</h4>
+<pre>protected final&nbsp;byte[] password</pre>
+</li>
+</ul>
+<a name="encryptionXTEA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>encryptionXTEA</h4>
+<pre>protected final&nbsp;<a href="../../org/mapdb/EncryptionXTEA.html" title="class in org.mapdb">EncryptionXTEA</a> encryptionXTEA</pre>
+</li>
+</ul>
+<a name="LZF">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LZF</h4>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ThreadLocal.html?is-external=true" title="class or interface in java.lang">ThreadLocal</a>&lt;<a href="../../org/mapdb/CompressLZF.html" title="class in org.mapdb">CompressLZF</a>&gt; LZF</pre>
+</li>
+</ul>
+<a name="recycledDataOuts">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>recycledDataOuts</h4>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a>&gt; recycledDataOuts</pre>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="Store()">
+<a name="Store(boolean, boolean, byte[])">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Store</h4>
-<pre>public&nbsp;Store()</pre>
+<pre>protected&nbsp;Store(boolean&nbsp;checksum,
+     boolean&nbsp;compress,
+     byte[]&nbsp;password)</pre>
 </li>
 </ul>
 </li>
@@ -327,10 +454,45 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <a name="printStatistics()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>printStatistics</h4>
 <pre>public&nbsp;void&nbsp;printStatistics()</pre>
+</li>
+</ul>
+<a name="serialize(java.lang.Object,org.mapdb.Serializer)">
+<!--   -->
+</a><a name="serialize(A, org.mapdb.Serializer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serialize</h4>
+<pre>protected&nbsp;&lt;A&gt;&nbsp;<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a>&nbsp;serialize(A&nbsp;value,
+                        <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
+</li>
+</ul>
+<a name="newDataOut2()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>newDataOut2</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a>&nbsp;newDataOut2()</pre>
+</li>
+</ul>
+<a name="deserialize(org.mapdb.Serializer, int, org.mapdb.DataInput2)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>deserialize</h4>
+<pre>protected&nbsp;&lt;A&gt;&nbsp;A&nbsp;deserialize(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer,
+                int&nbsp;size,
+                <a href="../../org/mapdb/DataInput2.html" title="class in org.mapdb">DataInput2</a>&nbsp;di)
+                 throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>
@@ -388,13 +550,13 @@ hljs.initHighlightingOnLoad();
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

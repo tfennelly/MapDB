@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>DB (mapdb 0.9.4-SNAPSHOT API)</title>
+<title>DB (mapdb 0.9.5-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="DB (mapdb 0.9.4-SNAPSHOT API)";
+        parent.document.title="DB (mapdb 0.9.5-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -122,6 +122,10 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></strong></code>&nbsp;</td>
 </tr>
@@ -338,141 +342,141 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#createTreeSet(java.lang.String, int, boolean, org.mapdb.BTreeKeySerializer, java.util.Comparator)">createTreeSet</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-             int&nbsp;nodeSize,
-             boolean&nbsp;keepCounter,
-             <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;serializer,
-             <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;K&gt;&nbsp;comparator)</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#createTreeSet(org.mapdb.DB.BTreeSetMaker)">createTreeSet</a></strong>(<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a>&nbsp;m)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#createTreeSet(java.lang.String)">createTreeSet</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Creates new TreeSet.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#delete(java.lang.String)">delete</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">delete record/collection with given name</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected &lt;K&gt;&nbsp;<a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#fillNulls(org.mapdb.BTreeKeySerializer)">fillNulls</a></strong>(<a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;keySerializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;E</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#get(java.lang.String)">get</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">return record with given name or null if name does not exist</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getAll()">getAll</a></strong>()</code>
 <div class="block">return map of all named collections/records</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Atomic.Boolean.html" title="class in org.mapdb">Atomic.Boolean</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getAtomicBoolean(java.lang.String)">getAtomicBoolean</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Atomic.Integer.html" title="class in org.mapdb">Atomic.Integer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getAtomicInteger(java.lang.String)">getAtomicInteger</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getAtomicLong(java.lang.String)">getAtomicLong</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Atomic.String.html" title="class in org.mapdb">Atomic.String</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getAtomicString(java.lang.String)">getAtomicString</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="../../org/mapdb/Atomic.Var.html" title="class in org.mapdb">Atomic.Var</a>&lt;E&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getAtomicVar(java.lang.String)">getAtomicVar</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getCatalog()">getCatalog</a></strong>()</code>
 <div class="block">Get Named directory.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getCircularQueue(java.lang.String)">getCircularQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getDefaultSerializer()">getDefaultSerializer</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getFromWeakCollection(java.lang.String)">getFromWeakCollection</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">All collections are weakly referenced to prevent two instances of the same collection in memory.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getHashMap(java.lang.String)">getHashMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Opens existing or creates new Hash Tree Map.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getHashMap(java.lang.String, org.mapdb.Fun.Function1)">getHashMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
           <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueCreator)</code>
 <div class="block">Opens existing or creates new Hash Tree Map.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;K&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getHashSet(java.lang.String)">getHashSet</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Opens existing or creates new Hash Tree Set.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getQueue(java.lang.String)">getQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getStack(java.lang.String)">getStack</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getTreeMap(java.lang.String)">getTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Opens existing or creates new B-linked-tree Map.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getTreeSet(java.lang.String)">getTreeSet</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Opens existing or creates new B-linked-tree Set.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#isClosed()">isClosed</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#reinit()">reinit</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#rename(java.lang.String, java.lang.String)">rename</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldName,
       <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;newName)</code>
 <div class="block">rename named record into newName</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Rollback changes made on collections loaded by this DB</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#snapshot()">snapshot</a></strong>()</code>
 <div class="block">Make readonly snapshot view of DB and all of its collection Collections loaded by this instance are not affected (are still mutable).</div>
@@ -788,22 +792,27 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <dt><span class="strong">Returns:</span></dt><dd>set</dd></dl>
 </li>
 </ul>
-<a name="createTreeSet(java.lang.String, int, boolean, org.mapdb.BTreeKeySerializer, java.util.Comparator)">
+<a name="createTreeSet(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createTreeSet</h4>
-<pre>public&nbsp;&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;&nbsp;createTreeSet(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                int&nbsp;nodeSize,
-                                boolean&nbsp;keepCounter,
-                                <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;serializer,
-                                <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;K&gt;&nbsp;comparator)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a>&nbsp;createTreeSet(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <div class="block"><p>Creates new TreeSet.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of set to create</dd><dd><code>nodeSize</code> - maximal size of node, larger node causes overflow and creation of new BTree node. Use large number for small keys, use small number for large keys.</dd><dd><code>keepCounter</code> - if counter should be kept, without counter updates are faster, but entire collection needs to be traversed to count items.</dd><dd><code>serializer</code> - used to convert keys into/from binary form. Use null for default value.</dd><dd><code>comparator</code> - used to sort keys. Use null for default value. TODO delta packing</dd><dd><code>K</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd></dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of set to create</dd>
+<dt><span class="strong">Returns:</span></dt><dd>maker used to construct set</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if name is already used</dd></dl>
+</li>
+</ul>
+<a name="createTreeSet(org.mapdb.DB.BTreeSetMaker)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createTreeSet</h4>
+<pre>public&nbsp;&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;&nbsp;createTreeSet(<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a>&nbsp;m)</pre>
 </li>
 </ul>
 <a name="getQueue(java.lang.String)">

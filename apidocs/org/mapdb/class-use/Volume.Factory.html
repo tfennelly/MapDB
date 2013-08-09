@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Uses of Interface org.mapdb.Volume.Factory (mapdb 0.9.4-SNAPSHOT API)</title>
+<title>Uses of Interface org.mapdb.Volume.Factory (mapdb 0.9.5-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Uses of Interface org.mapdb.Volume.Factory (mapdb 0.9.4-SNAPSHOT API)";
+        parent.document.title="Uses of Interface org.mapdb.Volume.Factory (mapdb 0.9.5-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -145,23 +145,29 @@
 <td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory)">StoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long)">StoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">StoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
            boolean&nbsp;readOnly,
            boolean&nbsp;deleteFilesAfterClose,
            int&nbsp;spaceReclaimMode,
            boolean&nbsp;syncOnCommitDisabled,
-           long&nbsp;sizeLimit)</code>&nbsp;</td>
+           long&nbsp;sizeLimit,
+           boolean&nbsp;checksum,
+           boolean&nbsp;compress,
+           byte[]&nbsp;password)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory)">StoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long)">StoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">StoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
         boolean&nbsp;readOnly,
         boolean&nbsp;deleteFilesAfterClose,
         int&nbsp;spaceReclaimMode,
         boolean&nbsp;syncOnCommitDisabled,
-        long&nbsp;sizeLimit)</code>&nbsp;</td>
+        long&nbsp;sizeLimit,
+        boolean&nbsp;checksum,
+        boolean&nbsp;compress,
+        byte[]&nbsp;password)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
