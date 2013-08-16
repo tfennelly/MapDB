@@ -201,26 +201,30 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#makeOrGet()">makeOrGet</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#makeStringSet()">makeStringSet</a></strong>()</code>
 <div class="block">creates set optimized for using <code>String</code></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#nodeSize(int)">nodeSize</a></strong>(int&nbsp;nodeSize)</code>
 <div class="block">nodeSize maximal size of node, larger node causes overflow and creation of new BTree node.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#pumpPresort(int)">pumpPresort</a></strong>(int&nbsp;batchSize)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#pumpSource(java.util.Iterator)">pumpSource</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;K&gt;&nbsp;source)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#serializer(org.mapdb.BTreeKeySerializer)">serializer</a></strong>(<a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;serializer)</code>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
@@ -401,6 +405,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>make</h4>
 <pre>public&nbsp;&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;&nbsp;make()</pre>
+</li>
+</ul>
+<a name="makeOrGet()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>makeOrGet</h4>
+<pre>public&nbsp;&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;&nbsp;makeOrGet()</pre>
 </li>
 </ul>
 <a name="makeStringSet()">

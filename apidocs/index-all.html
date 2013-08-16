@@ -1453,6 +1453,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#exirePurgeSegment(int, long)">exirePurgeSegment(int, long)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#exists(java.lang.String)">exists(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/CompressLZF.html#expand(byte[], int, int, byte[], int, int)">expand(byte[], int, int, byte[], int, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/CompressLZF.html" title="class in org.mapdb">CompressLZF</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/CompressLZF.html#expand(java.nio.ByteBuffer, int, int, byte[], int, int)">expand(ByteBuffer, int, int, byte[], int, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/CompressLZF.html" title="class in org.mapdb">CompressLZF</a></dt>
@@ -1593,9 +1595,17 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Bind.html#findSecondaryKeys(java.util.NavigableSet, K2)">findSecondaryKeys(NavigableSet&lt;Fun.Tuple2&lt;K2, K1&gt;&gt;, K2)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Bind.html" title="class in org.mapdb">Bind</a></dt>
 <dd>
-<div class="block">Find all Primary Keys associated with Secondary Key.</div>
+<div class="block"><span class="strong">Deprecated.</span>
+<div class="block"><i>(use <code>Bind#findVals2()</code></i></div>
+</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#findSmaller(K, boolean)">findSmaller(K, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Bind.html#findVals2(java.util.NavigableSet, A)">findVals2(NavigableSet&lt;Fun.Tuple2&lt;A, B&gt;&gt;, A)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Bind.html" title="class in org.mapdb">Bind</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Bind.html#findVals3(java.util.NavigableSet, A, B)">findVals3(NavigableSet&lt;Fun.Tuple3&lt;A, B, C&gt;&gt;, A, B)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Bind.html" title="class in org.mapdb">Bind</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Bind.html#findVals4(java.util.NavigableSet, A, B, C)">findVals4(NavigableSet&lt;Fun.Tuple4&lt;A, B, C, D&gt;&gt;, A, B, C)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Bind.html" title="class in org.mapdb">Bind</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.FieldInfo.html#firstCharCap(java.lang.String)">firstCharCap(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.FieldInfo.html" title="class in org.mapdb">SerializerPojo.FieldInfo</a></dt>
 <dd>&nbsp;</dd>
@@ -2846,6 +2856,12 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/Volume.MappedFileVol.html#makeNewBuffer(long, java.nio.ByteBuffer[])">makeNewBuffer(long, ByteBuffer[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb">Volume.MappedFileVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.MemoryVol.html#makeNewBuffer(long, java.nio.ByteBuffer[])">makeNewBuffer(long, ByteBuffer[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.MemoryVol.html" title="class in org.mapdb">Volume.MemoryVol</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#makeOrGet()">makeOrGet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#makeOrGet()">makeOrGet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#makeOrGet()">makeOrGet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#makeStringMap()">makeStringMap()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
 <dd>
