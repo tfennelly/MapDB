@@ -108,7 +108,7 @@ extends <a href="../../org/mapdb/SerializerBase.html" title="class in org.mapdb"
 implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
 <div class="block"><p>Serializer which handles POJO, object graphs etc.</p></div>
 <dl><dt><span class="strong">Author:</span></dt>
-  <dd>Jan Kotek</p><p>TODO make this class thread safe</dd>
+  <dd>Jan Kotek</dd>
 <dt><span class="strong">See Also:</span></dt><dd><a href="../../serialized-form.html#org.mapdb.SerializerPojo">Serialized Form</a></dd></dl>
 </li>
 </ul>
@@ -191,18 +191,22 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#lock">lock</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#oldSize">oldSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/CopyOnWriteArrayList.html?is-external=true" title="class or interface in java.util.concurrent">CopyOnWriteArrayList</a>&lt;<a href="../../org/mapdb/SerializerPojo.ClassInfo.html" title="class in org.mapdb">SerializerPojo.ClassInfo</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#registered">registered</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/CopyOnWriteArrayList.html?is-external=true" title="class or interface in java.util.concurrent">CopyOnWriteArrayList</a>&lt;<a href="../../org/mapdb/SerializerPojo.ClassInfo.html" title="class in org.mapdb">SerializerPojo.ClassInfo</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#serializer">serializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Method.html?is-external=true" title="class or interface in java.lang.reflect">Method</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#sunConstructor">sunConstructor</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#sunReflFac">sunReflFac</a></strong></code>&nbsp;</td>
 </tr>
@@ -290,8 +294,16 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
              <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#hasUnsavedChanges()">hasUnsavedChanges</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#registerClass(java.lang.Class)">registerClass</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;clazz)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#save(org.mapdb.Engine)">save</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;e)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
@@ -427,10 +439,19 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <a name="class2constuctor">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>class2constuctor</h4>
 <pre>protected static&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Constructor.html?is-external=true" title="class or interface in java.lang.reflect">Constructor</a>&lt;?&gt;&gt; class2constuctor</pre>
+</li>
+</ul>
+<a name="oldSize">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>oldSize</h4>
+<pre>protected&nbsp;int oldSize</pre>
 </li>
 </ul>
 </li>
@@ -622,7 +643,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <a name="createInstanceSkippinkConstructor(java.lang.Class)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>createInstanceSkippinkConstructor</h4>
 <pre>protected&nbsp;&lt;T&gt;&nbsp;T&nbsp;createInstanceSkippinkConstructor(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;clazz)
@@ -636,6 +657,24 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/InstantiationException.html?is-external=true" title="class or interface in java.lang">InstantiationException</a></code></dd></dl>
+</li>
+</ul>
+<a name="hasUnsavedChanges()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasUnsavedChanges</h4>
+<pre>public&nbsp;boolean&nbsp;hasUnsavedChanges()</pre>
+</li>
+</ul>
+<a name="save(org.mapdb.Engine)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>save</h4>
+<pre>public&nbsp;void&nbsp;save(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;e)</pre>
 </li>
 </ul>
 </li>

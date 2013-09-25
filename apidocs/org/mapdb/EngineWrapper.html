@@ -98,7 +98,7 @@
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a>, <a href="../../org/mapdb/Caches.HashTable.html" title="class in org.mapdb">Caches.HashTable</a>, <a href="../../org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a>, <a href="../../org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a>, <a href="../../org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a>, <a href="../../org/mapdb/TxMaker.TxEngine.html" title="class in org.mapdb">TxMaker.TxEngine</a></dd>
+<dd><a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a>, <a href="../../org/mapdb/Caches.HashTable.html" title="class in org.mapdb">Caches.HashTable</a>, <a href="../../org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a>, <a href="../../org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a>, <a href="../../org/mapdb/TxEngine.html" title="class in org.mapdb">TxEngine</a></dd>
 </dl>
 <hr>
 <br>
@@ -257,35 +257,51 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.html#getSerializerPojo()">getSerializerPojo</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.html#isClosed()">isClosed</a></strong>()</code>
 <div class="block">Checks whether Engine was closed.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.html#isReadOnly()">isReadOnly</a></strong>()</code>
 <div class="block">Check if you can write into this Engine.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.html#preallocate()">preallocate</a></strong>()</code>
+<div class="block">Preallocates recid for not yet created record.</div>
+</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.html#preallocate(long[])">preallocate</a></strong>(long[]&nbsp;recids)</code>
+<div class="block">Preallocates recids for not yet created record.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Insert new record.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Undoes all changes made in the current transaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
@@ -332,6 +348,36 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="preallocate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preallocate</h4>
+<pre>public&nbsp;long&nbsp;preallocate()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#preallocate()">Engine</a></code></strong></div>
+<div class="block"><p>Preallocates recid for not yet created record. It does not insert any data into it.</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#preallocate()">preallocate</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>new recid</dd></dl>
+</li>
+</ul>
+<a name="preallocate(long[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preallocate</h4>
+<pre>public&nbsp;void&nbsp;preallocate(long[]&nbsp;recids)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#preallocate(long[])">Engine</a></code></strong></div>
+<div class="block"><p>Preallocates recids for not yet created record. It does not insert any data into it. This is done in batch of given size (determied by size of array in argument)</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#preallocate(long[])">preallocate</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>recids</code> - array to put result into</dd></dl>
+</li>
+</ul>
 <a name="put(java.lang.Object,org.mapdb.Serializer)">
 <!--   -->
 </a><a name="put(A, org.mapdb.Serializer)">
@@ -538,6 +584,19 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../org/mapdb/Engine.html#compact()">compact</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getSerializerPojo()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSerializerPojo</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a>&nbsp;getSerializerPojo()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#getSerializerPojo()">getSerializerPojo</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
 </dl>
 </li>
 </ul>

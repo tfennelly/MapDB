@@ -157,18 +157,12 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#defaultSerializer">defaultSerializer</a></strong></code>
-<div class="block">default serializer used for persistence.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#engine">engine</a></strong></code>
 <div class="block">Engine which provides persistence for this DB</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#strictDBGet">strictDBGet</a></strong></code>&nbsp;</td>
 </tr>
@@ -540,21 +534,11 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <a name="catalog">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>catalog</h4>
 <pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt; catalog</pre>
 <div class="block"><p>view over named records</p></div>
-</li>
-</ul>
-<a name="defaultSerializer">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>defaultSerializer</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt; defaultSerializer</pre>
-<div class="block"><p>default serializer used for persistence. Handles POJO and other stuff which requires write-able access to Engine</p></div>
 </li>
 </ul>
 </li>

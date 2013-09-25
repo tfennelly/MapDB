@@ -165,61 +165,65 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_ifInMemoryUseDirectBuffer">_ifInMemoryUseDirectBuffer</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_fullTx">_fullTx</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_ifInMemoryUseDirectBuffer">_ifInMemoryUseDirectBuffer</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_rafMode">_rafMode</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_readOnly">_readOnly</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_sizeLimit">_sizeLimit</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_snapshotDisabled">_snapshotDisabled</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_strictDBGet">_strictDBGet</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_syncOnCommitDisabled">_syncOnCommitDisabled</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_transactionEnabled">_transactionEnabled</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_xteaEncryptionKey">_xteaEncryptionKey</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#CACHE_DISABLE">CACHE_DISABLE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#CACHE_FIXED_HASH_TABLE">CACHE_FIXED_HASH_TABLE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#CACHE_HARD_REF">CACHE_HARD_REF</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#CACHE_LRU">CACHE_LRU</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#CACHE_SOFT_REF">CACHE_SOFT_REF</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#CACHE_WEAK_REF">CACHE_WEAK_REF</a></strong></code>&nbsp;</td>
 </tr>
@@ -400,7 +404,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendShutdownHookBefore(org.mapdb.Engine)">extendShutdownHookBefore</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/TxEngine.html" title="class in org.mapdb">TxEngine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendSnapshotEngine(org.mapdb.Engine)">extendSnapshotEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -830,10 +834,19 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <a name="_appendStorage">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>_appendStorage</h4>
 <pre>protected&nbsp;boolean _appendStorage</pre>
+</li>
+</ul>
+<a name="_fullTx">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>_fullTx</h4>
+<pre>protected&nbsp;boolean _fullTx</pre>
 </li>
 </ul>
 </li>
@@ -1136,7 +1149,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>snapshotDisable</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;snapshotDisable()</pre>
-<div class="block"><p>MapDB supports snapshots. <code>SnapshotEngine</code> requires additional locking which has small overhead when not used. So it is possible to disable snapshots in order to maximize performance when snapshots are not used.</p></div>
+<div class="block"><p>MapDB supports snapshots. <code>TxEngine</code> requires additional locking which has small overhead when not used. So it is possible to disable snapshots in order to maximize performance when snapshots are not used.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
 </ul>
@@ -1341,7 +1354,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>extendSnapshotEngine</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/SnapshotEngine.html" title="class in org.mapdb">SnapshotEngine</a>&nbsp;extendSnapshotEngine(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/TxEngine.html" title="class in org.mapdb">TxEngine</a>&nbsp;extendSnapshotEngine(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</pre>
 </li>
 </ul>
 <a name="extendCacheLRU(org.mapdb.Engine)">

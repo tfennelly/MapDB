@@ -169,7 +169,7 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></h3>
-<code><a href="../../org/mapdb/Volume.html#BUF_SIZE">BUF_SIZE</a>, <a href="../../org/mapdb/Volume.html#BUF_SIZE_MOD_MASK">BUF_SIZE_MOD_MASK</a></code></li>
+<code><a href="../../org/mapdb/Volume.html#BUF_SHIFT">BUF_SHIFT</a>, <a href="../../org/mapdb/Volume.html#BUF_SIZE">BUF_SIZE</a>, <a href="../../org/mapdb/Volume.html#BUF_SIZE_MOD_MASK">BUF_SIZE_MOD_MASK</a></code></li>
 </ul>
 </li>
 </ul>
@@ -223,54 +223,50 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#getLong(long)">getLong</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#internalByteBuffer(long)">internalByteBuffer</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#isEmpty()">isEmpty</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#isSliced()">isSliced</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected abstract <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#makeNewBuffer(long, java.nio.ByteBuffer[])">makeNewBuffer</a></strong>(long&nbsp;offset,
              <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>[]&nbsp;buffers2)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#putByte(long, byte)">putByte</a></strong>(long&nbsp;offset,
        byte&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#putData(long, byte[], int, int)">putData</a></strong>(long&nbsp;offset,
        byte[]&nbsp;src,
        int&nbsp;srcPos,
        int&nbsp;srcSize)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#putData(long, java.nio.ByteBuffer)">putData</a></strong>(long&nbsp;offset,
        <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;buf)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#putInt(long, int)">putInt</a></strong>(long&nbsp;offset,
       int&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#putLong(long, long)">putLong</a></strong>(long&nbsp;offset,
        long&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#tryAvailable(long)">tryAvailable</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#unmap(java.nio.MappedByteBuffer)">unmap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/MappedByteBuffer.html?is-external=true" title="class or interface in java.nio">MappedByteBuffer</a>&nbsp;b)</code>
 <div class="block">Hack to unmap MappedByteBuffer.</div>
@@ -397,15 +393,6 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <h4>makeNewBuffer</h4>
 <pre>protected abstract&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;makeNewBuffer(long&nbsp;offset,
                        <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>[]&nbsp;buffers2)</pre>
-</li>
-</ul>
-<a name="internalByteBuffer(long)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>internalByteBuffer</h4>
-<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;internalByteBuffer(long&nbsp;offset)</pre>
 </li>
 </ul>
 <a name="putLong(long, long)">

@@ -102,10 +102,6 @@
 <dd><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dd>
 </dl>
 <dl>
-<dt>Direct Known Subclasses:</dt>
-<dd><a href="../../org/mapdb/SnapshotEngine.Snapshot.html" title="class in org.mapdb">SnapshotEngine.Snapshot</a></dd>
-</dl>
-<dl>
 <dt>Enclosing class:</dt>
 <dd><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dd>
 </dl>
@@ -208,6 +204,18 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#preallocate()">preallocate</a></strong>()</code>
+<div class="block">Preallocates recid for not yet created record.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#preallocate(long[])">preallocate</a></strong>(long[]&nbsp;recids)</code>
+<div class="block">Preallocates recids for not yet created record.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
@@ -234,7 +242,7 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></h3>
-<code><a href="../../org/mapdb/EngineWrapper.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/EngineWrapper.html#checkClosed(V)">checkClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#clearCache()">clearCache</a>, <a href="../../org/mapdb/EngineWrapper.html#close()">close</a>, <a href="../../org/mapdb/EngineWrapper.html#compact()">compact</a>, <a href="../../org/mapdb/EngineWrapper.html#get(long, org.mapdb.Serializer)">get</a>, <a href="../../org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine</a>, <a href="../../org/mapdb/EngineWrapper.html#isClosed()">isClosed</a></code></li>
+<code><a href="../../org/mapdb/EngineWrapper.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/EngineWrapper.html#checkClosed(V)">checkClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#clearCache()">clearCache</a>, <a href="../../org/mapdb/EngineWrapper.html#close()">close</a>, <a href="../../org/mapdb/EngineWrapper.html#compact()">compact</a>, <a href="../../org/mapdb/EngineWrapper.html#get(long, org.mapdb.Serializer)">get</a>, <a href="../../org/mapdb/EngineWrapper.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine</a>, <a href="../../org/mapdb/EngineWrapper.html#isClosed()">isClosed</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -274,6 +282,40 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="preallocate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preallocate</h4>
+<pre>public&nbsp;long&nbsp;preallocate()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#preallocate()">Engine</a></code></strong></div>
+<div class="block"><p>Preallocates recid for not yet created record. It does not insert any data into it.</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#preallocate()">preallocate</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../org/mapdb/EngineWrapper.html#preallocate()">preallocate</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>new recid</dd></dl>
+</li>
+</ul>
+<a name="preallocate(long[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preallocate</h4>
+<pre>public&nbsp;void&nbsp;preallocate(long[]&nbsp;recids)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#preallocate(long[])">Engine</a></code></strong></div>
+<div class="block"><p>Preallocates recids for not yet created record. It does not insert any data into it. This is done in batch of given size (determied by size of array in argument)</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#preallocate(long[])">preallocate</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../org/mapdb/EngineWrapper.html#preallocate(long[])">preallocate</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>recids</code> - array to put result into</dd></dl>
+</li>
+</ul>
 <a name="compareAndSwap(long,java.lang.Object,java.lang.Object,org.mapdb.Serializer)">
 <!--   -->
 </a><a name="compareAndSwap(long, A, A, org.mapdb.Serializer)">

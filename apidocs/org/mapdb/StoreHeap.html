@@ -128,15 +128,31 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#freeRecids">freeRecids</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#freeRecids">freeRecids</a></strong></code>
+<div class="block">Queue of deleted recids, those are reused for new records</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#maxRecid">maxRecid</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#maxRecid">maxRecid</a></strong></code>
+<div class="block">Maximal returned recid, incremented if there are no free recids</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#records">records</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#records">records</a></strong></code>
+<div class="block">All commited records in store</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#rollback">rollback</a></strong></code>
+<div class="block">All not-yet commited records in store</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected static <a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#TOMBSTONE">TOMBSTONE</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -144,7 +160,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></h3>
-<code><a href="../../org/mapdb/Store.html#checksum">checksum</a>, <a href="../../org/mapdb/Store.html#compress">compress</a>, <a href="../../org/mapdb/Store.html#encrypt">encrypt</a>, <a href="../../org/mapdb/Store.html#encryptionXTEA">encryptionXTEA</a>, <a href="../../org/mapdb/Store.html#LZF">LZF</a>, <a href="../../org/mapdb/Store.html#password">password</a>, <a href="../../org/mapdb/Store.html#recycledDataOuts">recycledDataOuts</a></code></li>
+<code><a href="../../org/mapdb/Store.html#checksum">checksum</a>, <a href="../../org/mapdb/Store.html#compress">compress</a>, <a href="../../org/mapdb/Store.html#encrypt">encrypt</a>, <a href="../../org/mapdb/Store.html#encryptionXTEA">encryptionXTEA</a>, <a href="../../org/mapdb/Store.html#locks">locks</a>, <a href="../../org/mapdb/Store.html#LZF">LZF</a>, <a href="../../org/mapdb/Store.html#password">password</a>, <a href="../../org/mapdb/Store.html#recycledDataOuts">recycledDataOuts</a>, <a href="../../org/mapdb/Store.html#serializerPojo">serializerPojo</a>, <a href="../../org/mapdb/Store.html#structuralLock">structuralLock</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.mapdb.Engine">
@@ -282,6 +298,18 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#preallocate()">preallocate</a></strong>()</code>
+<div class="block">Preallocates recid for not yet created record.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#preallocate(long[])">preallocate</a></strong>(long[]&nbsp;recids)</code>
+<div class="block">Preallocates recids for not yet created record.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreHeap.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
@@ -313,7 +341,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></h3>
-<code><a href="../../org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, org.mapdb.DataInput2)">deserialize</a>, <a href="../../org/mapdb/Store.html#newDataOut2()">newDataOut2</a>, <a href="../../org/mapdb/Store.html#printStatistics()">printStatistics</a>, <a href="../../org/mapdb/Store.html#serialize(A, org.mapdb.Serializer)">serialize</a></code></li>
+<code><a href="../../org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, org.mapdb.DataInput2)">deserialize</a>, <a href="../../org/mapdb/Store.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/Store.html#lockAllWrite()">lockAllWrite</a>, <a href="../../org/mapdb/Store.html#newDataOut2()">newDataOut2</a>, <a href="../../org/mapdb/Store.html#printStatistics()">printStatistics</a>, <a href="../../org/mapdb/Store.html#serialize(A, org.mapdb.Serializer)">serialize</a>, <a href="../../org/mapdb/Store.html#unlockAllWrite()">unlockAllWrite</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -336,6 +364,15 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="TOMBSTONE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TOMBSTONE</h4>
+<pre>protected static final&nbsp;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a> TOMBSTONE</pre>
+</li>
+</ul>
 <a name="records">
 <!--   -->
 </a>
@@ -343,6 +380,17 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <li class="blockList">
 <h4>records</h4>
 <pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&gt; records</pre>
+<div class="block"><p>All commited records in store</p></div>
+</li>
+</ul>
+<a name="rollback">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>rollback</h4>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&gt; rollback</pre>
+<div class="block"><p>All not-yet commited records in store</p></div>
 </li>
 </ul>
 <a name="freeRecids">
@@ -352,6 +400,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <li class="blockList">
 <h4>freeRecids</h4>
 <pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt; freeRecids</pre>
+<div class="block"><p>Queue of deleted recids, those are reused for new records</p></div>
 </li>
 </ul>
 <a name="maxRecid">
@@ -361,6 +410,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <li class="blockList">
 <h4>maxRecid</h4>
 <pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> maxRecid</pre>
+<div class="block"><p>Maximal returned recid, incremented if there are no free recids</p></div>
 </li>
 </ul>
 </li>
@@ -388,6 +438,36 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="preallocate()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preallocate</h4>
+<pre>public&nbsp;long&nbsp;preallocate()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#preallocate()">Engine</a></code></strong></div>
+<div class="block"><p>Preallocates recid for not yet created record. It does not insert any data into it.</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#preallocate()">preallocate</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>new recid</dd></dl>
+</li>
+</ul>
+<a name="preallocate(long[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preallocate</h4>
+<pre>public&nbsp;void&nbsp;preallocate(long[]&nbsp;recids)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#preallocate(long[])">Engine</a></code></strong></div>
+<div class="block"><p>Preallocates recids for not yet created record. It does not insert any data into it. This is done in batch of given size (determied by size of array in argument)</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#preallocate(long[])">preallocate</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>recids</code> - array to put result into</dd></dl>
+</li>
+</ul>
 <a name="put(java.lang.Object,org.mapdb.Serializer)">
 <!--   -->
 </a><a name="put(A, org.mapdb.Serializer)">

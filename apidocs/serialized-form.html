@@ -422,9 +422,13 @@
 <h4>class2classId</h4>
 <pre><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">K</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">V</a>&gt; class2classId</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>classId2class</h4>
 <pre><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">K</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">V</a>&gt; classId2class</pre>
+</li>
+<li class="blockListLast">
+<h4>oldSize</h4>
+<pre>int oldSize</pre>
 </li>
 </ul>
 </li>
@@ -443,14 +447,22 @@
 <li class="blockList">
 <h4>records</h4>
 <pre><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">K</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">V</a>&gt; records</pre>
+<div class="block"><p>All commited records in store</p></div>
+</li>
+<li class="blockList">
+<h4>rollback</h4>
+<pre><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentNavigableMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">K</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent">V</a>&gt; rollback</pre>
+<div class="block"><p>All not-yet commited records in store</p></div>
 </li>
 <li class="blockList">
 <h4>freeRecids</h4>
 <pre><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">E</a>&gt; freeRecids</pre>
+<div class="block"><p>Queue of deleted recids, those are reused for new records</p></div>
 </li>
 <li class="blockListLast">
 <h4>maxRecid</h4>
 <pre><a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a> maxRecid</pre>
+<div class="block"><p>Maximal returned recid, incremented if there are no free recids</p></div>
 </li>
 </ul>
 </li>
