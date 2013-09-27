@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>TxEngine (mapdb 0.9.6-SNAPSHOT API)</title>
+<title>TxEngine (mapdb 0.9.7-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="TxEngine (mapdb 0.9.6-SNAPSHOT API)";
+        parent.document.title="TxEngine (mapdb 0.9.7-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -157,8 +157,8 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.html#fullTx">fullTx</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantReadWriteLock</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.html#lock">lock</a></strong></code>
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantReadWriteLock</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.html#locks">locks</a></strong></code>
 <div class="block">write lock:  - <code>TX.modified</code> and <code>TX.old</code> are updated  - commits and rollback  read lock on everything else</div>
 </td>
 </tr>
@@ -275,6 +275,10 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.html#snapshot()">snapshot</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.html#txsCleanup()">txsCleanup</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
@@ -320,13 +324,13 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <pre>protected static final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> TOMBSTONE</pre>
 </li>
 </ul>
-<a name="lock">
+<a name="locks">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>lock</h4>
-<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantReadWriteLock</a> lock</pre>
+<h4>locks</h4>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantReadWriteLock</a>[] locks</pre>
 <div class="block"><p>write lock:  - <code>TX.modified</code> and <code>TX.old</code> are updated  - commits and rollback  read lock on everything else</p></div>
 </li>
 </ul>
@@ -384,6 +388,15 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="txsCleanup()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>txsCleanup</h4>
+<pre>protected&nbsp;void&nbsp;txsCleanup()</pre>
+</li>
+</ul>
 <a name="put(java.lang.Object,org.mapdb.Serializer)">
 <!--   -->
 </a><a name="put(A, org.mapdb.Serializer)">
