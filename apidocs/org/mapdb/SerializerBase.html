@@ -156,7 +156,7 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <!--   -->
 </a>
 <h3>Fields inherited from interface&nbsp;org.mapdb.<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></h3>
-<code><a href="../../org/mapdb/Serializer.html#BASIC">BASIC</a>, <a href="../../org/mapdb/Serializer.html#BOOLEAN">BOOLEAN</a>, <a href="../../org/mapdb/Serializer.html#BYTE_ARRAY_NOSIZE">BYTE_ARRAY_NOSIZE</a>, <a href="../../org/mapdb/Serializer.html#EMPTY_SERIALIZER">EMPTY_SERIALIZER</a>, <a href="../../org/mapdb/Serializer.html#INTEGER">INTEGER</a>, <a href="../../org/mapdb/Serializer.html#JAVA">JAVA</a>, <a href="../../org/mapdb/Serializer.html#LONG">LONG</a>, <a href="../../org/mapdb/Serializer.html#STRING_NOSIZE">STRING_NOSIZE</a></code></li>
+<code><a href="../../org/mapdb/Serializer.html#BASIC">BASIC</a>, <a href="../../org/mapdb/Serializer.html#BOOLEAN">BOOLEAN</a>, <a href="../../org/mapdb/Serializer.html#BYTE_ARRAY_NOSIZE">BYTE_ARRAY_NOSIZE</a>, <a href="../../org/mapdb/Serializer.html#EMPTY_SERIALIZER">EMPTY_SERIALIZER</a>, <a href="../../org/mapdb/Serializer.html#INTEGER">INTEGER</a>, <a href="../../org/mapdb/Serializer.html#JAVA">JAVA</a>, <a href="../../org/mapdb/Serializer.html#LONG">LONG</a>, <a href="../../org/mapdb/Serializer.html#STRING">STRING</a>, <a href="../../org/mapdb/Serializer.html#STRING_NOSIZE">STRING_NOSIZE</a>, <a href="../../org/mapdb/Serializer.html#UUID">UUID</a></code></li>
 </ul>
 </li>
 </ul>
@@ -229,30 +229,34 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static boolean[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#readBooleanArray(java.io.DataInput)">readBooleanArray</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;is)</code>
 <div class="block">Unpacks an integer from the DataInput indicating the number of booleans that are compressed.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#serialize(java.io.DataOutput, java.lang.Object)">serialize</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;out,
          <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>
 <div class="block">Serialize the content of an object into a ObjectOutput</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#serialize(java.io.DataOutput, java.lang.Object, org.mapdb.SerializerBase.FastArrayList)">serialize</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;out,
          <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj,
          <a href="../../org/mapdb/SerializerBase.FastArrayList.html" title="class in org.mapdb">SerializerBase.FastArrayList</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;objectStack)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#serializeClass(java.io.DataOutput, java.lang.Class)">serializeClass</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;out,
               <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;clazz)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.html#serializeUnknownObject(java.io.DataOutput, java.lang.Object, org.mapdb.SerializerBase.FastArrayList)">serializeUnknownObject</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;out,
                       <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj,
@@ -398,6 +402,15 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
                            throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getEngine()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEngine</h4>
+<pre>protected&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;getEngine()</pre>
 </li>
 </ul>
 <a name="deserializeClass(java.io.DataInput)">

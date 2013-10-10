@@ -174,8 +174,8 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static &lt;K,V&gt;&nbsp;void</code></td>
-<td class="colLast"><span class="strong">Bind.</span><code><strong><a href="../../../org/mapdb/Bind.html#mapInverse(org.mapdb.Bind.MapWithModificationListener, java.util.NavigableSet)">mapInverse</a></strong>(<a href="../../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;primary,
-          <a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;V,K&gt;&gt;&nbsp;inverse)</code>
+<td class="colLast"><span class="strong">Bind.</span><code><strong><a href="../../../org/mapdb/Bind.html#mapInverse(org.mapdb.Bind.MapWithModificationListener, java.util.Set)">mapInverse</a></strong>(<a href="../../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;primary,
+          <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;V,K&gt;&gt;&nbsp;inverse)</code>
 <div class="block">Binds Secondary Set so it contains inverse mapping to Primary Map: Primary Value will become Secondary Key.</div>
 </td>
 </tr>
@@ -185,10 +185,26 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static &lt;K,V,K2&gt;&nbsp;void</code></td>
-<td class="colLast"><span class="strong">Bind.</span><code><strong><a href="../../../org/mapdb/Bind.html#secondaryKey(org.mapdb.Bind.MapWithModificationListener, java.util.NavigableSet, org.mapdb.Fun.Function2)">secondaryKey</a></strong>(<a href="../../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
-            <a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K2,K&gt;&gt;&nbsp;secondary,
+<td class="colLast"><span class="strong">Bind.</span><code><strong><a href="../../../org/mapdb/Bind.html#secondaryKey(org.mapdb.Bind.MapWithModificationListener, java.util.Set, org.mapdb.Fun.Function2)">secondaryKey</a></strong>(<a href="../../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
+            <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K2,K&gt;&gt;&nbsp;secondary,
             <a href="../../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;K2,K,V&gt;&nbsp;fun)</code>
 <div class="block">Binds Secondary Set so it contains Secondary Key (Index).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;K,V,K2&gt;&nbsp;void</code></td>
+<td class="colLast"><span class="strong">Bind.</span><code><strong><a href="../../../org/mapdb/Bind.html#secondaryKeys(org.mapdb.Bind.MapWithModificationListener, java.util.Set, org.mapdb.Fun.Function2)">secondaryKeys</a></strong>(<a href="../../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
+             <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K2,K&gt;&gt;&nbsp;secondary,
+             <a href="../../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;K2[],K,V&gt;&nbsp;fun)</code>
+<div class="block">Binds Secondary Set so it contains Secondary Key (Index).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;K,V,V2&gt;&nbsp;void</code></td>
+<td class="colLast"><span class="strong">Bind.</span><code><strong><a href="../../../org/mapdb/Bind.html#secondaryValues(org.mapdb.Bind.MapWithModificationListener, java.util.Set, org.mapdb.Fun.Function2)">secondaryValues</a></strong>(<a href="../../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
+               <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V2&gt;&gt;&nbsp;secondary,
+               <a href="../../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;V2[],K,V&gt;&nbsp;fun)</code>
+<div class="block">Binds Secondary Map so that it contains Key from Primary Map and custom Value.</div>
 </td>
 </tr>
 </tbody>

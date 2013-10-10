@@ -104,30 +104,36 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#nodeSize(int)">nodeSize</a></strong>(int&nbsp;nodeSize)</code>
-<div class="block">nodeSize maximal size of node, larger node causes overflow and creation of new BTree node.</div>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#keySerializerWrap(org.mapdb.Serializer)">keySerializerWrap</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>
+<div class="block">keySerializer used to convert keys into/from binary form.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpPresort(int)">pumpPresort</a></strong>(int&nbsp;batchSize)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#nodeSize(int)">nodeSize</a></strong>(int&nbsp;nodeSize)</code>
+<div class="block">nodeSize maximal size of node, larger node causes overflow and creation of new BTree node.</div>
+</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpPresort(int)">pumpPresort</a></strong>(int&nbsp;batchSize)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpSource(java.util.Iterator)">pumpSource</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;&nbsp;entriesSource)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpSource(java.util.Iterator, org.mapdb.Fun.Function1)">pumpSource</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;K&gt;&nbsp;keysSource,
           <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueExtractor)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</code>
 <div class="block">valueSerializer used to convert values into/from binary form.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valuesStoredOutsideNodes(boolean)">valuesStoredOutsideNodes</a></strong>(boolean&nbsp;outside)</code>
 <div class="block">valuesStoredOutsideNodes if true, values are stored outside of BTree nodes.</div>

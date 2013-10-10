@@ -160,8 +160,20 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#STRING">STRING</a></strong></code>
+<div class="block">Serializes strings using UTF8 encoding.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#STRING_NOSIZE">STRING_NOSIZE</a></strong></code>
 <div class="block">Serializes strings using UTF8 encoding.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#UUID">UUID</a></strong></code>
+<div class="block">Serializers <a href="http://docs.oracle.com/javase/6/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util"><code>UUID</code></a> class</div>
 </td>
 </tr>
 </table>
@@ -208,6 +220,16 @@
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="STRING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STRING</h4>
+<pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; STRING</pre>
+<div class="block"><p>Serializes strings using UTF8 encoding. Stores string size so can be used as collection serializer. Does not handle null values</p></div>
+</li>
+</ul>
 <a name="STRING_NOSIZE">
 <!--   -->
 </a>
@@ -282,11 +304,21 @@
 <a name="JAVA">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>JAVA</h4>
 <pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt; JAVA</pre>
 <div class="block"><p>Serializer which uses standard Java Serialization with <a href="http://docs.oracle.com/javase/6/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io"><code>ObjectInputStream</code></a> and <a href="http://docs.oracle.com/javase/6/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io"><code>ObjectOutputStream</code></a></p></div>
+</li>
+</ul>
+<a name="UUID">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>UUID</h4>
+<pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&gt; UUID</pre>
+<div class="block"><p>Serializers <a href="http://docs.oracle.com/javase/6/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util"><code>UUID</code></a> class</p></div>
 </li>
 </ul>
 </li>

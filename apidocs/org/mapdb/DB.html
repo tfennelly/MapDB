@@ -151,18 +151,22 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref">WeakReference</a>&lt;?&gt;&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#collections">collections</a></strong></code>
-<div class="block">already loaded named collections.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#engine">engine</a></strong></code>
 <div class="block">Engine which provides persistence for this DB</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref">WeakReference</a>&lt;?&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#namesInstanciated">namesInstanciated</a></strong></code>
+<div class="block">already loaded named collections.</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#namesLookup">namesLookup</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#strictDBGet">strictDBGet</a></strong></code>&nbsp;</td>
 </tr>
@@ -434,28 +438,39 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getQueue(java.lang.String)">getQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getNameForObject(java.lang.Object)">getNameForObject</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</code>
+<div class="block">returns name for this object, if it has name and was instanciated by this DB</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getStack(java.lang.String)">getStack</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getQueue(java.lang.String)">getQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getStack(java.lang.String)">getStack</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getTreeMap(java.lang.String)">getTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Opens existing or creates new B-linked-tree Map.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getTreeSet(java.lang.String)">getTreeSet</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Opens existing or creates new B-linked-tree Set.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#isClosed()">isClosed</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#namedPut(java.lang.String, java.lang.Object)">namedPut</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+        <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;ret)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
@@ -521,14 +536,23 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block"><p>Engine which provides persistence for this DB</p></div>
 </li>
 </ul>
-<a name="collections">
+<a name="namesInstanciated">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>collections</h4>
-<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref">WeakReference</a>&lt;?&gt;&gt; collections</pre>
+<h4>namesInstanciated</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref">WeakReference</a>&lt;?&gt;&gt; namesInstanciated</pre>
 <div class="block"><p>already loaded named collections. It is important to keep collections as singletons, because of &lsquo;in-memory&rsquo; locking</p></div>
+</li>
+</ul>
+<a name="namesLookup">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>namesLookup</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; namesLookup</pre>
 </li>
 </ul>
 <a name="catalog">
@@ -633,6 +657,16 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
            A&nbsp;retValueIfNull)</pre>
 </li>
 </ul>
+<a name="getNameForObject(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNameForObject</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getNameForObject(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;obj)</pre>
+<div class="block"><p>returns name for this object, if it has name and was instanciated by this DB</p></div>
+</li>
+</ul>
 <a name="getHashMap(java.lang.String)">
 <!--   -->
 </a>
@@ -656,6 +690,16 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block"><p>Opens existing or creates new Hash Tree Map. This collection perform well under concurrent access. Is best for large keys and large values.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of map</dd><dd><code>valueCreator</code> - if value is not found, new is created and placed into map.</dd><dd><code>K</code> - key</dd><dd><code>V</code> - value</dd>
 <dt><span class="strong">Returns:</span></dt><dd>map</dd></dl>
+</li>
+</ul>
+<a name="namedPut(java.lang.String, java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>namedPut</h4>
+<pre>protected&nbsp;void&nbsp;namedPut(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+            <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;ret)</pre>
 </li>
 </ul>
 <a name="createHashMap(java.lang.String)">
