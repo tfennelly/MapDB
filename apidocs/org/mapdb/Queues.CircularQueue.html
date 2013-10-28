@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Queues.CircularQueue (mapdb 0.9.7-SNAPSHOT API)</title>
+<title>Queues.CircularQueue (mapdb 0.9.8-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Queues.CircularQueue (mapdb 0.9.7-SNAPSHOT API)";
+        parent.document.title="Queues.CircularQueue (mapdb 0.9.8-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -99,7 +99,7 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;E&gt;, <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;E&gt;, <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</dd>
+<dd><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;E&gt;, <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;E&gt;, <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;E&gt;, <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;E&gt;</dd>
 </dl>
 <dl>
 <dt>Enclosing class:</dt>
@@ -160,7 +160,7 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></h3>
-<code><a href="../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#head">head</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#nodeSerializer">nodeSerializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#serializer">serializer</a></code></li>
+<code><a href="../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#head">head</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#nodeSerializer">nodeSerializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#serializer">serializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#TICK">TICK</a></code></li>
 </ul>
 </li>
 </ul>
@@ -219,7 +219,7 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></h3>
-<code><a href="../../org/mapdb/Queues.SimpleQueue.html#addAll(java.util.Collection)">addAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#close()">close</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#contains(java.lang.Object)">contains</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#containsAll(java.util.Collection)">containsAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#element()">element</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#isEmpty()">isEmpty</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#iterator()">iterator</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#offer(E)">offer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remove()">remove</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remove(java.lang.Object)">remove</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#removeAll(java.util.Collection)">removeAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#retainAll(java.util.Collection)">retainAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#size()">size</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#toArray()">toArray</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#toArray(T[])">toArray</a></code></li>
+<code><a href="../../org/mapdb/Queues.SimpleQueue.html#addAll(java.util.Collection)">addAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#close()">close</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#contains(java.lang.Object)">contains</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#containsAll(java.util.Collection)">containsAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#drainTo(java.util.Collection)">drainTo</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#drainTo(java.util.Collection, int)">drainTo</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#element()">element</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#isEmpty()">isEmpty</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#iterator()">iterator</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#offer(E)">offer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#offer(E, long, java.util.concurrent.TimeUnit)">offer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#poll(long, java.util.concurrent.TimeUnit)">poll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#put(E)">put</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remainingCapacity()">remainingCapacity</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remove()">remove</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remove(java.lang.Object)">remove</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#removeAll(java.util.Collection)">removeAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#retainAll(java.util.Collection)">retainAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#size()">size</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#take()">take</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#toArray()">toArray</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#toArray(T[])">toArray</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">

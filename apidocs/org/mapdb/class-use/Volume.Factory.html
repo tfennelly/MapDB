@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Uses of Interface org.mapdb.Volume.Factory (mapdb 0.9.7-SNAPSHOT API)</title>
+<title>Uses of Interface org.mapdb.Volume.Factory (mapdb 0.9.8-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Uses of Interface org.mapdb.Volume.Factory (mapdb 0.9.7-SNAPSHOT API)";
+        parent.document.title="Uses of Interface org.mapdb.Volume.Factory (mapdb 0.9.8-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -97,24 +97,27 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
-<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long)">fileFactory</a></strong>(boolean&nbsp;readOnly,
+<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long, boolean)">fileFactory</a></strong>(boolean&nbsp;readOnly,
            int&nbsp;rafMode,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
-           long&nbsp;sizeLimit)</code>&nbsp;</td>
+           long&nbsp;sizeLimit,
+           boolean&nbsp;fullChunkAllocation)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
-<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">fileFactory</a></strong>(boolean&nbsp;readOnly,
+<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#fileFactory(boolean, int, long, boolean, java.io.File, java.io.File, java.io.File)">fileFactory</a></strong>(boolean&nbsp;readOnly,
            int&nbsp;rafMode,
            long&nbsp;sizeLimit,
+           boolean&nbsp;fullChunkAllocation,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;physFile,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;transLogFile)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
-<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#memoryFactory(boolean, long)">memoryFactory</a></strong>(boolean&nbsp;useDirectBuffer,
-             long&nbsp;sizeLimit)</code>&nbsp;</td>
+<td class="colLast"><span class="strong">Volume.</span><code><strong><a href="../../../org/mapdb/Volume.html#memoryFactory(boolean, long, boolean)">memoryFactory</a></strong>(boolean&nbsp;useDirectBuffer,
+             long&nbsp;sizeLimit,
+             boolean&nbsp;fullChunkAllocation)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -145,7 +148,7 @@
 <td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory)">StoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">StoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean)">StoreDirect</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
            boolean&nbsp;readOnly,
            boolean&nbsp;deleteFilesAfterClose,
            int&nbsp;spaceReclaimMode,
@@ -153,13 +156,14 @@
            long&nbsp;sizeLimit,
            boolean&nbsp;checksum,
            boolean&nbsp;compress,
-           byte[]&nbsp;password)</code>&nbsp;</td>
+           byte[]&nbsp;password,
+           boolean&nbsp;fullChunkAllocation)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory)">StoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">StoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean)">StoreWAL</a></strong>(<a href="../../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
         boolean&nbsp;readOnly,
         boolean&nbsp;deleteFilesAfterClose,
         int&nbsp;spaceReclaimMode,
@@ -167,7 +171,8 @@
         long&nbsp;sizeLimit,
         boolean&nbsp;checksum,
         boolean&nbsp;compress,
-        byte[]&nbsp;password)</code>&nbsp;</td>
+        byte[]&nbsp;password,
+        boolean&nbsp;fullChunkAllocation)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

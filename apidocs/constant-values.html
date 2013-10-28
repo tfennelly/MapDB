@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Constant Field Values (mapdb 0.9.7-SNAPSHOT API)</title>
+<title>Constant Field Values (mapdb 0.9.8-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Constant Field Values (mapdb 0.9.7-SNAPSHOT API)";
+        parent.document.title="Constant Field Values (mapdb 0.9.8-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -178,27 +178,48 @@
 <td class="colLast"><code>128</code></td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.CC.DEFAULT_CACHE">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/CC.html#DEFAULT_CACHE">DEFAULT_CACHE</a></code></td>
+<td class="colLast"><code>"hashTable"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.CC.DEFAULT_CACHE_SIZE">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/CC.html#DEFAULT_CACHE_SIZE">DEFAULT_CACHE_SIZE</a></code></td>
+<td class="colLast"><code>32768</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.CC.DEFAULT_FREE_SPACE_RECLAIM_Q">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/CC.html#DEFAULT_FREE_SPACE_RECLAIM_Q">DEFAULT_FREE_SPACE_RECLAIM_Q</a></code></td>
+<td class="colLast"><code>5</code></td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a name="org.mapdb.CC.LOG_HINTS">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;boolean</code></td>
 <td><code><a href="org/mapdb/CC.html#LOG_HINTS">LOG_HINTS</a></code></td>
 <td class="colLast"><code>true</code></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a name="org.mapdb.CC.LOG_LOCKS">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;boolean</code></td>
 <td><code><a href="org/mapdb/CC.html#LOG_LOCKS">LOG_LOCKS</a></code></td>
 <td class="colLast"><code>false</code></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a name="org.mapdb.CC.LOG_TRACE">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;boolean</code></td>
 <td><code><a href="org/mapdb/CC.html#LOG_TRACE">LOG_TRACE</a></code></td>
 <td class="colLast"><code>false</code></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a name="org.mapdb.CC.PARANOID">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;boolean</code></td>
@@ -218,46 +239,303 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.DBMaker.CACHE_DISABLE">
+<td class="colFirst"><a name="org.mapdb.DBMaker.TRUE">
 <!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
-<td><code><a href="org/mapdb/DBMaker.html#CACHE_DISABLE">CACHE_DISABLE</a></code></td>
-<td class="colLast"><code>0</code></td>
+</a><code>protected&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.html#TRUE">TRUE</a></code></td>
+<td class="colLast"><code>"true"</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Constant Field Values table, listing constant fields, and values">
+<caption><span>org.mapdb.<a href="org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th scope="col">Constant Field</th>
+<th class="colLast" scope="col">Value</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.asyncFlushDelay">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#asyncFlushDelay">asyncFlushDelay</a></code></td>
+<td class="colLast"><code>"asyncFlushDelay"</code></td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.DBMaker.CACHE_FIXED_HASH_TABLE">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.asyncWriteDisable">
 <!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
-<td><code><a href="org/mapdb/DBMaker.html#CACHE_FIXED_HASH_TABLE">CACHE_FIXED_HASH_TABLE</a></code></td>
-<td class="colLast"><code>1</code></td>
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#asyncWriteDisable">asyncWriteDisable</a></code></td>
+<td class="colLast"><code>"asyncWriteDisable"</code></td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.DBMaker.CACHE_HARD_REF">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.cache">
 <!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
-<td><code><a href="org/mapdb/DBMaker.html#CACHE_HARD_REF">CACHE_HARD_REF</a></code></td>
-<td class="colLast"><code>2</code></td>
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#cache">cache</a></code></td>
+<td class="colLast"><code>"cache"</code></td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.DBMaker.CACHE_LRU">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.cache_disable">
 <!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
-<td><code><a href="org/mapdb/DBMaker.html#CACHE_LRU">CACHE_LRU</a></code></td>
-<td class="colLast"><code>5</code></td>
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#cache_disable">cache_disable</a></code></td>
+<td class="colLast"><code>"disable"</code></td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.DBMaker.CACHE_SOFT_REF">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.cache_hardRef">
 <!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
-<td><code><a href="org/mapdb/DBMaker.html#CACHE_SOFT_REF">CACHE_SOFT_REF</a></code></td>
-<td class="colLast"><code>4</code></td>
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#cache_hardRef">cache_hardRef</a></code></td>
+<td class="colLast"><code>"hardRef"</code></td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.DBMaker.CACHE_WEAK_REF">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.cache_hashTable">
 <!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
-<td><code><a href="org/mapdb/DBMaker.html#CACHE_WEAK_REF">CACHE_WEAK_REF</a></code></td>
-<td class="colLast"><code>3</code></td>
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#cache_hashTable">cache_hashTable</a></code></td>
+<td class="colLast"><code>"hashTable"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.cache_lru">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#cache_lru">cache_lru</a></code></td>
+<td class="colLast"><code>"lru"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.cache_softRef">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#cache_softRef">cache_softRef</a></code></td>
+<td class="colLast"><code>"softRef"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.cache_weakRef">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#cache_weakRef">cache_weakRef</a></code></td>
+<td class="colLast"><code>"weakRef"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.cacheSize">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#cacheSize">cacheSize</a></code></td>
+<td class="colLast"><code>"cacheSize"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.checksum">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#checksum">checksum</a></code></td>
+<td class="colLast"><code>"checksum"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.closeOnJvmShutdown">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#closeOnJvmShutdown">closeOnJvmShutdown</a></code></td>
+<td class="colLast"><code>"closeOnJvmShutdown"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.compression">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#compression">compression</a></code></td>
+<td class="colLast"><code>"compression"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.compression_lzf">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#compression_lzf">compression_lzf</a></code></td>
+<td class="colLast"><code>"lzf"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.deleteFilesAfterClose">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#deleteFilesAfterClose">deleteFilesAfterClose</a></code></td>
+<td class="colLast"><code>"deleteFilesAfterClose"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.encryption">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#encryption">encryption</a></code></td>
+<td class="colLast"><code>"encryption"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.encryption_xtea">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#encryption_xtea">encryption_xtea</a></code></td>
+<td class="colLast"><code>"xtea"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.encryptionKey">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#encryptionKey">encryptionKey</a></code></td>
+<td class="colLast"><code>"encryptionKey"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.file">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#file">file</a></code></td>
+<td class="colLast"><code>"file"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.freeSpaceReclaimQ">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#freeSpaceReclaimQ">freeSpaceReclaimQ</a></code></td>
+<td class="colLast"><code>"freeSpaceReclaimQ"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.fullChunkAllocation">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#fullChunkAllocation">fullChunkAllocation</a></code></td>
+<td class="colLast"><code>"fullChunkAllocation"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.fullTx">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#fullTx">fullTx</a></code></td>
+<td class="colLast"><code>"fullTx"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.readOnly">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#readOnly">readOnly</a></code></td>
+<td class="colLast"><code>"readOnly"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.sizeLimit">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#sizeLimit">sizeLimit</a></code></td>
+<td class="colLast"><code>"sizeLimit"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.snapshots">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#snapshots">snapshots</a></code></td>
+<td class="colLast"><code>"snapshots"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.store">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#store">store</a></code></td>
+<td class="colLast"><code>"store"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.store_append">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#store_append">store_append</a></code></td>
+<td class="colLast"><code>"append"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.store_direct">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#store_direct">store_direct</a></code></td>
+<td class="colLast"><code>"direct"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.store_heap">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#store_heap">store_heap</a></code></td>
+<td class="colLast"><code>"heap"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.store_wal">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#store_wal">store_wal</a></code></td>
+<td class="colLast"><code>"wal"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.strictDBGet">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#strictDBGet">strictDBGet</a></code></td>
+<td class="colLast"><code>"strictDBGet"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.syncOnCommitDisable">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#syncOnCommitDisable">syncOnCommitDisable</a></code></td>
+<td class="colLast"><code>"syncOnCommitDisable"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.transactionDisable">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#transactionDisable">transactionDisable</a></code></td>
+<td class="colLast"><code>"transactionDisable"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.volume">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#volume">volume</a></code></td>
+<td class="colLast"><code>"volume"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.volume_heap">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#volume_heap">volume_heap</a></code></td>
+<td class="colLast"><code>"heap"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.volume_mmapf">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#volume_mmapf">volume_mmapf</a></code></td>
+<td class="colLast"><code>"mmapf"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.volume_offheap">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#volume_offheap">volume_offheap</a></code></td>
+<td class="colLast"><code>"offheap"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.volume_raf">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#volume_raf">volume_raf</a></code></td>
+<td class="colLast"><code>"raf"</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.volume_rafIfNeeded">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#volume_rafIfNeeded">volume_rafIfNeeded</a></code></td>
+<td class="colLast"><code>"rafIfNeeded"</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.volume_rafIndexMapped">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#volume_rafIndexMapped">volume_rafIndexMapped</a></code></td>
+<td class="colLast"><code>"rafIndexMapped"</code></td>
 </tr>
 </tbody>
 </table>
@@ -350,6 +628,25 @@
 </a><code>protected&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/HTreeMap.html#MOD8">MOD8</a></code></td>
 <td class="colLast"><code>7</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Constant Field Values table, listing constant fields, and values">
+<caption><span>org.mapdb.<a href="org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a>&lt;<a href="org/mapdb/Queues.SimpleQueue.html" title="type parameter in Queues.SimpleQueue">E</a>&gt;</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th scope="col">Constant Field</th>
+<th class="colLast" scope="col">Value</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.Queues.SimpleQueue.TICK">
+<!--   -->
+</a><code>protected&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/Queues.SimpleQueue.html#TICK">TICK</a></code></td>
+<td class="colLast"><code>10000</code></td>
 </tr>
 </tbody>
 </table>
@@ -1636,24 +1933,38 @@
 <td class="colLast"><code>16</code></td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.BYTE_ARRAY_SERIALIZER">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#BYTE_ARRAY_SERIALIZER">BYTE_ARRAY_SERIALIZER</a></code></td>
+<td class="colLast"><code>21</code></td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.COMPARABLE_COMPARATOR">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#COMPARABLE_COMPARATOR">COMPARABLE_COMPARATOR</a></code></td>
 <td class="colLast"><code>11</code></td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.COMPARABLE_COMPARATOR_WITH_NULLS">
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.FUN_COMPARATOR">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
-<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#COMPARABLE_COMPARATOR_WITH_NULLS">COMPARABLE_COMPARATOR_WITH_NULLS</a></code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#FUN_COMPARATOR">FUN_COMPARATOR</a></code></td>
 <td class="colLast"><code>10</code></td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.EMPTY_SERIALIZER">
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.FUN_COMPARATOR_REVERSE">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
-<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#EMPTY_SERIALIZER">EMPTY_SERIALIZER</a></code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#FUN_COMPARATOR_REVERSE">FUN_COMPARATOR_REVERSE</a></code></td>
+<td class="colLast"><code>28</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.ILLEGAL_ACCESS_SERIALIZER">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#ILLEGAL_ACCESS_SERIALIZER">ILLEGAL_ACCESS_SERIALIZER</a></code></td>
 <td class="colLast"><code>6</code></td>
 </tr>
 <tr class="rowColor">
@@ -1732,6 +2043,48 @@
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#THIS_SERIALIZER">THIS_SERIALIZER</a></code></td>
 <td class="colLast"><code>12</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE2_COMPARATOR">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE2_COMPARATOR">TUPLE2_COMPARATOR</a></code></td>
+<td class="colLast"><code>22</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE2_COMPARATOR_STATIC">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE2_COMPARATOR_STATIC">TUPLE2_COMPARATOR_STATIC</a></code></td>
+<td class="colLast"><code>25</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE3_COMPARATOR">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE3_COMPARATOR">TUPLE3_COMPARATOR</a></code></td>
+<td class="colLast"><code>23</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE3_COMPARATOR_STATIC">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE3_COMPARATOR_STATIC">TUPLE3_COMPARATOR_STATIC</a></code></td>
+<td class="colLast"><code>26</code></td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE4_COMPARATOR">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE4_COMPARATOR">TUPLE4_COMPARATOR</a></code></td>
+<td class="colLast"><code>24</code></td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE4_COMPARATOR_STATIC">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE4_COMPARATOR_STATIC">TUPLE4_COMPARATOR_STATIC</a></code></td>
+<td class="colLast"><code>27</code></td>
 </tr>
 </tbody>
 </table>
@@ -2012,6 +2365,25 @@
 </li>
 <li class="blockList">
 <table border="0" cellpadding="3" cellspacing="0" summary="Constant Field Values table, listing constant fields, and values">
+<caption><span>org.mapdb.<a href="org/mapdb/TxEngine.html" title="class in org.mapdb">TxEngine</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th scope="col">Constant Field</th>
+<th class="colLast" scope="col">Value</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.TxEngine.PREALLOC_RECID_SIZE">
+<!--   -->
+</a><code>protected&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/TxEngine.html#PREALLOC_RECID_SIZE">PREALLOC_RECID_SIZE</a></code></td>
+<td class="colLast"><code>128</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table border="0" cellpadding="3" cellspacing="0" summary="Constant Field Values table, listing constant fields, and values">
 <caption><span>org.mapdb.<a href="org/mapdb/Utils.html" title="class in org.mapdb">Utils</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
@@ -2027,13 +2399,6 @@
 <td class="colLast"><code>""</code></td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.Utils.LOCK_MASK">
-<!--   -->
-</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
-<td><code><a href="org/mapdb/Utils.html#LOCK_MASK">LOCK_MASK</a></code></td>
-<td class="colLast"><code>127</code></td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><a name="org.mapdb.Utils.UTF8">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>

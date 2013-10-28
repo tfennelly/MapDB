@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>StoreDirect (mapdb 0.9.7-SNAPSHOT API)</title>
+<title>StoreDirect (mapdb 0.9.8-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="StoreDirect (mapdb 0.9.7-SNAPSHOT API)";
+        parent.document.title="StoreDirect (mapdb 0.9.8-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -308,132 +308,136 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#freeSize">freeSize</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#fullChunkAllocation">fullChunkAllocation</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#HEADER">HEADER</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#index">index</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#indexSize">indexSize</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#IO_FREE_RECID">IO_FREE_RECID</a></strong></code>
 <div class="block">index file offset where reference to longstack of free recid is stored</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#IO_FREE_SIZE">IO_FREE_SIZE</a></strong></code>
 <div class="block">index file offset where space occupied by free phys records is stored</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#IO_INDEX_SIZE">IO_INDEX_SIZE</a></strong></code>
 <div class="block">index file offset where current size of index file is stored</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#IO_INDEX_SUM">IO_INDEX_SUM</a></strong></code>
 <div class="block">checksum of all index file headers.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#IO_PHYS_SIZE">IO_PHYS_SIZE</a></strong></code>
 <div class="block">index file offset where current size of phys file is stored</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#IO_USER_START">IO_USER_START</a></strong></code>
 <div class="block">index file offset where first recid available to user is stored</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_COUNT">LONG_STACK_PREF_COUNT</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_COUNT_ALTER">LONG_STACK_PREF_COUNT_ALTER</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_SIZE">LONG_STACK_PREF_SIZE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#LONG_STACK_PREF_SIZE_ALTER">LONG_STACK_PREF_SIZE_ALTER</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#MASK_ARCHIVE">MASK_ARCHIVE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#MASK_DISCARD">MASK_DISCARD</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#MASK_LINKED">MASK_LINKED</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#MASK_OFFSET">MASK_OFFSET</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#MAX_REC_SIZE">MAX_REC_SIZE</a></strong></code>
 <div class="block">maximal non linked record size</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#maxUsedIoList">maxUsedIoList</a></strong></code>
 <div class="block">maximal non zero slot in free phys record, access requires <code>structuralLock</code></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#phys">phys</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#PHYS_FREE_SLOTS_COUNT">PHYS_FREE_SLOTS_COUNT</a></strong></code>
 <div class="block">number of free physical slots</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#physSize">physSize</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#readOnly">readOnly</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#sizeLimit">sizeLimit</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#spaceReclaimReuse">spaceReclaimReuse</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#spaceReclaimSplit">spaceReclaimSplit</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#spaceReclaimTrack">spaceReclaimTrack</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#syncOnCommitDisabled">syncOnCommitDisabled</a></strong></code>&nbsp;</td>
 </tr>
@@ -443,7 +447,7 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></h3>
-<code><a href="../../org/mapdb/Store.html#checksum">checksum</a>, <a href="../../org/mapdb/Store.html#compress">compress</a>, <a href="../../org/mapdb/Store.html#encrypt">encrypt</a>, <a href="../../org/mapdb/Store.html#encryptionXTEA">encryptionXTEA</a>, <a href="../../org/mapdb/Store.html#locks">locks</a>, <a href="../../org/mapdb/Store.html#LZF">LZF</a>, <a href="../../org/mapdb/Store.html#password">password</a>, <a href="../../org/mapdb/Store.html#recycledDataOuts">recycledDataOuts</a>, <a href="../../org/mapdb/Store.html#serializerPojo">serializerPojo</a>, <a href="../../org/mapdb/Store.html#structuralLock">structuralLock</a></code></li>
+<code><a href="../../org/mapdb/Store.html#checksum">checksum</a>, <a href="../../org/mapdb/Store.html#compress">compress</a>, <a href="../../org/mapdb/Store.html#encrypt">encrypt</a>, <a href="../../org/mapdb/Store.html#encryptionXTEA">encryptionXTEA</a>, <a href="../../org/mapdb/Store.html#locks">locks</a>, <a href="../../org/mapdb/Store.html#LZF">LZF</a>, <a href="../../org/mapdb/Store.html#newRecidLock">newRecidLock</a>, <a href="../../org/mapdb/Store.html#password">password</a>, <a href="../../org/mapdb/Store.html#recycledDataOuts">recycledDataOuts</a>, <a href="../../org/mapdb/Store.html#serializerPojo">serializerPojo</a>, <a href="../../org/mapdb/Store.html#serializerPojoInitLock">serializerPojoInitLock</a>, <a href="../../org/mapdb/Store.html#structuralLock">structuralLock</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.mapdb.Engine">
@@ -469,7 +473,7 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <td class="colOne"><code><strong><a href="../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory)">StoreDirect</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">StoreDirect</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
+<td class="colOne"><code><strong><a href="../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean)">StoreDirect</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
            boolean&nbsp;readOnly,
            boolean&nbsp;deleteFilesAfterClose,
            int&nbsp;spaceReclaimMode,
@@ -477,7 +481,8 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
            long&nbsp;sizeLimit,
            boolean&nbsp;checksum,
            boolean&nbsp;compress,
-           byte[]&nbsp;password)</code>&nbsp;</td>
+           byte[]&nbsp;password,
+           boolean&nbsp;fullChunkAllocation)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -529,6 +534,18 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#compact()">compact</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#compactPostUnderLock()">compactPostUnderLock</a></strong>()</code>
+<div class="block">subclasses put additional cleanup after compaction finishes here</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreDirect.html#compactPreUnderLock()">compactPreUnderLock</a></strong>()</code>
+<div class="block">subclasses put additional checks before compaction starts here</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
@@ -1034,6 +1051,15 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <pre>protected final&nbsp;long sizeLimit</pre>
 </li>
 </ul>
+<a name="fullChunkAllocation">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fullChunkAllocation</h4>
+<pre>protected final&nbsp;boolean fullChunkAllocation</pre>
+</li>
+</ul>
 <a name="maxUsedIoList">
 <!--   -->
 </a>
@@ -1052,7 +1078,7 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">
+<a name="StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -1066,7 +1092,8 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
            long&nbsp;sizeLimit,
            boolean&nbsp;checksum,
            boolean&nbsp;compress,
-           byte[]&nbsp;password)</pre>
+           byte[]&nbsp;password,
+           boolean&nbsp;fullChunkAllocation)</pre>
 </li>
 </ul>
 <a name="StoreDirect(org.mapdb.Volume.Factory)">
@@ -1366,6 +1393,26 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <li class="blockList">
 <h4>compact</h4>
 <pre>public&nbsp;void&nbsp;compact()</pre>
+</li>
+</ul>
+<a name="compactPreUnderLock()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compactPreUnderLock</h4>
+<pre>protected&nbsp;void&nbsp;compactPreUnderLock()</pre>
+<div class="block"><p>subclasses put additional checks before compaction starts here</p></div>
+</li>
+</ul>
+<a name="compactPostUnderLock()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compactPostUnderLock</h4>
+<pre>protected&nbsp;void&nbsp;compactPostUnderLock()</pre>
+<div class="block"><p>subclasses put additional cleanup after compaction finishes here</p></div>
 </li>
 </ul>
 <a name="longStackTake(long, boolean)">

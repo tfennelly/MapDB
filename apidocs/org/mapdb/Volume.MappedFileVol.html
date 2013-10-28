@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Volume.MappedFileVol (mapdb 0.9.7-SNAPSHOT API)</title>
+<title>Volume.MappedFileVol (mapdb 0.9.8-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Volume.MappedFileVol (mapdb 0.9.7-SNAPSHOT API)";
+        parent.document.title="Volume.MappedFileVol (mapdb 0.9.8-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -160,8 +160,12 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.MappedFileVol.html#raf">raf</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ref/Reference.html?is-external=true" title="class or interface in java.lang.ref">Reference</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/MappedByteBuffer.html?is-external=true" title="class or interface in java.nio">MappedByteBuffer</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.MappedFileVol.html#unreleasedBuffers">unreleasedBuffers</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ref/ReferenceQueue.html?is-external=true" title="class or interface in java.lang.ref">ReferenceQueue</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/MappedByteBuffer.html?is-external=true" title="class or interface in java.nio">MappedByteBuffer</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.MappedFileVol.html#unreleasedQueue">unreleasedQueue</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -169,7 +173,7 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></h3>
-<code><a href="../../org/mapdb/Volume.ByteBufferVol.html#buffers">buffers</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#growLock">growLock</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#hasLimit">hasLimit</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#readOnly">readOnly</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#sizeLimit">sizeLimit</a></code></li>
+<code><a href="../../org/mapdb/Volume.ByteBufferVol.html#buffers">buffers</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#fullChunkAllocation">fullChunkAllocation</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#growLock">growLock</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#hasLimit">hasLimit</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#readOnly">readOnly</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#sizeLimit">sizeLimit</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.mapdb.Volume">
@@ -192,9 +196,10 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/Volume.MappedFileVol.html#Volume.MappedFileVol(java.io.File, boolean, long)">Volume.MappedFileVol</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+<td class="colOne"><code><strong><a href="../../org/mapdb/Volume.MappedFileVol.html#Volume.MappedFileVol(java.io.File, boolean, long, boolean)">Volume.MappedFileVol</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
                     boolean&nbsp;readOnly,
-                    long&nbsp;sizeLimit)</code>&nbsp;</td>
+                    long&nbsp;sizeLimit,
+                    boolean&nbsp;fullChunkAllocation)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -251,7 +256,7 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></h3>
-<code><a href="../../org/mapdb/Volume.html#ensureAvailable(long)">ensureAvailable</a>, <a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#getPackedLong(long)">getPackedLong</a>, <a href="../../org/mapdb/Volume.html#getSixLong(long)">getSixLong</a>, <a href="../../org/mapdb/Volume.html#getUnsignedByte(long)">getUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#getUnsignedShort(long)">getUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#memoryFactory(boolean, long)">memoryFactory</a>, <a href="../../org/mapdb/Volume.html#putPackedLong(long, long)">putPackedLong</a>, <a href="../../org/mapdb/Volume.html#putSixLong(long, long)">putSixLong</a>, <a href="../../org/mapdb/Volume.html#putUnsignedByte(long, int)">putUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#putUnsignedShort(long, int)">putUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long)">volumeForFile</a></code></li>
+<code><a href="../../org/mapdb/Volume.html#ensureAvailable(long)">ensureAvailable</a>, <a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long, boolean)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, long, boolean, java.io.File, java.io.File, java.io.File)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#getPackedLong(long)">getPackedLong</a>, <a href="../../org/mapdb/Volume.html#getSixLong(long)">getSixLong</a>, <a href="../../org/mapdb/Volume.html#getUnsignedByte(long)">getUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#getUnsignedShort(long)">getUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#memoryFactory(boolean, long, boolean)">memoryFactory</a>, <a href="../../org/mapdb/Volume.html#putPackedLong(long, long)">putPackedLong</a>, <a href="../../org/mapdb/Volume.html#putSixLong(long, long)">putSixLong</a>, <a href="../../org/mapdb/Volume.html#putUnsignedByte(long, int)">putUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#putUnsignedShort(long, int)">putUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long, boolean)">volumeForFile</a>, <a href="../../org/mapdb/Volume.html#volumeTransfer(long, org.mapdb.Volume, org.mapdb.Volume)">volumeTransfer</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -310,13 +315,22 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/RandomAccessFile.html?is-external=true" title="class or interface in java.io">RandomAccessFile</a> raf</pre>
 </li>
 </ul>
+<a name="unreleasedQueue">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>unreleasedQueue</h4>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ref/ReferenceQueue.html?is-external=true" title="class or interface in java.lang.ref">ReferenceQueue</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/MappedByteBuffer.html?is-external=true" title="class or interface in java.nio">MappedByteBuffer</a>&gt; unreleasedQueue</pre>
+</li>
+</ul>
 <a name="unreleasedBuffers">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>unreleasedBuffers</h4>
-<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; unreleasedBuffers</pre>
+<pre>protected&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ref/Reference.html?is-external=true" title="class or interface in java.lang.ref">Reference</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/MappedByteBuffer.html?is-external=true" title="class or interface in java.nio">MappedByteBuffer</a>&gt;&gt; unreleasedBuffers</pre>
 </li>
 </ul>
 </li>
@@ -327,7 +341,7 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="Volume.MappedFileVol(java.io.File, boolean, long)">
+<a name="Volume.MappedFileVol(java.io.File, boolean, long, boolean)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -335,7 +349,8 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <h4>Volume.MappedFileVol</h4>
 <pre>public&nbsp;Volume.MappedFileVol(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
                     boolean&nbsp;readOnly,
-                    long&nbsp;sizeLimit)</pre>
+                    long&nbsp;sizeLimit,
+                    boolean&nbsp;fullChunkAllocation)</pre>
 </li>
 </ul>
 </li>
