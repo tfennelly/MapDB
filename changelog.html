@@ -119,12 +119,27 @@
 <div class="section"> 
  <h2 id="Version_097_2013-10-28">Version 0.9.7 (2013-10-28)</h2> 
  <p>Store format is not backward compatible. Fixed locking issues on Windows. Concurrent Transactions (TxMaker) reworked and finally fixed. Added <tt>DBMaker.fullChunkAllocationEnable()</tt> to enable disk space allocation in 1GB chunks. In-memory store now can be compacted. Fixed race condition in <tt>BTreeMap.put()</tt>.</p> 
- <p>Changes: * Rework integer/long serialization. * Fix #214: Queues now implement <tt>BlockingQueue</tt> interface * Refactor <tt>DBMaker</tt> so it uses properties. Easy to load/save config. * TxMaker reworked, fixed concurrency issue. * StoreDirect &amp; WAL use stricter locking. * Fix #218 and #192, locking issues on Windows during compaction solved. * Added Tuple comparators. * Fixed several issues in Data Pump. * Fix #187, Reference to named objects/collections should be serializable * BTreeMap: fix #209, put operation was not thread safe.</p> 
+ <p>Changes:</p> 
+ <ul> 
+  <li>Rework integer/long serialization.</li> 
+  <li>Fix #214: Queues now implement <tt>BlockingQueue</tt> interface</li> 
+  <li>Refactor <tt>DBMaker</tt> so it uses properties. Easy to load/save config.</li> 
+  <li>TxMaker reworked, fixed concurrency issue.</li> 
+  <li>StoreDirect &amp; WAL use stricter locking.</li> 
+  <li>Fix #218 and #192, locking issues on Windows during compaction solved.</li> 
+  <li>Added Tuple comparators.</li> 
+  <li>Fixed several issues in Data Pump.</li> 
+  <li>Fix #187, Reference to named objects/collections should be serializable</li> 
+  <li>BTreeMap: fix #209, put operation was not thread safe.</li> 
+ </ul> 
 </div> 
 <div class="section"> 
  <h2 id="Version_096_2013-09-27">Version 0.9.6 (2013-09-27)</h2> 
  <p>Concurrent Transactions (TxMaker) almost fixed. Backward incompatible store format change. Snapshots are no longer enabled by default.</p> 
- <p>Open issues * #201: failing test suggests that Concurrent Transactions contains race condition.</p> 
+ <p>Open issues</p> 
+ <ul> 
+  <li> <h1 id="201_failing_test_suggests_that_concurrent_transact">201: failing test suggests that Concurrent Transactions contains race condition.</h1></li> 
+ </ul> 
  <p>Changes:</p> 
  <ul> 
   <li>Concurrent Transactions were broken and are now completely re-written.</li> 
@@ -260,6 +275,11 @@
 			<ul class="nav nav-list">
 		<li><a href="#Version_097_2013-10-28" title="Version 0.9.7 (2013-10-28)">Version 0.9.7 (2013-10-28)</a>
 		<li><a href="#Version_096_2013-09-27" title="Version 0.9.6 (2013-09-27)">Version 0.9.6 (2013-09-27)</a>
+				<li class="divider"></li>
+			</ul>
+		</li>
+		<li class="dropdown"><a href="#201_failing_test_suggests_that_concurrent_transact" title="201: failing test suggests that Concurrent Transactions contains race condition.">201: failing test suggests that Concurrent Transactions contains race condition. <b class="caret"></b></a>
+			<ul class="nav nav-list">
 		<li><a href="#Version_095_2013-08-26" title="Version 0.9.5 (2013-08-26)">Version 0.9.5 (2013-08-26)</a>
 		<li><a href="#Version_094_2013-08-09" title="Version 0.9.4 (2013-08-09)">Version 0.9.4 (2013-08-09)</a>
 		<li><a href="#Version_093_2013-06-02" title="Version 0.9.3 (2013-06-02)">Version 0.9.3 (2013-06-02)</a>
