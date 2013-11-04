@@ -193,7 +193,19 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">Queues.SimpleQueue.</span><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">BTreeMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.html#engine">engine</a></strong></code>
+<div class="block">DB Engine in which entries are persisted</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#engine">engine</a></strong></code>
+<div class="block">Engine which provides persistence for this DB</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#engine">engine</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
@@ -217,19 +229,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">BTreeMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.html#engine">engine</a></strong></code>
-<div class="block">DB Engine in which entries are persisted</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#engine">engine</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#engine">engine</a></strong></code>
-<div class="block">Engine which provides persistence for this DB</div>
-</td>
+<td class="colLast"><span class="strong">Queues.SimpleQueue.</span><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -257,16 +257,16 @@
 <td class="colLast"><span class="strong">DBMaker.</span><code><strong><a href="../../../org/mapdb/DBMaker.html#extendWrapStore(org.mapdb.Engine)">extendWrapStore</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">SerializerBase.</span><code><strong><a href="../../../org/mapdb/SerializerBase.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><span class="strong">SerializerPojo.</span><code><strong><a href="../../../org/mapdb/SerializerPojo.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><span class="strong">SerializerBase.</span><code><strong><a href="../../../org/mapdb/SerializerBase.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
@@ -480,7 +480,7 @@
 <td class="colLast"><code><strong><a href="../../../org/mapdb/EngineWrapper.html#EngineWrapper(org.mapdb.Engine)">EngineWrapper</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[], org.mapdb.Fun.Function1)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
         long&nbsp;counterRecid,
         int&nbsp;hashSalt,
         long[]&nbsp;segmentRecids,
@@ -492,7 +492,8 @@
         long&nbsp;expireMaxSize,
         long[]&nbsp;expireHeads,
         long[]&nbsp;expireTails,
-        <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator)</code>
+        <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator,
+        <a href="../../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>
 <div class="block">Opens HTreeMap</div>
 </td>
 </tr>

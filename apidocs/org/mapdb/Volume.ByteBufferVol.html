@@ -145,7 +145,7 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#buffers">buffers</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.ByteBufferVol.html#chunks">chunks</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
@@ -173,7 +173,7 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></h3>
-<code><a href="../../org/mapdb/Volume.html#BUF_SHIFT">BUF_SHIFT</a>, <a href="../../org/mapdb/Volume.html#BUF_SIZE">BUF_SIZE</a>, <a href="../../org/mapdb/Volume.html#BUF_SIZE_MOD_MASK">BUF_SIZE_MOD_MASK</a></code></li>
+<code><a href="../../org/mapdb/Volume.html#CHUNK_SHIFT">CHUNK_SHIFT</a>, <a href="../../org/mapdb/Volume.html#CHUNK_SIZE">CHUNK_SIZE</a>, <a href="../../org/mapdb/Volume.html#CHUNK_SIZE_MOD_MASK">CHUNK_SIZE_MOD_MASK</a></code></li>
 </ul>
 </li>
 </ul>
@@ -342,13 +342,13 @@ extends <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume<
 <pre>protected final&nbsp;boolean fullChunkAllocation</pre>
 </li>
 </ul>
-<a name="buffers">
+<a name="chunks">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>buffers</h4>
-<pre>protected volatile&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>[] buffers</pre>
+<h4>chunks</h4>
+<pre>protected volatile&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>[] chunks</pre>
 </li>
 </ul>
 <a name="readOnly">

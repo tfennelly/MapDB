@@ -142,6 +142,10 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <td class="colFirst"><code>protected static interface&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.HeaderMapDB.html" title="interface in org.mapdb">SerializerBase.HeaderMapDB</a></strong></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected static class&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/SerializerBase.singletons.html" title="class in org.mapdb">SerializerBase.singletons</a></strong></code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -156,7 +160,7 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <!--   -->
 </a>
 <h3>Fields inherited from interface&nbsp;org.mapdb.<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></h3>
-<code><a href="../../org/mapdb/Serializer.html#BASIC">BASIC</a>, <a href="../../org/mapdb/Serializer.html#BOOLEAN">BOOLEAN</a>, <a href="../../org/mapdb/Serializer.html#BYTE_ARRAY">BYTE_ARRAY</a>, <a href="../../org/mapdb/Serializer.html#BYTE_ARRAY_NOSIZE">BYTE_ARRAY_NOSIZE</a>, <a href="../../org/mapdb/Serializer.html#ILLEGAL_ACCESS">ILLEGAL_ACCESS</a>, <a href="../../org/mapdb/Serializer.html#INTEGER">INTEGER</a>, <a href="../../org/mapdb/Serializer.html#JAVA">JAVA</a>, <a href="../../org/mapdb/Serializer.html#LONG">LONG</a>, <a href="../../org/mapdb/Serializer.html#STRING">STRING</a>, <a href="../../org/mapdb/Serializer.html#STRING_NOSIZE">STRING_NOSIZE</a>, <a href="../../org/mapdb/Serializer.html#UUID">UUID</a></code></li>
+<code><a href="../../org/mapdb/Serializer.html#BASIC">BASIC</a>, <a href="../../org/mapdb/Serializer.html#BOOLEAN">BOOLEAN</a>, <a href="../../org/mapdb/Serializer.html#BYTE_ARRAY">BYTE_ARRAY</a>, <a href="../../org/mapdb/Serializer.html#BYTE_ARRAY_NOSIZE">BYTE_ARRAY_NOSIZE</a>, <a href="../../org/mapdb/Serializer.html#CHAR_ARRAY">CHAR_ARRAY</a>, <a href="../../org/mapdb/Serializer.html#DOUBLE_ARRAY">DOUBLE_ARRAY</a>, <a href="../../org/mapdb/Serializer.html#ILLEGAL_ACCESS">ILLEGAL_ACCESS</a>, <a href="../../org/mapdb/Serializer.html#INT_ARRAY">INT_ARRAY</a>, <a href="../../org/mapdb/Serializer.html#INTEGER">INTEGER</a>, <a href="../../org/mapdb/Serializer.html#JAVA">JAVA</a>, <a href="../../org/mapdb/Serializer.html#LONG">LONG</a>, <a href="../../org/mapdb/Serializer.html#LONG_ARRAY">LONG_ARRAY</a>, <a href="../../org/mapdb/Serializer.html#STRING">STRING</a>, <a href="../../org/mapdb/Serializer.html#STRING_ASCII">STRING_ASCII</a>, <a href="../../org/mapdb/Serializer.html#STRING_NOSIZE">STRING_NOSIZE</a>, <a href="../../org/mapdb/Serializer.html#UUID">UUID</a></code></li>
 </ul>
 </li>
 </ul>
@@ -303,15 +307,6 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="assertSerializable(java.lang.Object)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>assertSerializable</h4>
-<pre>public static&nbsp;void&nbsp;assertSerializable(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
-</li>
-</ul>
 <a name="serialize(java.io.DataOutput, java.lang.Object)">
 <!--   -->
 </a>
@@ -389,6 +384,15 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
                    throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="assertSerializable(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>assertSerializable</h4>
+<pre>public static&nbsp;void&nbsp;assertSerializable(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
 </li>
 </ul>
 <a name="deserializeMapDB(java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">

@@ -135,27 +135,51 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;char[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#CHAR_ARRAY">CHAR_ARRAY</a></strong></code>
+<div class="block">Serializes <code>char[]</code> it adds header which contains size information</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;double[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#DOUBLE_ARRAY">DOUBLE_ARRAY</a></strong></code>
+<div class="block">Serializes <code>double[]</code> it adds header which contains size information</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#ILLEGAL_ACCESS">ILLEGAL_ACCESS</a></strong></code>
 <div class="block">Always throws <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalAccessError.html?is-external=true" title="class or interface in java.lang"><code>IllegalAccessError</code></a> when invoked.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;int[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#INT_ARRAY">INT_ARRAY</a></strong></code>
+<div class="block">Serializes <code>int[]</code> it adds header which contains size information</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#INTEGER">INTEGER</a></strong></code>
 <div class="block">Serializes Integer into 4 bytes, used mainly for testing.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#JAVA">JAVA</a></strong></code>
 <div class="block">Serializer which uses standard Java Serialization with <a href="http://docs.oracle.com/javase/6/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io"><code>ObjectInputStream</code></a> and <a href="http://docs.oracle.com/javase/6/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io"><code>ObjectOutputStream</code></a></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#LONG">LONG</a></strong></code>
 <div class="block">Serializes Long into 8 bytes, used mainly for testing.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;long[]&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#LONG_ARRAY">LONG_ARRAY</a></strong></code>
+<div class="block">Serializes <code>long[]</code> it adds header which contains size information</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -166,11 +190,17 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#STRING_ASCII">STRING_ASCII</a></strong></code>
+<div class="block">Serializes strings using ASCII encoding (8 bit character).</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#STRING_NOSIZE">STRING_NOSIZE</a></strong></code>
 <div class="block">Serializes strings using UTF8 encoding.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#UUID">UUID</a></strong></code>
 <div class="block">Serializers <a href="http://docs.oracle.com/javase/6/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util"><code>UUID</code></a> class</div>
@@ -228,6 +258,16 @@
 <h4>STRING</h4>
 <pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; STRING</pre>
 <div class="block"><p>Serializes strings using UTF8 encoding. Stores string size so can be used as collection serializer. Does not handle null values</p></div>
+</li>
+</ul>
+<a name="STRING_ASCII">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STRING_ASCII</h4>
+<pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; STRING_ASCII</pre>
+<div class="block"><p>Serializes strings using ASCII encoding (8 bit character). Is faster compared to UTF8 encoding. Stores string size so can be used as collection serializer. Does not handle null values</p></div>
 </li>
 </ul>
 <a name="STRING_NOSIZE">
@@ -307,6 +347,46 @@
 <h4>BYTE_ARRAY_NOSIZE</h4>
 <pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;byte[]&gt; BYTE_ARRAY_NOSIZE</pre>
 <div class="block"><p>Serializes <code>byte[]</code> directly into underlying store It does not store size, so it can not be used in Maps and other collections.</p></div>
+</li>
+</ul>
+<a name="CHAR_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CHAR_ARRAY</h4>
+<pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;char[]&gt; CHAR_ARRAY</pre>
+<div class="block"><p>Serializes <code>char[]</code> it adds header which contains size information</p></div>
+</li>
+</ul>
+<a name="INT_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>INT_ARRAY</h4>
+<pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;int[]&gt; INT_ARRAY</pre>
+<div class="block"><p>Serializes <code>int[]</code> it adds header which contains size information</p></div>
+</li>
+</ul>
+<a name="LONG_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LONG_ARRAY</h4>
+<pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;long[]&gt; LONG_ARRAY</pre>
+<div class="block"><p>Serializes <code>long[]</code> it adds header which contains size information</p></div>
+</li>
+</ul>
+<a name="DOUBLE_ARRAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DOUBLE_ARRAY</h4>
+<pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;double[]&gt; DOUBLE_ARRAY</pre>
+<div class="block"><p>Serializes <code>double[]</code> it adds header which contains size information</p></div>
 </li>
 </ul>
 <a name="JAVA">
