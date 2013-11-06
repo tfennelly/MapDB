@@ -148,12 +148,23 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparato
 <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
 <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
-<th class="colOne" scope="col">Constructor and Description</th>
+<th class="colFirst" scope="col">Modifier</th>
+<th class="colLast" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/Fun.Tuple3Comparator.html#Fun.Tuple3Comparator(java.util.Comparator, java.util.Comparator, java.util.Comparator)">Fun.Tuple3Comparator</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">A</a>&gt;&nbsp;a,
+<td class="colFirst"><code>&nbsp;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.Tuple3Comparator.html#Fun.Tuple3Comparator(java.util.Comparator, java.util.Comparator, java.util.Comparator)">Fun.Tuple3Comparator</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">A</a>&gt;&nbsp;a,
                     <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">B</a>&gt;&nbsp;b,
                     <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">C</a>&gt;&nbsp;c)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected </code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.Tuple3Comparator.html#Fun.Tuple3Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList, int)">Fun.Tuple3Comparator</a></strong>(<a href="../../org/mapdb/SerializerBase.html" title="class in org.mapdb">SerializerBase</a>&nbsp;serializer,
+                    <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in,
+                    <a href="../../org/mapdb/SerializerBase.FastArrayList.html" title="class in org.mapdb">SerializerBase.FastArrayList</a>&nbsp;objectStack,
+                    int&nbsp;extra)</code>
+<div class="block">constructor used for deserilization, <code>extra</code> is added just to make function not to collide</div>
+</td>
 </tr>
 </table>
 </li>
@@ -175,20 +186,21 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparato
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.Tuple3Comparator.html#compare(org.mapdb.Fun.Tuple3, org.mapdb.Fun.Tuple3)">compare</a></strong>(<a href="../../org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a>&nbsp;o1,
        <a href="../../org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a>&nbsp;o2)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.Tuple3Comparator.html#equals(java.lang.Object)">equals</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.Tuple3Comparator.html#hashCode()">hashCode</a></strong>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_java.util.Comparator">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;java.util.<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a></h3>
-<code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.util">equals</a></code></li>
+<code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#wait(long, int)" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -242,12 +254,28 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparato
 <a name="Fun.Tuple3Comparator(java.util.Comparator, java.util.Comparator, java.util.Comparator)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>Fun.Tuple3Comparator</h4>
 <pre>public&nbsp;Fun.Tuple3Comparator(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">A</a>&gt;&nbsp;a,
                     <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">B</a>&gt;&nbsp;b,
                     <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">C</a>&gt;&nbsp;c)</pre>
+</li>
+</ul>
+<a name="Fun.Tuple3Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList, int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Fun.Tuple3Comparator</h4>
+<pre>protected&nbsp;Fun.Tuple3Comparator(<a href="../../org/mapdb/SerializerBase.html" title="class in org.mapdb">SerializerBase</a>&nbsp;serializer,
+                    <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in,
+                    <a href="../../org/mapdb/SerializerBase.FastArrayList.html" title="class in org.mapdb">SerializerBase.FastArrayList</a>&nbsp;objectStack,
+                    int&nbsp;extra)
+                        throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<div class="block"><p>constructor used for deserilization, <code>extra</code> is added just to make function not to collide</p></div>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
 </li>
@@ -261,7 +289,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparato
 <a name="compare(org.mapdb.Fun.Tuple3, org.mapdb.Fun.Tuple3)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>compare</h4>
 <pre>public&nbsp;int&nbsp;compare(<a href="../../org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a>&nbsp;o1,
@@ -269,6 +297,34 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparato
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true#compare(T, T)" title="class or interface in java.util">compare</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a>&lt;<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">A</a>,<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">B</a>,<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">C</a>&gt;&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals(java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.util">equals</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a>&lt;<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">A</a>,<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">B</a>,<a href="../../org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">C</a>&gt;&gt;</code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>
