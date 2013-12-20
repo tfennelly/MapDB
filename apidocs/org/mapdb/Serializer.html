@@ -217,11 +217,17 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#STRING_NOSIZE">STRING_NOSIZE</a></strong></code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#STRING_INTERN">STRING_INTERN</a></strong></code>
 <div class="block">Serializes strings using UTF8 encoding.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#STRING_NOSIZE">STRING_NOSIZE</a></strong></code>
+<div class="block">Serializes strings using UTF8 encoding.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Serializer.html#UUID">UUID</a></strong></code>
 <div class="block">Serializers <a href="http://docs.oracle.com/javase/6/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util"><code>UUID</code></a> class</div>
@@ -279,6 +285,16 @@
 <h4>STRING</h4>
 <pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; STRING</pre>
 <div class="block"><p>Serializes strings using UTF8 encoding. Stores string size so can be used as collection serializer. Does not handle null values</p></div>
+</li>
+</ul>
+<a name="STRING_INTERN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>STRING_INTERN</h4>
+<pre>static final&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt; STRING_INTERN</pre>
+<div class="block"><p>Serializes strings using UTF8 encoding. Deserialized String is interned <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true#intern()" title="class or interface in java.lang"><code>String.intern()</code></a>, so it could save some memory.</p><p>Stores string size so can be used as collection serializer. Does not handle null values</p></div>
 </li>
 </ul>
 <a name="STRING_ASCII">

@@ -208,6 +208,12 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/BTreeKeySerializer.BasicKeySerializer.html#getComparator()">getComparator</a></strong>()</code>
+<div class="block">Some key serializers may only work with they own comparators.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/BTreeKeySerializer.BasicKeySerializer.html#serialize(java.io.DataOutput, int, int, java.lang.Object[])">serialize</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;out,
          int&nbsp;start,
@@ -318,7 +324,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <a name="deserialize(java.io.DataInput, int, int, int)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>deserialize</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;deserialize(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in,
@@ -335,6 +341,21 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <dt><span class="strong">Returns:</span></dt><dd>array of keys for single BTree Node</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
+</li>
+</ul>
+<a name="getComparator()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getComparator</h4>
+<pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;getComparator()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../org/mapdb/BTreeKeySerializer.html#getComparator()">BTreeKeySerializer</a></code></strong></div>
+<div class="block"><p>Some key serializers may only work with they own comparators. For example delta-packing stores increments between numbers and requires ascending order. So Key Serializer may provide its own comparator.</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/BTreeKeySerializer.html#getComparator()">getComparator</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>comparator which must be used with this method. <code>null</code> if comparator is not strictly required.</dd></dl>
 </li>
 </ul>
 </li>

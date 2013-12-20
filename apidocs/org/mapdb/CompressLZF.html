@@ -171,18 +171,15 @@ back-reference.
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CompressLZF.html#expand(byte[], int, int, byte[], int, int)">expand</a></strong>(byte[]&nbsp;in,
+<td class="colLast"><code><strong><a href="../../org/mapdb/CompressLZF.html#expand(java.nio.ByteBuffer, int, byte[], int, int)">expand</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in,
       int&nbsp;inPos,
-      int&nbsp;inLen,
       byte[]&nbsp;out,
       int&nbsp;outPos,
       int&nbsp;outLen)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CompressLZF.html#expand(java.nio.ByteBuffer, int, int, byte[], int, int)">expand</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in,
-      int&nbsp;inPos,
-      int&nbsp;inLen,
+<td class="colLast"><code><strong><a href="../../org/mapdb/CompressLZF.html#expand(java.io.DataInput, byte[], int, int)">expand</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in,
       byte[]&nbsp;out,
       int&nbsp;outPos,
       int&nbsp;outLen)</code>&nbsp;</td>
@@ -238,21 +235,22 @@ back-reference.
            int&nbsp;outPos)</pre>
 </li>
 </ul>
-<a name="expand(byte[], int, int, byte[], int, int)">
+<a name="expand(java.io.DataInput, byte[], int, int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>expand</h4>
-<pre>public&nbsp;void&nbsp;expand(byte[]&nbsp;in,
-          int&nbsp;inPos,
-          int&nbsp;inLen,
+<pre>public&nbsp;void&nbsp;expand(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;in,
           byte[]&nbsp;out,
           int&nbsp;outPos,
-          int&nbsp;outLen)</pre>
+          int&nbsp;outLen)
+            throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
 </li>
 </ul>
-<a name="expand(java.nio.ByteBuffer, int, int, byte[], int, int)">
+<a name="expand(java.nio.ByteBuffer, int, byte[], int, int)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -260,7 +258,6 @@ back-reference.
 <h4>expand</h4>
 <pre>public&nbsp;void&nbsp;expand(<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;in,
           int&nbsp;inPos,
-          int&nbsp;inLen,
           byte[]&nbsp;out,
           int&nbsp;outPos,
           int&nbsp;outLen)</pre>

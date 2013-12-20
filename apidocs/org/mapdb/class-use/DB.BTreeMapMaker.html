@@ -86,14 +86,14 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createTreeMap(java.lang.String)">createTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
-<div class="block">Returns new builder for TreeMap with given name</div>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#counterEnable()">counterEnable</a></strong>()</code>
+<div class="block">by default collection does not have counter, without counter updates are faster, but entire collection needs to be traversed to count items.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#keepCounter(boolean)">keepCounter</a></strong>(boolean&nbsp;keepCounter)</code>
-<div class="block">keepCounter if counter should be kept, without counter updates are faster, but entire collection needs to be traversed to count items.</div>
+<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createTreeMap(java.lang.String)">createTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Returns new builder for TreeMap with given name</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -115,28 +115,34 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpIgnoreDuplicates()">pumpIgnoreDuplicates</a></strong>()</code>
+<div class="block">If source iteretor contains an duplicate key, exception is thrown.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpPresort(int)">pumpPresort</a></strong>(int&nbsp;batchSize)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpSource(java.util.Iterator)">pumpSource</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="../../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;&nbsp;entriesSource)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpSource(java.util.Iterator, org.mapdb.Fun.Function1)">pumpSource</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;K&gt;&nbsp;keysSource,
           <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueExtractor)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</code>
 <div class="block">valueSerializer used to convert values into/from binary form.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valuesStoredOutsideNodes(boolean)">valuesStoredOutsideNodes</a></strong>(boolean&nbsp;outside)</code>
-<div class="block">valuesStoredOutsideNodes if true, values are stored outside of BTree nodes.</div>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valuesOutsideNodesEnable()">valuesOutsideNodesEnable</a></strong>()</code>
+<div class="block">by default values are stored inside BTree Nodes.</div>
 </td>
 </tr>
 </tbody>

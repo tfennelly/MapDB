@@ -325,8 +325,9 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;E&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#createQueue(java.lang.String, org.mapdb.Serializer)">createQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-           <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#createQueue(java.lang.String, org.mapdb.Serializer, boolean)">createQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+           <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer,
+           boolean&nbsp;useLocks)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;E&gt;</code></td>
@@ -474,7 +475,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#isClosed()">isClosed</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
+<td class="colFirst"><code>protected &lt;V&gt;&nbsp;V</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#namedPut(java.lang.String, java.lang.Object)">namedPut</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
         <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;ret)</code>&nbsp;</td>
 </tr>
@@ -704,8 +705,8 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>namedPut</h4>
-<pre>protected&nbsp;void&nbsp;namedPut(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-            <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;ret)</pre>
+<pre>protected&nbsp;&lt;V&gt;&nbsp;V&nbsp;namedPut(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+             <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;ret)</pre>
 </li>
 </ul>
 <a name="createHashMap(java.lang.String)">
@@ -867,14 +868,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public&nbsp;&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;E&gt;&nbsp;getQueue(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 </li>
 </ul>
-<a name="createQueue(java.lang.String, org.mapdb.Serializer)">
+<a name="createQueue(java.lang.String, org.mapdb.Serializer, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>createQueue</h4>
 <pre>public&nbsp;&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;E&gt;&nbsp;createQueue(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                               <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer)</pre>
+                               <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer,
+                               boolean&nbsp;useLocks)</pre>
 </li>
 </ul>
 <a name="getStack(java.lang.String)">

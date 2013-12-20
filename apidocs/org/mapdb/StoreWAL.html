@@ -152,40 +152,48 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#logChecksum">logChecksum</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#logSize">logSize</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/LongMap.html" title="class in org.mapdb">LongMap</a>&lt;long[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#longStackPages">longStackPages</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/LongConcurrentHashMap.html" title="class in org.mapdb">LongConcurrentHashMap</a>&lt;long[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#modified">modified</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#PREALLOC">PREALLOC</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#replayPending">replayPending</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#TOMBSTONE">TOMBSTONE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#TRANS_LOG_FILE_EXT">TRANS_LOG_FILE_EXT</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#volFac">volFac</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_INDEX_LONG">WAL_INDEX_LONG</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected static byte</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_LONGSTACK_PAGE">WAL_LONGSTACK_PAGE</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected static byte</code></td>
@@ -193,19 +201,15 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected static byte</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_PHYS_LONG">WAL_PHYS_LONG</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_PHYS_ARRAY_ONE_LONG">WAL_PHYS_ARRAY_ONE_LONG</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected static byte</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_PHYS_SIX_LONG">WAL_PHYS_SIX_LONG</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_SEAL">WAL_SEAL</a></strong></code>
 <div class="block">last instruction in log file</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static byte</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#WAL_SKIP_REST_OF_BLOCK">WAL_SKIP_REST_OF_BLOCK</a></strong></code>&nbsp;</td>
 </tr>
@@ -343,8 +347,16 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#getLinkedRecordsFromLog(long)">getLinkedRecordsFromLog</a></strong>(long&nbsp;ioRecid)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#indexHeaderChecksumUncommited()">indexHeaderChecksumUncommited</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#logAllocate(long[])">logAllocate</a></strong>(long[]&nbsp;physPos)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#logChecksumAdd(int)">logChecksumAdd</a></strong>(int&nbsp;cs)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
@@ -403,12 +415,16 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#verifyLogFile()">verifyLogFile</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#walIndexVal(long, long, long)">walIndexVal</a></strong>(long&nbsp;logPos,
            long&nbsp;ioRecid,
            long&nbsp;indexVal)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/StoreWAL.html#walPhysArray(org.mapdb.DataOutput2, long[], long[])">walPhysArray</a></strong>(<a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a>&nbsp;out,
             long[]&nbsp;physPos,
@@ -470,24 +486,24 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.StoreWAL.WAL_INDEX_LONG">Constant Field Values</a></dd></dl>
 </li>
 </ul>
-<a name="WAL_PHYS_LONG">
+<a name="WAL_LONGSTACK_PAGE">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>WAL_PHYS_LONG</h4>
-<pre>protected static final&nbsp;byte WAL_PHYS_LONG</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.StoreWAL.WAL_PHYS_LONG">Constant Field Values</a></dd></dl>
+<h4>WAL_LONGSTACK_PAGE</h4>
+<pre>protected static final&nbsp;byte WAL_LONGSTACK_PAGE</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.StoreWAL.WAL_LONGSTACK_PAGE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
-<a name="WAL_PHYS_SIX_LONG">
+<a name="WAL_PHYS_ARRAY_ONE_LONG">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>WAL_PHYS_SIX_LONG</h4>
-<pre>protected static final&nbsp;byte WAL_PHYS_SIX_LONG</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.StoreWAL.WAL_PHYS_SIX_LONG">Constant Field Values</a></dd></dl>
+<h4>WAL_PHYS_ARRAY_ONE_LONG</h4>
+<pre>protected static final&nbsp;byte WAL_PHYS_ARRAY_ONE_LONG</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.StoreWAL.WAL_PHYS_ARRAY_ONE_LONG">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="WAL_PHYS_ARRAY">
@@ -626,10 +642,19 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <a name="replayPending">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>replayPending</h4>
 <pre>protected&nbsp;boolean replayPending</pre>
+</li>
+</ul>
+<a name="logChecksum">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>logChecksum</h4>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> logChecksum</pre>
 </li>
 </ul>
 </li>
@@ -916,6 +941,24 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 </dl>
 </li>
 </ul>
+<a name="indexHeaderChecksumUncommited()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>indexHeaderChecksumUncommited</h4>
+<pre>protected&nbsp;long&nbsp;indexHeaderChecksumUncommited()</pre>
+</li>
+</ul>
+<a name="verifyLogFile()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>verifyLogFile</h4>
+<pre>protected&nbsp;boolean&nbsp;verifyLogFile()</pre>
+</li>
+</ul>
 <a name="replayLogFile()">
 <!--   -->
 </a>
@@ -1032,7 +1075,7 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <a name="canRollback()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>canRollback</h4>
 <pre>public&nbsp;boolean&nbsp;canRollback()</pre>
@@ -1042,6 +1085,15 @@ extends <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">St
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../org/mapdb/StoreDirect.html#canRollback()">canRollback</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>true if engine supports rollback</dd></dl>
+</li>
+</ul>
+<a name="logChecksumAdd(int)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>logChecksumAdd</h4>
+<pre>protected&nbsp;void&nbsp;logChecksumAdd(int&nbsp;cs)</pre>
 </li>
 </ul>
 </li>

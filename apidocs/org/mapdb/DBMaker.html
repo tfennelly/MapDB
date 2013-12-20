@@ -185,7 +185,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#_newAppendFileDB(java.io.File)">_newAppendFileDB</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -202,14 +202,14 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#asyncFlushDelay(int)">asyncFlushDelay</a></strong>(int&nbsp;delay)</code>
-<div class="block">Set flush iterval for write cache, by default is 0 <p/> When BTreeMap is constructed from ordered set, tree node size is increasing linearly with each item added.</div>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#asyncWriteEnable()">asyncWriteEnable</a></strong>()</code>
+<div class="block">Enables mode where all modifications are queued and written into disk on Background Writer Thread.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#asyncWriteDisable()">asyncWriteDisable</a></strong>()</code>
-<div class="block">By default all modifications are queued and written into disk on Background Writer Thread.</div>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#asyncWriteFlushDelay(int)">asyncWriteFlushDelay</a></strong>(int&nbsp;delay)</code>
+<div class="block">Set flush iterval for write cache, by default is 0 <p/> When BTreeMap is constructed from ordered set, tree node size is increasing linearly with each item added.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -325,7 +325,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendSnapshotEngine(org.mapdb.Engine)">extendSnapshotEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></code></td>
+<td class="colFirst"><code>protected org.mapdb.StoreAppend</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#extendStoreAppend()">extendStoreAppend</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -385,7 +385,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#makeTxMaker()">makeTxMaker</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
+<td class="colFirst"><code>protected static <a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newAppendFileDB(java.io.File)">newAppendFileDB</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
 <div class="block">Creates or open append-only database stored in file.</div>
 </td>
@@ -634,7 +634,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>newAppendFileDB</h4>
-<pre>public static&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;newAppendFileDB(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
+<pre>protected static&nbsp;<a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a>&nbsp;newAppendFileDB(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
 <div class="block"><p>Creates or open append-only database stored in file. This database uses format other than usual file db</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>file</code> - </dd>
 <dt><span class="strong">Returns:</span></dt><dd>maker</dd></dl>
@@ -646,7 +646,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>_newAppendFileDB</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;_newAppendFileDB(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;_newAppendFileDB(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
 </li>
 </ul>
 <a name="newTempTreeMap()">
@@ -846,25 +846,25 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
 </ul>
-<a name="asyncWriteDisable()">
+<a name="asyncWriteEnable()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>asyncWriteDisable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;asyncWriteDisable()</pre>
-<div class="block"><p>By default all modifications are queued and written into disk on Background Writer Thread. So all modifications are performed in asynchronous mode and do not block. <p/> It is possible to disable Background Writer Thread, but this greatly hurts concurrency. Without async writes, all threads blocks until all previous writes are not finished (single big lock).</p>
-<p/><p>This may workaround some problems</p></div>
+<h4>asyncWriteEnable</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;asyncWriteEnable()</pre>
+<div class="block"><p>Enables mode where all modifications are queued and written into disk on Background Writer Thread. So all modifications are performed in asynchronous mode and do not block.</p>
+<p/><p>Enabling this mode might increase performance for single threaded apps.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
 </ul>
-<a name="asyncFlushDelay(int)">
+<a name="asyncWriteFlushDelay(int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>asyncFlushDelay</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;asyncFlushDelay(int&nbsp;delay)</pre>
+<h4>asyncWriteFlushDelay</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;asyncWriteFlushDelay(int&nbsp;delay)</pre>
 <div class="block"><p>Set flush iterval for write cache, by default is 0 <p/> When BTreeMap is constructed from ordered set, tree node size is increasing linearly with each item added. Each time new key is added to tree node, its size changes and storage needs to find new place. So constructing BTreeMap from ordered set leads to large store fragmentation. <p/>  Setting flush interval is workaround as BTreeMap node is always updated in memory (write cache)  and only final version of node is stored on disk.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>delay</code> - flush write cache every N miliseconds</dd>
 <dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
@@ -1203,7 +1203,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>extendStoreAppend</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a>&nbsp;extendStoreAppend()</pre>
+<pre>protected&nbsp;org.mapdb.StoreAppend&nbsp;extendStoreAppend()</pre>
 </li>
 </ul>
 <a name="extendStoreDirect(org.mapdb.Volume.Factory)">

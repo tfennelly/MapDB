@@ -119,24 +119,24 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#counter">counter</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#expire">expire</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#expireAccess">expireAccess</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#expireMaxSize">expireMaxSize</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#hasher">hasher</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#keepCounter">keepCounter</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
@@ -188,45 +188,45 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#counterEnable()">counterEnable</a></strong>()</code>
+<div class="block">by default collection does not have counter, without counter updates are faster, but entire collection needs to be traversed to count items.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#expireAfterAccess(long)">expireAfterAccess</a></strong>(long&nbsp;interval)</code>
 <div class="block">Specifies that each entry should be automatically removed from the map once a fixed duration has elapsed after the entry&rsquo;s creation, the most recent replacement of its value, or its last access.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#expireAfterAccess(long, java.util.concurrent.TimeUnit)">expireAfterAccess</a></strong>(long&nbsp;interval,
                  <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/TimeUnit.html?is-external=true" title="class or interface in java.util.concurrent">TimeUnit</a>&nbsp;timeUnit)</code>
 <div class="block">Specifies that each entry should be automatically removed from the map once a fixed duration has elapsed after the entry&rsquo;s creation, the most recent replacement of its value, or its last access.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#expireAfterWrite(long)">expireAfterWrite</a></strong>(long&nbsp;interval)</code>
 <div class="block">Specifies that each entry should be automatically removed from the map once a fixed duration has elapsed after the entry&rsquo;s creation, or the most recent replacement of its value.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#expireAfterWrite(long, java.util.concurrent.TimeUnit)">expireAfterWrite</a></strong>(long&nbsp;interval,
                 <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/TimeUnit.html?is-external=true" title="class or interface in java.util.concurrent">TimeUnit</a>&nbsp;timeUnit)</code>
 <div class="block">Specifies that each entry should be automatically removed from the map once a fixed duration has elapsed after the entry&rsquo;s creation, or the most recent replacement of its value.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#expireMaxSize(long)">expireMaxSize</a></strong>(long&nbsp;maxSize)</code>
 <div class="block">maximal number of entries in this map.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#hasher(org.mapdb.Hasher)">hasher</a></strong>(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#keepCounter(boolean)">keepCounter</a></strong>(boolean&nbsp;keepCounter)</code>
-<div class="block">keepCounter if counter should be kept, without counter updates are faster, but entire collection needs to be traversed to count items.</div>
-</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#hasher(org.mapdb.Hasher)">hasher</a></strong>(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
@@ -285,13 +285,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> name</pre>
 </li>
 </ul>
-<a name="keepCounter">
+<a name="counter">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>keepCounter</h4>
-<pre>protected&nbsp;boolean keepCounter</pre>
+<h4>counter</h4>
+<pre>protected&nbsp;boolean counter</pre>
 </li>
 </ul>
 <a name="keySerializer">
@@ -382,14 +382,14 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="keepCounter(boolean)">
+<a name="counterEnable()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>keepCounter</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;keepCounter(boolean&nbsp;keepCounter)</pre>
-<div class="block"><p>keepCounter if counter should be kept, without counter updates are faster, but entire collection needs to be traversed to count items.</p></div>
+<h4>counterEnable</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;counterEnable()</pre>
+<div class="block"><p>by default collection does not have counter, without counter updates are faster, but entire collection needs to be traversed to count items.</p></div>
 </li>
 </ul>
 <a name="keySerializer(org.mapdb.Serializer)">

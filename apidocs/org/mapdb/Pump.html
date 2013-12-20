@@ -134,10 +134,11 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static &lt;E,K,V&gt;&nbsp;long</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">buildTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, boolean, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">buildTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
             <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
             <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,E&gt;&nbsp;keyExtractor,
             <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,E&gt;&nbsp;valueExtractor,
+            boolean&nbsp;ignoreDuplicates,
             int&nbsp;nodeSize,
             boolean&nbsp;valuesStoredOutsideNodes,
             long&nbsp;counterRecid,
@@ -163,27 +164,35 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static &lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#sort(java.util.Comparator, java.util.Iterator[])">sort</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator,
-    <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>[]&nbsp;iterators)</code>
-<div class="block">Merge presorted iterators into single sorted iterator.</div>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#merge(java.util.Iterator...)">merge</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>...&nbsp;iters)</code>
+<div class="block">Merges multiple iterators into single iterator.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static &lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#sort(java.util.Iterator, int, java.util.Comparator, org.mapdb.Serializer)">sort</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#sort(java.util.Comparator, boolean, java.util.Iterator...)">sort</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator,
+    boolean&nbsp;mergeDuplicates,
+    <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>...&nbsp;iterators)</code>
+<div class="block">Merge presorted iterators into single sorted iterator.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#sort(java.util.Iterator, boolean, int, java.util.Comparator, org.mapdb.Serializer)">sort</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
+    boolean&nbsp;mergeDuplicates,
     int&nbsp;batchSize,
     <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator,
     <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>
 <div class="block">Sorts large data set by given <code>Comparator</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#storeForDB(org.mapdb.DB)">storeForDB</a></strong>(<a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db)</code>
 <div class="block">traverses <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s and returns underlying <a href="../../org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#storeForEngine(org.mapdb.Engine)">storeForEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;e)</code>
 <div class="block">traverses <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s and returns underlying <a href="../../org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a></div>
@@ -270,35 +279,49 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block"><p>traverses <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s and returns underlying <a href="../../org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a></p></div>
 </li>
 </ul>
-<a name="sort(java.util.Iterator, int, java.util.Comparator, org.mapdb.Serializer)">
+<a name="sort(java.util.Iterator, boolean, int, java.util.Comparator, org.mapdb.Serializer)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>sort</h4>
 <pre>public static&nbsp;&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;sort(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
+                   boolean&nbsp;mergeDuplicates,
                    int&nbsp;batchSize,
                    <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator,
                    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</pre>
 <div class="block"><p>Sorts large data set by given <code>Comparator</code>. Data are sorted with in-memory cache and temporary files.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - iterator over unsorted data</dd><dd><code>batchSize</code> - how much items can fit into heap memory</dd><dd><code>comparator</code> - used to sort data</dd><dd><code>serializer</code> - used to store data in temporary files</dd><dd><code>E</code> - type of data</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - iterator over unsorted data</dd><dd><code>mergeDuplicates</code> - should be duplicate keys merged into single one?</dd><dd><code>batchSize</code> - how much items can fit into heap memory</dd><dd><code>comparator</code> - used to sort data</dd><dd><code>serializer</code> - used to store data in temporary files</dd><dd><code>E</code> - type of data</dd>
 <dt><span class="strong">Returns:</span></dt><dd>iterator over sorted data set</dd></dl>
 </li>
 </ul>
-<a name="sort(java.util.Comparator, java.util.Iterator[])">
+<a name="sort(java.util.Comparator, boolean, java.util.Iterator...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>sort</h4>
 <pre>public static&nbsp;&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;sort(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator,
-                   <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>[]&nbsp;iterators)</pre>
+                   boolean&nbsp;mergeDuplicates,
+                   <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>...&nbsp;iterators)</pre>
 <div class="block"><p>Merge presorted iterators into single sorted iterator.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>comparator</code> - used to compare data</dd><dd><code>iterators</code> - array of already sorted iterators</dd><dd><code>E</code> - type of data</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>comparator</code> - used to compare data</dd><dd><code>mergeDuplicates</code> - if duplicate keys should be merged into single one</dd><dd><code>iterators</code> - array of already sorted iterators</dd><dd><code>E</code> - type of data</dd>
 <dt><span class="strong">Returns:</span></dt><dd>sorted iterator</dd></dl>
 </li>
 </ul>
-<a name="buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">
+<a name="merge(java.util.Iterator...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>merge</h4>
+<pre>public static&nbsp;&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;merge(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>...&nbsp;iters)</pre>
+<div class="block"><p>Merges multiple iterators into single iterator. Does not allow null elements.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>iters</code> - </dd><dd><code>E</code> - </dd>
+<dt><span class="strong">Returns:</span></dt><dd></dd></dl>
+</li>
+</ul>
+<a name="buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, boolean, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -308,14 +331,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
                         <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
                         <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,E&gt;&nbsp;keyExtractor,
                         <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,E&gt;&nbsp;valueExtractor,
+                        boolean&nbsp;ignoreDuplicates,
                         int&nbsp;nodeSize,
                         boolean&nbsp;valuesStoredOutsideNodes,
                         long&nbsp;counterRecid,
                         <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;keySerializer,
                         <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;V&gt;&nbsp;valueSerializer,
                         <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator)</pre>
-<div class="block"><p>Build BTreeMap (or TreeSet) from presorted data. This method is much faster than usual import using <code>Map.put(key,value)</code> method. It is because tree integrity does not have to be maintained and tree can be created in linear way with.</p><p>This method expect data to be presorted in <strong>reverse order</strong> (highest to lowest). There are technical reason for this requirement. To sort unordered data use <a href="../../org/mapdb/Pump.html#sort(java.util.Iterator, int, java.util.Comparator, org.mapdb.Serializer)"><code>sort(java.util.Iterator, int, java.util.Comparator, Serializer)</code></a></p><p>This method does not call commit. You should disable Write Ahead Log when this method is used <a href="../../org/mapdb/DBMaker.html#transactionDisable()"><code>DBMaker.transactionDisable()</code></a></p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - iterator over source data, must be reverse sorted</dd><dd><code>keyExtractor</code> - transforms items from source iterator into keys. If null source items will be used directly as keys.</dd><dd><code>valueExtractor</code> - transforms items from source iterator into values. If null BTreeMap will be constructed without values (as Set)</dd><dd><code>nodeSize</code> - maximal BTree node size before it is splited.</dd><dd><code>valuesStoredOutsideNodes</code> - if true values will not be stored as part of BTree nodes</dd><dd><code>counterRecid</code> - TODO make size counter friendly to use</dd><dd><code>keySerializer</code> - serializer for keys, use null for default value</dd><dd><code>valueSerializer</code> - serializer for value, use null for default value</dd><dd><code>comparator</code> - comparator used to compare keys, use null for &lsquo;comparable comparator&rsquo;</dd>
+<div class="block"><p>Build BTreeMap (or TreeSet) from presorted data. This method is much faster than usual import using <code>Map.put(key,value)</code> method. It is because tree integrity does not have to be maintained and tree can be created in linear way with.</p><p>This method expect data to be presorted in <strong>reverse order</strong> (highest to lowest). There are technical reason for this requirement. To sort unordered data use <a href="../../org/mapdb/Pump.html#sort(java.util.Iterator, boolean, int, java.util.Comparator, org.mapdb.Serializer)"><code>sort(java.util.Iterator, boolean, int, java.util.Comparator, Serializer)</code></a></p><p>This method does not call commit. You should disable Write Ahead Log when this method is used <a href="../../org/mapdb/DBMaker.html#transactionDisable()"><code>DBMaker.transactionDisable()</code></a></p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - iterator over source data, must be reverse sorted</dd><dd><code>keyExtractor</code> - transforms items from source iterator into keys. If null source items will be used directly as keys.</dd><dd><code>valueExtractor</code> - transforms items from source iterator into values. If null BTreeMap will be constructed without values (as Set)</dd><dd><code>ignoreDuplicates</code> - should be duplicate keys merged into single one?</dd><dd><code>nodeSize</code> - maximal BTree node size before it is splited.</dd><dd><code>valuesStoredOutsideNodes</code> - if true values will not be stored as part of BTree nodes</dd><dd><code>counterRecid</code> - TODO make size counter friendly to use</dd><dd><code>keySerializer</code> - serializer for keys, use null for default value</dd><dd><code>valueSerializer</code> - serializer for value, use null for default value</dd><dd><code>comparator</code> - comparator used to compare keys, use null for &lsquo;comparable comparator&rsquo;</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if source iterator is not reverse sorted</dd></dl>
 </li>

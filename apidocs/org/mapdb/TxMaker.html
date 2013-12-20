@@ -166,12 +166,18 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxMaker.html#close()">close</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/TxMaker.html#execute(org.mapdb.Fun.Function1)">execute</a></strong>(<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;A,<a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&gt;&nbsp;txBlock)</code>
+<div class="block">Executes given block withing single transaction.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxMaker.html#execute(org.mapdb.TxBlock)">execute</a></strong>(<a href="../../org/mapdb/TxBlock.html" title="interface in org.mapdb">TxBlock</a>&nbsp;txBlock)</code>
 <div class="block">Executes given block withing single transaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxMaker.html#makeTx()">makeTx</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -263,11 +269,22 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <a name="execute(org.mapdb.TxBlock)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>execute</h4>
 <pre>public&nbsp;void&nbsp;execute(<a href="../../org/mapdb/TxBlock.html" title="interface in org.mapdb">TxBlock</a>&nbsp;txBlock)</pre>
 <div class="block"><p>Executes given block withing single transaction. If block throws <code>TxRollbackException</code> execution is repeated until it does not fail.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>txBlock</code> - </dd></dl>
+</li>
+</ul>
+<a name="execute(org.mapdb.Fun.Function1)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>execute</h4>
+<pre>public&nbsp;&lt;A&gt;&nbsp;A&nbsp;execute(<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;A,<a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&gt;&nbsp;txBlock)</pre>
+<div class="block"><p>Executes given block withing single transaction. If block throws <code>TxRollbackException</code> execution is repeated until it does not fail.</p><p>This method returns result returned by txBlock.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>txBlock</code> - </dd></dl>
 </li>
 </ul>

@@ -145,10 +145,6 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Queues.Queue.html#size">size</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Queues.Queue.html#tail">tail</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -157,7 +153,7 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></h3>
-<code><a href="../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#head">head</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#nodeSerializer">nodeSerializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#serializer">serializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#TICK">TICK</a></code></li>
+<code><a href="../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#head">head</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#locks">locks</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#nodeSerializer">nodeSerializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#serializer">serializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#TICK">TICK</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#useLocks">useLocks</a></code></li>
 </ul>
 </li>
 </ul>
@@ -173,11 +169,11 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/Queues.Queue.html#Queues.Queue(org.mapdb.Engine, org.mapdb.Serializer, long, long, long)">Queues.Queue</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colOne"><code><strong><a href="../../org/mapdb/Queues.Queue.html#Queues.Queue(org.mapdb.Engine, org.mapdb.Serializer, long, long, boolean)">Queues.Queue</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
             <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&gt;&nbsp;serializer,
             long&nbsp;headerRecid,
             long&nbsp;nextTailRecid,
-            long&nbsp;sizeRecid)</code>&nbsp;</td>
+            boolean&nbsp;useLocks)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -196,15 +192,7 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Queues.Queue.html#add(E)">add</a></strong>(<a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&nbsp;item)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Queues.Queue.html#peek()">peek</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Queues.Queue.html#poll()">poll</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Queues.Queue.html#add(E)">add</a></strong>(<a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&nbsp;e)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -212,7 +200,7 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></h3>
-<code><a href="../../org/mapdb/Queues.SimpleQueue.html#addAll(java.util.Collection)">addAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#clear()">clear</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#close()">close</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#contains(java.lang.Object)">contains</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#containsAll(java.util.Collection)">containsAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#drainTo(java.util.Collection)">drainTo</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#drainTo(java.util.Collection, int)">drainTo</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#element()">element</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#isEmpty()">isEmpty</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#iterator()">iterator</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#offer(E)">offer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#offer(E, long, java.util.concurrent.TimeUnit)">offer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#poll(long, java.util.concurrent.TimeUnit)">poll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#put(E)">put</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remainingCapacity()">remainingCapacity</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remove()">remove</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remove(java.lang.Object)">remove</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#removeAll(java.util.Collection)">removeAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#retainAll(java.util.Collection)">retainAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#size()">size</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#take()">take</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#toArray()">toArray</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#toArray(T[])">toArray</a></code></li>
+<code><a href="../../org/mapdb/Queues.SimpleQueue.html#addAll(java.util.Collection)">addAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#clear()">clear</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#close()">close</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#contains(java.lang.Object)">contains</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#containsAll(java.util.Collection)">containsAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#drainTo(java.util.Collection)">drainTo</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#drainTo(java.util.Collection, int)">drainTo</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#element()">element</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#isEmpty()">isEmpty</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#iterator()">iterator</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#offer(E)">offer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#offer(E, long, java.util.concurrent.TimeUnit)">offer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#peek()">peek</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#poll()">poll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#poll(long, java.util.concurrent.TimeUnit)">poll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#put(E)">put</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remainingCapacity()">remainingCapacity</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remove()">remove</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#remove(java.lang.Object)">remove</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#removeAll(java.util.Collection)">removeAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#retainAll(java.util.Collection)">retainAll</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#size()">size</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#take()">take</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#toArray()">toArray</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#toArray(T[])">toArray</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -245,19 +233,10 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <a name="tail">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>tail</h4>
 <pre>protected final&nbsp;<a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a> tail</pre>
-</li>
-</ul>
-<a name="size">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>size</h4>
-<pre>protected final&nbsp;<a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a> size</pre>
 </li>
 </ul>
 </li>
@@ -268,7 +247,7 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="Queues.Queue(org.mapdb.Engine, org.mapdb.Serializer, long, long, long)">
+<a name="Queues.Queue(org.mapdb.Engine, org.mapdb.Serializer, long, long, boolean)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -278,7 +257,7 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
             <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&gt;&nbsp;serializer,
             long&nbsp;headerRecid,
             long&nbsp;nextTailRecid,
-            long&nbsp;sizeRecid)</pre>
+            boolean&nbsp;useLocks)</pre>
 </li>
 </ul>
 </li>
@@ -294,28 +273,10 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 </a><a name="add(E)">
 <!--   -->
 </a>
-<ul class="blockList">
-<li class="blockList">
-<h4>add</h4>
-<pre>public&nbsp;boolean&nbsp;add(<a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&nbsp;item)</pre>
-</li>
-</ul>
-<a name="poll()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>poll</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&nbsp;poll()</pre>
-</li>
-</ul>
-<a name="peek()">
-<!--   -->
-</a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>peek</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&nbsp;peek()</pre>
+<h4>add</h4>
+<pre>public&nbsp;boolean&nbsp;add(<a href="../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&nbsp;e)</pre>
 </li>
 </ul>
 </li>

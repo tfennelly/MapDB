@@ -124,7 +124,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#keepCounter">keepCounter</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#counter">counter</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -135,14 +135,18 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#nodeSize">nodeSize</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#pumpIgnoreDuplicates">pumpIgnoreDuplicates</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#pumpPresortBatchSize">pumpPresortBatchSize</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#pumpSource">pumpSource</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#serializer">serializer</a></strong></code>&nbsp;</td>
 </tr>
@@ -186,8 +190,8 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#keepCounter(boolean)">keepCounter</a></strong>(boolean&nbsp;keepCounter)</code>
-<div class="block">keepCounter if counter should be kept, without counter updates are faster, but entire collection needs to be traversed to count items.</div>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#counterEnable()">counterEnable</a></strong>()</code>
+<div class="block">by default collection does not have counter, without counter updates are faster, but entire collection needs to be traversed to count items.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -217,14 +221,20 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#pumpIgnoreDuplicates()">pumpIgnoreDuplicates</a></strong>()</code>
+<div class="block">If source iteretor contains an duplicate key, exception is thrown.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#pumpPresort(int)">pumpPresort</a></strong>(int&nbsp;batchSize)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#pumpSource(java.util.Iterator)">pumpSource</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;K&gt;&nbsp;source)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.BTreeSetMaker.html#serializer(org.mapdb.BTreeKeySerializer)">serializer</a></strong>(<a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;serializer)</code>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
@@ -270,13 +280,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>protected&nbsp;int nodeSize</pre>
 </li>
 </ul>
-<a name="keepCounter">
+<a name="counter">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>keepCounter</h4>
-<pre>protected&nbsp;boolean keepCounter</pre>
+<h4>counter</h4>
+<pre>protected&nbsp;boolean counter</pre>
 </li>
 </ul>
 <a name="serializer">
@@ -309,10 +319,19 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <a name="pumpPresortBatchSize">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>pumpPresortBatchSize</h4>
 <pre>protected&nbsp;int pumpPresortBatchSize</pre>
+</li>
+</ul>
+<a name="pumpIgnoreDuplicates">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>pumpIgnoreDuplicates</h4>
+<pre>protected&nbsp;boolean pumpIgnoreDuplicates</pre>
 </li>
 </ul>
 </li>
@@ -350,14 +369,14 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="block"><p>nodeSize maximal size of node, larger node causes overflow and creation of new BTree node. Use large number for small keys, use small number for large keys.</p></div>
 </li>
 </ul>
-<a name="keepCounter(boolean)">
+<a name="counterEnable()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>keepCounter</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a>&nbsp;keepCounter(boolean&nbsp;keepCounter)</pre>
-<div class="block"><p>keepCounter if counter should be kept, without counter updates are faster, but entire collection needs to be traversed to count items.</p></div>
+<h4>counterEnable</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a>&nbsp;counterEnable()</pre>
+<div class="block"><p>by default collection does not have counter, without counter updates are faster, but entire collection needs to be traversed to count items.</p></div>
 </li>
 </ul>
 <a name="serializer(org.mapdb.BTreeKeySerializer)">
@@ -387,6 +406,16 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>pumpSource</h4>
 <pre>public&nbsp;&lt;K&gt;&nbsp;<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a>&nbsp;pumpSource(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;K&gt;&nbsp;source)</pre>
+</li>
+</ul>
+<a name="pumpIgnoreDuplicates()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>pumpIgnoreDuplicates</h4>
+<pre>public&nbsp;&lt;K&gt;&nbsp;<a href="../../org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a>&nbsp;pumpIgnoreDuplicates()</pre>
+<div class="block"><p>If source iteretor contains an duplicate key, exception is thrown. This options will only use firts key and ignore any consequentive duplicates.</p></div>
 </li>
 </ul>
 <a name="pumpPresort(int)">

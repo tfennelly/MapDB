@@ -186,39 +186,48 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.DebugEngine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
+              A&nbsp;expectedOldValue,
+              A&nbsp;newValue,
+              <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
+<div class="block">Updates existing record in atomic <a href="http://en.wikipedia.org/wiki/Compare-and-swap">(Compare And Swap)</a> manner.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.DebugEngine.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
       <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Remove existing record from store/cache</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.DebugEngine.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Get existing record.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.DebugEngine.html#preallocate()">preallocate</a></strong>()</code>
 <div class="block">Preallocates recid for not yet created record.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.DebugEngine.html#preallocate(long[])">preallocate</a></strong>(long[]&nbsp;recids)</code>
 <div class="block">Preallocates recids for not yet created record.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.DebugEngine.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Insert new record.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.DebugEngine.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
@@ -232,7 +241,7 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></h3>
-<code><a href="../../org/mapdb/EngineWrapper.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/EngineWrapper.html#checkClosed(V)">checkClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#clearCache()">clearCache</a>, <a href="../../org/mapdb/EngineWrapper.html#close()">close</a>, <a href="../../org/mapdb/EngineWrapper.html#commit()">commit</a>, <a href="../../org/mapdb/EngineWrapper.html#compact()">compact</a>, <a href="../../org/mapdb/EngineWrapper.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a>, <a href="../../org/mapdb/EngineWrapper.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine</a>, <a href="../../org/mapdb/EngineWrapper.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#isReadOnly()">isReadOnly</a>, <a href="../../org/mapdb/EngineWrapper.html#rollback()">rollback</a></code></li>
+<code><a href="../../org/mapdb/EngineWrapper.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/EngineWrapper.html#checkClosed(V)">checkClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#clearCache()">clearCache</a>, <a href="../../org/mapdb/EngineWrapper.html#close()">close</a>, <a href="../../org/mapdb/EngineWrapper.html#commit()">commit</a>, <a href="../../org/mapdb/EngineWrapper.html#compact()">compact</a>, <a href="../../org/mapdb/EngineWrapper.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine</a>, <a href="../../org/mapdb/EngineWrapper.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#isReadOnly()">isReadOnly</a>, <a href="../../org/mapdb/EngineWrapper.html#rollback()">rollback</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -365,6 +374,29 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../org/mapdb/EngineWrapper.html#update(long, A, org.mapdb.Serializer)">update</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>value</code> - new record value to be stored</dd><dd><code>serializer</code> - used to serialize record into binary form</dd></dl>
+</li>
+</ul>
+<a name="compareAndSwap(long,java.lang.Object,java.lang.Object,org.mapdb.Serializer)">
+<!--   -->
+</a><a name="compareAndSwap(long, A, A, org.mapdb.Serializer)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>compareAndSwap</h4>
+<pre>public&nbsp;&lt;A&gt;&nbsp;boolean&nbsp;compareAndSwap(long&nbsp;recid,
+                         A&nbsp;expectedOldValue,
+                         A&nbsp;newValue,
+                         <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">Engine</a></code></strong></div>
+<div class="block"><p>Updates existing record in atomic <a href="http://en.wikipedia.org/wiki/Compare-and-swap">(Compare And Swap)</a> manner. Value is modified only if old value matches expected value. There are three ways to match values, MapDB may use any of them: <ol>  <li>Equality check <code>oldValue==expectedOldValue</code> when old value is found in instance cache</li>  <li>Deserializing <code>oldValue</code> using <code>serializer</code> and checking <code>oldValue.equals(expectedOldValue)</code></li>  <li>Serializing <code>expectedOldValue</code> using <code>serializer </code> and comparing binary array with already serialized <code>oldValue</code> </ol> <p/> Recid must be a number returned by &lsquo;put&rsquo; method. Behaviour for invalid recid (random number or already deleted record) is not defined, typically it throws &lsquo;EndOfFileException&rsquo;, but it may also corrupt store.</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../org/mapdb/EngineWrapper.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>expectedOldValue</code> - old value to be compared with existing record</dd><dd><code>newValue</code> - to be written if values are matching</dd><dd><code>serializer</code> - used to serialize record into binary form</dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if values matched and newValue was written</dd></dl>
 </li>
 </ul>
 <a name="delete(long, org.mapdb.Serializer)">

@@ -87,12 +87,12 @@
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpValueExtractor">pumpValueExtractor</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></code></td>
-<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueCreator">valueCreator</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#valueCreator">valueCreator</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></code></td>
+<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueCreator">valueCreator</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -126,10 +126,11 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static &lt;E,K,V&gt;&nbsp;long</code></td>
-<td class="colLast"><span class="strong">Pump.</span><code><strong><a href="../../../org/mapdb/Pump.html#buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">buildTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
+<td class="colLast"><span class="strong">Pump.</span><code><strong><a href="../../../org/mapdb/Pump.html#buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, boolean, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">buildTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
             <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
             <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,E&gt;&nbsp;keyExtractor,
             <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,E&gt;&nbsp;valueExtractor,
+            boolean&nbsp;ignoreDuplicates,
             int&nbsp;nodeSize,
             boolean&nbsp;valuesStoredOutsideNodes,
             long&nbsp;counterRecid,
@@ -141,10 +142,11 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static &lt;E,K,V&gt;&nbsp;long</code></td>
-<td class="colLast"><span class="strong">Pump.</span><code><strong><a href="../../../org/mapdb/Pump.html#buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">buildTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
+<td class="colLast"><span class="strong">Pump.</span><code><strong><a href="../../../org/mapdb/Pump.html#buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, boolean, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">buildTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
             <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
             <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,E&gt;&nbsp;keyExtractor,
             <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,E&gt;&nbsp;valueExtractor,
+            boolean&nbsp;ignoreDuplicates,
             int&nbsp;nodeSize,
             boolean&nbsp;valuesStoredOutsideNodes,
             long&nbsp;counterRecid,
@@ -155,18 +157,24 @@
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
+<td class="colLast"><span class="strong">TxMaker.</span><code><strong><a href="../../../org/mapdb/TxMaker.html#execute(org.mapdb.Fun.Function1)">execute</a></strong>(<a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;A,<a href="../../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&gt;&nbsp;txBlock)</code>
+<div class="block">Executes given block withing single transaction.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#getHashMap(java.lang.String, org.mapdb.Fun.Function1)">getHashMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
           <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueCreator)</code>
 <div class="block">Opens existing or creates new Hash Tree Map.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;K,V&gt;&nbsp;<a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#pumpSource(java.util.Iterator, org.mapdb.Fun.Function1)">pumpSource</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;K&gt;&nbsp;keysSource,
           <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueExtractor)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
 <td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueCreator(org.mapdb.Fun.Function1)">valueCreator</a></strong>(<a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&nbsp;valueCreator)</code>
 <div class="block">If value is not found, HTreeMap can fetch and insert default value.</div>

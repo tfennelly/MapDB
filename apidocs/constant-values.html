@@ -265,18 +265,18 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.asyncFlushDelay">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.asyncWrite">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td><code><a href="org/mapdb/DBMaker.Keys.html#asyncFlushDelay">asyncFlushDelay</a></code></td>
-<td class="colLast"><code>"asyncFlushDelay"</code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#asyncWrite">asyncWrite</a></code></td>
+<td class="colLast"><code>"asyncWrite"</code></td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.asyncWriteDisable">
+<td class="colFirst"><a name="org.mapdb.DBMaker.Keys.asyncWriteFlushDelay">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td><code><a href="org/mapdb/DBMaker.Keys.html#asyncWriteDisable">asyncWriteDisable</a></code></td>
-<td class="colLast"><code>"asyncWriteDisable"</code></td>
+<td><code><a href="org/mapdb/DBMaker.Keys.html#asyncWriteFlushDelay">asyncWriteFlushDelay</a></code></td>
+<td class="colLast"><code>"asyncWriteFlushDelay"</code></td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a name="org.mapdb.DBMaker.Keys.cache">
@@ -2171,128 +2171,74 @@
 <td class="colLast"><code>46</code></td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.SERIALIZER_STRING_INTERN">
+<!--   -->
+</a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
+<td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#SERIALIZER_STRING_INTERN">SERIALIZER_STRING_INTERN</a></code></td>
+<td class="colLast"><code>49</code></td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.SERIALIZER_STRING_NOSIZE">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#SERIALIZER_STRING_NOSIZE">SERIALIZER_STRING_NOSIZE</a></code></td>
 <td class="colLast"><code>14</code></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.SERIALIZER_UUID">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#SERIALIZER_UUID">SERIALIZER_UUID</a></code></td>
 <td class="colLast"><code>19</code></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.THIS_SERIALIZER">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#THIS_SERIALIZER">THIS_SERIALIZER</a></code></td>
 <td class="colLast"><code>12</code></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE2_COMPARATOR">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE2_COMPARATOR">TUPLE2_COMPARATOR</a></code></td>
 <td class="colLast"><code>22</code></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE2_COMPARATOR_STATIC">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE2_COMPARATOR_STATIC">TUPLE2_COMPARATOR_STATIC</a></code></td>
 <td class="colLast"><code>25</code></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE3_COMPARATOR">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE3_COMPARATOR">TUPLE3_COMPARATOR</a></code></td>
 <td class="colLast"><code>23</code></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE3_COMPARATOR_STATIC">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE3_COMPARATOR_STATIC">TUPLE3_COMPARATOR_STATIC</a></code></td>
 <td class="colLast"><code>26</code></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE4_COMPARATOR">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE4_COMPARATOR">TUPLE4_COMPARATOR</a></code></td>
 <td class="colLast"><code>24</code></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a name="org.mapdb.SerializerBase.HeaderMapDB.TUPLE4_COMPARATOR_STATIC">
 <!--   -->
 </a><code>public&nbsp;static&nbsp;final&nbsp;int</code></td>
 <td><code><a href="org/mapdb/SerializerBase.HeaderMapDB.html#TUPLE4_COMPARATOR_STATIC">TUPLE4_COMPARATOR_STATIC</a></code></td>
 <td class="colLast"><code>27</code></td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList">
-<table border="0" cellpadding="3" cellspacing="0" summary="Constant Field Values table, listing constant fields, and values">
-<caption><span>org.mapdb.<a href="org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th scope="col">Constant Field</th>
-<th class="colLast" scope="col">Value</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.StoreAppend.END">
-<!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;long</code></td>
-<td><code><a href="org/mapdb/StoreAppend.html#END">END</a></code></td>
-<td class="colLast"><code>-2L</code></td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.StoreAppend.FILE_MASK">
-<!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;long</code></td>
-<td><code><a href="org/mapdb/StoreAppend.html#FILE_MASK">FILE_MASK</a></code></td>
-<td class="colLast"><code>16777215L</code></td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.StoreAppend.FILE_SHIFT">
-<!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;int</code></td>
-<td><code><a href="org/mapdb/StoreAppend.html#FILE_SHIFT">FILE_SHIFT</a></code></td>
-<td class="colLast"><code>24</code></td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.StoreAppend.HEADER">
-<!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;long</code></td>
-<td><code><a href="org/mapdb/StoreAppend.html#HEADER">HEADER</a></code></td>
-<td class="colLast"><code>1239900952130003033L</code></td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.StoreAppend.RECIDP">
-<!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;long</code></td>
-<td><code><a href="org/mapdb/StoreAppend.html#RECIDP">RECIDP</a></code></td>
-<td class="colLast"><code>3L</code></td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.StoreAppend.SIZEP">
-<!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;long</code></td>
-<td><code><a href="org/mapdb/StoreAppend.html#SIZEP">SIZEP</a></code></td>
-<td class="colLast"><code>2L</code></td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.StoreAppend.SKIP">
-<!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;long</code></td>
-<td><code><a href="org/mapdb/StoreAppend.html#SKIP">SKIP</a></code></td>
-<td class="colLast"><code>-1L</code></td>
 </tr>
 </tbody>
 </table>
@@ -2473,24 +2419,24 @@
 <td class="colLast"><code>101</code></td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><a name="org.mapdb.StoreWAL.WAL_LONGSTACK_PAGE">
+<!--   -->
+</a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
+<td><code><a href="org/mapdb/StoreWAL.html#WAL_LONGSTACK_PAGE">WAL_LONGSTACK_PAGE</a></code></td>
+<td class="colLast"><code>102</code></td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><a name="org.mapdb.StoreWAL.WAL_PHYS_ARRAY">
 <!--   -->
 </a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
 <td><code><a href="org/mapdb/StoreWAL.html#WAL_PHYS_ARRAY">WAL_PHYS_ARRAY</a></code></td>
 <td class="colLast"><code>104</code></td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a name="org.mapdb.StoreWAL.WAL_PHYS_LONG">
-<!--   -->
-</a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
-<td><code><a href="org/mapdb/StoreWAL.html#WAL_PHYS_LONG">WAL_PHYS_LONG</a></code></td>
-<td class="colLast"><code>102</code></td>
-</tr>
 <tr class="altColor">
-<td class="colFirst"><a name="org.mapdb.StoreWAL.WAL_PHYS_SIX_LONG">
+<td class="colFirst"><a name="org.mapdb.StoreWAL.WAL_PHYS_ARRAY_ONE_LONG">
 <!--   -->
 </a><code>protected&nbsp;static&nbsp;final&nbsp;byte</code></td>
-<td><code><a href="org/mapdb/StoreWAL.html#WAL_PHYS_SIX_LONG">WAL_PHYS_SIX_LONG</a></code></td>
+<td><code><a href="org/mapdb/StoreWAL.html#WAL_PHYS_ARRAY_ONE_LONG">WAL_PHYS_ARRAY_ONE_LONG</a></code></td>
 <td class="colLast"><code>103</code></td>
 </tr>
 <tr class="rowColor">

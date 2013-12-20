@@ -160,7 +160,7 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></h3>
-<code><a href="../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#head">head</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#nodeSerializer">nodeSerializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#serializer">serializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#TICK">TICK</a></code></li>
+<code><a href="../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#head">head</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#locks">locks</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#nodeSerializer">nodeSerializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#serializer">serializer</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#TICK">TICK</a>, <a href="../../org/mapdb/Queues.SimpleQueue.html#useLocks">useLocks</a></code></li>
 </ul>
 </li>
 </ul>
@@ -336,6 +336,12 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <li class="blockList">
 <h4>poll</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/Queues.CircularQueue.html" title="type parameter in Queues.CircularQueue">E</a>&nbsp;poll()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true#poll()" title="class or interface in java.util">poll</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;<a href="../../org/mapdb/Queues.CircularQueue.html" title="type parameter in Queues.CircularQueue">E</a>&gt;</code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../org/mapdb/Queues.SimpleQueue.html#poll()">poll</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a>&lt;<a href="../../org/mapdb/Queues.CircularQueue.html" title="type parameter in Queues.CircularQueue">E</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="peek()">
@@ -345,6 +351,12 @@ extends <a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.ma
 <li class="blockList">
 <h4>peek</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/Queues.CircularQueue.html" title="type parameter in Queues.CircularQueue">E</a>&nbsp;peek()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true#peek()" title="class or interface in java.util">peek</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Queue.html?is-external=true" title="class or interface in java.util">Queue</a>&lt;<a href="../../org/mapdb/Queues.CircularQueue.html" title="type parameter in Queues.CircularQueue">E</a>&gt;</code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../org/mapdb/Queues.SimpleQueue.html#peek()">peek</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a>&lt;<a href="../../org/mapdb/Queues.CircularQueue.html" title="type parameter in Queues.CircularQueue">E</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 </li>

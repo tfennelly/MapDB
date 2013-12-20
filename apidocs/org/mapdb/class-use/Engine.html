@@ -150,35 +150,29 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../org/mapdb/StoreAppend.html" title="class in org.mapdb">StoreAppend</a></strong></code>
-<div class="block">Append only store.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></strong></code>
 <div class="block">Storage Engine which saves record directly into file.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a></strong></code>
 <div class="block">Store which keeps all instances on heap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></strong></code>
 <div class="block">Write-Ahead-Log</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../org/mapdb/TxEngine.html" title="class in org.mapdb">TxEngine</a></strong></code>
 <div class="block">Naive implementation of Snapshots on top of StorageEngine.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></strong></code>&nbsp;</td>
 </tr>
@@ -193,9 +187,17 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#engine">engine</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><span class="strong">BTreeMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.html#engine">engine</a></strong></code>
 <div class="block">DB Engine in which entries are persisted</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><span class="strong">Queues.SimpleQueue.</span><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
@@ -205,31 +207,23 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#engine">engine</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><span class="strong">Atomic.Integer.</span><code><strong><a href="../../../org/mapdb/Atomic.Integer.html#engine">engine</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><span class="strong">Atomic.Long.</span><code><strong><a href="../../../org/mapdb/Atomic.Long.html#engine">engine</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><span class="strong">Atomic.Boolean.</span><code><strong><a href="../../../org/mapdb/Atomic.Boolean.html#engine">engine</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><span class="strong">Atomic.String.</span><code><strong><a href="../../../org/mapdb/Atomic.String.html#engine">engine</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">Atomic.Var.</span><code><strong><a href="../../../org/mapdb/Atomic.Var.html#engine">engine</a></strong></code>&nbsp;</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">Queues.SimpleQueue.</span><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#engine">engine</a></strong></code>&nbsp;</td>
+<td class="colLast"><span class="strong">Atomic.Var.</span><code><strong><a href="../../../org/mapdb/Atomic.Var.html#engine">engine</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -257,12 +251,12 @@
 <td class="colLast"><span class="strong">DBMaker.</span><code><strong><a href="../../../org/mapdb/DBMaker.html#extendWrapStore(org.mapdb.Engine)">extendWrapStore</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
-<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><span class="strong">SerializerPojo.</span><code><strong><a href="../../../org/mapdb/SerializerPojo.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
@@ -293,10 +287,11 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>static &lt;E,K,V&gt;&nbsp;long</code></td>
-<td class="colLast"><span class="strong">Pump.</span><code><strong><a href="../../../org/mapdb/Pump.html#buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">buildTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
+<td class="colLast"><span class="strong">Pump.</span><code><strong><a href="../../../org/mapdb/Pump.html#buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, boolean, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">buildTreeMap</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;source,
             <a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
             <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,E&gt;&nbsp;keyExtractor,
             <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,E&gt;&nbsp;valueExtractor,
+            boolean&nbsp;ignoreDuplicates,
             int&nbsp;nodeSize,
             boolean&nbsp;valuesStoredOutsideNodes,
             long&nbsp;counterRecid,
@@ -513,16 +508,17 @@
                     long&nbsp;size)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.Queue.html#Queues.Queue(org.mapdb.Engine, org.mapdb.Serializer, long, long, long)">Queues.Queue</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.Queue.html#Queues.Queue(org.mapdb.Engine, org.mapdb.Serializer, long, long, boolean)">Queues.Queue</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
             <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&gt;&nbsp;serializer,
             long&nbsp;headerRecid,
             long&nbsp;nextTailRecid,
-            long&nbsp;sizeRecid)</code>&nbsp;</td>
+            boolean&nbsp;useLocks)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#Queues.SimpleQueue(org.mapdb.Engine, org.mapdb.Serializer, long)">Queues.SimpleQueue</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#Queues.SimpleQueue(org.mapdb.Engine, org.mapdb.Serializer, long, boolean)">Queues.SimpleQueue</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
                   <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.SimpleQueue.html" title="type parameter in Queues.SimpleQueue">E</a>&gt;&nbsp;serializer,
-                  long&nbsp;headRecidRef)</code>&nbsp;</td>
+                  long&nbsp;headRecidRef,
+                  boolean&nbsp;useLocks)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.Stack.html#Queues.Stack(org.mapdb.Engine, org.mapdb.Serializer, long, boolean)">Queues.Stack</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
