@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>TxEngine.Tx (mapdb 0.9.8-SNAPSHOT API)</title>
+<title>TxEngine.Tx (mapdb 0.9.9-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="TxEngine.Tx (mapdb 0.9.8-SNAPSHOT API)";
+        parent.document.title="TxEngine.Tx (mapdb 0.9.9-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -236,43 +236,47 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#getSerializerPojo()">getSerializerPojo</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#getWrappedEngine()">getWrappedEngine</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#isClosed()">isClosed</a></strong>()</code>
 <div class="block">Checks whether Engine was closed.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#isReadOnly()">isReadOnly</a></strong>()</code>
 <div class="block">Check if you can write into this Engine.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#preallocate()">preallocate</a></strong>()</code>
 <div class="block">Preallocates recid for not yet created record.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#preallocate(long[])">preallocate</a></strong>(long[]&nbsp;recids)</code>
 <div class="block">Preallocates recids for not yet created record.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Insert new record.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Undoes all changes made in the current transaction.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
@@ -616,7 +620,7 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <a name="getSerializerPojo()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getSerializerPojo</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a>&nbsp;getSerializerPojo()</pre>
@@ -624,6 +628,15 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../org/mapdb/Engine.html#getSerializerPojo()">getSerializerPojo</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="getWrappedEngine()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getWrappedEngine</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;getWrappedEngine()</pre>
 </li>
 </ul>
 </li>

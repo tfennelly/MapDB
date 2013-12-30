@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Pump (mapdb 0.9.8-SNAPSHOT API)</title>
+<title>Pump (mapdb 0.9.9-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Pump (mapdb 0.9.8-SNAPSHOT API)";
+        parent.document.title="Pump (mapdb 0.9.9-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -94,7 +94,7 @@
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <span class="strong">Pump</span>
+<pre>public final class <span class="strong">Pump</span>
 extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block"><p>Data Pump moves data from one source to other. It can be used to import data from text file, or copy store from memory to disk.</p></div>
 </li>
@@ -149,20 +149,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#copy(org.mapdb.DB, org.mapdb.DB)">copy</a></strong>(<a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db1,
-    <a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db2)</code>
-<div class="block">copies all data from first DB to second DB</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#copy(org.mapdb.Store, org.mapdb.Store)">copy</a></strong>(<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>&nbsp;s1,
-    <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>&nbsp;s2)</code>
-<div class="block">copies all data from first store to second store</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>static &lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#merge(java.util.Iterator...)">merge</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>...&nbsp;iters)</code>
 <div class="block">Merges multiple iterators into single iterator.</div>
@@ -184,18 +170,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
     <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator,
     <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>
 <div class="block">Sorts large data set by given <code>Comparator</code>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#storeForDB(org.mapdb.DB)">storeForDB</a></strong>(<a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db)</code>
-<div class="block">traverses <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s and returns underlying <a href="../../org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a></div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Pump.html#storeForEngine(org.mapdb.Engine)">storeForEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;e)</code>
-<div class="block">traverses <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s and returns underlying <a href="../../org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a></div>
 </td>
 </tr>
 </table>
@@ -237,48 +211,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="copy(org.mapdb.DB, org.mapdb.DB)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>copy</h4>
-<pre>public static&nbsp;void&nbsp;copy(<a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db1,
-        <a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db2)</pre>
-<div class="block"><p>copies all data from first DB to second DB</p></div>
-</li>
-</ul>
-<a name="copy(org.mapdb.Store, org.mapdb.Store)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>copy</h4>
-<pre>public static&nbsp;void&nbsp;copy(<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>&nbsp;s1,
-        <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>&nbsp;s2)</pre>
-<div class="block"><p>copies all data from first store to second store</p></div>
-</li>
-</ul>
-<a name="storeForDB(org.mapdb.DB)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>storeForDB</h4>
-<pre>public static&nbsp;<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>&nbsp;storeForDB(<a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a>&nbsp;db)</pre>
-<div class="block"><p>traverses <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s and returns underlying <a href="../../org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a></p></div>
-</li>
-</ul>
-<a name="storeForEngine(org.mapdb.Engine)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>storeForEngine</h4>
-<pre>public static&nbsp;<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>&nbsp;storeForEngine(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;e)</pre>
-<div class="block"><p>traverses <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s and returns underlying <a href="../../org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a></p></div>
-</li>
-</ul>
 <a name="sort(java.util.Iterator, boolean, int, java.util.Comparator, org.mapdb.Serializer)">
 <!--   -->
 </a>

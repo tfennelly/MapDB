@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>Fun (mapdb 0.9.8-SNAPSHOT API)</title>
+<title>Fun (mapdb 0.9.9-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Fun (mapdb 0.9.8-SNAPSHOT API)";
+        parent.document.title="Fun (mapdb 0.9.9-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -201,32 +201,38 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#DOUBLE_ARRAY_COMPARATOR">DOUBLE_ARRAY_COMPARATOR</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#EMPTY_ITERATOR">EMPTY_ITERATOR</a></strong></code>
+<div class="block">empty iterator (note: Collections.EMPTY_ITERATOR is Java 7 specific and should not be used)</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#HI">HI</a></strong></code>
 <div class="block">positive infinity object.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;int[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#INT_ARRAY_COMPARATOR">INT_ARRAY_COMPARATOR</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;long[]&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#LONG_ARRAY_COMPARATOR">LONG_ARRAY_COMPARATOR</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#REVERSE_COMPARATOR">REVERSE_COMPARATOR</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#TUPLE2_COMPARATOR">TUPLE2_COMPARATOR</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#TUPLE3_COMPARATOR">TUPLE3_COMPARATOR</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../org/mapdb/Fun.Tuple4.html" title="class in org.mapdb">Fun.Tuple4</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#TUPLE4_COMPARATOR">TUPLE4_COMPARATOR</a></strong></code>&nbsp;</td>
 </tr>
@@ -246,23 +252,50 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#extractKey()">extractKey</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;K&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,K&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#extractNoTransform()">extractNoTransform</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#extractValue()">extractValue</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;K2,K1&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;K1&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#filter(java.util.NavigableSet, K2)">filter</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K2,K1&gt;&gt;&nbsp;secondaryKeys,
+      K2&nbsp;secondaryKey)</code>
+<div class="block">Find all Primary Keys associated with Secondary Key.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;K2,K1&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;K1&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#filter(java.util.NavigableSet, K2, boolean, K2, boolean)">filter</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K2,K1&gt;&gt;&nbsp;secondaryKeys,
+      K2&nbsp;lo,
+      boolean&nbsp;loInc,
+      K2&nbsp;hi,
+      boolean&nbsp;hiInc)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static &lt;A,B,C&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;C&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#filter(java.util.NavigableSet, A, B)">filter</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a>&lt;A,B,C&gt;&gt;&nbsp;secondaryKeys,
+      A&nbsp;a,
+      B&nbsp;b)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;A,B,C,D&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;D&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#filter(java.util.NavigableSet, A, B, C)">filter</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/Fun.Tuple4.html" title="class in org.mapdb">Fun.Tuple4</a>&lt;A,B,C,D&gt;&gt;&nbsp;secondaryKeys,
+      A&nbsp;a,
+      B&nbsp;b,
+      C&nbsp;c)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static &lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#HI()">HI</a></strong>()</code>
 <div class="block">autocast version of <code>HI</code></div>
 </td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected static int</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#intCompare(int, int)">intCompare</a></strong>(int&nbsp;x,
-          int&nbsp;y)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#keyExtractor()">keyExtractor</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static &lt;K&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,K&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#noTransformExtractor()">noTransformExtractor</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static &lt;A,B&gt;&nbsp;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;A,B&gt;</code></td>
@@ -281,10 +314,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
   B&nbsp;b,
   C&nbsp;c,
   D&nbsp;d)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Fun.html#valueExtractor()">valueExtractor</a></strong>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -324,6 +353,16 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>REVERSE_COMPARATOR</h4>
 <pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</a>&gt; REVERSE_COMPARATOR</pre>
+</li>
+</ul>
+<a name="EMPTY_ITERATOR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EMPTY_ITERATOR</h4>
+<pre>public static final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a> EMPTY_ITERATOR</pre>
+<div class="block"><p>empty iterator (note: Collections.EMPTY_ITERATOR is Java 7 specific and should not be used)</p></div>
 </li>
 </ul>
 <a name="TUPLE2_COMPARATOR">
@@ -475,41 +514,88 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
                                D&nbsp;d)</pre>
 </li>
 </ul>
-<a name="noTransformExtractor()">
+<a name="extractKey()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>noTransformExtractor</h4>
-<pre>public static&nbsp;&lt;K&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,K&gt;&nbsp;noTransformExtractor()</pre>
+<h4>extractKey</h4>
+<pre>public static&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;&nbsp;extractKey()</pre>
 </li>
 </ul>
-<a name="keyExtractor()">
+<a name="extractValue()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>keyExtractor</h4>
-<pre>public static&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;&nbsp;keyExtractor()</pre>
+<h4>extractValue</h4>
+<pre>public static&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;&nbsp;extractValue()</pre>
 </li>
 </ul>
-<a name="valueExtractor()">
+<a name="extractNoTransform()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>valueExtractor</h4>
-<pre>public static&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V&gt;&gt;&nbsp;valueExtractor()</pre>
+<h4>extractNoTransform</h4>
+<pre>public static&nbsp;&lt;K&gt;&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;K,K&gt;&nbsp;extractNoTransform()</pre>
 </li>
 </ul>
-<a name="intCompare(int, int)">
+<a name="filter(java.util.NavigableSet,java.lang.Object)">
+<!--   -->
+</a><a name="filter(java.util.NavigableSet, K2)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>filter</h4>
+<pre>public static&nbsp;&lt;K2,K1&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;K1&gt;&nbsp;filter(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K2,K1&gt;&gt;&nbsp;secondaryKeys,
+                          K2&nbsp;secondaryKey)</pre>
+<div class="block"><p>Find all Primary Keys associated with Secondary Key. This is useful companion to <a href="../../org/mapdb/Bind.html#mapInverse(org.mapdb.Bind.MapWithModificationListener, java.util.Set)"><code>Bind.mapInverse(org.mapdb.Bind.MapWithModificationListener, java.util.Set)</code></a> and <a href="../../org/mapdb/Bind.html#secondaryKey(org.mapdb.Bind.MapWithModificationListener, java.util.Set, org.mapdb.Fun.Function2)"><code>Bind.secondaryKey(org.mapdb.Bind.MapWithModificationListener, java.util.Set, org.mapdb.Fun.Function2)</code></a> It can by also used to find values from &lsquo;MultiMap&rsquo;.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>secondaryKeys</code> - Secondary Set or &lsquo;MultiMap&rsquo; to find values in</dd><dd><code>secondaryKey</code> - key to look from</dd><dd><code>K2</code> - Secondary Key type</dd><dd><code>K1</code> - Primary Key type</dd>
+<dt><span class="strong">Returns:</span></dt><dd>all keys where primary value equals to <code>secondaryKey</code></dd></dl>
+</li>
+</ul>
+<a name="filter(java.util.NavigableSet,java.lang.Object,boolean,java.lang.Object,boolean)">
+<!--   -->
+</a><a name="filter(java.util.NavigableSet, K2, boolean, K2, boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>filter</h4>
+<pre>public static&nbsp;&lt;K2,K1&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;K1&gt;&nbsp;filter(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K2,K1&gt;&gt;&nbsp;secondaryKeys,
+                          K2&nbsp;lo,
+                          boolean&nbsp;loInc,
+                          K2&nbsp;hi,
+                          boolean&nbsp;hiInc)</pre>
+</li>
+</ul>
+<a name="filter(java.util.NavigableSet,java.lang.Object,java.lang.Object)">
+<!--   -->
+</a><a name="filter(java.util.NavigableSet, A, B)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>filter</h4>
+<pre>public static&nbsp;&lt;A,B,C&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;C&gt;&nbsp;filter(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a>&lt;A,B,C&gt;&gt;&nbsp;secondaryKeys,
+                         A&nbsp;a,
+                         B&nbsp;b)</pre>
+</li>
+</ul>
+<a name="filter(java.util.NavigableSet,java.lang.Object,java.lang.Object,java.lang.Object)">
+<!--   -->
+</a><a name="filter(java.util.NavigableSet, A, B, C)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>intCompare</h4>
-<pre>protected static&nbsp;int&nbsp;intCompare(int&nbsp;x,
-             int&nbsp;y)</pre>
+<h4>filter</h4>
+<pre>public static&nbsp;&lt;A,B,C,D&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;D&gt;&nbsp;filter(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;<a href="../../org/mapdb/Fun.Tuple4.html" title="class in org.mapdb">Fun.Tuple4</a>&lt;A,B,C,D&gt;&gt;&nbsp;secondaryKeys,
+                           A&nbsp;a,
+                           B&nbsp;b,
+                           C&nbsp;c)</pre>
 </li>
 </ul>
 </li>

@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>DBMaker (mapdb 0.9.8-SNAPSHOT API)</title>
+<title>DBMaker (mapdb 0.9.9-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="DBMaker (mapdb 0.9.8-SNAPSHOT API)";
+        parent.document.title="DBMaker (mapdb 0.9.9-SNAPSHOT API)";
     }
 //-->
 </script>
@@ -34,7 +34,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../org/mapdb/DB.IdentityWrapper.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -359,14 +359,24 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected static byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#fromHexa(java.lang.String)">fromHexa</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#fullChunkAllocationEnable()">fullChunkAllocationEnable</a></strong>()</code>
 <div class="block">Allocate new space in 1GB chunks rather than small increments.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#getThis()">getThis</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected static boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#JVMSupportsLargeMappedFiles()">JVMSupportsLargeMappedFiles</a></strong>()</code>
+<div class="block">Check if large files can be mapped into memory.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.html" title="class in org.mapdb">DB</a></code></td>
@@ -385,98 +395,98 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#makeTxMaker()">makeTxMaker</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#mmapFileEnable()">mmapFileEnable</a></strong>()</code>
+<div class="block">Enables Memory Mapped Files, much faster storage option.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#mmapFileEnableIfSupported()">mmapFileEnableIfSupported</a></strong>()</code>
+<div class="block">Enable Memory Mapped Files only if current JVM supports it (is 64bit).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#mmapFileEnablePartial()">mmapFileEnablePartial</a></strong>()</code>
+<div class="block">Keeps small-frequently-used part of storage files memory mapped, but main area is accessed using Random Access File.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected static <a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newAppendFileDB(java.io.File)">newAppendFileDB</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
 <div class="block">Creates or open append-only database stored in file.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newDirectMemoryDB()">newDirectMemoryDB</a></strong>()</code>
 <div class="block">Creates new in-memory database.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newFileDB(java.io.File)">newFileDB</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
 <div class="block">Creates or open database stored in file.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newMemoryDB()">newMemoryDB</a></strong>()</code>
 <div class="block">Creates new in-memory database.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newTempFileDB()">newTempFileDB</a></strong>()</code>
 <div class="block">Creates new database in temporary folder.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newTempHashMap()">newTempHashMap</a></strong>()</code>
 <div class="block">Create new HTreeMap backed by temporary file storage.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static &lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;K&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newTempHashSet()">newTempHashSet</a></strong>()</code>
 <div class="block">Create new HashSet backed by temporary file storage.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static &lt;K,V&gt;&nbsp;<a href="../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newTempTreeMap()">newTempTreeMap</a></strong>()</code>
 <div class="block">Create new BTreeMap backed by temporary file storage.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static &lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#newTempTreeSet()">newTempTreeSet</a></strong>()</code>
 <div class="block">Create new TreeSet backed by temporary file storage.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#propsGetBool(java.lang.String)">propsGetBool</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#propsGetInt(java.lang.String, int)">propsGetInt</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
            int&nbsp;defValue)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#propsGetLong(java.lang.String, long)">propsGetLong</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
             long&nbsp;defValue)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#propsGetRafMode()">propsGetRafMode</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected byte[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#propsGetXteaEncKey()">propsGetXteaEncKey</a></strong>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#randomAccessFileEnable()">randomAccessFileEnable</a></strong>()</code>
-<div class="block">Enables compatibility storage mode for 32bit JVMs.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#randomAccessFileEnableIfNeeded()">randomAccessFileEnableIfNeeded</a></strong>()</code>
-<div class="block">Check current JVM for known problems.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#randomAccessFileEnableKeepIndexMapped()">randomAccessFileEnableKeepIndexMapped</a></strong>()</code>
-<div class="block">Same as <code>randomAccessFileEnable()</code>, but part of storage is kept memory mapped.</div>
-</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
@@ -509,6 +519,10 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#toHexa(byte[])">toHexa</a></strong>(byte[]&nbsp;bb)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DBMaker.html#transactionDisable()">transactionDisable</a></strong>()</code>
 <div class="block">Transaction journal is enabled by default You must call <b>DB.commit()</b> to save your changes.</div>
@@ -793,34 +807,34 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">Returns:</span></dt><dd>this builder</dd></dl>
 </li>
 </ul>
-<a name="randomAccessFileEnable()">
+<a name="mmapFileEnable()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>randomAccessFileEnable</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;randomAccessFileEnable()</pre>
-<div class="block"><p>Enables compatibility storage mode for 32bit JVMs. <p/> By default MapDB uses memory mapped files. However 32bit JVM can only address 4GB of memory. Also some older JVMs do not handle large memory mapped files well. We can use <code>FileChannel</code> which does not use memory mapped files, but is slower. Use this if you are experiencing <b>java.lang.OutOfMemoryError: Map failed</b> exceptions <p/> This options disables memory mapped files but causes storage to be slower.</p></div>
+<h4>mmapFileEnable</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;mmapFileEnable()</pre>
+<div class="block"><p>Enables Memory Mapped Files, much faster storage option. However on 32bit JVM this mode could corrupt your DB thanks to 4GB memory addressing limit.</p><p>You may experience <code>java.lang.OutOfMemoryError: Map failed</code> exception on 32bit JVM, if you enable this mode.</p></div>
 </li>
 </ul>
-<a name="randomAccessFileEnableKeepIndexMapped()">
+<a name="mmapFileEnablePartial()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>randomAccessFileEnableKeepIndexMapped</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;randomAccessFileEnableKeepIndexMapped()</pre>
-<div class="block"><p>Same as <code>randomAccessFileEnable()</code>, but part of storage is kept memory mapped.  This mode is good performance compromise between memory mapped files and RAF.  <p/>  Index file is typically 5% of storage. It contains small frequently read values,  which is where memory mapped file excel.  <p/>  With this mode you will experience <b>java.lang.OutOfMemoryError: Map failed</b> exceptions  eventually. But storage size limit is pushed to somewhere around 40GB.</p></div>
+<h4>mmapFileEnablePartial</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;mmapFileEnablePartial()</pre>
+<div class="block"><p>Keeps small-frequently-used part of storage files memory mapped, but main area is accessed using Random Access File.</p><p>This mode is good performance compromise between Memory Mapped Files and old slow Random Access Files.</p><p>Index file is typically 5% of storage. It contains small frequently read values,  which is where memory mapped file excel.</p><p>With this mode you will experience <code>java.lang.OutOfMemoryError: Map failed</code> exceptions on 32bit JVMs  eventually. But storage size limit is pushed to somewhere around 40GB.</p></div>
 </li>
 </ul>
-<a name="randomAccessFileEnableIfNeeded()">
+<a name="mmapFileEnableIfSupported()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>randomAccessFileEnableIfNeeded</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;randomAccessFileEnableIfNeeded()</pre>
-<div class="block"><p>Check current JVM for known problems. If JVM does not handle large memory files well, this option disables memory mapped files, and use safer and slower <code>RandomAccessFile</code> instead.</p></div>
+<h4>mmapFileEnableIfSupported</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DBMaker.html" title="type parameter in DBMaker">DBMakerT</a>&nbsp;mmapFileEnableIfSupported()</pre>
+<div class="block"><p>Enable Memory Mapped Files only if current JVM supports it (is 64bit).</p></div>
 </li>
 </ul>
 <a name="cacheSize(int)">
@@ -1071,6 +1085,16 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>protected&nbsp;byte[]&nbsp;propsGetXteaEncKey()</pre>
 </li>
 </ul>
+<a name="JVMSupportsLargeMappedFiles()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JVMSupportsLargeMappedFiles</h4>
+<pre>protected static&nbsp;boolean&nbsp;JVMSupportsLargeMappedFiles()</pre>
+<div class="block"><p>Check if large files can be mapped into memory. For example 32bit JVM can only address 2GB and large files can not be mapped, so for 32bit JVM this function returns false.</p></div>
+</li>
+</ul>
 <a name="propsGetRafMode()">
 <!--   -->
 </a>
@@ -1227,10 +1251,28 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <a name="extendStoreVolumeFactory()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>extendStoreVolumeFactory</h4>
 <pre>protected&nbsp;<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;extendStoreVolumeFactory()</pre>
+</li>
+</ul>
+<a name="toHexa(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>toHexa</h4>
+<pre>protected static&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toHexa(byte[]&nbsp;bb)</pre>
+</li>
+</ul>
+<a name="fromHexa(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>fromHexa</h4>
+<pre>protected static&nbsp;byte[]&nbsp;fromHexa(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</pre>
 </li>
 </ul>
 </li>
@@ -1262,7 +1304,7 @@ hljs.initHighlightingOnLoad();
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../org/mapdb/DB.IdentityWrapper.html" title="class in org.mapdb"><span class="strong">Prev Class</span></a></li>
 <li><a href="../../org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
