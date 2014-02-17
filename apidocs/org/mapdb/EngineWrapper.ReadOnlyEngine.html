@@ -127,7 +127,7 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></h3>
-<code><a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
+<code><a href="../../org/mapdb/EngineWrapper.CloseOnJVMShutdown.html" title="class in org.mapdb">EngineWrapper.CloseOnJVMShutdown</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
 </ul>
 </li>
 </ul>
@@ -183,12 +183,16 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#canSnapshot()">canSnapshot</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#commit()">commit</a></strong>()</code>
 <div class="block">Makes all changes made since the previous commit/rollback permanent.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
@@ -197,42 +201,48 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <div class="block">Updates existing record in atomic <a href="http://en.wikipedia.org/wiki/Compare-and-swap">(Compare And Swap)</a> manner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
       <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Remove existing record from store/cache</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#isReadOnly()">isReadOnly</a></strong>()</code>
 <div class="block">Check if you can write into this Engine.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#preallocate()">preallocate</a></strong>()</code>
 <div class="block">Preallocates recid for not yet created record.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#preallocate(long[])">preallocate</a></strong>(long[]&nbsp;recids)</code>
 <div class="block">Preallocates recids for not yet created record.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Insert new record.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Undoes all changes made in the current transaction.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#snapshot()">snapshot</a></strong>()</code>
+<div class="block">Returns read-only snapshot of data in Engine.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -444,7 +454,7 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <a name="isReadOnly()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>isReadOnly</h4>
 <pre>public&nbsp;boolean&nbsp;isReadOnly()</pre>
@@ -456,6 +466,40 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../org/mapdb/EngineWrapper.html#isReadOnly()">isReadOnly</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>true if engine is read-only</dd></dl>
+</li>
+</ul>
+<a name="canSnapshot()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canSnapshot</h4>
+<pre>public&nbsp;boolean&nbsp;canSnapshot()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#canSnapshot()">canSnapshot</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../org/mapdb/EngineWrapper.html#canSnapshot()">canSnapshot</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if engine can create read-only snapshots</dd></dl>
+</li>
+</ul>
+<a name="snapshot()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>snapshot</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;snapshot()
+                throws <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#snapshot()">Engine</a></code></strong></div>
+<div class="block"><p>Returns read-only snapshot of data in Engine.</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#snapshot()">snapshot</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../org/mapdb/EngineWrapper.html#snapshot()">snapshot</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if snapshots are not supported/enabled</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../org/mapdb/EngineWrapper.html#canSnapshot()"><code>EngineWrapper.canSnapshot()</code></a></dd></dl>
 </li>
 </ul>
 </li>

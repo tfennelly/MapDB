@@ -223,64 +223,68 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireMaxSizeFlag">expireMaxSizeFlag</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireStoreSize">expireStoreSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireTails">expireTails</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireTimeStart">expireTimeStart</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#hasher">hasher</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#hashSalt">hashSalt</a></strong></code>
 <div class="block">Salt added to hash before rehashing, so it is harder to trigger hash collision attack.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#hasValues">hasValues</a></strong></code>
 <div class="block">is this a Map or Set? if false, entries do not have values, only keys are allowed</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#keySerializer">keySerializer</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#LN_SERIALIZER">LN_SERIALIZER</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#MOD8">MOD8</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#modListeners">modListeners</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#modListenersLock">modListenersLock</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantReadWriteLock</a>[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#segmentLocks">segmentLocks</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#segmentRecids">segmentRecids</a></strong></code>
 <div class="block">list of segments, this is immutable</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#valueCreator">valueCreator</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
@@ -299,7 +303,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">HTreeMap</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colOne"><code><strong><a href="../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">HTreeMap</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
         long&nbsp;counterRecid,
         int&nbsp;hashSalt,
         long[]&nbsp;segmentRecids,
@@ -309,6 +313,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
         long&nbsp;expire,
         long&nbsp;expireAccess,
         long&nbsp;expireMaxSize,
+        long&nbsp;expireStoreSize,
         long[]&nbsp;expireHeads,
         long[]&nbsp;expireTails,
         <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator,
@@ -361,147 +366,151 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#exirePurgeSegment(int, long)">exirePurgeSegment</a></strong>(int&nbsp;seg,
-                 long&nbsp;removePerSegment)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireCheckSegment(int)">expireCheckSegment</a></strong>(int&nbsp;segment)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireLinkAdd(int, long, long, int)">expireLinkAdd</a></strong>(int&nbsp;segment,
              long&nbsp;expireNodeRecid,
              long&nbsp;keyRecid,
              int&nbsp;hash)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireLinkBump(int, long, boolean)">expireLinkBump</a></strong>(int&nbsp;segment,
               long&nbsp;nodeRecid,
               boolean&nbsp;access)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireLinkRemove(int, long)">expireLinkRemove</a></strong>(int&nbsp;segment,
                 long&nbsp;nodeRecid)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireLinkRemoveLast(int)">expireLinkRemoveLast</a></strong>(int&nbsp;segment)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expirePurge()">expirePurge</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expirePurgeSegment(int, long)">expirePurgeSegment</a></strong>(int&nbsp;seg,
+                  long&nbsp;removePerSegment)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#get(java.lang.Object)">get</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getInner(java.lang.Object, int, int)">getInner</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o,
         int&nbsp;h,
         int&nbsp;segment)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getMaxExpireTime()">getMaxExpireTime</a></strong>()</code>
 <div class="block">Returns maximal (newest) expiration timestamp</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getMinExpireTime()">getMinExpireTime</a></strong>()</code>
 <div class="block">Returns minimal (oldest) expiration timestamp</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getPeek(java.lang.Object)">getPeek</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</code>
 <div class="block">Return given value, without updating cache statistics if <code>expireAccess()</code> is true It also does not use <code>valueCreator</code> if value is not found (always returns null if not found)</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#hash(java.lang.Object)">hash</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#isEmpty()">isEmpty</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#keySet()">keySet</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#notify(K, V, V)">notify</a></strong>(<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&nbsp;key,
       <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;oldValue,
       <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;newValue)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#preallocateSegments(org.mapdb.Engine)">preallocateSegments</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#put(K, V)">put</a></strong>(<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&nbsp;key,
    <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#putIfAbsent(K, V)">putIfAbsent</a></strong>(<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&nbsp;key,
            <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#remove(java.lang.Object)">remove</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#remove(java.lang.Object, java.lang.Object)">remove</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key,
       <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#removeInternal(java.lang.Object, int, int, boolean)">removeInternal</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key,
               int&nbsp;segment,
               int&nbsp;h,
               boolean&nbsp;removeExpire)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener</a></strong>(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;listener)</code>
 <div class="block">Remove registered notification listener</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#replace(K, V)">replace</a></strong>(<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&nbsp;key,
        <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#replace(K, V, V)">replace</a></strong>(<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&nbsp;key,
        <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;oldValue,
        <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;newValue)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#size()">size</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#sizeLong()">sizeLong</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#snapshot()">snapshot</a></strong>()</code>
 <div class="block">Make readonly snapshot view of current Map.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#values()">values</a></strong>()</code>&nbsp;</td>
 </tr>
@@ -690,6 +699,15 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <pre>protected final&nbsp;long expireMaxSize</pre>
 </li>
 </ul>
+<a name="expireStoreSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>expireStoreSize</h4>
+<pre>protected final&nbsp;long expireStoreSize</pre>
+</li>
+</ul>
 <a name="expireMaxSizeFlag">
 <!--   -->
 </a>
@@ -789,7 +807,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">
+<a name="HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -805,6 +823,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
         long&nbsp;expire,
         long&nbsp;expireAccess,
         long&nbsp;expireMaxSize,
+        long&nbsp;expireStoreSize,
         long[]&nbsp;expireHeads,
         long[]&nbsp;expireTails,
         <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator,
@@ -1188,14 +1207,14 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <pre>protected&nbsp;void&nbsp;expirePurge()</pre>
 </li>
 </ul>
-<a name="exirePurgeSegment(int, long)">
+<a name="expirePurgeSegment(int, long)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>exirePurgeSegment</h4>
-<pre>protected&nbsp;void&nbsp;exirePurgeSegment(int&nbsp;seg,
-                     long&nbsp;removePerSegment)</pre>
+<h4>expirePurgeSegment</h4>
+<pre>protected&nbsp;void&nbsp;expirePurgeSegment(int&nbsp;seg,
+                      long&nbsp;removePerSegment)</pre>
 </li>
 </ul>
 <a name="expireCheckSegment(int)">
@@ -1264,11 +1283,20 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <a name="close()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>close</h4>
 <pre>public&nbsp;void&nbsp;close()</pre>
 <div class="block"><p>Closes underlying storage and releases all resources. Used mostly with temporary collections where engine is not accessible.</p></div>
+</li>
+</ul>
+<a name="getEngine()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getEngine</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;getEngine()</pre>
 </li>
 </ul>
 </li>

@@ -135,14 +135,18 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#expireMaxSize">expireMaxSize</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#expireStoreSize">expireStoreSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#hasher">hasher</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#name">name</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#serializer">serializer</a></strong></code>&nbsp;</td>
 </tr>
@@ -218,17 +222,23 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#hasher(org.mapdb.Hasher)">hasher</a></strong>(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#expireStoreSize(double)">expireStoreSize</a></strong>(double&nbsp;maxStoreSize)</code>
+<div class="block">maximal size of store in GB, if store is larger entries will start expiring</div>
+</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;K&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#make()">make</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#hasher(org.mapdb.Hasher)">hasher</a></strong>(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;K&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#makeOrGet()">makeOrGet</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#make()">make</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;K&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#makeOrGet()">makeOrGet</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#serializer(org.mapdb.Serializer)">serializer</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
@@ -290,6 +300,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>expireMaxSize</h4>
 <pre>protected&nbsp;long expireMaxSize</pre>
+</li>
+</ul>
+<a name="expireStoreSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>expireStoreSize</h4>
+<pre>protected&nbsp;long expireStoreSize</pre>
 </li>
 </ul>
 <a name="expire">
@@ -372,6 +391,16 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>expireMaxSize</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a>&nbsp;expireMaxSize(long&nbsp;maxSize)</pre>
 <div class="block"><p>maximal number of entries in this map. Less used entries will be expired and removed to make collection smaller</p></div>
+</li>
+</ul>
+<a name="expireStoreSize(double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>expireStoreSize</h4>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a>&nbsp;expireStoreSize(double&nbsp;maxStoreSize)</pre>
+<div class="block"><p>maximal size of store in GB, if store is larger entries will start expiring</p></div>
 </li>
 </ul>
 <a name="expireAfterWrite(long, java.util.concurrent.TimeUnit)">

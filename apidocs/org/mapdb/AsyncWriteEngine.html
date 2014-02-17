@@ -106,7 +106,7 @@
 <pre>public class <span class="strong">AsyncWriteEngine</span>
 extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a>
 implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></pre>
-<div class="block"><p><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb"><code>Engine</code></a> wrapper which provides asynchronous serialization and asynchronous write. This class takes an object instance, passes it to background writer thread (using Write Cache) where it is serialized and written to disk. Async write does not affect commit durability, write cache is flushed into disk on each commit. Modified records are held in small instance cache, until they are written into disk.</p><p>This feature is enabled by default and can be disabled by calling <code>DBMaker#asyncWriteDisable()</code>. Write Cache is flushed in regular intervals or when it becomes full. Flush interval is 100 ms by default and can be controlled by <a href="../../org/mapdb/DBMaker.html#asyncWriteFlushDelay(int)"><code>DBMaker.asyncWriteFlushDelay(int)</code></a>. Increasing this interval may improve performance in scenarios where frequently modified items should be cached, typically <a href="../../org/mapdb/BTreeMap.html" title="class in org.mapdb"><code>BTreeMap</code></a> import where keys are presorted.</p><p>Asynchronous write does not affect commit durability. Write Cache is flushed during each commit, rollback and close call. You may also flush Write Cache manually by using <a href="../../org/mapdb/AsyncWriteEngine.html#clearCache()"><code>clearCache()</code></a> method. There is global lock which prevents record being updated while commit is in progress.</p><p>This wrapper starts one threads named <code>MapDB writer #N</code> (where N is static counter). Async Writer takes modified records from Write Cache and writes them into store. It also preallocates new recids, as finding empty <code>recids</code> takes time so small stash is pre-allocated. It runs as <code>daemon</code>, so it does not prevent JVM to exit.</p><p>Asynchronous Writes have several advantages (especially for single threaded user). But there are two things user should be aware of:</p>
+<div class="block"><p><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb"><code>Engine</code></a> wrapper which provides asynchronous serialization and asynchronous write. This class takes an object instance, passes it to background writer thread (using Write Cache) where it is serialized and written to disk. Async write does not affect commit durability, write cache is flushed into disk on each commit. Modified records are held in small instance cache, until they are written into disk.</p><p>This feature is disabled by default and can be enabled by calling <a href="../../org/mapdb/DBMaker.html#asyncWriteEnable()"><code>DBMaker.asyncWriteEnable()</code></a>. Write Cache is flushed in regular intervals or when it becomes full. Flush interval is 100 ms by default and can be controlled by <a href="../../org/mapdb/DBMaker.html#asyncWriteFlushDelay(int)"><code>DBMaker.asyncWriteFlushDelay(int)</code></a>. Increasing this interval may improve performance in scenarios where frequently modified items should be cached, typically <a href="../../org/mapdb/BTreeMap.html" title="class in org.mapdb"><code>BTreeMap</code></a> import where keys are presorted.</p><p>Asynchronous write does not affect commit durability. Write Cache is flushed during each commit, rollback and close call. You may also flush Write Cache manually by using <a href="../../org/mapdb/AsyncWriteEngine.html#clearCache()"><code>clearCache()</code></a> method. There is global lock which prevents record being updated while commit is in progress.</p><p>This wrapper starts one threads named <code>MapDB writer #N</code> (where N is static counter). Async Writer takes modified records from Write Cache and writes them into store. It also preallocates new recids, as finding empty <code>recids</code> takes time so small stash is pre-allocated. It runs as <code>daemon</code>, so it does not prevent JVM to exit.</p><p>Asynchronous Writes have several advantages (especially for single threaded user). But there are two things user should be aware of:</p>
 <ul>
   <li><p>Because data are serialized on back-ground thread, they need to be thread safe or better immutable.  When you insert record into MapDB and modify it latter, this modification may happen before item  was serialized and you may not be sure what version was persisted</p></li>
   <li><p>Asynchronous writes have some overhead and introduce single bottle-neck. This usually not issue for  single or two threads, but in multi-threaded environment it may decrease performance.  So in truly concurrent environments with many updates (network servers, parallel computing )  you should disable Asynchronous Writes.</p></li>
@@ -143,7 +143,7 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></h3>
-<code><a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
+<code><a href="../../org/mapdb/EngineWrapper.CloseOnJVMShutdown.html" title="class in org.mapdb">EngineWrapper.CloseOnJVMShutdown</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
 </ul>
 </li>
 </ul>
@@ -188,16 +188,24 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#maxSize">maxSize</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>protected long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#newRecids">newRecids</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html?is-external=true" title="class or interface in java.util.concurrent.locks">ReentrantLock</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#newRecidsLock">newRecidsLock</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#newRecidsPos">newRecidsPos</a></strong></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a></code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#size">size</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected static <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a></code></td>
@@ -255,8 +263,9 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <td class="colOne"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#AsyncWriteEngine(org.mapdb.Engine)">AsyncWriteEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#AsyncWriteEngine(org.mapdb.Engine, int, java.util.concurrent.Executor)">AsyncWriteEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colOne"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#AsyncWriteEngine(org.mapdb.Engine, int, int, java.util.concurrent.Executor)">AsyncWriteEngine</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
                 int&nbsp;_asyncFlushDelay,
+                int&nbsp;queueSize,
                 <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent">Executor</a>&nbsp;executor)</code>
 <div class="block">Construct new class and starts background threads.</div>
 </td>
@@ -340,39 +349,43 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#preallocateRefill()">preallocateRefill</a></strong>()</code>&nbsp;</td>
+<td class="colFirst"><code>protected long</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#preallocateNoCommitLock()">preallocateNoCommitLock</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#preallocateRollback()">preallocateRollback</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#preallocateRefill()">preallocateRefill</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#preallocateRollback()">preallocateRollback</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Insert new record.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Undoes all changes made in the current transaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#runWriter()">runWriter</a></strong>()</code>
 <div class="block">runs on background thread.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#startThreads(java.util.concurrent.Executor)">startThreads</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent">Executor</a>&nbsp;executor)</code>
 <div class="block">Starts background threads.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
@@ -380,13 +393,17 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <div class="block">Update existing record with new value.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/AsyncWriteEngine.html#waitForAction(int)">waitForAction</a></strong>(int&nbsp;actionNumber)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_org.mapdb.EngineWrapper">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></h3>
-<code><a href="../../org/mapdb/EngineWrapper.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/EngineWrapper.html#checkClosed(V)">checkClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine</a>, <a href="../../org/mapdb/EngineWrapper.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#isReadOnly()">isReadOnly</a></code></li>
+<code><a href="../../org/mapdb/EngineWrapper.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/EngineWrapper.html#canSnapshot()">canSnapshot</a>, <a href="../../org/mapdb/EngineWrapper.html#checkClosed(V)">checkClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine</a>, <a href="../../org/mapdb/EngineWrapper.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#isReadOnly()">isReadOnly</a>, <a href="../../org/mapdb/EngineWrapper.html#snapshot()">snapshot</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -400,7 +417,7 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;org.mapdb.<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></h3>
-<code><a href="../../org/mapdb/Engine.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/Engine.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/Engine.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/Engine.html#isReadOnly()">isReadOnly</a></code></li>
+<code><a href="../../org/mapdb/Engine.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/Engine.html#canSnapshot()">canSnapshot</a>, <a href="../../org/mapdb/Engine.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/Engine.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/Engine.html#isReadOnly()">isReadOnly</a>, <a href="../../org/mapdb/Engine.html#snapshot()">snapshot</a></code></li>
 </ul>
 </li>
 </ul>
@@ -434,6 +451,24 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <h4>TOMBSTONE</h4>
 <pre>protected static final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> TOMBSTONE</pre>
 <div class="block"><p>used to signal that object was deleted</p></div>
+</li>
+</ul>
+<a name="maxSize">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>maxSize</h4>
+<pre>protected final&nbsp;int maxSize</pre>
+</li>
+</ul>
+<a name="size">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>size</h4>
+<pre>protected final&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/AtomicInteger.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicInteger</a> size</pre>
 </li>
 </ul>
 <a name="newRecids">
@@ -540,7 +575,7 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="AsyncWriteEngine(org.mapdb.Engine, int, java.util.concurrent.Executor)">
+<a name="AsyncWriteEngine(org.mapdb.Engine, int, int, java.util.concurrent.Executor)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -548,6 +583,7 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <h4>AsyncWriteEngine</h4>
 <pre>public&nbsp;AsyncWriteEngine(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
                 int&nbsp;_asyncFlushDelay,
+                int&nbsp;queueSize,
                 <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Executor.html?is-external=true" title="class or interface in java.util.concurrent">Executor</a>&nbsp;executor)</pre>
 <div class="block"><p>Construct new class and starts background threads. User may provide executor in which background tasks will be executed, otherwise MapDB starts two daemon threads.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>engine</code> - which stores data.</dd><dd><code>_asyncFlushDelay</code> - flush Write Queue every N milliseconds</dd><dd><code>executor</code> - optional executor to run tasks. If null daemon threads will be created</dd></dl>
@@ -620,6 +656,32 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <dt><span class="strong">Returns:</span></dt><dd>new recid</dd></dl>
 </li>
 </ul>
+<a name="preallocate(long[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preallocate</h4>
+<pre>public&nbsp;void&nbsp;preallocate(long[]&nbsp;recids)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#preallocate(long[])">Engine</a></code></strong></div>
+<div class="block"><p>Preallocates recids for not yet created record. It does not insert any data into it. This is done in batch of given size (determied by size of array in argument)</p></div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../org/mapdb/Engine.html#preallocate(long[])">preallocate</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../org/mapdb/EngineWrapper.html#preallocate(long[])">preallocate</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>recids</code> - array to put result into</dd></dl>
+</li>
+</ul>
+<a name="preallocateNoCommitLock()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preallocateNoCommitLock</h4>
+<pre>protected&nbsp;long&nbsp;preallocateNoCommitLock()</pre>
+</li>
+</ul>
 <a name="preallocateRefill()">
 <!--   -->
 </a>
@@ -637,23 +699,6 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <h4>checkState</h4>
 <pre>protected&nbsp;void&nbsp;checkState()</pre>
 <div class="block"><p>checks that background threads are ready and throws exception if not</p></div>
-</li>
-</ul>
-<a name="preallocate(long[])">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>preallocate</h4>
-<pre>public&nbsp;void&nbsp;preallocate(long[]&nbsp;recids)</pre>
-<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#preallocate(long[])">Engine</a></code></strong></div>
-<div class="block"><p>Preallocates recids for not yet created record. It does not insert any data into it. This is done in batch of given size (determied by size of array in argument)</p></div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#preallocate(long[])">preallocate</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
-<dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../org/mapdb/EngineWrapper.html#preallocate(long[])">preallocate</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>recids</code> - array to put result into</dd></dl>
 </li>
 </ul>
 <a name="put(java.lang.Object,org.mapdb.Serializer)">
@@ -768,6 +813,15 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../org/mapdb/EngineWrapper.html#close()">close</a></code>&nbsp;in class&nbsp;<code><a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="waitForAction(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>waitForAction</h4>
+<pre>protected&nbsp;void&nbsp;waitForAction(int&nbsp;actionNumber)</pre>
 </li>
 </ul>
 <a name="commit()">

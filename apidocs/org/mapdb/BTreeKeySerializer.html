@@ -100,7 +100,7 @@
 <br>
 <pre>public abstract class <span class="strong">BTreeKeySerializer&lt;K&gt;</span>
 extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block"><p>Custom serializer for BTreeMap keys which enables <a href='https://en.wikipedia.org/wiki/Delta_encoding'>Delta encoding</a>. <p/> Keys in BTree Nodes are sorted, this enables number of tricks to save disk space. For example for numbers we may store only difference between subsequent numbers, for string we can only take suffix, etc&hellip;</p></div>
+<div class="block"><p>Custom serializer for BTreeMap keys which enables <a href="https://en.wikipedia.org/wiki/Delta_encoding">Delta encoding</a>.</p><p>Keys in BTree Nodes are sorted, this enables number of tricks to save disk space. For example for numbers we may store only difference between subsequent numbers, for string we can only take suffix, etc&hellip;</p></div>
 </li>
 </ul>
 </div>
