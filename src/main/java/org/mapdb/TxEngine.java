@@ -360,7 +360,11 @@ public class TxEngine extends EngineWrapper {
             }
         }
 
-    @Override
+        @Override
+        public void addLifecycleListener(EngineLifecycleListener listener) {
+        }
+
+        @Override
     public <A> long put(A value, Serializer<A> serializer) {
         if(!fullTx)
             throw new UnsupportedOperationException("read-only");

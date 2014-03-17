@@ -19,8 +19,10 @@ package org.mapdb;
 
 import java.io.IOError;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -34,6 +36,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class EngineWrapper implements Engine{
 
     private Engine engine;
+    private List<EngineLifecycleListener> lifecycleListeners = new ArrayList<EngineLifecycleListener>();
 
     protected EngineWrapper(Engine engine){
         if(engine == null) throw new IllegalArgumentException();
@@ -48,6 +51,11 @@ public class EngineWrapper implements Engine{
     @Override
     public void preallocate(long[] recids){
         getWrappedEngine().preallocate(recids);
+    }
+
+    @Override
+    public void addLifecycleListener(EngineLifecycleListener listener) {
+        lifecycleListeners.add(listener);
     }
 
     @Override
@@ -77,6 +85,15 @@ public class EngineWrapper implements Engine{
 
     @Override
     public void close() {
+        for (EngineLifecycleListener lifecycleListener : lifecycleListeners) {
+            try {
+                lifecycleListener.onClose();
+            } catch(Exception e) {
+                e.printStackTrace();
+                // logging???
+            }
+        }
+
         Engine e = engine;
         if(e!=null)
             e.close();
@@ -520,6 +537,11 @@ public class EngineWrapper implements Engine{
 
         @Override
         public void preallocate(long[] recids) {
+            throw new IllegalAccessError("already closed");
+        }
+
+        @Override
+        public void addLifecycleListener(EngineLifecycleListener listener) {
             throw new IllegalAccessError("already closed");
         }
 

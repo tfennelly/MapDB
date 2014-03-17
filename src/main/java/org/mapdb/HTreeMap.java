@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.*;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -1476,6 +1477,8 @@ public class HTreeMap<K,V>   extends AbstractMap<K,V> implements ConcurrentMap<K
 
         //use weak referece to prevent memory leak
         final WeakReference<HTreeMap> mapRef;
+        final AtomicBoolean running = new AtomicBoolean(true);
+        final AtomicBoolean stopRequested = new AtomicBoolean(false);
 
         public ExpireRunnable(HTreeMap map) {
             this.mapRef = new WeakReference<HTreeMap>(map);
@@ -1484,25 +1487,49 @@ public class HTreeMap<K,V>   extends AbstractMap<K,V> implements ConcurrentMap<K
         @Override
         public void run() {
             boolean pause = false;
-            while(true){
-                try{
-                    if(pause){
-                        Thread.sleep(1000);
-                    }
-                    HTreeMap map = mapRef.get();
-                    if(map==null||map.engine.isClosed()) return;
 
-                    //TODO what if store gets closed while working on this?
-                    map.expirePurge();
-                    pause = ((!map.expireMaxSizeFlag || map.size()<map.expireMaxSize)
-                        && (map.expireStoreSize==0L ||
+            mapRef.get().engine.addLifecycleListener(new EngineLifecycleListener() {
+                @Override
+                public void onClose() {
+                    stopRequested.set(true);
+                    while (running.get()) {
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
+
+            try {
+                while(!stopRequested.get()){
+                    try{
+                        if(pause){
+                            Thread.sleep(1000);
+                        }
+                        HTreeMap map = mapRef.get();
+
+                        //TODO what if store gets closed while working on this?
+                        map.expirePurge();
+                        pause = ((!map.expireMaxSizeFlag || map.size()<map.expireMaxSize)
+                                && (map.expireStoreSize==0L ||
                                 Store.forEngine(map.engine).getCurrSize() - Store.forEngine(map.engine).getFreeSize()<map.expireStoreSize));
 
 
-                }catch(Throwable e){
-                    //TODO exception handling
-                    e.printStackTrace();
-                    //Utils.LOG.log(Level.SEVERE, "HTreeMap expirator failed", e);
+                    }catch(Throwable e){
+                        //TODO exception handling
+                        e.printStackTrace();
+                        //Utils.LOG.log(Level.SEVERE, "HTreeMap expirator failed", e);
+                    }
+                }
+                System.out.println("HTreeMap#ExpireRunnable stopped.");
+            } finally {
+                try {
+                    // One last purge before we stop...
+                    mapRef.get().expirePurge();
+                } finally {
+                    running.set(false);
                 }
             }
         }

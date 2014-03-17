@@ -83,6 +83,8 @@ public interface Engine {
      */
     void preallocate(long[] recids);
 
+    void addLifecycleListener(EngineLifecycleListener listener);
+
     /**
      * Insert new record.
      *

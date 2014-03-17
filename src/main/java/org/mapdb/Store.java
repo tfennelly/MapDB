@@ -54,6 +54,10 @@ public abstract class Store implements Engine{
         };
     }
 
+    @Override
+    public void addLifecycleListener(EngineLifecycleListener listener) {
+    }
+
     public abstract long getMaxRecid();
     public abstract ByteBuffer getRaw(long recid);
     public abstract Iterator<Long> getFreeRecids();
